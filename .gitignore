@@ -1,4 +1,24 @@
+# dependencies
 node_modules/
+.pnpm-store/
+
+# build outputs
 .next/
+out/
+build/
+dist/
+tsconfig.tsbuildinfo
+
+# IDE & temporary dev tools
+.bolt/
+.idea/
+.vscode/
+
+# env files
 .env
-.env.local
+.env*.local
+
+# logs & system files
+*.log
+.DS_Store
+*.pem

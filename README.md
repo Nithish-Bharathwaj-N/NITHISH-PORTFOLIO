@@ -6,8 +6,7 @@
 
 Building AI-powered software that transforms complex ideas into practical, real-world solutions.
 
-[![Portfolio](https://img.shields.io/badge/🌐_Live_Site-Visit-6366f1?style=for-the-badge)](https://your-portfolio-url.com)
-[![Resume](https://img.shields.io/badge/📄_Resume-Download-22c55e?style=for-the-badge)](public/NITHISH_BHARATHWAJ_N_FlowCV_Resume.pdf)
+[![Portfolio](https://img.shields.io/badge/🌐_Live_Site-Visit-6366f1?style=for-the-badge)](https://nithishbharathwajn-portfolio.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nithish-bharathwaj-n-847a00379)
 [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/nithish_cit/)
 
