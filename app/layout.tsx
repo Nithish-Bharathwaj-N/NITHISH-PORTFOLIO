@@ -8,7 +8,7 @@ const inter = Inter({
   display: 'swap',
 });
 
-const siteUrl = 'https://nithish-portfolio.example.com';
+const siteUrl = 'https://nithishbharathwajn-portfolio.vercel.app';
 const ogImage = `${siteUrl}/og.png`;
 
 export const metadata: Metadata = {
@@ -70,14 +70,12 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-    ],
+    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
     apple: '/favicon.svg',
   },
 };
 
-export const themeColor = '#3B82F6';
+export const themeColor = '#06b6d4';
 
 export default function RootLayout({
   children,
@@ -85,8 +83,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="font-sans antialiased">{children}</body>
+    <html lang="en" className={`dark ${inter.variable}`} style={{ colorScheme: 'dark' }}>
+      <body className="font-sans antialiased bg-[#090d16] text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-200">
+        {children}
+      </body>
     </html>
   );
 }
