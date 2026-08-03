@@ -75,7 +75,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const themeColor = '#06b6d4';
+export const themeColor = '#2563eb';
 
 export default function RootLayout({
   children,
@@ -83,8 +83,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`dark ${inter.variable}`} style={{ colorScheme: 'dark' }}>
-      <body className="font-sans antialiased bg-[#090d16] text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-200">
+    <html lang="en" className={`light ${inter.variable}`} style={{ colorScheme: 'light' }}>
+      <body className="font-sans antialiased bg-slate-50 text-slate-900 selection:bg-blue-500/20 selection:text-blue-900">
         {children}
       </body>
     </html>
