@@ -157,17 +157,6 @@ export const projects: Project[] = [
     featured: true,
     image: '/images/istockphoto-1193029537-612x612.jpg',
   },
-  {
-    slug: 'asset-chain',
-    title: 'Asset Chain',
-    tagline: 'Campus Asset Management System.',
-    description:
-      'Digital platform for managing institutional assets through streamlined inventory tracking and administration.',
-    tech: ['React', 'Node', 'Express', 'MySQL'],
-    github: 'https://github.com/Nithish-Bharathwaj-N/asset-chain',
-    featured: false,
-    image: '/images/multi-campus-asset-management-platform-education.webp',
-  },
 ];
 
 export const experiences: Experience[] = [
