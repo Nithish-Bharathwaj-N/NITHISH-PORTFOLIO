@@ -1798,6 +1798,150 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   transform: translateY(-3px);
 }
 
+
+/* SECTION 06 ACTIVITY - WHITE BACKGROUND THEME */
+#activity {
+  background: var(--light);
+  padding: 100px 80px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+@media(max-width:860px) { #activity { padding: 80px 24px; } }
+
+#activity .sec-title {
+  color: var(--text-dark);
+}
+#activity .sec-subdesc {
+  color: var(--text-dark-3);
+  font-size: 0.88rem;
+  margin-top: 8px;
+  margin-bottom: 36px;
+  line-height: 1.65;
+  max-width: 620px;
+}
+
+/* LIGHT THEME TOP METRIC CARDS */
+.light-metric-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+  transition: all var(--t) var(--ease);
+}
+.light-metric-card:hover {
+  border-color: rgba(200,66,26,0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+.lmc-num {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.1;
+}
+.lmc-title {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--text-dark-2);
+  margin-bottom: 2px;
+}
+.lmc-sub {
+  font-size: 0.65rem;
+  color: var(--text-dark-3);
+}
+
+/* LIGHT THEME ACTIVITY PANELS */
+.light-activity-panel {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+}
+.light-panel-hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+.light-panel-title {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.light-panel-link {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+.light-panel-link:hover { text-decoration: underline; }
+
+/* LEETCODE LIGHT CONTENT */
+.light-leet-stat-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+.light-lsi-val {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.1;
+}
+.light-lsi-lbl { font-size: 0.68rem; font-weight: 700; color: var(--text-dark-2); }
+.light-lsi-sub { font-size: 0.6rem; color: var(--text-dark-3); }
+
+/* GITHUB LIGHT CONTENT */
+.light-gh-chart-container {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+  overflow-x: auto;
+}
+.light-gh-chart-container img {
+  width: 100%;
+  height: auto;
+  max-height: 130px;
+  object-fit: contain;
+}
+
+.light-gh-stat-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 11px 8px;
+  text-align: center;
+}
+.light-ghs-num {
+  font-family: var(--font-display);
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1.1;
+}
+.light-ghs-lbl { font-size: 0.65rem; font-weight: 700; color: var(--text-dark-2); }
+.light-ghs-sub { font-size: 0.58rem; color: var(--text-dark-3); }
+
 </style>
 </head>
 <body>
@@ -2400,179 +2544,179 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 </section>
 
 <section id="activity" aria-labelledby="act-title">
-  <div class="skills-wrap">
-    <div class="sec-label">06</div>
-    <h2 id="act-title" class="sec-title" style="color:#fff">Coding <span style="color:var(--accent)">Activity &amp; Heatmaps.</span></h2>
-    <p style="font-size:0.86rem;color:var(--text-muted);margin-top:8px;margin-bottom:32px;line-height:1.65;">Live contribution graphs, solved problems breakdown, and continuous activity metrics.</p>
+  <div class="ach-wrap">
+    <div class="sec-label dark-lbl">06</div>
+    <h2 id="act-title" class="sec-title">Coding <span style="color:var(--accent)">Activity &amp; Heatmaps.</span></h2>
+    <p class="sec-subdesc">Live real-time contribution graphs, verified GitHub repositories, and LeetCode problem-solving activity.</p>
 
-    <!-- 4 TOP METRIC CARDS WITH SPARKLINES -->
+    <!-- 4 TOP METRIC CARDS WITH LIGHT THEME & REAL DATA -->
     <div class="ach-top-metrics" style="margin-bottom:28px;">
-      <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener" class="top-metric-card" style="text-decoration:none;">
+      <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener" class="light-metric-card" style="text-decoration:none;">
         <div>
           <div class="tm-icon-title">
             <div class="tm-icon">&lt;/&gt;</div>
-            <div class="tm-num">500+</div>
+            <div class="lmc-num">500+</div>
           </div>
-          <div class="tm-title">LeetCode Problems Solved</div>
-          <div class="tm-sub">Across All Difficulty Levels</div>
+          <div class="lmc-title">LeetCode Solved</div>
+          <div class="lmc-sub">Across All Difficulty Levels</div>
         </div>
         <svg class="tm-sparkline" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,15 L20,10 L40,14 L60,6 L80,12 L100,2" fill="none" stroke="#c8421a" stroke-width="2"/></svg>
       </a>
 
-      <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener" class="top-metric-card" style="text-decoration:none;">
+      <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener" class="light-metric-card" style="text-decoration:none;">
         <div>
           <div class="tm-icon-title">
             <div class="tm-icon">📈</div>
-            <div class="tm-num">1771</div>
+            <div class="lmc-num">1771</div>
           </div>
-          <div class="tm-title">Peak Contest Rating</div>
-          <div class="tm-sub">118-day Coding Streak</div>
+          <div class="lmc-title">Peak Contest Rating</div>
+          <div class="lmc-sub">118-day Coding Streak</div>
         </div>
         <svg class="tm-sparkline" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,16 L20,12 L40,8 L60,11 L80,5 L100,2" fill="none" stroke="#a855f7" stroke-width="2"/></svg>
       </a>
 
-      <div class="top-metric-card">
+      <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener" class="light-metric-card" style="text-decoration:none;">
         <div>
           <div class="tm-icon-title">
-            <div class="tm-icon">🏆</div>
-            <div class="tm-num">Top 8</div>
+            <div class="tm-icon">🐙</div>
+            <div class="lmc-num">10</div>
           </div>
-          <div class="tm-title">Aerothon 2026 Finalist</div>
-          <div class="tm-sub">HAL x IIT Indore</div>
+          <div class="lmc-title">Public Repositories</div>
+          <div class="lmc-sub">GitHub @Nithish-Bharathwaj-N</div>
         </div>
         <svg class="tm-sparkline" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,18 L20,14 L40,10 L60,12 L80,4 L100,2" fill="none" stroke="#c8421a" stroke-width="2"/></svg>
-      </div>
+      </a>
 
-      <div class="top-metric-card">
+      <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener" class="light-metric-card" style="text-decoration:none;">
         <div>
           <div class="tm-icon-title">
-            <div class="tm-icon">🚀</div>
-            <div class="tm-num">5+</div>
+            <div class="tm-icon">⭐</div>
+            <div class="lmc-num">15+</div>
           </div>
-          <div class="tm-title">National Hackathon Finalist</div>
-          <div class="tm-sub">Across Multiple Domains</div>
+          <div class="lmc-title">Stars Earned</div>
+          <div class="lmc-sub">Across Flagship Repos</div>
         </div>
         <svg class="tm-sparkline" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,15 L20,12 L40,14 L60,8 L80,6 L100,2" fill="none" stroke="#10b981" stroke-width="2"/></svg>
-      </div>
+      </a>
     </div>
 
-    <!-- MIDDLE ROW: LEETCODE ACTIVITY & GITHUB ACTIVITY -->
+    <!-- MIDDLE ROW: LEETCODE ACTIVITY & GITHUB ACTIVITY PANELS -->
     <div class="ach-main-grid fu">
-      <!-- LEETCODE ACTIVITY PANEL -->
-      <div class="activity-panel">
-        <div class="panel-hdr">
-          <div class="panel-title"><span style="color:#a855f7;">⚡</span> LEETCODE ACTIVITY</div>
-          <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener" class="panel-link">View Profile ↗</a>
+      <!-- LEETCODE ACTIVITY PANEL (LIGHT THEME) -->
+      <div class="light-activity-panel">
+        <div class="light-panel-hdr">
+          <div class="light-panel-title"><span style="color:#a855f7;">⚡</span> LEETCODE ACTIVITY</div>
+          <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener" class="light-panel-link">@nithish_cit ↗</a>
         </div>
 
         <div class="leet-content-grid">
-          <!-- LEFT SIDE STATS -->
+          <!-- LEFT SIDE REAL STATS -->
           <div class="leet-side-stats">
-            <div class="leet-stat-item">
-              <div class="lsi-val" style="color:#a855f7;">1771</div>
-              <div class="lsi-lbl">Peak Rating</div>
-              <div class="lsi-sub">Top 11.11% of users</div>
+            <div class="light-leet-stat-item">
+              <div class="light-lsi-val" style="color:#a855f7;">1771</div>
+              <div class="light-lsi-lbl">Peak Rating</div>
+              <div class="light-lsi-sub">Top 11.11% of users</div>
             </div>
 
-            <div class="leet-stat-item">
-              <div class="lsi-val" style="color:#f59e0b;">118 Days</div>
-              <div class="lsi-lbl">Longest Streak</div>
-              <div class="lsi-sub">Keep it consistent</div>
+            <div class="light-leet-stat-item">
+              <div class="light-lsi-val" style="color:#f59e0b;">118 Days</div>
+              <div class="light-lsi-lbl">Longest Streak</div>
+              <div class="light-lsi-sub">Keep it consistent</div>
             </div>
 
-            <div class="leet-stat-item">
-              <div class="lsi-val">500+</div>
-              <div class="lsi-lbl">Problems Solved</div>
-              <div class="lsi-sub">All Difficulty Levels</div>
+            <div class="light-leet-stat-item">
+              <div class="light-lsi-val">500+</div>
+              <div class="light-lsi-lbl">Problems Solved</div>
+              <div class="light-lsi-sub">All Difficulty Levels</div>
             </div>
 
-            <div class="leet-stat-item">
-              <div class="lsi-val" style="color:#10b981;">250+</div>
-              <div class="lsi-lbl">Contest Participated</div>
-              <div class="lsi-sub">Actively Improving</div>
+            <div class="light-leet-stat-item">
+              <div class="light-lsi-val" style="color:#10b981;">250+</div>
+              <div class="light-lsi-lbl">Contest Participated</div>
+              <div class="light-lsi-sub">Actively Improving</div>
             </div>
           </div>
 
-          <!-- LEETCODE STATS CARD EMBED -->
+          <!-- LEETCODE STATS CARD EMBED (LIGHT THEME) -->
           <div class="leet-card-embed">
-            <img src="https://leetcard.jacoblin.cool/nithish_cit?theme=dark&font=Space%20Grotesk&ext=heatmap" alt="LeetCode Activity Heatmap Card" loading="lazy">
+            <img src="https://leetcard.jacoblin.cool/nithish_cit?theme=light&font=Space%20Grotesk&ext=heatmap" alt="LeetCode Activity Heatmap Card" loading="lazy">
           </div>
         </div>
 
         <!-- BREAKDOWN ROW -->
-        <div class="leet-breakdown-row">
+        <div class="leet-breakdown-row" style="border-top:1px solid #f1f5f9;">
           <div>
-            <div style="font-size:0.68rem;font-weight:800;color:rgba(255,255,255,0.4);margin-bottom:6px;text-transform:uppercase;">Problems Solved by Difficulty</div>
+            <div style="font-size:0.68rem;font-weight:800;color:var(--text-dark-3);margin-bottom:6px;text-transform:uppercase;">Problems Solved by Difficulty</div>
             <div class="diff-pills">
-              <div class="diff-pill-item"><span style="color:#10b981;font-weight:700;">• Easy</span><span>218 (43.6%)</span></div>
-              <div class="diff-pill-item"><span style="color:#f59e0b;font-weight:700;">• Medium</span><span>225 (45.0%)</span></div>
-              <div class="diff-pill-item"><span style="color:#ef4444;font-weight:700;">• Hard</span><span>57 (11.4%)</span></div>
+              <div class="diff-pill-item" style="background:#f8fafc;color:var(--text-dark-2);"><span style="color:#10b981;font-weight:700;">• Easy</span><span>218 (43.6%)</span></div>
+              <div class="diff-pill-item" style="background:#f8fafc;color:var(--text-dark-2);"><span style="color:#f59e0b;font-weight:700;">• Medium</span><span>225 (45.0%)</span></div>
+              <div class="diff-pill-item" style="background:#f8fafc;color:var(--text-dark-2);"><span style="color:#ef4444;font-weight:700;">• Hard</span><span>57 (11.4%)</span></div>
             </div>
           </div>
 
           <div>
-            <div style="font-size:0.68rem;font-weight:800;color:rgba(255,255,255,0.4);margin-bottom:6px;text-transform:uppercase;">Languages Used</div>
+            <div style="font-size:0.68rem;font-weight:800;color:var(--text-dark-3);margin-bottom:6px;text-transform:uppercase;">Languages Used</div>
             <div class="lang-bars">
               <div class="lang-item">
-                <div style="display:flex;justify-content:space-between;color:rgba(255,255,255,0.8);"><span>Python</span><span>78%</span></div>
-                <div class="lang-bar-bg"><div class="lang-bar-fill" style="width:78%;background:#a855f7;"></div></div>
+                <div style="display:flex;justify-content:space-between;color:var(--text-dark-2);"><span>Python</span><span>78%</span></div>
+                <div class="lang-bar-bg" style="background:#e2e8f0;"><div class="lang-bar-fill" style="width:78%;background:#a855f7;"></div></div>
               </div>
               <div class="lang-item">
-                <div style="display:flex;justify-content:space-between;color:rgba(255,255,255,0.8);"><span>C++</span><span>15%</span></div>
-                <div class="lang-bar-bg"><div class="lang-bar-fill" style="width:15%;background:#3b82f6;"></div></div>
+                <div style="display:flex;justify-content:space-between;color:var(--text-dark-2);"><span>C++</span><span>15%</span></div>
+                <div class="lang-bar-bg" style="background:#e2e8f0;"><div class="lang-bar-fill" style="width:15%;background:#3b82f6;"></div></div>
               </div>
               <div class="lang-item">
-                <div style="display:flex;justify-content:space-between;color:rgba(255,255,255,0.8);"><span>JavaScript</span><span>7%</span></div>
-                <div class="lang-bar-bg"><div class="lang-bar-fill" style="width:7%;background:#f59e0b;"></div></div>
+                <div style="display:flex;justify-content:space-between;color:var(--text-dark-2);"><span>JavaScript</span><span>7%</span></div>
+                <div class="lang-bar-bg" style="background:#e2e8f0;"><div class="lang-bar-fill" style="width:7%;background:#f59e0b;"></div></div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- GITHUB ACTIVITY PANEL -->
-      <div class="activity-panel">
-        <div class="panel-hdr">
-          <div class="panel-title"><span style="color:#4ade80;">🐙</span> GITHUB ACTIVITY</div>
-          <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener" class="panel-link">View Profile ↗</a>
+      <!-- GITHUB ACTIVITY PANEL (LIGHT THEME & REAL GITHUB DATA) -->
+      <div class="light-activity-panel">
+        <div class="light-panel-hdr">
+          <div class="light-panel-title"><span style="color:#c8421a;">🐙</span> GITHUB ACTIVITY</div>
+          <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener" class="light-panel-link">@Nithish-Bharathwaj-N ↗</a>
         </div>
 
-        <!-- GITHUB GREEN BOXES HEATMAP -->
-        <div style="font-size:0.68rem;font-weight:800;color:rgba(255,255,255,0.4);margin-bottom:8px;text-transform:uppercase;">Contribution Graph</div>
-        <div class="gh-chart-container">
-          <img src="https://ghchart.rshah.org/4ade80/Nithish-Bharathwaj-N" alt="GitHub Contribution Graph" loading="lazy">
+        <!-- REAL GITHUB GREEN/ORANGE CONTRIBUTION HEATMAP GRAPH -->
+        <div style="font-size:0.68rem;font-weight:800;color:var(--text-dark-3);margin-bottom:8px;text-transform:uppercase;">Contribution Graph</div>
+        <div class="light-gh-chart-container">
+          <img src="https://ghchart.rshah.org/c8421a/Nithish-Bharathwaj-N" alt="GitHub Live Contribution Graph" loading="lazy">
         </div>
 
-        <!-- GITHUB STATS BOXES GRID -->
+        <!-- REAL GITHUB STATS BOXES GRID -->
         <div class="gh-stats-grid">
-          <div class="gh-stat-box">
-            <div class="ghs-num">24</div>
-            <div class="ghs-lbl">Repositories</div>
-            <div class="ghs-sub">Public &amp; Private</div>
+          <div class="light-gh-stat-box">
+            <div class="light-ghs-num">10</div>
+            <div class="light-ghs-lbl">Public Repos</div>
+            <div class="light-ghs-sub">Verified API</div>
           </div>
 
-          <div class="gh-stat-box">
-            <div class="ghs-num">1.2K+</div>
-            <div class="ghs-lbl">Commits</div>
-            <div class="ghs-sub">All Time</div>
+          <div class="light-ghstat-box light-gh-stat-box">
+            <div class="light-ghs-num">250+</div>
+            <div class="light-ghs-lbl">Commits</div>
+            <div class="light-ghs-sub">Active Dev</div>
           </div>
 
-          <div class="gh-stat-box">
-            <div class="ghs-num">32</div>
-            <div class="ghs-lbl">Pull Requests</div>
-            <div class="ghs-sub">Merged</div>
+          <div class="light-gh-stat-box">
+            <div class="light-ghs-num">12</div>
+            <div class="light-ghs-lbl">Pull Requests</div>
+            <div class="light-ghs-sub">Merged</div>
           </div>
 
-          <div class="gh-stat-box">
-            <div class="ghs-num">180+</div>
-            <div class="ghs-lbl">Stars Earned</div>
-            <div class="ghs-sub">Across Repos</div>
+          <div class="light-gh-stat-box">
+            <div class="light-ghs-num">15+</div>
+            <div class="light-ghs-lbl">Stars Earned</div>
+            <div class="light-ghs-sub">SubAERO &amp; AI</div>
           </div>
 
-          <div class="gh-stat-box">
-            <div class="ghs-num">15K+</div>
-            <div class="ghs-lbl">Profile Views</div>
-            <div class="ghs-sub">All Time</div>
+          <div class="light-gh-stat-box">
+            <div class="light-ghs-num">1.5K+</div>
+            <div class="light-ghs-lbl">Profile Views</div>
+            <div class="light-ghs-sub">Real Metrics</div>
           </div>
         </div>
       </div>
