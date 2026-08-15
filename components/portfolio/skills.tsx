@@ -4,23 +4,64 @@ import React from 'react';
 
 export function Skills() {
   const arsenal = [
-    { name: 'Python', pct: 90 },
-    { name: 'TypeScript', pct: 85 },
-    { name: 'React 19 / Next.js', pct: 88 },
-    { name: 'FastAPI', pct: 85 },
-    { name: 'PostgreSQL / MySQL', pct: 80 },
-    { name: 'AWS', pct: 75 },
-    { name: 'Docker', pct: 80 },
-    { name: 'Three.js / WebGL', pct: 78 },
-    { name: 'WebSockets', pct: 85 },
-    { name: 'Linux Security', pct: 85 },
+    { name: 'Python', pct: 92 },
+    { name: 'TypeScript / JavaScript', pct: 88 },
+    { name: 'React 19 / Next.js', pct: 90 },
+    { name: 'FastAPI / Flask', pct: 86 },
+    { name: 'Linux & Web Security', pct: 88 },
+    { name: 'Three.js & WebGL', pct: 80 },
+    { name: 'WebSockets / Real-Time Streaming', pct: 88 },
+    { name: 'AI Agents & RAG (Gemini/OpenAI)', pct: 85 },
+    { name: 'PostgreSQL / MySQL / MongoDB', pct: 82 },
+    { name: 'AWS (EC2, S3, Lambda) & Docker', pct: 80 },
+    { name: 'OAuth 2.0 / JWT Auth', pct: 86 },
+    { name: 'Threat Modeling & OWASP Top 10', pct: 85 },
+    { name: 'Scikit-Learn & Predictive ML', pct: 80 },
+    { name: 'Tailwind CSS & Modern UI/UX', pct: 90 },
+    { name: 'Git / GitHub Actions CI/CD', pct: 88 },
   ];
 
   const marqueePills = [
     '🐍 Python', '⚡ TypeScript', '⚛️ React 19', '▲ Next.js',
-    '🟢 Node.js', '⚡ FastAPI', '🐘 PostgreSQL', '🐬 MySQL',
-    '🍃 MongoDB', '🔴 Redis', '🔌 WebSockets', '🎲 Three.js',
-    '🎨 Tailwind CSS', '☁️ AWS', '🐙 Git', '🐧 Linux'
+    '🟢 Node.js', '⚡ FastAPI', '🌶️ Flask', '🐘 PostgreSQL',
+    '🐬 MySQL', '🍃 MongoDB', '🔴 Redis', '🛡️ Linux Security',
+    '🔐 OAuth 2.0', '🤖 Gemini AI', '🧠 AI Agents & RAG',
+    '📊 Scikit-Learn', '🔌 WebSockets', '🎲 Three.js / WebGL',
+    '🎨 Tailwind CSS', '☁️ AWS (EC2/S3)', '🐳 Docker',
+    '🐙 GitHub Actions', '🐧 Linux', '🌐 REST APIs', '🎨 Blender 3D'
+  ];
+
+  const domainBreakdown = [
+    {
+      domain: 'Cybersecurity',
+      icon: '🛡️',
+      color: 'text-[#c8421a]',
+      skills: ['Linux Security', 'Web Security & OWASP', 'OAuth 2.0 / JWT Auth', 'Secure API Design', 'Threat Modeling', 'Security Automation', 'Network Security', 'Wireshark & Audit']
+    },
+    {
+      domain: 'Full-Stack Eng.',
+      icon: '</>',
+      color: 'text-[#a855f7]',
+      skills: ['Python (3.x)', 'TypeScript / JS', 'React 19 & Next.js', 'FastAPI & Flask', 'Node.js & Express', 'PostgreSQL & MySQL', 'MongoDB & Redis', 'Tailwind CSS']
+    },
+    {
+      domain: 'AI & Machine Learning',
+      icon: '🧠',
+      color: 'text-[#10b981]',
+      skills: ['Gemini & LLM APIs', 'AI Agents & RAG', 'Scikit-Learn', 'Predictive Analytics', 'PyTorch Basics', 'Vector Databases', 'Prompt Engineering']
+    },
+    {
+      domain: 'Real-Time & 3D',
+      icon: '🧊',
+      color: 'text-[#f59e0b]',
+      skills: ['Three.js & WebGL', 'WebSockets (1Hz Stream)', 'Socket.io', 'Blender 3D Modeling', 'Digital Twin Arch.', 'Telemetry Pipelines', 'State Sync Engine']
+    },
+    {
+      domain: 'Cloud & DevOps',
+      icon: '☁️',
+      color: 'text-[#06b6d4]',
+      skills: ['AWS (EC2, S3, Lambda)', 'Docker Containerization', 'GitHub Actions CI/CD', 'Linux Admin (Bash)', 'Nginx Web Server', 'Vercel & Netlify', 'REST & GraphQL APIs']
+    }
   ];
 
   const principles = [
@@ -92,13 +133,11 @@ export function Skills() {
                 <line x1="210" y1="180" x2="75" y2="110" stroke="#a855f7" strokeWidth="1.5" opacity="0.6" />
               </svg>
 
-              {/* CENTER HUB */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-radial from-[#c8421a]/20 to-[#0d0d0d] border-2 border-[#c8421a] flex flex-col items-center justify-center text-center z-10 shadow-[0_0_20px_rgba(200,66,26,0.3)]">
                 <span className="font-display text-lg font-black text-[#c8421a] leading-none">NB</span>
                 <span className="text-[0.55rem] font-bold text-white/70 uppercase tracking-wider mt-1">Core Engineering</span>
               </div>
 
-              {/* DOMAIN NODES */}
               <div className="absolute top-2 left-1/2 -translate-x-1/2 w-32 p-2 bg-[#0d0d0d]/95 border border-[#c8421a] rounded-lg text-center z-10 hover:scale-105 transition-transform">
                 <div className="text-sm">🛡️</div>
                 <div className="text-[0.68rem] font-extrabold uppercase text-white">Cybersecurity</div>
@@ -131,13 +170,13 @@ export function Skills() {
             </div>
           </div>
 
-          {/* RIGHT COLUMN (TECH ARSENAL METERS) */}
-          <div className="bg-[#161616] border border-white/10 rounded-2xl p-5 flex flex-col justify-between">
+          {/* RIGHT COLUMN (SCROLLABLE ALL ARSENAL PROGRESS METERS) */}
+          <div className="bg-[#161616] border border-white/10 rounded-2xl p-5 flex flex-col">
             <div className="flex items-center justify-between text-xs font-extrabold uppercase tracking-wider text-[#c8421a] mb-3">
-              <span>TECH ARSENAL</span>
+              <span>ALL SKILLS &amp; ARSENAL</span>
               <span className="text-[0.6rem] text-white/40">PROFICIENCY</span>
             </div>
-            <div className="space-y-2.5">
+            <div className="space-y-2.5 max-h-[380px] overflow-y-auto pr-1">
               {arsenal.map((item) => (
                 <div key={item.name} className="space-y-1">
                   <div className="flex justify-between text-xs font-bold text-white/90">
@@ -154,6 +193,27 @@ export function Skills() {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* DETAILED ALL SKILLS GRID BY DOMAIN */}
+        <div className="text-[0.68rem] font-extrabold uppercase tracking-wider text-white mb-3 mt-4">
+          COMPLETE SKILLS BREAKDOWN BY DOMAIN •
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+          {domainBreakdown.map((d) => (
+            <div key={d.domain} className="bg-[#161616] border border-white/10 rounded-xl p-4 transition-all hover:border-[#c8421a]/40 hover:-translate-y-1">
+              <div className="flex items-center gap-2 font-display text-sm font-extrabold text-white mb-3 pb-2 border-b border-white/10">
+                <span className={d.color}>{d.icon}</span> {d.domain}
+              </div>
+              <ul className="space-y-1.5 text-xs text-white/70">
+                {d.skills.map((s) => (
+                  <li key={s} className="flex items-center gap-1.5">
+                    <span className="text-[#c8421a] font-bold">•</span> {s}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         {/* MIDDLE ECOSYSTEM MARQUEE */}

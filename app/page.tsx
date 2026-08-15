@@ -750,6 +750,76 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 .p-title { font-size: 0.8rem; font-weight: 800; color: #fff; margin-bottom: 6px; }
 .p-desc { font-size: 0.72rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
 
+
+.arsenal-scroll {
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+.arsenal-scroll::-webkit-scrollbar { width: 4px; }
+.arsenal-scroll::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
+
+/* ALL SKILLS CATEGORIES GRID BELOW DASHBOARD */
+.all-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+  margin-bottom: 28px;
+}
+@media(max-width:1100px) { .all-skills-grid { grid-template-columns: repeat(3, 1fr); } }
+@media(max-width:680px) { .all-skills-grid { grid-template-columns: repeat(2, 1fr); } }
+@media(max-width:480px) { .all-skills-grid { grid-template-columns: 1fr; } }
+
+.skill-domain-card {
+  background: var(--dark-3);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius-lg);
+  padding: 20px 16px;
+  transition: all var(--t) var(--ease);
+}
+.skill-domain-card:hover {
+  border-color: rgba(200,66,26,0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+}
+.sd-hdr {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.sd-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.sd-list li {
+  font-size: 0.76rem;
+  color: rgba(255,255,255,0.65);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.sd-list li::before {
+  content: '•';
+  color: var(--accent);
+  font-weight: bold;
+}
+.sd-used {
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.35);
+  margin-left: auto;
+  font-weight: 500;
+}
+
 ` }} />
       <div dangerouslySetInnerHTML={{ __html: `
 <a id="skip-link" href="#intro">Skip to content</a>
@@ -955,55 +1025,75 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
       <!-- RIGHT COLUMN (TECH ARSENAL PROGRESS METERS) -->
       <div class="exp-right-col fu">
         <div class="arsenal-hdr">
-          <span>TECH ARSENAL</span>
+          <span>ALL SKILLS &amp; ARSENAL</span>
           <span style="color:rgba(255,255,255,0.4);font-size:0.6rem;">PROFICIENCY</span>
         </div>
-        <div class="arsenal-list">
+        <div class="arsenal-list arsenal-scroll">
           <div class="arsenal-item">
-            <div class="arsenal-info"><span>Python</span><span class="arsenal-val">90%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:90%;"></div></div>
+            <div class="arsenal-info"><span>Python</span><span class="arsenal-val">92%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:92%;"></div></div>
           </div>
           <div class="arsenal-item">
-            <div class="arsenal-info"><span>TypeScript</span><span class="arsenal-val">85%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:85%;"></div></div>
-          </div>
-          <div class="arsenal-item">
-            <div class="arsenal-info"><span>React 19 / Next.js</span><span class="arsenal-val">88%</span></div>
+            <div class="arsenal-info"><span>TypeScript / JavaScript</span><span class="arsenal-val">88%</span></div>
             <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:88%;"></div></div>
           </div>
           <div class="arsenal-item">
-            <div class="arsenal-info"><span>FastAPI</span><span class="arsenal-val">85%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:85%;"></div></div>
+            <div class="arsenal-info"><span>React 19 / Next.js</span><span class="arsenal-val">90%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:90%;"></div></div>
           </div>
           <div class="arsenal-item">
-            <div class="arsenal-info"><span>PostgreSQL / MySQL</span><span class="arsenal-val">80%</span></div>
+            <div class="arsenal-info"><span>FastAPI / Flask</span><span class="arsenal-val">86%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:86%;"></div></div>
+          </div>
+          <div class="arsenal-item">
+            <div class="arsenal-info"><span>Linux &amp; Web Security</span><span class="arsenal-val">88%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:88%;"></div></div>
+          </div>
+          <div class="arsenal-item">
+            <div class="arsenal-info"><span>Three.js &amp; WebGL</span><span class="arsenal-val">80%</span></div>
             <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:80%;"></div></div>
           </div>
           <div class="arsenal-item">
-            <div class="arsenal-info"><span>AWS</span><span class="arsenal-val">75%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:75%;"></div></div>
+            <div class="arsenal-info"><span>WebSockets / Real-Time Streaming</span><span class="arsenal-val">88%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:88%;"></div></div>
           </div>
           <div class="arsenal-item">
-            <div class="arsenal-info"><span>Docker</span><span class="arsenal-val">80%</span></div>
+            <div class="arsenal-info"><span>AI Agents &amp; RAG (Gemini/OpenAI)</span><span class="arsenal-val">85%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:85%;"></div></div>
+          </div>
+          <div class="arsenal-item">
+            <div class="arsenal-info"><span>PostgreSQL / MySQL / MongoDB</span><span class="arsenal-val">82%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:82%;"></div></div>
+          </div>
+          <div class="arsenal-item">
+            <div class="arsenal-info"><span>AWS (EC2, S3, Lambda) &amp; Docker</span><span class="arsenal-val">80%</span></div>
             <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:80%;"></div></div>
           </div>
           <div class="arsenal-item">
-            <div class="arsenal-info"><span>Three.js / WebGL</span><span class="arsenal-val">78%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:78%;"></div></div>
+            <div class="arsenal-info"><span>OAuth 2.0 / JWT Auth</span><span class="arsenal-val">86%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:86%;"></div></div>
           </div>
           <div class="arsenal-item">
-            <div class="arsenal-info"><span>WebSockets</span><span class="arsenal-val">85%</span></div>
+            <div class="arsenal-info"><span>Threat Modeling &amp; OWASP Top 10</span><span class="arsenal-val">85%</span></div>
             <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:85%;"></div></div>
           </div>
           <div class="arsenal-item">
-            <div class="arsenal-info"><span>Linux Security</span><span class="arsenal-val">85%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:85%;"></div></div>
+            <div class="arsenal-info"><span>Scikit-Learn &amp; Predictive ML</span><span class="arsenal-val">80%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:80%;"></div></div>
+          </div>
+          <div class="arsenal-item">
+            <div class="arsenal-info"><span>Tailwind CSS &amp; Modern UI/UX</span><span class="arsenal-val">90%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:90%;"></div></div>
+          </div>
+          <div class="arsenal-item">
+            <div class="arsenal-info"><span>Git / GitHub Actions CI/CD</span><span class="arsenal-val">88%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:88%;"></div></div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- MIDDLE TECHNOLOGY ECOSYSTEM MARQUEE -->
+    <!-- ALL SKILLS DETAILED BREAKDOWN BY DOMAIN --> TECHNOLOGY ECOSYSTEM MARQUEE -->
     <div class="exp-marquee-wrap fu">
       <div class="exp-sec-hdr">TECHNOLOGY ECOSYSTEM •</div>
       <div class="marquee">
@@ -1014,34 +1104,52 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
           <span class="tech-pill">▲ Next.js</span>
           <span class="tech-pill">🟢 Node.js</span>
           <span class="tech-pill">⚡ FastAPI</span>
+          <span class="tech-pill">🌶️ Flask</span>
           <span class="tech-pill">🐘 PostgreSQL</span>
           <span class="tech-pill">🐬 MySQL</span>
           <span class="tech-pill">🍃 MongoDB</span>
           <span class="tech-pill">🔴 Redis</span>
+          <span class="tech-pill">🛡️ Linux Security</span>
+          <span class="tech-pill">🔐 OAuth 2.0</span>
+          <span class="tech-pill">🤖 Gemini AI</span>
+          <span class="tech-pill">🧠 AI Agents &amp; RAG</span>
+          <span class="tech-pill">📊 Scikit-Learn</span>
           <span class="tech-pill">🔌 WebSockets</span>
-          <span class="tech-pill">🎲 Three.js</span>
+          <span class="tech-pill">🎲 Three.js / WebGL</span>
           <span class="tech-pill">🎨 Tailwind CSS</span>
-          <span class="tech-pill">☁️ AWS</span>
-          <span class="tech-pill">🐙 Git</span>
+          <span class="tech-pill">☁️ AWS (EC2/S3)</span>
+          <span class="tech-pill">🐳 Docker</span>
+          <span class="tech-pill">🐙 GitHub Actions</span>
           <span class="tech-pill">🐧 Linux</span>
+          <span class="tech-pill">🌐 REST APIs</span>
+          <span class="tech-pill">🎨 Blender 3D</span>
 
-          <!-- REPEAT FOR SEAMLESS LOOP -->
+          <!-- LOOP -->
           <span class="tech-pill">🐍 Python</span>
           <span class="tech-pill">⚡ TypeScript</span>
           <span class="tech-pill">⚛️ React 19</span>
           <span class="tech-pill">▲ Next.js</span>
           <span class="tech-pill">🟢 Node.js</span>
           <span class="tech-pill">⚡ FastAPI</span>
+          <span class="tech-pill">🌶️ Flask</span>
           <span class="tech-pill">🐘 PostgreSQL</span>
           <span class="tech-pill">🐬 MySQL</span>
           <span class="tech-pill">🍃 MongoDB</span>
           <span class="tech-pill">🔴 Redis</span>
+          <span class="tech-pill">🛡️ Linux Security</span>
+          <span class="tech-pill">🔐 OAuth 2.0</span>
+          <span class="tech-pill">🤖 Gemini AI</span>
+          <span class="tech-pill">🧠 AI Agents &amp; RAG</span>
+          <span class="tech-pill">📊 Scikit-Learn</span>
           <span class="tech-pill">🔌 WebSockets</span>
-          <span class="tech-pill">🎲 Three.js</span>
+          <span class="tech-pill">🎲 Three.js / WebGL</span>
           <span class="tech-pill">🎨 Tailwind CSS</span>
-          <span class="tech-pill">☁️ AWS</span>
-          <span class="tech-pill">🐙 Git</span>
+          <span class="tech-pill">☁️ AWS (EC2/S3)</span>
+          <span class="tech-pill">🐳 Docker</span>
+          <span class="tech-pill">🐙 GitHub Actions</span>
           <span class="tech-pill">🐧 Linux</span>
+          <span class="tech-pill">🌐 REST APIs</span>
+          <span class="tech-pill">🎨 Blender 3D</span>
         </div>
       </div>
     </div>
