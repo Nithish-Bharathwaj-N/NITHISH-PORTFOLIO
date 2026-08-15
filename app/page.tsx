@@ -148,6 +148,14 @@ export default function Home() {
       });
     });
 
+    const inquiryPills = document.querySelectorAll('.inquiry-pill');
+    inquiryPills.forEach((pill) => {
+      pill.addEventListener('click', () => {
+        inquiryPills.forEach((p) => p.classList.remove('active'));
+        pill.classList.add('active');
+      });
+    });
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('scroll', handleBtt);
@@ -2307,6 +2315,258 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 .bt-circle-icon { width: 38px; height: 38px; border-radius: 50%; background: rgba(200,66,26,0.12); border: 1.5px solid rgba(200,66,26,0.3); display: flex; align-items: center; justify-content: center; font-size: 1.05rem; color: var(--accent); flex-shrink: 0; }
 .bt-lbl { font-family: var(--font-display); font-size: 0.72rem; font-weight: 800; color: #fff; line-height: 1.3; text-transform: uppercase; }
 
+
+/* ENHANCED CONTACT SECTION STYLING */
+#contact {
+  background: var(--dark-2);
+  padding: 100px 80px 70px;
+  border-top: 1px solid var(--border-d);
+}
+@media(max-width:860px) { #contact { padding: 80px 24px 40px; } }
+
+.contact-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.contact-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  background: rgba(74,222,128,0.08);
+  border: 1px solid rgba(74,222,128,0.25);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #4ade80;
+  margin-bottom: 20px;
+}
+
+.contact-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  margin-top: 32px;
+  align-items: start;
+}
+@media(max-width:960px) { .contact-main-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+/* LEFT COLUMN - CHANNELS & TERMINAL */
+.contact-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.c-channel-card {
+  background: var(--dark-3);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius-lg);
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all var(--t) var(--ease);
+  text-decoration: none;
+}
+.c-channel-card:hover {
+  border-color: rgba(200,66,26,0.45);
+  transform: translateX(6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.4);
+}
+.c-channel-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(200,66,26,0.12);
+  border: 1px solid rgba(200,66,26,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.c-channel-info { flex: 1; }
+.c-channel-lbl {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 2px;
+}
+.c-channel-val {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #fff;
+}
+.c-channel-arrow {
+  font-size: 1rem;
+  color: var(--accent);
+  transition: transform var(--t);
+}
+.c-channel-card:hover .c-channel-arrow {
+  transform: translateX(4px);
+}
+
+.c-meta-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 4px;
+}
+.c-meta-box {
+  background: var(--dark-3);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+.c-meta-lbl {
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.38);
+  margin-bottom: 4px;
+}
+.c-meta-val {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+}
+
+/* TERMINAL PING BLOCK */
+.contact-terminal {
+  background: #090d16;
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  font-family: monospace;
+  margin-top: 6px;
+}
+.ct-hdr {
+  background: rgba(255,255,255,0.04);
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.ct-dot { width: 8px; height: 8px; border-radius: 50%; }
+.ct-body {
+  padding: 14px;
+  font-size: 0.73rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.75);
+}
+
+/* RIGHT COLUMN - PREMIUM FORM */
+.contact-form-card {
+  background: var(--dark-3);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+}
+@media(max-width:600px) { .contact-form-card { padding: 24px 18px; } }
+
+.inquiry-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.inquiry-pill {
+  padding: 7px 14px;
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: all var(--t) var(--ease);
+}
+.inquiry-pill.active, .inquiry-pill:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.c-fgroup {
+  margin-bottom: 18px;
+}
+.c-flabel {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 8px;
+}
+.c-finput, .c-ftextarea {
+  width: 100%;
+  padding: 13px 16px;
+  font-size: 0.88rem;
+  font-family: var(--font);
+  color: #fff;
+  background: rgba(13,13,13,0.7);
+  border: 1px solid var(--border-d);
+  border-radius: 10px;
+  outline: none;
+  transition: all var(--t) var(--ease);
+  box-sizing: border-box;
+}
+.c-finput:focus, .c-ftextarea:focus {
+  border-color: var(--accent);
+  background: rgba(13,13,13,0.95);
+  box-shadow: 0 0 0 3px rgba(200,66,26,0.15);
+}
+.c-ftextarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.c-submit-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--t) var(--ease);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.c-submit-btn:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(200,66,26,0.35);
+}
+
+.toast-msg {
+  display: none;
+  margin-top: 14px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: rgba(34,197,94,0.12);
+  border: 1px solid rgba(34,197,94,0.3);
+  color: #4ade80;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: center;
+}
+
 ` }} />
       <div dangerouslySetInnerHTML={{ __html: `
 <a id="skip-link" href="#intro">Skip to content</a>
@@ -2964,35 +3224,109 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 
 <section id="contact" aria-labelledby="contact-title">
   <div class="contact-wrap">
-    <div class="sec-label dark-lbl">05</div>
-    <h2 id="contact-title" class="sec-title" style="color:var(--text-dark)">Get In Touch.</h2>
-    <p class="contact-subdesc">I'm open to full-stack, AI &amp; cybersecurity roles, internships and exciting engineering collaborations.</p>
-    <div class="contact-grid">
-      <div>
-        <div class="contact-links">
-          <a href="mailto:nithishbharathwajn@gmail.com" class="c-link"><div class="c-icon" style="background:rgba(200,66,26,0.09)"><svg width="18" height="18" viewBox="0 0 24 24" fill="#c8421a" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div><div><div class="c-lbl">Email</div><div class="c-val">nithishbharathwajn@gmail.com</div></div></a>
-          <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener" class="c-link"><div class="c-icon" style="background:rgba(0,0,0,0.06)"><svg width="18" height="18" viewBox="0 0 24 24" fill="#1e293b" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></div><div><div class="c-lbl">GitHub</div><div class="c-val">Nithish-Bharathwaj-N</div></div></a>
-          <a href="https://www.linkedin.com/in/nithish-bharathwaj-n-847a00379" target="_blank" rel="noopener" class="c-link"><div class="c-icon" style="background:rgba(10,102,194,0.09)"><svg width="18" height="18" viewBox="0 0 24 24" fill="#0a66c2" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div><div><div class="c-lbl">LinkedIn</div><div class="c-val">Nithish Bharathwaj N</div></div></a>
-          <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener" class="c-link"><div class="c-icon" style="background:rgba(245,158,11,0.09)"><svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg></div><div><div class="c-lbl">LeetCode</div><div class="c-val">nithish_cit</div></div></a>
+    <div class="sec-label">05</div>
+    
+    <div class="contact-status-badge fu">
+      <span class="pulse"></span> Available for Freelance, Full-Time Roles &amp; Open Source
+    </div>
+
+    <h2 id="contact-title" class="sec-title" style="color:#fff">Let's Build Something <span style="color:var(--accent)">Exceptional.</span></h2>
+    <p style="font-size:0.92rem;color:var(--text-muted);margin-top:8px;line-height:1.7;max-width:560px;">Have a project, role, or collaboration in mind? Reach out via email, social channels, or the direct form below.</p>
+
+    <div class="contact-main-grid fu">
+      <!-- LEFT COLUMN: DIRECT CHANNELS & TERMINAL -->
+      <div class="contact-channels">
+        <a href="mailto:nithishbharathwajn@gmail.com" class="c-channel-card">
+          <div class="c-channel-icon">✉️</div>
+          <div class="c-channel-info">
+            <div class="c-channel-lbl">DIRECT EMAIL</div>
+            <div class="c-channel-val">nithishbharathwajn@gmail.com</div>
+          </div>
+          <span class="c-channel-arrow">→</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/nithish-bharathwaj-n-847a00379" target="_blank" rel="noopener" class="c-channel-card">
+          <div class="c-channel-icon">💼</div>
+          <div class="c-channel-info">
+            <div class="c-channel-lbl">LINKEDIN PROFILE</div>
+            <div class="c-channel-val">Nithish Bharathwaj N</div>
+          </div>
+          <span class="c-channel-arrow">↗</span>
+        </a>
+
+        <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener" class="c-channel-card">
+          <div class="c-channel-icon">🐙</div>
+          <div class="c-channel-info">
+            <div class="c-channel-lbl">GITHUB REPOSITORIES</div>
+            <div class="c-channel-val">@Nithish-Bharathwaj-N</div>
+          </div>
+          <span class="c-channel-arrow">↗</span>
+        </a>
+
+        <div class="c-meta-row">
+          <div class="c-meta-box">
+            <div class="c-meta-lbl">LOCATION</div>
+            <div class="c-meta-val">📍 Chennai, India (UTC+5:30)</div>
+          </div>
+          <div class="c-meta-box">
+            <div class="c-meta-lbl">RESPONSE TIME</div>
+            <div class="c-meta-val">⚡ Within 2-4 Hours</div>
+          </div>
+        </div>
+
+        <!-- TERMINAL PING -->
+        <div class="contact-terminal">
+          <div class="ct-hdr">
+            <span class="ct-dot" style="background:#ef4444;"></span>
+            <span class="ct-dot" style="background:#f59e0b;"></span>
+            <span class="ct-dot" style="background:#10b981;"></span>
+            <span style="color:rgba(255,255,255,0.4);font-size:0.65rem;margin-left:auto;">nithish@system:~</span>
+          </div>
+          <div class="ct-body">
+            <span style="color:var(--accent);font-weight:bold;">&gt; engineer@portfolio:~\$ ping nithish-bharathwaj.dev</span><br>
+            <span style="color:rgba(255,255,255,0.6);">PING status: ONLINE • Latency: 12ms</span><br>
+            <span style="color:#10b981;">✓ Channel encryption: TLS 1.3 Active</span>
+          </div>
         </div>
       </div>
-      <div class="contact-form" role="form" aria-label="Contact form">
-        <div class="frow">
-          <div class="fgroup" id="fg-name"><label for="f-name">Your Name</label><input type="text" id="f-name" name="name" autocomplete="name" placeholder="John Doe" required><span class="field-err" role="alert">Please enter your full name.</span></div>
-          <div class="fgroup" id="fg-email"><label for="f-email">Your Email</label><input type="email" id="f-email" name="email" autocomplete="email" placeholder="you@example.com" required><span class="field-err" role="alert">Please enter a valid email address.</span></div>
+
+      <!-- RIGHT COLUMN: ENHANCED INTERACTIVE FORM -->
+      <div class="contact-form-card">
+        <div style="font-size:0.7rem;font-weight:800;text-transform:uppercase;letter-spacing:0.12em;color:var(--accent);margin-bottom:12px;">SELECT INQUIRY TYPE</div>
+        <div class="inquiry-pills">
+          <button type="button" class="inquiry-pill active">💼 Full-Time Role</button>
+          <button type="button" class="inquiry-pill">🚀 Freelance Project</button>
+          <button type="button" class="inquiry-pill">🏆 Hackathon / AI</button>
+          <button type="button" class="inquiry-pill">✉️ General Inquiry</button>
         </div>
-        <div class="fgroup" id="fg-subject"><label for="f-subject">Subject</label><input type="text" id="f-subject" name="subject" placeholder="Collaboration, Opportunity, etc."></div>
-        <div class="fgroup" id="fg-msg"><label for="f-msg">Your Message</label><textarea id="f-msg" name="message" placeholder="Tell me about your project or opportunity..."></textarea><span class="field-err" role="alert">Message must be at least 10 characters.</span></div>
-        <button type="button" class="form-btn" id="form-btn" onclick="submitForm(event)">Send Message →</button>
-        <div class="form-ok" id="form-ok" role="status">✓ Message sent! I'll get back to you soon.</div>
+
+        <form id="contact-form" action="https://formspree.io/f/xknlqpyw" method="POST" onsubmit="event.preventDefault(); document.getElementById('contact-toast').style.display='block'; setTimeout(()=>this.submit(), 1200);">
+          <div class="c-fgroup">
+            <label class="c-flabel">YOUR NAME</label>
+            <input type="text" name="name" class="c-finput" placeholder="e.g. Alex Morgan" required>
+          </div>
+
+          <div class="c-fgroup">
+            <label class="c-flabel">EMAIL ADDRESS</label>
+            <input type="email" name="email" class="c-finput" placeholder="alex@company.com" required>
+          </div>
+
+          <div class="c-fgroup">
+            <label class="c-flabel">YOUR MESSAGE</label>
+            <textarea name="message" class="c-ftextarea" placeholder="Tell me about your project, timeline, or position..." required></textarea>
+          </div>
+
+          <button type="submit" class="c-submit-btn">
+            <span>SEND MESSAGE</span> 🚀
+          </button>
+
+          <div id="contact-toast" class="toast-msg">
+            ✓ Message sent successfully! I will respond shortly.
+          </div>
+        </form>
       </div>
     </div>
   </div>
-  <footer class="footer-bar" style="margin-top:60px">
-    <div class="footer-bar-left"><div class="nav-mono" style="width:30px;height:30px;font-size:0.72rem">NB</div><span class="footer-name">Nithish Bharathwaj N</span></div>
-    <span class="footer-tags">Cybersecurity · AI · Full-Stack · Real-Time Systems</span>
-    <span class="footer-copy">© 2026 Nithish Bharathwaj N. Designed &amp; engineered by me.</span>
-  </footer>
 </section>
 
 
