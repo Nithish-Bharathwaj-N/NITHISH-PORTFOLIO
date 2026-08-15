@@ -39,17 +39,6 @@ export function Projects() {
       tech: ['Python', 'Flask', 'Scikit-Learn', 'MySQL'],
       caseStudy: 'https://github.com/Nithish-Bharathwaj-N/QUEUE-CURE---AI',
     },
-    {
-      name: 'SentinelX',
-      sub: 'Threat Intelligence & Log Analyzer',
-      desc: 'Security telemetry platform for real-time threat detection, log parsing and incident visualization.',
-      cat: ['cybersecurity', 'ai-ml'],
-      badge: 'Cybersecurity',
-      image: '',
-      tech: ['Python', 'FastAPI', 'SQLite', 'DKIM 2.0'],
-      caseStudy: 'https://github.com/Nithish-Bharathwaj-N',
-      liveDemo: 'https://github.com/Nithish-Bharathwaj-N',
-    },
   ];
 
   const filteredProjects = projects.filter(
@@ -91,7 +80,7 @@ export function Projects() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {filteredProjects.map((proj) => (
             <article
               key={proj.name}
