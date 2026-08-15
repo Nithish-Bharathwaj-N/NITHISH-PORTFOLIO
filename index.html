@@ -374,6 +374,267 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   .secondary-grid { grid-template-columns: 1fr; }
 }
 
+
+/* EXPERTISE DASHBOARD STYLING */
+#skills {
+  background: var(--dark-2);
+  padding: 100px 80px;
+}
+.exp-grid-top {
+  display: grid;
+  grid-template-columns: 280px 1fr 340px;
+  gap: 24px;
+  margin-top: 36px;
+  margin-bottom: 32px;
+  align-items: stretch;
+}
+@media(max-width:1200px) {
+  .exp-grid-top { grid-template-columns: 1fr; }
+}
+
+/* LEFT COLUMN */
+.exp-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.exp-stat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.exp-mini-card {
+  background: var(--dark-3);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius);
+  padding: 18px 14px;
+  text-align: center;
+}
+.exp-mini-icon { font-size: 1.3rem; margin-bottom: 6px; }
+.exp-mini-num {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.exp-mini-lbl {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* TERMINAL BLOCK */
+.exp-terminal {
+  background: #090d16;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-family: 'Space Grotesk', monospace;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.term-head {
+  background: rgba(255,255,255,0.04);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.term-dot { width: 8px; height: 8px; border-radius: 50%; }
+.term-dot.r { background: #ef4444; }
+.term-dot.y { background: #f59e0b; }
+.term-dot.g { background: #10b981; }
+.term-title { font-size: 0.68rem; color: rgba(255,255,255,0.4); margin-left: auto; }
+.term-body {
+  padding: 14px;
+  font-size: 0.74rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.8);
+}
+.term-cmd { color: var(--accent); font-weight: 700; }
+.term-text { color: rgba(255,255,255,0.7); margin-top: 6px; display: block; }
+.term-cursor { display: inline-block; width: 6px; height: 12px; background: var(--accent); margin-left: 2px; animation: blink 1s infinite; }
+
+/* CENTER RADIAL HUB */
+.exp-hub-wrap {
+  background: var(--dark-3);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius-lg);
+  padding: 32px 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+  overflow: hidden;
+}
+.exp-hub-container {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  height: 380px;
+  margin: 0 auto;
+}
+.hub-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,66,26,0.2) 0%, rgba(13,13,13,0.95) 70%);
+  border: 2px solid var(--accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+  box-shadow: 0 0 24px rgba(200,66,26,0.3);
+}
+.hub-center-mono {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1;
+}
+.hub-center-lbl {
+  font-size: 0.58rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+}
+
+/* NODES */
+.hub-node {
+  position: absolute;
+  width: 135px;
+  padding: 10px 12px;
+  background: rgba(13,13,13,0.92);
+  border-radius: 10px;
+  text-align: center;
+  z-index: 5;
+  transition: all var(--t) var(--ease);
+}
+.hub-node:hover { transform: scale(1.06); }
+.hub-node-icon { font-size: 1.1rem; margin-bottom: 3px; }
+.hub-node-title { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2; }
+.hub-node-sub { font-size: 0.6rem; color: rgba(255,255,255,0.45); margin-top: 2px; }
+
+/* NODE POSITIONS & COLORS */
+.node-cyber { top: 10px; left: 50%; transform: translateX(-50%); border: 1.5px solid #c8421a; color: #fff; }
+.node-cyber:hover { transform: translateX(-50%) scale(1.06); box-shadow: 0 0 18px rgba(200,66,26,0.4); }
+
+.node-ai { top: 90px; right: 10px; border: 1.5px solid #10b981; color: #fff; }
+.node-ai:hover { box-shadow: 0 0 18px rgba(16,185,129,0.4); }
+
+.node-realtime { bottom: 25px; right: 35px; border: 1.5px solid #f59e0b; color: #fff; }
+.node-realtime:hover { box-shadow: 0 0 18px rgba(245,158,11,0.4); }
+
+.node-cloud { bottom: 25px; left: 35px; border: 1.5px solid #06b6d4; color: #fff; }
+.node-cloud:hover { box-shadow: 0 0 18px rgba(6,182,212,0.4); }
+
+.node-fullstack { top: 90px; left: 10px; border: 1.5px solid #a855f7; color: #fff; }
+.node-fullstack:hover { box-shadow: 0 0 18px rgba(168,85,247,0.4); }
+
+/* SVG CONNECTING RINGS */
+.hub-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* RIGHT COLUMN (TECH ARSENAL) */
+.exp-right-col {
+  background: var(--dark-3);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius-lg);
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+}
+.arsenal-hdr {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.arsenal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.arsenal-item { display: flex; flex-direction: column; gap: 4px; }
+.arsenal-info { display: flex; justify-content: space-between; font-size: 0.76rem; font-weight: 700; color: rgba(255,255,255,0.85); }
+.arsenal-val { color: var(--accent); font-size: 0.72rem; }
+.arsenal-bar-bg { height: 5px; background: rgba(255,255,255,0.08); border-radius: 999px; overflow: hidden; }
+.arsenal-bar-fill { height: 100%; background: linear-gradient(90deg, var(--accent), #f97316); border-radius: 999px; }
+
+/* MIDDLE MARQUEE */
+.exp-marquee-wrap {
+  background: var(--dark-3);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 32px;
+}
+.exp-sec-hdr {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+/* BOTTOM PRINCIPLES */
+.exp-principles-wrap {
+  background: var(--dark-3);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+}
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+@media(max-width:1024px) { .principles-grid { grid-template-columns: repeat(3, 1fr); } }
+@media(max-width:640px) { .principles-grid { grid-template-columns: 1fr; } }
+.principle-card {
+  background: rgba(13,13,13,0.6);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  padding: 18px 14px;
+  transition: all var(--t) var(--ease);
+}
+.principle-card:hover {
+  border-color: rgba(200,66,26,0.35);
+  transform: translateY(-3px);
+  background: rgba(200,66,26,0.04);
+}
+.p-num { font-family: var(--font-display); font-size: 1.1rem; font-weight: 900; color: var(--accent); margin-bottom: 6px; }
+.p-title { font-size: 0.8rem; font-weight: 800; color: #fff; margin-bottom: 6px; }
+.p-desc { font-size: 0.72rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
+
 </style>
 </head>
 <body>
@@ -488,21 +749,218 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 
 <section id="skills" aria-labelledby="skills-title">
   <div class="skills-wrap">
-    <div class="skills-hdr">
-      <div><div class="sec-label">02</div><h2 id="skills-title" class="sec-title" style="color:#fff">Expertise &amp; Technology.</h2></div>
-      <p class="skills-note">Technologies and domains I work with across systems, AI &amp; security.</p>
+    <div class="sec-label">02</div>
+    <h2 id="skills-title" class="sec-title" style="color:#fff">Expertise &amp; <span style="color:var(--accent)">Technology.</span></h2>
+    <p style="font-size:0.9rem;color:var(--text-muted);max-width:540px;margin-top:10px;line-height:1.65;">Technologies and domains I work with to build secure, intelligent, and real-time systems that solve complex engineering problems.</p>
+
+    <!-- TOP DASHBOARD ROW (3 COLUMNS) -->
+    <div class="exp-grid-top">
+      <!-- LEFT COLUMN -->
+      <div class="exp-left-col fu">
+        <div class="exp-stat-row">
+          <div class="exp-mini-card">
+            <div class="exp-mini-icon">💻</div>
+            <div class="exp-mini-num">30+</div>
+            <div class="exp-mini-lbl">Technologies</div>
+          </div>
+          <div class="exp-mini-card">
+            <div class="exp-mini-icon">⭐</div>
+            <div class="exp-mini-num">5</div>
+            <div class="exp-mini-lbl">Core Domains</div>
+          </div>
+        </div>
+
+        <!-- TERMINAL BLOCK -->
+        <div class="exp-terminal">
+          <div class="term-head">
+            <span class="term-dot r"></span>
+            <span class="term-dot y"></span>
+            <span class="term-dot g"></span>
+            <span class="term-title">engineer@portfolio:~</span>
+          </div>
+          <div class="term-body">
+            <span class="term-cmd">&gt; engineer@portfolio:~$ cat philosophy.txt</span>
+            <span class="term-text">I combine security-first thinking with modern engineering practices to build systems that are scalable, reliable, and impactful.<span class="term-cursor"></span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CENTER RADIAL HUB DIAGRAM -->
+      <div class="exp-hub-wrap fu">
+        <div class="exp-hub-container">
+          <svg class="hub-svg" viewBox="0 0 440 380">
+            <circle cx="220" cy="190" r="130" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1.5" stroke-dasharray="4 4" />
+            <circle cx="220" cy="190" r="70" fill="none" stroke="rgba(200,66,26,0.18)" stroke-width="1.5" />
+            <!-- CONNECTING LINES TO NODES -->
+            <line x1="220" y1="190" x2="220" y2="45" stroke="#c8421a" stroke-width="1.5" opacity="0.6" />
+            <line x1="220" y1="190" x2="360" y2="115" stroke="#10b981" stroke-width="1.5" opacity="0.6" />
+            <line x1="220" y1="190" x2="335" y2="305" stroke="#f59e0b" stroke-width="1.5" opacity="0.6" />
+            <line x1="220" y1="190" x2="105" y2="305" stroke="#06b6d4" stroke-width="1.5" opacity="0.6" />
+            <line x1="220" y1="190" x2="80" y2="115" stroke="#a855f7" stroke-width="1.5" opacity="0.6" />
+          </svg>
+
+          <!-- CENTRAL CORE -->
+          <div class="hub-center">
+            <span class="hub-center-mono">NB</span>
+            <span class="hub-center-lbl">Core Engineering</span>
+          </div>
+
+          <!-- 5 DOMAIN NODES -->
+          <div class="hub-node node-cyber">
+            <div class="hub-node-icon">🛡️</div>
+            <div class="hub-node-title">Cybersecurity</div>
+            <div class="hub-node-sub">Security First</div>
+          </div>
+
+          <div class="hub-node node-ai">
+            <div class="hub-node-icon">🧠</div>
+            <div class="hub-node-title">AI &amp; ML</div>
+            <div class="hub-node-sub">Intelligence Layer</div>
+          </div>
+
+          <div class="hub-node node-realtime">
+            <div class="hub-node-icon">🧊</div>
+            <div class="hub-node-title">Real-Time 3D</div>
+            <div class="hub-node-sub">Simulate &amp; Visualize</div>
+          </div>
+
+          <div class="hub-node node-cloud">
+            <div class="hub-node-icon">☁️</div>
+            <div class="hub-node-title">Cloud &amp; DevOps</div>
+            <div class="hub-node-sub">Deploy &amp; Automate</div>
+          </div>
+
+          <div class="hub-node node-fullstack">
+            <div class="hub-node-icon">&lt;/&gt;</div>
+            <div class="hub-node-title">Full-Stack</div>
+            <div class="hub-node-sub">Build &amp; Scale</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN (TECH ARSENAL PROGRESS METERS) -->
+      <div class="exp-right-col fu">
+        <div class="arsenal-hdr">
+          <span>TECH ARSENAL</span>
+          <span style="color:rgba(255,255,255,0.4);font-size:0.6rem;">PROFICIENCY</span>
+        </div>
+        <div class="arsenal-list">
+          <div class="arsenal-item">
+            <div class="arsenal-info"><span>Python</span><span class="arsenal-val">90%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:90%;"></div></div>
+          </div>
+          <div class="arsenal-item">
+            <div class="arsenal-info"><span>TypeScript</span><span class="arsenal-val">85%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:85%;"></div></div>
+          </div>
+          <div class="arsenal-item">
+            <div class="arsenal-info"><span>React 19 / Next.js</span><span class="arsenal-val">88%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:88%;"></div></div>
+          </div>
+          <div class="arsenal-item">
+            <div class="arsenal-info"><span>FastAPI</span><span class="arsenal-val">85%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:85%;"></div></div>
+          </div>
+          <div class="arsenal-item">
+            <div class="arsenal-info"><span>PostgreSQL / MySQL</span><span class="arsenal-val">80%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:80%;"></div></div>
+          </div>
+          <div class="arsenal-item">
+            <div class="arsenal-info"><span>AWS</span><span class="arsenal-val">75%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:75%;"></div></div>
+          </div>
+          <div class="arsenal-item">
+            <div class="arsenal-info"><span>Docker</span><span class="arsenal-val">80%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:80%;"></div></div>
+          </div>
+          <div class="arsenal-item">
+            <div class="arsenal-info"><span>Three.js / WebGL</span><span class="arsenal-val">78%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:78%;"></div></div>
+          </div>
+          <div class="arsenal-item">
+            <div class="arsenal-info"><span>WebSockets</span><span class="arsenal-val">85%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:85%;"></div></div>
+          </div>
+          <div class="arsenal-item">
+            <div class="arsenal-info"><span>Linux Security</span><span class="arsenal-val">85%</span></div>
+            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:85%;"></div></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="skill-cats">
-      <div class="skill-cat fu"><div class="sc-icon" style="background:rgba(34,197,94,0.1)">🔒</div><div class="sc-title">Cybersecurity &amp; Security</div><ul class="sc-list"><li>Linux Security</li><li>Web Security (OWASP)</li><li>OAuth 2.0 / Auth</li><li>Secure API Design</li><li>Threat Modeling</li><li>Security Automation</li></ul></div>
-      <div class="skill-cat fu"><div class="sc-icon" style="background:rgba(99,102,241,0.1)">⚡</div><div class="sc-title">Full-Stack Engineering</div><ul class="sc-list"><li>Python 3.12</li><li>React 19 / Next.js</li><li>Node.js / Express</li><li>FastAPI</li><li>PostgreSQL / MySQL</li><li>TypeScript</li></ul></div>
-      <div class="skill-cat fu"><div class="sc-icon" style="background:rgba(245,158,11,0.1)">🧠</div><div class="sc-title">AI &amp; Machine Learning</div><ul class="sc-list"><li>LLM APIs (Gemini, OpenAI)</li><li>Scikit-Learn</li><li>PyTorch</li><li>AI Agents &amp; RAG</li><li>Predictive Analytics</li></ul></div>
-      <div class="skill-cat fu"><div class="sc-icon" style="background:rgba(14,165,233,0.1)">☁️</div><div class="sc-title">Cloud &amp; DevOps</div><ul class="sc-list"><li>AWS Cloud</li><li>Docker</li><li>GitHub Actions</li><li>Linux Administration</li><li>CI/CD Basics</li></ul></div>
-      <div class="skill-cat fu"><div class="sc-icon" style="background:rgba(200,66,26,0.1)">🌐</div><div class="sc-title">Real-Time &amp; 3D Systems</div><ul class="sc-list"><li>Three.js / WebGL</li><li>WebSockets</li><li>Blender 3D</li><li>Digital Twins</li><li>Telemetry Systems</li></ul></div>
+
+    <!-- MIDDLE TECHNOLOGY ECOSYSTEM MARQUEE -->
+    <div class="exp-marquee-wrap fu">
+      <div class="exp-sec-hdr">TECHNOLOGY ECOSYSTEM •</div>
+      <div class="marquee">
+        <div class="marquee-inner">
+          <span class="tech-pill">🐍 Python</span>
+          <span class="tech-pill">⚡ TypeScript</span>
+          <span class="tech-pill">⚛️ React 19</span>
+          <span class="tech-pill">▲ Next.js</span>
+          <span class="tech-pill">🟢 Node.js</span>
+          <span class="tech-pill">⚡ FastAPI</span>
+          <span class="tech-pill">🐘 PostgreSQL</span>
+          <span class="tech-pill">🐬 MySQL</span>
+          <span class="tech-pill">🍃 MongoDB</span>
+          <span class="tech-pill">🔴 Redis</span>
+          <span class="tech-pill">🔌 WebSockets</span>
+          <span class="tech-pill">🎲 Three.js</span>
+          <span class="tech-pill">🎨 Tailwind CSS</span>
+          <span class="tech-pill">☁️ AWS</span>
+          <span class="tech-pill">🐙 Git</span>
+          <span class="tech-pill">🐧 Linux</span>
+
+          <!-- REPEAT FOR SEAMLESS LOOP -->
+          <span class="tech-pill">🐍 Python</span>
+          <span class="tech-pill">⚡ TypeScript</span>
+          <span class="tech-pill">⚛️ React 19</span>
+          <span class="tech-pill">▲ Next.js</span>
+          <span class="tech-pill">🟢 Node.js</span>
+          <span class="tech-pill">⚡ FastAPI</span>
+          <span class="tech-pill">🐘 PostgreSQL</span>
+          <span class="tech-pill">🐬 MySQL</span>
+          <span class="tech-pill">🍃 MongoDB</span>
+          <span class="tech-pill">🔴 Redis</span>
+          <span class="tech-pill">🔌 WebSockets</span>
+          <span class="tech-pill">🎲 Three.js</span>
+          <span class="tech-pill">🎨 Tailwind CSS</span>
+          <span class="tech-pill">☁️ AWS</span>
+          <span class="tech-pill">🐙 Git</span>
+          <span class="tech-pill">🐧 Linux</span>
+        </div>
+      </div>
     </div>
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-inner">
-        <span class="tech-pill">Python</span><span class="tech-pill">React 19</span><span class="tech-pill">Next.js</span><span class="tech-pill">TypeScript</span><span class="tech-pill">Three.js</span><span class="tech-pill">FastAPI</span><span class="tech-pill">Node.js</span><span class="tech-pill">Docker</span><span class="tech-pill">AWS Cloud</span><span class="tech-pill">Linux Security</span><span class="tech-pill">PyTorch</span><span class="tech-pill">PostgreSQL</span><span class="tech-pill">WebSockets</span><span class="tech-pill">Git / GitHub</span><span class="tech-pill">C++</span><span class="tech-pill">HTML5 / CSS3</span><span class="tech-pill">Scikit-Learn</span><span class="tech-pill">Tailwind CSS</span><span class="tech-pill">Express.js</span><span class="tech-pill">Blender 3D</span>
-        <span class="tech-pill">Python</span><span class="tech-pill">React 19</span><span class="tech-pill">Next.js</span><span class="tech-pill">TypeScript</span><span class="tech-pill">Three.js</span><span class="tech-pill">FastAPI</span><span class="tech-pill">Node.js</span><span class="tech-pill">Docker</span><span class="tech-pill">AWS Cloud</span><span class="tech-pill">Linux Security</span><span class="tech-pill">PyTorch</span><span class="tech-pill">PostgreSQL</span><span class="tech-pill">WebSockets</span><span class="tech-pill">Git / GitHub</span><span class="tech-pill">C++</span><span class="tech-pill">HTML5 / CSS3</span><span class="tech-pill">Scikit-Learn</span><span class="tech-pill">Tailwind CSS</span><span class="tech-pill">Express.js</span><span class="tech-pill">Blender 3D</span>
+
+    <!-- BOTTOM ENGINEERING PRINCIPLES ROW -->
+    <div class="exp-principles-wrap fu">
+      <div class="exp-sec-hdr" style="color:var(--accent)">ENGINEERING PRINCIPLES •</div>
+      <div class="principles-grid">
+        <div class="principle-card">
+          <div class="p-num">01</div>
+          <div class="p-title">Security</div>
+          <div class="p-desc">Every system I build follows zero-trust principles and secure design patterns.</div>
+        </div>
+        <div class="principle-card">
+          <div class="p-num">02</div>
+          <div class="p-title">Clean Architecture</div>
+          <div class="p-desc">Scalable, maintainable, and modular architectures that stand the test of time.</div>
+        </div>
+        <div class="principle-card">
+          <div class="p-num">03</div>
+          <div class="p-title">Real-Time Oriented</div>
+          <div class="p-desc">Building low-latency systems with real-time data pipelines and event-driven design.</div>
+        </div>
+        <div class="principle-card">
+          <div class="p-num">04</div>
+          <div class="p-title">Intelligent Systems</div>
+          <div class="p-desc">Leveraging AI/ML to create systems that learn, predict, and make real impact.</div>
+        </div>
+        <div class="principle-card">
+          <div class="p-num">05</div>
+          <div class="p-title">Build for Impact</div>
+          <div class="p-desc">Solving meaningful engineering problems for aerospace, healthcare, and security.</div>
+        </div>
       </div>
     </div>
   </div>
