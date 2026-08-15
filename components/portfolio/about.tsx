@@ -76,9 +76,15 @@ export function About() {
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-2">
                   Education <span className="flex-1 h-[1px] bg-slate-200" />
                 </div>
-                <div>
-                  <strong className="block text-xs font-bold text-slate-800">B.E. CSE (Cyber Security)</strong>
-                  <span className="text-[0.78rem] text-slate-500">Chennai Institute of Technology (2025–Present)</span>
+                <div className="space-y-3">
+                  <div>
+                    <strong className="block text-xs font-bold text-slate-800">B.E. CSE (Cyber Security)</strong>
+                    <span className="text-[0.78rem] text-slate-500">Chennai Institute of Technology (2025–Present)</span>
+                  </div>
+                  <div>
+                    <strong className="block text-xs font-bold text-slate-800">Class XII — 88.4%</strong>
+                    <span className="text-[0.78rem] text-slate-500">SSBM</span>
+                  </div>
                 </div>
               </div>
 
