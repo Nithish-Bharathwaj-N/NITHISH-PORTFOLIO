@@ -705,6 +705,59 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   font-weight: 500;
 }
 
+
+/* ACHIEVEMENTS LIVE GRAPHS & HEATMAPS */
+.ach-graphs-wrap {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.graph-box {
+  background: var(--dark-2);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  transition: all var(--t) var(--ease);
+}
+.graph-box:hover {
+  border-color: rgba(200,66,26,0.35);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+}
+.graph-hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.graph-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.graph-sub {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.45);
+}
+.gh-chart-img {
+  width: 100%;
+  height: auto;
+  max-height: 130px;
+  object-fit: contain;
+  filter: contrast(1.1) brightness(1.05);
+}
+.leet-card-img {
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 12px;
+}
+
 </style>
 </head>
 <body>
@@ -1166,14 +1219,42 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 <section id="achievements" aria-labelledby="ach-title">
   <div class="ach-wrap">
     <div class="sec-label">04</div>
-    <h2 id="ach-title" class="sec-title" style="color:#fff">Key Achievements.</h2>
+    <h2 id="ach-title" class="sec-title" style="color:#fff">Key Achievements &amp; <span style="color:var(--accent)">Activity.</span></h2>
+    <p style="font-size:0.9rem;color:var(--text-muted);max-width:540px;margin-top:10px;line-height:1.65;">Verified metrics, continuous coding streaks, LeetCode problem solving, and live contribution heatmaps.</p>
+    
     <div class="ach-grid">
-      <div class="ach-card fu"><span class="ach-icon">💻</span><div class="ach-num" data-target="500" data-suffix="+">0</div><div class="ach-title">LeetCode Problems Solved</div><div class="ach-desc">Strong foundation in DSA, algorithms and problem solving.</div></div>
+      <div class="ach-card fu"><span class="ach-icon">💻</span><div class="ach-num" data-target="500" data-suffix="+">0</div><div class="ach-title">LeetCode Solved</div><div class="ach-desc">Strong foundation in DSA, algorithms and problem solving.</div></div>
       <div class="ach-card fu"><span class="ach-icon">📊</span><div class="ach-num" data-target="1771" data-suffix="">0</div><div class="ach-title">Peak Contest Rating</div><div class="ach-desc">Achieved a peak rating of 1771 with 118-day coding streak.</div></div>
       <div class="ach-card fu"><span class="ach-icon">🏆</span><div class="ach-num">Top 8</div><div class="ach-title">Aerothon 2026 Finalist</div><div class="ach-desc">Ranked Top 8 nationwide in HAL &amp; IIT Indore Aerothon 2026.</div></div>
       <div class="ach-card fu"><span class="ach-icon">🚀</span><div class="ach-num" data-target="5" data-suffix="+">0</div><div class="ach-title">National Hackathon Finalist</div><div class="ach-desc">Finalist in 5+ national-level hackathons across domains.</div></div>
     </div>
-    <div class="ach-cta"><a href="https://www.linkedin.com/in/nithish-bharathwaj-n-847a00379" target="_blank" rel="noopener" class="btn-outline-light">View All Achievements ↗</a></div>
+
+    <!-- LIVE GITHUB & LEETCODE CONTRIBUTION GRAPHS -->
+    <div class="ach-graphs-wrap fu">
+      <!-- GITHUB GREEN BOXES HEATMAP -->
+      <div class="graph-box">
+        <div class="graph-hdr">
+          <div class="graph-title"><span>🐙</span> GitHub Live Contributions (Green Boxes Heatmap)</div>
+          <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener" class="graph-sub" style="color:var(--accent);text-decoration:none;">@Nithish-Bharathwaj-N ↗</a>
+        </div>
+        <div style="overflow-x:auto;padding:8px 0;text-align:center;">
+          <img src="https://ghchart.rshah.org/4ade80/Nithish-Bharathwaj-N" alt="Nithish Bharathwaj N GitHub Green Contribution Graph" class="gh-chart-img" loading="lazy">
+        </div>
+      </div>
+
+      <!-- LEETCODE ACTIVITY CARD -->
+      <div class="graph-box">
+        <div class="graph-hdr">
+          <div class="graph-title"><span>⚡</span> LeetCode Live Stats &amp; Activity</div>
+          <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener" class="graph-sub" style="color:var(--accent);text-decoration:none;">@nithish_cit ↗</a>
+        </div>
+        <div style="text-align:center;padding:10px 0;">
+          <img src="https://leetcard.jacoblin.cool/nithish_cit?theme=dark&font=Space%20Grotesk&ext=heatmap" alt="Nithish Bharathwaj N LeetCode Stats Card & Activity Heatmap" class="leet-card-img" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="ach-cta" style="margin-top:32px;"><a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener" class="btn-outline-light">View Full LeetCode Profile ↗</a></div>
   </div>
 </section>
 
