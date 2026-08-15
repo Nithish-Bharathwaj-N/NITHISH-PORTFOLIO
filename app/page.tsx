@@ -4015,6 +4015,333 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 @media(max-width:1024px) { .je-track { grid-template-columns: repeat(3, 1fr); } }
 @media(max-width:600px) { .je-track { grid-template-columns: 1fr; } }
 
+
+/* EXACT MATCH TO REFERENCE IMAGE media_1786813142528.png */
+#about {
+  background: #ffffff;
+  padding: 80px 48px 60px;
+}
+@media(max-width:860px) { #about { padding: 60px 20px 40px; } }
+
+.about-ref-container {
+  max-width: 1680px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.about-ref-top-grid {
+  display: grid;
+  grid-template-columns: 340px 1.2fr 1fr;
+  gap: 40px;
+  margin-top: 20px;
+  margin-bottom: 32px;
+  align-items: start;
+}
+@media(max-width:1300px) { .about-ref-top-grid { grid-template-columns: 300px 1fr; } .about-right-col { grid-column: span 2; } }
+@media(max-width:960px) { .about-ref-top-grid { grid-template-columns: 1fr; } .about-right-col { grid-column: span 1; } }
+
+/* LEFT PHOTO & HEADER BLOCK */
+.about-ref-left {
+  display: flex;
+  flex-direction: column;
+}
+.ref-sec-num {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  margin-bottom: 8px;
+}
+.ref-sec-num::after {
+  content: ' ——';
+  color: #cbd5e1;
+}
+
+.ref-about-h2 {
+  font-family: var(--font-display);
+  font-size: 3.4rem;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+}
+.ref-about-h2 span {
+  color: var(--accent);
+}
+
+.ref-quote-text {
+  font-size: 0.84rem;
+  font-style: italic;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* PORTRAIT HOODIE PHOTO WITH SOFT PEACH CIRCLE BACKDROP & ORBIT ARCS */
+.ref-photo-stage {
+  position: relative;
+  width: 280px;
+  height: 310px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.ref-peach-circle {
+  position: absolute;
+  bottom: 0;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%);
+  z-index: 1;
+}
+.ref-orbit-arcs {
+  position: absolute;
+  right: -15px;
+  top: 40px;
+  width: 260px;
+  height: 260px;
+  border-right: 1px solid rgba(200,66,26,0.25);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+.ref-dots-grid {
+  position: absolute;
+  left: -20px;
+  top: 60px;
+  width: 50px;
+  height: 100px;
+  background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
+  background-size: 10px 10px;
+  z-index: 0;
+  opacity: 0.6;
+}
+.ref-portrait-img {
+  position: relative;
+  z-index: 2;
+  width: 260px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* CENTER COLUMN: WHO AM I & 4 STATS */
+.about-ref-center {
+  display: flex;
+  flex-direction: column;
+}
+.ref-hdr-label {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.ref-hdr-icon {
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.ref-who-p {
+  font-size: 0.9rem;
+  line-height: 1.78;
+  color: #475569;
+  margin-bottom: 16px;
+}
+.ref-who-p strong {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.ref-divider-line {
+  height: 1px;
+  background: #f1f5f9;
+  margin: 32px 0 28px;
+}
+
+.ref-4stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+@media(max-width:600px) { .ref-4stats-row { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
+
+.ref-stat-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ref-stat-icon {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.ref-stat-num {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.ref-stat-lbl {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #64748b;
+}
+
+/* RIGHT COLUMN: SKILLS OVERVIEW & BEYOND CODE */
+.about-ref-right {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.ref-skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ref-sb-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ref-sb-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+.ref-sb-[#c8421a] { color: var(--accent); }
+.ref-sb-bg {
+  height: 5px;
+  background: #f1f5f9;
+  border-radius: 99px;
+  overflow: hidden;
+}
+.ref-sb-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #f97316);
+  border-radius: 99px;
+}
+
+/* BEYOND CODE 5 ITEMS HORIZONTAL GRID */
+.ref-beyond-5grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+@media(max-width:600px) { .ref-beyond-5grid { grid-template-columns: repeat(3, 1fr); } }
+
+.ref-b5-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.ref-b5-icon {
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.ref-b5-lbl {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #475569;
+  line-height: 1.3;
+}
+
+/* BOTTOM TIMELINE CARD */
+.ref-journey-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  margin-top: 10px;
+}
+.ref-jt-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  position: relative;
+  margin-top: 24px;
+}
+@media(max-width:1024px) { .ref-jt-grid { grid-template-columns: repeat(3, 1fr); } }
+@media(max-width:600px) { .ref-jt-grid { grid-template-columns: 1fr; } }
+
+.ref-jt-grid::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent) 0%, #f97316 75%, #10b981 100%);
+  z-index: 0;
+}
+@media(max-width:1024px) { .ref-jt-grid::before { display: none; } }
+
+.ref-jt-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.ref-jt-time {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.ref-jt-node {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.ref-jt-node.now-node {
+  background: #10b981;
+  border-color: #ffffff;
+  color: #ffffff;
+  box-shadow: 0 0 16px #10b981;
+}
+.ref-jt-title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+.ref-jt-desc {
+  font-size: 0.68rem;
+  color: #64748b;
+  line-height: 1.45;
+}
+
 ` }} />
       <div dangerouslySetInnerHTML={{ __html: `
 <a id="skip-link" href="#intro">Skip to content</a>
@@ -4078,240 +4405,185 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 </section>
 
 <section id="about" aria-labelledby="about-title">
-  <div class="about-exact-container">
+  <div class="about-ref-container">
     <!-- MAIN 3-COLUMN LAYOUT -->
-    <div class="about-exact-grid fu">
-      <!-- LEFT COLUMN: TITLE, QUOTE, CIRCULAR PHOTO & SPECS -->
-      <div class="about-left-col">
-        <div class="sec-label dark-lbl" style="width:100%;">02 ------</div>
-        <h2 id="about-title" class="sec-title" style="color:#0f172a;font-size:2.8rem;margin-bottom:12px;width:100%;">ABOUT<br><span style="color:var(--accent)">ME.</span></h2>
-        
-        <p class="about-quote-box">“ I enjoy solving complex problems, building real-world solutions, and constantly learning. ”</p>
+    <div class="about-ref-top-grid fu">
+      <!-- LEFT COLUMN: TITLE, QUOTE, PORTRAIT CUTOUT WITH PEACH BACKDROP -->
+      <div class="about-ref-left">
+        <div class="ref-sec-num">02</div>
+        <h2 id="about-title" class="ref-about-h2">ABOUT<br><span>ME.</span></h2>
+        <p class="ref-quote-text">I enjoy solving complex problems, building real-world solutions, and constantly learning.</p>
 
-        <!-- PERFECT CIRCULAR PHOTO FRAME -->
-        <div class="circle-photo-wrapper">
-          <div class="circle-photo-glow"></div>
-          <img src="images/nithish-about.jpg" alt="Nithish Bharathwaj N Portrait" class="circle-photo-img">
-        </div>
-
-        <!-- SPEC LIST -->
-        <div class="spec-list-exact">
-          <div class="sle-item">
-            <div class="sle-icon">👤</div>
-            <div>
-              <div class="sle-lbl">NAME</div>
-              <div class="sle-val">Nithish Bharathwaj N</div>
-            </div>
-          </div>
-
-          <div class="sle-item">
-            <div class="sle-icon">💼</div>
-            <div>
-              <div class="sle-lbl">ROLE</div>
-              <div class="sle-val">Cybersecurity • AI/ML • Full-Stack Engineer</div>
-            </div>
-          </div>
-
-          <div class="sle-item">
-            <div class="sle-icon">🎓</div>
-            <div>
-              <div class="sle-lbl">EDUCATION</div>
-              <div class="sle-val">BE Cybersecurity<br>Chennai Institute of Technology</div>
-            </div>
-          </div>
-
-          <div class="sle-item">
-            <div class="sle-icon">📍</div>
-            <div>
-              <div class="sle-lbl">LOCATION</div>
-              <div class="sle-val">Chennai, Tamil Nadu, India</div>
-            </div>
-          </div>
-
-          <div class="sle-item">
-            <div class="sle-icon">✉️</div>
-            <div>
-              <div class="sle-lbl">EMAIL</div>
-              <div class="sle-val">nithishbharathwajn@gmail.com</div>
-            </div>
-          </div>
-
-          <div class="sle-item">
-            <div class="sle-icon">🗣️</div>
-            <div>
-              <div class="sle-lbl">LANGUAGES</div>
-              <div class="sle-val">Tamil (Native) • English (Fluent)</div>
-            </div>
-          </div>
+        <!-- PORTRAIT STAGE -->
+        <div class="ref-photo-stage">
+          <div class="ref-dots-grid"></div>
+          <div class="ref-orbit-arcs"></div>
+          <div class="ref-peach-circle"></div>
+          <img src="images/nithish-photo.jpg" alt="Nithish Bharathwaj N Portrait" class="ref-portrait-img">
         </div>
       </div>
 
-      <!-- CENTER COLUMN: WHO AM I & MY APPROACH -->
-      <div class="about-center-col">
-        <!-- WHO AM I CARD -->
-        <div class="exact-card">
-          <div class="ec-hdr"><span style="color:var(--accent);">👤</span> WHO AM I?</div>
-          <p class="who-text-exact">
-            I'm a second-year BE Cybersecurity student at <strong style="color:var(--accent);">Chennai Institute of Technology</strong> with a strong passion for problem solving, building impactful projects, and exploring the intersection of security, AI, and full-stack development.<br><br>
-            I love learning by doing. From competitive programming to cybersecurity, from full-stack development to AI/ML, I enjoy turning ideas into real solutions. Hackathons, projects, and challenges keep me motivated to grow every day.
-          </p>
-
-          <div class="who-4stats">
-            <div class="w4s-box">
-              <div class="w4s-icon">&lt;/&gt;</div>
-              <div class="w4s-num">500+</div>
-              <div class="w4s-lbl">LeetCode Problems</div>
-            </div>
-
-            <div class="w4s-box">
-              <div class="w4s-icon">🏆</div>
-              <div class="w4s-num">5+</div>
-              <div class="w4s-lbl">Hackathon Finalist</div>
-            </div>
-
-            <div class="w4s-box">
-              <div class="w4s-icon">🚀</div>
-              <div class="w4s-num">3+</div>
-              <div class="w4s-lbl">Major Projects</div>
-            </div>
-
-            <div class="w4s-box">
-              <div class="w4s-icon">⏱️</div>
-              <div class="w4s-num">5-6 Hrs</div>
-              <div class="w4s-lbl">Daily Learning</div>
-            </div>
-          </div>
+      <!-- CENTER COLUMN: WHO AM I & 4 STATS -->
+      <div class="about-ref-center">
+        <div class="ref-hdr-label">
+          <span class="ref-hdr-icon">👤</span> WHO AM I?
         </div>
+        
+        <p class="ref-who-p">
+          I'm a second-year BE Cybersecurity student at <strong>Chennai Institute of Technology</strong> with a strong passion for problem solving, building impactful projects, and exploring the intersection of security, AI, and full-stack development.
+        </p>
 
-        <!-- MY APPROACH CARD -->
-        <div class="exact-card">
-          <div class="ec-hdr"><span style="color:var(--accent);">💡</span> MY APPROACH</div>
-          <div class="approach-steps-exact">
-            <div class="ase-step">
-              <div class="ase-icon-circle">💡</div>
-              <div class="ase-title">LEARN</div>
-              <div class="ase-desc">Understand deeply and explore possibilities.</div>
-            </div>
+        <p class="ref-who-p">
+          I love learning by doing. From competitive programming to cybersecurity, from full-stack development to AI/ML, I enjoy turning ideas into real solutions. Hackathons, projects, and challenges keep me motivated to grow every day.
+        </p>
 
-            <div class="ase-step">
-              <div class="ase-icon-circle">&lt;/&gt;</div>
-              <div class="ase-title">BUILD</div>
-              <div class="ase-desc">Build, break, debug and make it better.</div>
-            </div>
+        <div class="ref-divider-line"></div>
 
-            <div class="ase-step">
-              <div class="ase-icon-circle">🎯</div>
-              <div class="ase-title">SOLVE</div>
-              <div class="ase-desc">Solve real-world problems with impact.</div>
-            </div>
+        <!-- 4 STATS ROW -->
+        <div class="ref-4stats-row">
+          <div class="ref-stat-col">
+            <div class="ref-stat-icon">&lt;/&gt;</div>
+            <div class="ref-stat-num">500+</div>
+            <div class="ref-stat-lbl">LeetCode<br>Problems</div>
+          </div>
 
-            <div class="ase-step">
-              <div class="ase-icon-circle">📈</div>
-              <div class="ase-title">IMPROVE</div>
-              <div class="ase-desc">Iterate, optimize and keep leveling up.</div>
-            </div>
+          <div class="ref-stat-col">
+            <div class="ref-stat-icon">🏆</div>
+            <div class="ref-stat-num">5+</div>
+            <div class="ref-stat-lbl">Hackathon<br>Finalist</div>
+          </div>
+
+          <div class="ref-stat-col">
+            <div class="ref-stat-icon">🚀</div>
+            <div class="ref-stat-num">3+</div>
+            <div class="ref-stat-lbl">Major<br>Projects</div>
+          </div>
+
+          <div class="ref-stat-col">
+            <div class="ref-stat-icon">⏱️</div>
+            <div class="ref-stat-num">5-6 Hrs</div>
+            <div class="ref-stat-lbl">Daily<br>Learning</div>
           </div>
         </div>
       </div>
 
       <!-- RIGHT COLUMN: SKILLS OVERVIEW & BEYOND CODE -->
-      <div class="about-right-col">
-        <!-- SKILLS OVERVIEW -->
-        <div class="exact-card">
-          <div class="ec-hdr"><span style="color:var(--accent);">📊</span> SKILLS OVERVIEW</div>
-          <div class="skills-bars-exact">
-            <div class="sbe-item">
-              <div class="sbe-hdr"><span>Cybersecurity</span><span style="color:var(--accent);">85%</span></div>
-              <div class="sbe-bg"><div class="sbe-fill" style="width:85%;"></div></div>
+      <div class="about-ref-right">
+        <div>
+          <div class="ref-hdr-label">
+            <span class="ref-hdr-icon">📊</span> SKILLS OVERVIEW
+          </div>
+          <div class="ref-skills-list">
+            <div class="ref-sb-item">
+              <div class="ref-sb-info"><span>Cybersecurity</span><span style="color:var(--accent);">85%</span></div>
+              <div class="ref-sb-bg"><div class="ref-sb-fill" style="width:85%;"></div></div>
             </div>
 
-            <div class="sbe-item">
-              <div class="sbe-hdr"><span>Web Development</span><span style="color:var(--accent);">80%</span></div>
-              <div class="sbe-bg"><div class="sbe-fill" style="width:80%;"></div></div>
+            <div class="ref-sb-item">
+              <div class="ref-sb-info"><span>Web Development</span><span style="color:var(--accent);">80%</span></div>
+              <div class="ref-sb-bg"><div class="ref-sb-fill" style="width:80%;"></div></div>
             </div>
 
-            <div class="sbe-item">
-              <div class="sbe-hdr"><span>AI / Machine Learning</span><span style="color:var(--accent);">70%</span></div>
-              <div class="sbe-bg"><div class="sbe-fill" style="width:70%;"></div></div>
+            <div class="ref-sb-item">
+              <div class="ref-sb-info"><span>AI / Machine Learning</span><span style="color:var(--accent);">70%</span></div>
+              <div class="ref-sb-bg"><div class="ref-sb-fill" style="width:70%;"></div></div>
             </div>
 
-            <div class="sbe-item">
-              <div class="sbe-hdr"><span>Data Structures &amp; Algorithms</span><span style="color:var(--accent);">90%</span></div>
-              <div class="sbe-bg"><div class="sbe-fill" style="width:90%;"></div></div>
+            <div class="ref-sb-item">
+              <div class="ref-sb-info"><span>Data Structures &amp; Algorithms</span><span style="color:var(--accent);">90%</span></div>
+              <div class="ref-sb-bg"><div class="ref-sb-fill" style="width:90%;"></div></div>
             </div>
 
-            <div class="sbe-item">
-              <div class="sbe-hdr"><span>Problem Solving</span><span style="color:var(--accent);">90%</span></div>
-              <div class="sbe-bg"><div class="sbe-fill" style="width:90%;"></div></div>
+            <div class="ref-sb-item">
+              <div class="ref-sb-info"><span>Problem Solving</span><span style="color:var(--accent);">90%</span></div>
+              <div class="ref-sb-bg"><div class="ref-sb-fill" style="width:90%;"></div></div>
             </div>
 
-            <div class="sbe-item">
-              <div class="sbe-hdr"><span>Databases</span><span style="color:var(--accent);">75%</span></div>
-              <div class="sbe-bg"><div class="sbe-fill" style="width:75%;"></div></div>
+            <div class="ref-sb-item">
+              <div class="ref-sb-info"><span>Databases</span><span style="color:var(--accent);">75%</span></div>
+              <div class="ref-sb-bg"><div class="ref-sb-fill" style="width:75%;"></div></div>
             </div>
 
-            <div class="sbe-item">
-              <div class="sbe-hdr"><span>DevOps &amp; Tools</span><span style="color:var(--accent);">65%</span></div>
-              <div class="sbe-bg"><div class="sbe-fill" style="width:65%;"></div></div>
+            <div class="ref-sb-item">
+              <div class="ref-sb-info"><span>DevOps &amp; Tools</span><span style="color:var(--accent);">65%</span></div>
+              <div class="ref-sb-bg"><div class="ref-sb-fill" style="width:65%;"></div></div>
             </div>
           </div>
         </div>
 
-        <!-- BEYOND CODE (8 ITEMS) -->
-        <div class="exact-card">
-          <div class="ec-hdr"><span style="color:var(--accent);">🤍</span> BEYOND CODE</div>
-          <div class="beyond-8grid">
-            <div class="b8-item"><div class="b8-icon">📖</div><div class="b8-title">Reading Books</div></div>
-            <div class="b8-item"><div class="b8-icon">🏋️</div><div class="b8-title">Workout &amp; Fitness</div></div>
-            <div class="b8-item"><div class="b8-icon">🎬</div><div class="b8-title">Tamil Movies</div></div>
-            <div class="b8-item"><div class="b8-icon">✈️</div><div class="b8-title">Travel &amp; Exploration</div></div>
+        <div>
+          <div class="ref-hdr-label">
+            <span class="ref-hdr-icon">❤️</span> BEYOND CODE
+          </div>
+          <div class="ref-beyond-5grid">
+            <div class="ref-b5-item">
+              <div class="ref-b5-icon">📖</div>
+              <div class="ref-b5-lbl">Reading<br>Books</div>
+            </div>
 
-            <div class="b8-item"><div class="b8-icon">📈</div><div class="b8-title">Personal Growth</div></div>
-            <div class="b8-item"><div class="b8-icon">🎧</div><div class="b8-title">Music &amp; Focus</div></div>
-            <div class="b8-item"><div class="b8-icon">🏏</div><div class="b8-title">Cricket Player</div></div>
-            <div class="b8-item"><div class="b8-icon">🎓</div><div class="b8-title">Always Learning</div></div>
+            <div class="ref-b5-item">
+              <div class="ref-b5-icon">🏋️</div>
+              <div class="ref-b5-lbl">Workout &amp;<br>Fitness</div>
+            </div>
+
+            <div class="ref-b5-item">
+              <div class="ref-b5-icon">✈️</div>
+              <div class="ref-b5-lbl">Travel &amp;<br>Exploration</div>
+            </div>
+
+            <div class="ref-b5-item">
+              <div class="ref-b5-icon">🎧</div>
+              <div class="ref-b5-lbl">Music &amp;<br>Focus</div>
+            </div>
+
+            <div class="ref-b5-item">
+              <div class="ref-b5-icon">📈</div>
+              <div class="ref-b5-lbl">Personal<br>Growth</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- BOTTOM FULL-WIDTH CARD: MY JOURNEY SO FAR -->
-    <div class="journey-card-exact fu">
-      <div class="ec-hdr"><span style="color:var(--accent);">📅</span> MY JOURNEY SO FAR</div>
-      <div class="je-track">
-        <div class="je-step">
-          <div class="je-time">Till 2025 Mid</div>
-          <div class="je-icon-node">&lt;/&gt;</div>
-          <div class="je-title">Competitive Programming</div>
-          <div class="je-desc">Started my coding journey solving problems and building strong DSA foundation.</div>
+    <div class="ref-journey-card fu">
+      <div class="ref-hdr-label">
+        <span class="ref-hdr-icon">📍</span> MY JOURNEY SO FAR
+      </div>
+      <div class="ref-jt-grid">
+        <div class="ref-jt-step">
+          <div class="ref-jt-time">MID 2025</div>
+          <div class="ref-jt-node">&lt;/&gt;</div>
+          <div class="ref-jt-title">Competitive Programming</div>
+          <div class="ref-jt-desc">Started my coding journey, solving problems and building strong DSA foundation.</div>
         </div>
 
-        <div class="je-step">
-          <div class="je-time">End 2025</div>
-          <div class="je-icon-node">🛡️</div>
-          <div class="je-title">Cybersecurity</div>
-          <div class="je-desc">Explored security fundamentals, networking, ethical hacking and tools.</div>
+        <div class="ref-jt-step">
+          <div class="ref-jt-time">END 2025</div>
+          <div class="ref-jt-node">🛡️</div>
+          <div class="ref-jt-title">Cybersecurity</div>
+          <div class="ref-jt-desc">Explored security fundamentals, networking, ethical hacking and tools.</div>
         </div>
 
-        <div class="je-step">
-          <div class="je-time">Early 2026</div>
-          <div class="je-icon-node">💻</div>
-          <div class="je-title">Full-Stack Development</div>
-          <div class="je-desc">Building end-to-end web applications and real-world projects.</div>
+        <div class="ref-jt-step">
+          <div class="ref-jt-time">EARLY 2026</div>
+          <div class="ref-jt-node">💻</div>
+          <div class="ref-jt-title">Full-Stack Development</div>
+          <div class="ref-jt-desc">Building end-to-end web applications and real-world projects.</div>
         </div>
 
-        <div class="je-step">
-          <div class="je-time">Mid 2026</div>
-          <div class="je-icon-node">🧠</div>
-          <div class="je-title">AI / Machine Learning</div>
-          <div class="je-desc">Diving into ML models, data and intelligent systems.</div>
+        <div class="ref-jt-step">
+          <div class="ref-jt-time">MID 2026</div>
+          <div class="ref-jt-node">🧠</div>
+          <div class="ref-jt-title">AI / Machine Learning</div>
+          <div class="ref-jt-desc">Diving into ML models, data and intelligent systems.</div>
         </div>
 
-        <div class="je-step">
-          <div class="je-time" style="color:#10b981;">Now</div>
-          <div class="je-icon-node now-node">🚀</div>
-          <div class="je-title">Projects &amp; Hackathons</div>
-          <div class="je-desc">Building solutions, participating in hackathons and creating impact.</div>
+        <div class="ref-jt-step">
+          <div class="ref-jt-time" style="color:#10b981;">NOW</div>
+          <div class="ref-jt-node now-node">🚀</div>
+          <div class="ref-jt-title">Projects &amp; Hackathons</div>
+          <div class="ref-jt-desc">Building solutions, participating in hackathons and creating impact.</div>
         </div>
       </div>
     </div>
