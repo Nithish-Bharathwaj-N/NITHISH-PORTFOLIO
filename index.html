@@ -4438,6 +4438,288 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   }
 }
 
+
+/* EXACT MATCH TO REFERENCE IMAGE media_1786813712765.png */
+#about {
+  background: #ffffff;
+  padding: 80px 48px 60px;
+}
+@media(max-width:860px) { #about { padding: 60px 20px 40px; } }
+
+.about-minimal-container {
+  max-width: 1680px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* TOP SPLIT GRID (LEFT BIO/STATS + RIGHT PHOTO/SPECS) */
+.about-minimal-top-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  align-items: start;
+}
+@media(max-width:1024px) { .about-minimal-top-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+.am-left-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.am-sec-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  margin-bottom: 8px;
+}
+.am-sec-label::after {
+  content: ' ——';
+  color: #cbd5e1;
+}
+
+.am-title {
+  font-family: var(--font-display);
+  font-size: 3.6rem;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  margin-bottom: 14px;
+}
+.am-title span {
+  color: var(--accent);
+}
+
+.am-subtitle-box {
+  margin-bottom: 32px;
+}
+.am-sub1 {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: #64748b;
+  margin-bottom: 2px;
+}
+.am-sub2 {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: #64748b;
+}
+.am-sub-line {
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  margin-top: 10px;
+}
+
+/* BIO PARAGRAPHS */
+.am-bio-text {
+  font-size: 0.92rem;
+  line-height: 1.78;
+  color: #334155;
+  margin-bottom: 18px;
+}
+.am-bio-text strong {
+  color: #0f172a;
+  font-weight: 800;
+}
+
+/* 4 STAT COLUMNS AT BOTTOM OF LEFT COLUMN */
+.am-4stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 36px;
+  padding-top: 32px;
+  border-top: 1px solid #f1f5f9;
+  text-align: center;
+}
+@media(max-width:600px) { .am-4stats-row { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
+
+.am-stat-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.am-stat-icon {
+  font-size: 1.45rem;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.am-stat-num {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.am-stat-lbl {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #64748b;
+  line-height: 1.3;
+}
+
+/* RIGHT COLUMN - PHOTO STAGE & SPECS */
+.am-right-col {
+  border-left: 1px solid #f1f5f9;
+  padding-left: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media(max-width:1024px) { .am-right-col { border-left: none; padding-left: 0; } }
+
+.am-photo-stage {
+  position: relative;
+  width: 300px;
+  height: 320px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.am-peach-arch {
+  position: absolute;
+  bottom: 0;
+  width: 250px;
+  height: 250px;
+  border-radius: 120px 120px 40px 40px;
+  background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%);
+  z-index: 1;
+}
+.am-dots-grid {
+  position: absolute;
+  right: -10px;
+  top: 40px;
+  width: 50px;
+  height: 90px;
+  background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
+  background-size: 10px 10px;
+  z-index: 0;
+  opacity: 0.7;
+}
+.am-orange-dot {
+  position: absolute;
+  right: 0px;
+  top: 120px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  z-index: 3;
+}
+.am-portrait-img {
+  position: relative;
+  z-index: 2;
+  width: 280px;
+  height: 310px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* 4 SPECS LIST BELOW PHOTO */
+.am-specs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+}
+.am-spec-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f5f9;
+}
+.am-spec-item:last-child { border-bottom: none; }
+.am-spec-icon {
+  font-size: 1rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.am-spec-text {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* BOTTOM FULL-WIDTH CARD: BEYOND CODE */
+.am-beyond-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 18px;
+  padding: 32px 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 36px;
+  align-items: center;
+}
+@media(max-width:960px) { .am-beyond-card { grid-template-columns: 1fr; padding: 24px; } }
+
+.amb-hdr {
+  display: flex;
+  flex-direction: column;
+}
+.amb-icon-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.amb-sub {
+  font-size: 0.76rem;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+.amb-line {
+  width: 28px;
+  height: 2px;
+  background: var(--accent);
+}
+
+.amb-5cols {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+@media(max-width:768px) { .amb-5cols { grid-template-columns: repeat(3, 1fr); } }
+@media(max-width:500px) { .amb-5cols { grid-template-columns: repeat(2, 1fr); } }
+
+.amb-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-left: 1px solid #f1f5f9;
+  padding-left: 12px;
+}
+.amb-item:first-child { border-left: none; padding-left: 0; }
+@media(max-width:768px) { .amb-item { border-left: none; padding-left: 0; } }
+
+.amb-icon {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.amb-lbl {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #334155;
+  line-height: 1.3;
+}
+
 </style>
 </head>
 <body>
@@ -4502,185 +4784,129 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 </section>
 
 <section id="about" aria-labelledby="about-title">
-  <div class="about-ref-container">
-    <!-- MAIN 3-COLUMN LAYOUT -->
-    <div class="about-ref-top-grid fu">
-      <!-- LEFT COLUMN: TITLE, QUOTE, PORTRAIT CUTOUT WITH PEACH BACKDROP -->
-      <div class="about-ref-left">
-        <div class="ref-sec-num">02</div>
-        <h2 id="about-title" class="ref-about-h2">ABOUT<br><span>ME.</span></h2>
-        <p class="ref-quote-text">I enjoy solving complex problems, building real-world solutions, and constantly learning.</p>
-
-        <!-- PORTRAIT STAGE -->
-        <div class="ref-photo-stage">
-          <div class="ref-dots-grid"></div>
-          <div class="ref-orbit-arcs"></div>
-          <div class="ref-peach-circle"></div>
-          <img src="images/nithish-about.jpg" alt="Nithish Bharathwaj N Portrait" class="ref-portrait-img">
-        </div>
-      </div>
-
-      <!-- CENTER COLUMN: WHO AM I & 4 STATS -->
-      <div class="about-ref-center">
-        <div class="ref-hdr-label">
-          <span class="ref-hdr-icon">👤</span> WHO AM I?
-        </div>
+  <div class="about-minimal-container">
+    <!-- TOP SPLIT GRID -->
+    <div class="about-minimal-top-grid fu">
+      <!-- LEFT COLUMN: TITLE, BIO PARAGRAPHS & 4 STATS -->
+      <div class="am-left-col">
+        <div class="am-sec-label">02</div>
+        <h2 id="about-title" class="am-title">ABOUT<br><span>ME.</span></h2>
         
-        <p class="ref-who-p">
-          I'm a second-year BE Cybersecurity student at <strong>Chennai Institute of Technology</strong> with a strong passion for problem solving, building impactful projects, and exploring the intersection of security, AI, and full-stack development.
+        <div class="am-subtitle-box">
+          <div class="am-sub1">Learner. Builder. Problem Solver.</div>
+          <div class="am-sub2">Always curious, always improving.</div>
+          <div class="am-sub-line"></div>
+        </div>
+
+        <p class="am-bio-text">
+          I'm a second-year BE Cybersecurity student at <strong>Chennai Institute of Technology</strong>.
         </p>
 
-        <p class="ref-who-p">
-          I love learning by doing. From competitive programming to cybersecurity, from full-stack development to AI/ML, I enjoy turning ideas into real solutions. Hackathons, projects, and challenges keep me motivated to grow every day.
+        <p class="am-bio-text">
+          I'm passionate about solving complex problems, building impactful projects, and exploring the intersection of security, AI, and full-stack development.
         </p>
 
-        <div class="ref-divider-line"></div>
+        <p class="am-bio-text">
+          I love learning by doing. From competitive programming to real-world applications, I enjoy turning ideas into solutions that make a difference.
+        </p>
 
-        <!-- 4 STATS ROW -->
-        <div class="ref-4stats-row">
-          <div class="ref-stat-col">
-            <div class="ref-stat-icon">&lt;/&gt;</div>
-            <div class="ref-stat-num">500+</div>
-            <div class="ref-stat-lbl">LeetCode<br>Problems</div>
+        <!-- 4 STAT COLUMNS -->
+        <div class="am-4stats-row">
+          <div class="am-stat-col">
+            <div class="am-stat-icon">&lt;/&gt;</div>
+            <div class="am-stat-num">500+</div>
+            <div class="am-stat-lbl">LeetCode<br>Problems</div>
           </div>
 
-          <div class="ref-stat-col">
-            <div class="ref-stat-icon">🏆</div>
-            <div class="ref-stat-num">5+</div>
-            <div class="ref-stat-lbl">Hackathon<br>Finalist</div>
+          <div class="am-stat-col">
+            <div class="am-stat-icon">🏆</div>
+            <div class="am-stat-num">5+</div>
+            <div class="am-stat-lbl">Hackathon<br>Finalist</div>
           </div>
 
-          <div class="ref-stat-col">
-            <div class="ref-stat-icon">🚀</div>
-            <div class="ref-stat-num">3+</div>
-            <div class="ref-stat-lbl">Major<br>Projects</div>
+          <div class="am-stat-col">
+            <div class="am-stat-icon">🚀</div>
+            <div class="am-stat-num">3+</div>
+            <div class="am-stat-lbl">Major<br>Projects</div>
           </div>
 
-          <div class="ref-stat-col">
-            <div class="ref-stat-icon">⏱️</div>
-            <div class="ref-stat-num">5-6 Hrs</div>
-            <div class="ref-stat-lbl">Daily<br>Learning</div>
+          <div class="am-stat-col">
+            <div class="am-stat-icon">⏱️</div>
+            <div class="am-stat-num">5-6 Hrs</div>
+            <div class="am-stat-lbl">Daily<br>Learning</div>
           </div>
         </div>
       </div>
 
-      <!-- RIGHT COLUMN: SKILLS OVERVIEW & BEYOND CODE -->
-      <div class="about-ref-right">
-        <div>
-          <div class="ref-hdr-label">
-            <span class="ref-hdr-icon">📊</span> SKILLS OVERVIEW
-          </div>
-          <div class="ref-skills-list">
-            <div class="ref-sb-item">
-              <div class="ref-sb-info"><span>Cybersecurity</span><span style="color:var(--accent);">85%</span></div>
-              <div class="ref-sb-bg"><div class="ref-sb-fill" style="width:85%;"></div></div>
-            </div>
-
-            <div class="ref-sb-item">
-              <div class="ref-sb-info"><span>Web Development</span><span style="color:var(--accent);">80%</span></div>
-              <div class="ref-sb-bg"><div class="ref-sb-fill" style="width:80%;"></div></div>
-            </div>
-
-            <div class="ref-sb-item">
-              <div class="ref-sb-info"><span>AI / Machine Learning</span><span style="color:var(--accent);">70%</span></div>
-              <div class="ref-sb-bg"><div class="ref-sb-fill" style="width:70%;"></div></div>
-            </div>
-
-            <div class="ref-sb-item">
-              <div class="ref-sb-info"><span>Data Structures &amp; Algorithms</span><span style="color:var(--accent);">90%</span></div>
-              <div class="ref-sb-bg"><div class="ref-sb-fill" style="width:90%;"></div></div>
-            </div>
-
-            <div class="ref-sb-item">
-              <div class="ref-sb-info"><span>Problem Solving</span><span style="color:var(--accent);">90%</span></div>
-              <div class="ref-sb-bg"><div class="ref-sb-fill" style="width:90%;"></div></div>
-            </div>
-
-            <div class="ref-sb-item">
-              <div class="ref-sb-info"><span>Databases</span><span style="color:var(--accent);">75%</span></div>
-              <div class="ref-sb-bg"><div class="ref-sb-fill" style="width:75%;"></div></div>
-            </div>
-
-            <div class="ref-sb-item">
-              <div class="ref-sb-info"><span>DevOps &amp; Tools</span><span style="color:var(--accent);">65%</span></div>
-              <div class="ref-sb-bg"><div class="ref-sb-fill" style="width:65%;"></div></div>
-            </div>
-          </div>
+      <!-- RIGHT COLUMN: PORTRAIT PHOTO & 4 SPECS -->
+      <div class="am-right-col">
+        <!-- PORTRAIT STAGE -->
+        <div class="am-photo-stage">
+          <div class="am-dots-grid"></div>
+          <div class="am-orange-dot"></div>
+          <div class="am-peach-arch"></div>
+          <img src="images/nithish-photo.jpg" alt="Nithish Bharathwaj N Portrait" class="am-portrait-img">
         </div>
 
-        <div>
-          <div class="ref-hdr-label">
-            <span class="ref-hdr-icon">❤️</span> BEYOND CODE
+        <!-- 4 SPECS LIST BELOW PHOTO -->
+        <div class="am-specs-list">
+          <div class="am-spec-item">
+            <div class="am-spec-icon">👤</div>
+            <div class="am-spec-text">Nithish Bharathwaj N</div>
           </div>
-          <div class="ref-beyond-5grid">
-            <div class="ref-b5-item">
-              <div class="ref-b5-icon">📖</div>
-              <div class="ref-b5-lbl">Reading<br>Books</div>
-            </div>
 
-            <div class="ref-b5-item">
-              <div class="ref-b5-icon">🏋️</div>
-              <div class="ref-b5-lbl">Workout &amp;<br>Fitness</div>
-            </div>
+          <div class="am-spec-item">
+            <div class="am-spec-icon">🎓</div>
+            <div class="am-spec-text">Cybersecurity • AI/ML • Full-Stack Engineer</div>
+          </div>
 
-            <div class="ref-b5-item">
-              <div class="ref-b5-icon">✈️</div>
-              <div class="ref-b5-lbl">Travel &amp;<br>Exploration</div>
-            </div>
+          <div class="am-spec-item">
+            <div class="am-spec-icon">📍</div>
+            <div class="am-spec-text">Chennai, Tamil Nadu, India</div>
+          </div>
 
-            <div class="ref-b5-item">
-              <div class="ref-b5-icon">🎧</div>
-              <div class="ref-b5-lbl">Music &amp;<br>Focus</div>
-            </div>
-
-            <div class="ref-b5-item">
-              <div class="ref-b5-icon">📈</div>
-              <div class="ref-b5-lbl">Personal<br>Growth</div>
-            </div>
+          <div class="am-spec-item">
+            <div class="am-spec-icon">✉️</div>
+            <div class="am-spec-text">nithishbharathwajn@gmail.com</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- BOTTOM FULL-WIDTH CARD: MY JOURNEY SO FAR -->
-    <div class="ref-journey-card fu">
-      <div class="ref-hdr-label">
-        <span class="ref-hdr-icon">📍</span> MY JOURNEY SO FAR
+    <!-- BOTTOM FULL-WIDTH CARD: BEYOND CODE -->
+    <div class="am-beyond-card fu">
+      <div class="amb-hdr">
+        <div class="amb-icon-title">
+          <span style="color:var(--accent);">♡</span> BEYOND CODE
+        </div>
+        <div class="amb-sub">Things that fuel my mind and keep me balanced.</div>
+        <div class="amb-line"></div>
       </div>
-      <div class="ref-jt-grid">
-        <div class="ref-jt-step">
-          <div class="ref-jt-time">MID 2025</div>
-          <div class="ref-jt-node">&lt;/&gt;</div>
-          <div class="ref-jt-title">Competitive Programming</div>
-          <div class="ref-jt-desc">Started my coding journey, solving problems and building strong DSA foundation.</div>
+
+      <div class="amb-5cols">
+        <div class="amb-item">
+          <div class="amb-icon">📖</div>
+          <div class="amb-lbl">Reading<br>Books</div>
         </div>
 
-        <div class="ref-jt-step">
-          <div class="ref-jt-time">END 2025</div>
-          <div class="ref-jt-node">🛡️</div>
-          <div class="ref-jt-title">Cybersecurity</div>
-          <div class="ref-jt-desc">Explored security fundamentals, networking, ethical hacking and tools.</div>
+        <div class="amb-item">
+          <div class="amb-icon">🏋️</div>
+          <div class="amb-lbl">Workout &amp;<br>Fitness</div>
         </div>
 
-        <div class="ref-jt-step">
-          <div class="ref-jt-time">EARLY 2026</div>
-          <div class="ref-jt-node">💻</div>
-          <div class="ref-jt-title">Full-Stack Development</div>
-          <div class="ref-jt-desc">Building end-to-end web applications and real-world projects.</div>
+        <div class="amb-item">
+          <div class="amb-icon">✈️</div>
+          <div class="amb-lbl">Travel &amp;<br>Exploration</div>
         </div>
 
-        <div class="ref-jt-step">
-          <div class="ref-jt-time">MID 2026</div>
-          <div class="ref-jt-node">🧠</div>
-          <div class="ref-jt-title">AI / Machine Learning</div>
-          <div class="ref-jt-desc">Diving into ML models, data and intelligent systems.</div>
+        <div class="amb-item">
+          <div class="amb-icon">🎧</div>
+          <div class="amb-lbl">Music &amp;<br>Focus</div>
         </div>
 
-        <div class="ref-jt-step">
-          <div class="ref-jt-time" style="color:#10b981;">NOW</div>
-          <div class="ref-jt-node now-node">🚀</div>
-          <div class="ref-jt-title">Projects &amp; Hackathons</div>
-          <div class="ref-jt-desc">Building solutions, participating in hackathons and creating impact.</div>
+        <div class="amb-item">
+          <div class="amb-icon">📈</div>
+          <div class="amb-lbl">Personal<br>Growth</div>
         </div>
       </div>
     </div>
