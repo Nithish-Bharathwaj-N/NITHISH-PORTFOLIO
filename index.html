@@ -6,8 +6,24 @@
     ================================================== -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nithish Bharathwaj N | AI • Cybersecurity • Full-Stack Developer</title>
-    <meta name="description" content="Portfolio of Nithish Bharathwaj N, Computer Science (Cybersecurity) student, Top 8 Aerothon 2026 Finalist (HAL & IIT Indore), AI & 3D Digital Twin Engineer.">
+    <title>Nithish Bharathwaj N | Cybersecurity • AI • Full-Stack Engineer</title>
+    <meta name="description" content="Portfolio of Nithish Bharathwaj N — Cybersecurity & AI engineer specializing in 3D Digital Twins, real-time systems and full-stack platforms. Top 8 Aerothon 2026 Finalist (HAL & IIT Indore).">
+    <meta name="keywords" content="Nithish Bharathwaj, cybersecurity engineer, AI engineer, full-stack developer, 3D digital twin, WebGL, React, Three.js, FastAPI, Chennai">
+    <meta name="author" content="Nithish Bharathwaj N">
+
+    <!-- OpenGraph / Social Preview -->
+    <meta property="og:title" content="Nithish Bharathwaj N | Cybersecurity × AI × Full-Stack Engineer">
+    <meta property="og:description" content="Top 8 Aerothon 2026 Finalist. Building AI-powered systems, 3D Digital Twins & secure full-stack platforms.">
+    <meta property="og:image" content="images/nithish-photo.jpg">
+    <meta property="og:url" content="https://nithish-bharathwaj-n.github.io/Portfolio">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nithish Bharathwaj N | Cybersecurity × AI Engineer">
+    <meta name="twitter:description" content="Top 8 Aerothon 2026 Finalist. 3D Digital Twins, AI, Full-Stack.">
+    <meta name="twitter:image" content="images/nithish-photo.jpg">
+
+    <!-- Preload hero image for LCP -->
+    <link rel="preload" as="image" href="images/nithish-photo.jpg">
 
     <script>
         document.documentElement.classList.remove('no-js');
@@ -31,10 +47,92 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
+        /* ===== SCROLL PROGRESS BAR ===== */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, #d64923, #f97316, #d64923);
+            z-index: 9999;
+            transition: width 0.1s linear;
+        }
+
+        /* ===== OPEN TO WORK BADGE ===== */
+        .open-to-work-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            color: #10b981;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 9999px;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        .open-to-work-badge .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: pulse-green 1.8s infinite;
+            flex-shrink: 0;
+        }
+        @keyframes pulse-green {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.7); }
+        }
+
+        /* ===== HERO TYPED TEXT ===== */
         .s-intro__content-title {
-            font-size: clamp(3rem, 5.5vw, 5.2rem);
+            font-size: clamp(2.8rem, 5.5vw, 5rem);
             line-height: 1.1;
         }
+        .typed-role {
+            color: #d64923;
+            border-right: 3px solid #d64923;
+            animation: blink-cursor 0.75s step-end infinite;
+        }
+        @keyframes blink-cursor {
+            0%, 100% { border-color: #d64923; }
+            50% { border-color: transparent; }
+        }
+
+        /* ===== HERO TECH PILLS ===== */
+        .hero-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            margin-bottom: 4px;
+        }
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: rgba(255, 255, 255, 0.9);
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            backdrop-filter: blur(6px);
+            transition: all 0.25s ease;
+        }
+        .hero-pill:hover {
+            background: rgba(214, 73, 35, 0.15);
+            border-color: #d64923;
+            color: #fff;
+        }
+
+        /* ===== TECH BADGE (hero inline) ===== */
         .tech-badge-container {
             display: flex;
             flex-wrap: wrap;
@@ -54,28 +152,94 @@
             color: #38bdf8;
             font-weight: 700;
         }
-        /* About Section Matching Get In Touch Dark Theme */
+
+        /* ===== ABOUT SECTION ===== */
         #about {
-            background-color: var(--color-3) !important; /* Exact dark charcoal as Get In Touch */
+            background-color: var(--color-3) !important;
             padding-top: var(--vspace-5);
             padding-bottom: var(--vspace-5);
             color: var(--color-gray-15);
         }
-        #about .s-about__block-title {
-            color: #ffffff !important;
+        #about .s-about__block-title { color: #ffffff !important; }
+        #about .s-about__list { color: rgba(255, 255, 255, 0.85) !important; }
+        #about .s-about__list span { color: rgba(255, 255, 255, 0.5) !important; }
+
+        /* Certifications block */
+        .cert-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
         }
-        #about .s-about__list {
-            color: rgba(255, 255, 255, 0.85) !important;
+        .cert-card:hover {
+            border-color: rgba(214,73,35,0.5);
+            background: rgba(214,73,35,0.06);
         }
-        #about .s-about__list span {
-            color: rgba(255, 255, 255, 0.5) !important;
+        .cert-card__icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .cert-card__title {
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 1rem;
+            line-height: 1.3;
+        }
+        .cert-card__issuer {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            margin-top: 2px;
         }
 
-        /* Skills Section Light Theme & Full-Width Marquee Styling */
+        /* ===== SECTION TRANSITION DIVIDERS ===== */
+        .section-divider {
+            width: 100%;
+            height: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        .section-divider--dark-to-light {
+            background: var(--color-3);
+        }
+        .section-divider--dark-to-light::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: #f4f6f8;
+            clip-path: ellipse(55% 100% at 50% 100%);
+        }
+        .section-divider--light-to-dark {
+            background: #f4f6f8;
+        }
+        .section-divider--light-to-dark::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: var(--color-3);
+            clip-path: ellipse(55% 100% at 50% 100%);
+        }
+
+        /* ===== SKILLS SECTION ===== */
         #skills {
             background-color: #f4f6f8 !important;
-            padding-top: var(--vspace-5);
-            padding-bottom: var(--vspace-5);
+            padding-top: var(--vspace-4);
+            padding-bottom: var(--vspace-4);
             color: #0f172a;
             width: 100%;
             overflow: hidden;
@@ -102,15 +266,9 @@
             gap: 16px;
             width: max-content;
         }
-        .marquee-track--left {
-            animation: marqueeLeft 32s linear infinite;
-        }
-        .marquee-track--right {
-            animation: marqueeRight 32s linear infinite;
-        }
-        .marquee-track:hover {
-            animation-play-state: paused;
-        }
+        .marquee-track--left { animation: marqueeLeft 32s linear infinite; }
+        .marquee-track--right { animation: marqueeRight 32s linear infinite; }
+        .marquee-track:hover { animation-play-state: paused; }
         .marquee-pill {
             display: inline-flex;
             align-items: center;
@@ -123,15 +281,15 @@
             font-size: 0.9rem;
             font-weight: 600;
             white-space: nowrap;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
             transition: all 0.3s ease;
         }
         .marquee-pill:hover {
-            background: rgba(214, 73, 35, 0.08);
+            background: rgba(214,73,35,0.08);
             border-color: #d64923;
             color: #d64923;
             transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(214, 73, 35, 0.18);
+            box-shadow: 0 6px 20px rgba(214,73,35,0.18);
         }
         .skills-full-width-wrapper {
             width: 100%;
@@ -144,13 +302,13 @@
             border: 1px solid #e2e8f0;
             border-radius: 18px;
             padding: 28px 24px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
             transition: all 0.3s ease;
         }
         .skill-category-box:hover {
             border-color: #d64923;
             transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(214, 73, 35, 0.12);
+            box-shadow: 0 15px 35px rgba(214,73,35,0.12);
         }
         .skill-item {
             display: flex;
@@ -168,24 +326,44 @@
             background: #ffffff;
             border-color: #d64923;
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(214, 73, 35, 0.18);
+            box-shadow: 0 8px 25px rgba(214,73,35,0.18);
         }
-        .skill-item svg {
-            margin-bottom: 8px;
-            transition: transform 0.3s ease;
-        }
-        .skill-item:hover svg {
-            transform: scale(1.15);
-        }
+        .skill-item svg { margin-bottom: 8px; transition: transform 0.3s ease; }
+        .skill-item:hover svg { transform: scale(1.15); }
         .skill-item span {
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             font-weight: 600;
             color: #1e293b;
         }
 
-        /* Works Section Vertical One-by-One Layout */
+        /* ===== PROJECT FILTERS ===== */
+        .project-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 36px;
+        }
+        .filter-btn {
+            padding: 8px 20px;
+            border-radius: 9999px;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.05);
+            color: rgba(255,255,255,0.65);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-family: var(--font-1);
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: #d64923;
+            border-color: #d64923;
+            color: #ffffff;
+        }
+
+        /* ===== WORKS SECTION ===== */
         #works {
-            background-color: var(--color-3) !important; /* Exact same dark charcoal background as Get In Touch */
+            background-color: var(--color-3) !important;
             padding-top: var(--vspace-5);
             padding-bottom: var(--vspace-5);
             color: var(--color-gray-15);
@@ -198,8 +376,8 @@
             margin: var(--vspace-1_5) auto 0;
         }
         .project-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
             border-radius: 12px;
             overflow: hidden;
             display: grid;
@@ -207,14 +385,12 @@
             transition: all 0.3s ease;
         }
         @media (max-width: 900px) {
-            .project-card {
-                grid-template-columns: 1fr;
-            }
+            .project-card { grid-template-columns: 1fr; }
         }
         .project-card:hover {
             transform: translateY(-4px);
-            border-color: rgba(255, 255, 255, 0.25);
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+            border-color: rgba(255,255,255,0.25);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.6);
         }
         .project-card__thumb {
             width: 100%;
@@ -230,16 +406,14 @@
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        .project-card:hover .project-card__thumb img {
-            transform: scale(1.05);
-        }
+        .project-card:hover .project-card__thumb img { transform: scale(1.05); }
         .project-card__badge-overlay {
             position: absolute;
             top: 14px;
             left: 14px;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0,0,0,0.8);
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255,255,255,0.2);
             color: #fff;
             font-size: 0.75rem;
             font-weight: 600;
@@ -262,7 +436,7 @@
             line-height: 1.25;
         }
         .project-card__subtitle {
-            color: #d64923 !important; /* Hudson signature terracotta accent */
+            color: #d64923 !important;
             font-weight: 600;
             font-size: 0.95rem;
             margin-bottom: 14px;
@@ -281,21 +455,112 @@
             margin-bottom: 26px;
         }
         .project-card__badge {
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
             color: var(--color-gray-13) !important;
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: 500;
         }
-        .project-card__actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
+        .project-card__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+        .project-card__actions .btn { margin: 0; }
+
+        /* ===== CONTACT FORM ===== */
+        .contact-form {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 36px;
+            margin-top: 32px;
         }
-        .project-card__actions .btn {
-            margin: 0;
+        .contact-form h4 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: #ffffff;
+            font-family: var(--font-1);
+            font-size: 0.95rem;
+            transition: all 0.25s ease;
+            outline: none;
+            box-sizing: border-box;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #d64923;
+            background: rgba(255,255,255,0.08);
+            box-shadow: 0 0 0 3px rgba(214,73,35,0.12);
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255,255,255,0.3);
+        }
+        .form-group textarea { resize: vertical; min-height: 110px; }
+        .form-submit-btn {
+            background: #d64923;
+            border: none;
+            color: #fff;
+            padding: 13px 32px;
+            border-radius: 6px;
+            font-family: var(--font-1);
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .form-submit-btn:hover { background: #b83c1e; transform: translateY(-2px); }
+        .form-success-msg {
+            display: none;
+            padding: 12px 18px;
+            background: rgba(16,185,129,0.1);
+            border: 1px solid rgba(16,185,129,0.3);
+            border-radius: 8px;
+            color: #10b981;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 14px;
+        }
+
+        /* ===== SCROLL FADE-IN ANIMATIONS ===== */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fade-in-up:nth-child(2) { transition-delay: 0.1s; }
+        .fade-in-up:nth-child(3) { transition-delay: 0.2s; }
+        .fade-in-up:nth-child(4) { transition-delay: 0.3s; }
+
+        /* ===== ANIMATED COUNTERS ===== */
+        .counter-num {
+            font-variant-numeric: tabular-nums;
         }
     </style>
 
@@ -323,10 +588,14 @@
             <div class="row s-header__inner">
 
                 <div class="s-header__block">
-                    <div class="s-header__logo">
+                    <div class="s-header__logo" style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
                         <a class="logo" href="index.html" style="font-size: 1.4rem; font-weight: 800; color: #fff; letter-spacing: 1px;">
                             NITHISH BHARATHWAJ N
                         </a>
+                        <span class="open-to-work-badge">
+                            <span class="pulse-dot"></span>
+                            Open to Work
+                        </span>
                     </div>
 
                     <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
@@ -355,14 +624,22 @@
                     
                     <div class="s-intro__content-text">
 
-                        <div class="s-intro__content-pretitle text-pretitle">Hello</div>
+                        <div class="s-intro__content-pretitle text-pretitle">Hello, I'm</div>
                         <h1 class="s-intro__content-title">
-                        I'm Nithish Bharathwaj N <br>
-                        Full-Stack & AI Engineer <br>
-                        based in Chennai, India.
-                        </h1>                            
+                        Nithish Bharathwaj N<br>
+                        <span id="typed-role" class="typed-role">Cybersecurity Engineer</span>
+                        </h1>
 
-                        <div class="s-intro__content-btns">
+                        <!-- Hero Tech Specialty Pills -->
+                        <div class="hero-pills">
+                            <span class="hero-pill">🔒 Cybersecurity</span>
+                            <span class="hero-pill">🧠 AI / ML</span>
+                            <span class="hero-pill">🌐 3D WebGL</span>
+                            <span class="hero-pill">⚡ Full-Stack</span>
+                            <span class="hero-pill">📍 Chennai, India</span>
+                        </div>
+
+                        <div class="s-intro__content-btns" style="margin-top: 28px;">
                             <a class="smoothscroll btn" href="#about">More About Me</a>
                             <a class="smoothscroll btn btn--stroke" href="#footer">Get In Touch</a>
                         </div> <!-- s-intro__content-btns -->   
@@ -522,15 +799,58 @@
 
                     </div> <!-- grid-list-items -->
 
+                        <!-- Certifications Block -->
+                        <div class="grid-list-items__item s-about__block">
+                            <h4 class="s-about__block-title" style="color: #ffffff; font-size: 1.45rem; font-weight: 700; border-bottom: 2px solid #d64923; padding-bottom: 8px; margin-bottom: 20px;">Certifications</h4>
+                            <div class="cert-card">
+                                <div class="cert-card__icon" style="background: rgba(255,153,0,0.12);">
+                                    <svg width="28" height="28" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9L4 7.5v9l8 4.5 8-4.5v-9l-8 4.5z" fill="#FF9900"/></svg>
+                                </div>
+                                <div>
+                                    <div class="cert-card__title">Generative AI Virtual Internship</div>
+                                    <div class="cert-card__issuer">AWS Academy × AICTE × EduSkills</div>
+                                </div>
+                            </div>
+                            <div class="cert-card">
+                                <div class="cert-card__icon" style="background: rgba(16,185,129,0.12);">
+                                    <svg width="28" height="28" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="#10b981"/></svg>
+                                </div>
+                                <div>
+                                    <div class="cert-card__title">Cybersecurity Fundamentals</div>
+                                    <div class="cert-card__issuer">B.E. Computer Science (Cyber Security) — CIT</div>
+                                </div>
+                            </div>
+                            <div class="cert-card">
+                                <div class="cert-card__icon" style="background: rgba(214,73,35,0.12);">
+                                    <svg width="28" height="28" viewBox="0 0 24 24"><path d="M12 2L9.5 8.5 3 11l6.5 2.5L12 20l2.5-6.5L21 11l-6.5-2.5L12 2z" fill="#d64923"/></svg>
+                                </div>
+                                <div>
+                                    <div class="cert-card__title">Top 8 Finalist — Aerothon 2026</div>
+                                    <div class="cert-card__issuer">HAL (Hindustan Aeronautics Ltd) & IIT Indore</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- grid-list-items -->
+
+                    <!-- Inline CV Download CTA -->
+                    <div style="margin-top: 32px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+                        <p style="margin: 0; color: rgba(255,255,255,0.6); font-size: 1rem;">Want the full picture?</p>
+                        <a href="NITHISH_BHARATHWAJ_N_Resume_2026-08-15.pdf" download class="btn btn--stroke" style="margin: 0; padding: 10px 24px; font-size: 0.9rem;">Download My Resume ↓</a>
+                    </div>
+
                 </div> <!--end column -->
             </div> <!--end s-about__content -->
             
         </section> <!-- end s-about -->   
 
+        <!-- Section Divider: About (dark) → Skills (light) -->
+        <div class="section-divider section-divider--dark-to-light"></div>
+
 
         <!-- # skills
         ================================================== -->
-        <section id="skills" class="s-skills target-section">
+        <section id="skills" class="s-skills target-section" style="padding-top: var(--vspace-3);">
 
             <div class="skills-full-width-wrapper">
                 <div class="row">
@@ -728,6 +1048,8 @@
 
         </section> <!-- end s-skills -->
 
+        <!-- Section Divider: Skills (light) → Works (dark) -->
+        <div class="section-divider section-divider--light-to-dark"></div>
 
         <!-- # works
         ================================================== -->
@@ -738,6 +1060,15 @@
                     <div class="section-header light-on-dark" data-num="03">
                         <h2 class="text-display-title">Selected Works.</h2>
                     </div> <!-- end section-header -->
+
+                    <!-- Project Filter Tabs -->
+                    <div class="project-filters">
+                        <button class="filter-btn active" data-filter="all" id="filter-all">All Projects</button>
+                        <button class="filter-btn" data-filter="ai-ml" id="filter-ai">AI / ML</button>
+                        <button class="filter-btn" data-filter="3d-webgl" id="filter-3d">3D WebGL</button>
+                        <button class="filter-btn" data-filter="full-stack" id="filter-fs">Full-Stack</button>
+                        <button class="filter-btn" data-filter="healthcare" id="filter-health">Healthcare</button>
+                    </div>
                 </div>
             </div>
 
@@ -745,7 +1076,7 @@
                 <div class="projects-grid">
 
                     <!-- Project 1: SubAERO -->
-                    <div class="project-card">
+                    <div class="project-card fade-in-up" data-category="3d-webgl ai-ml">
                         <div class="project-card__thumb">
                             <div class="project-card__badge-overlay">🏆 Top 8 Aerothon 2026</div>
                             <img src="images/subaero-preview.jpg" alt="SubAERO Digital Twin">
@@ -773,7 +1104,7 @@
                     </div>
 
                     <!-- Project 2: Voyage AI -->
-                    <div class="project-card">
+                    <div class="project-card fade-in-up" data-category="ai-ml full-stack">
                         <div class="project-card__thumb">
                             <div class="project-card__badge-overlay">✨ Gemini AI Travel Engine</div>
                             <img src="images/voyage-preview.jpg" alt="Voyage AI">
@@ -793,13 +1124,14 @@
                                 <span class="project-card__badge">TailwindCSS</span>
                             </div>
                             <div class="project-card__actions">
-                                <a href="https://github.com/Nithish-Bharathwaj-N/Voyage-AI" target="_blank" class="btn btn--primary">GitHub Repository ↗</a>
+                                <a href="https://voyage-ai-nithish.vercel.app" target="_blank" class="btn btn--primary">Live Demo ↗</a>
+                                <a href="https://github.com/Nithish-Bharathwaj-N/Voyage-AI" target="_blank" class="btn btn--stroke">GitHub Code ↗</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Project 3: Queue Cure AI -->
-                    <div class="project-card">
+                    <div class="project-card fade-in-up" data-category="ai-ml full-stack healthcare">
                         <div class="project-card__thumb">
                             <div class="project-card__badge-overlay">🏥 Healthcare OPD Triage</div>
                             <img src="images/queuecure-preview.jpg" alt="Queue Cure AI">
@@ -836,10 +1168,9 @@
 
             <div class="row counter-items">
 
-                <div class="column counter-items__item">
-                    <div class="num">
-                        500
-                        <span>+</span>
+                <div class="column counter-items__item fade-in-up">
+                    <div class="num counter-num" data-target="500" data-suffix="+">
+                        0<span>+</span>
                     </div>
                     <h5>LeetCode Problems Solved</h5>
                     <p>
@@ -847,9 +1178,9 @@
                     </p>
                 </div> <!-- end counter-items__item -->
 
-                <div class="column counter-items__item">
-                    <div class="num">
-                        1771
+                <div class="column counter-items__item fade-in-up">
+                    <div class="num counter-num" data-target="1771" data-suffix="">
+                        0
                     </div>
                     <h5>LeetCode Contest Rating</h5>
                     <p>
@@ -857,7 +1188,7 @@
                     </p>
                 </div> <!-- end counter-items__item -->
 
-                <div class="column counter-items__item">
+                <div class="column counter-items__item fade-in-up">
                     <div class="num">
                         Top 8
                     </div>
@@ -867,10 +1198,9 @@
                     </p>
                 </div> <!-- end counter-items__item -->
 
-                <div class="column counter-items__item">
-                    <div class="num">
-                        5
-                        <span>+</span>
+                <div class="column counter-items__item fade-in-up">
+                    <div class="num counter-num" data-target="5" data-suffix="+">
+                        0<span>+</span>
                     </div>
                     <h5>National Hackathon Finalist</h5>
                     <p>
@@ -889,7 +1219,7 @@
 
             <div class="row">
                 <div class="column lg-12">
-                    <div class="section-header light-on-dark" data-num="03">
+                    <div class="section-header light-on-dark" data-num="04">
                         <h2 class="text-display-title">Get In Touch.</h2>
                     </div> <!-- end section-header -->
                 </div>
@@ -900,36 +1230,52 @@
                 <div class="column xl-6 md-12 s-footer__block s-footer__about">                    
                     <p class="attention-getter">
                     Open to full-stack software development, 3D simulation, AI engineering, and cybersecurity opportunities or research collaborations. Feel free to send a message or download my resume!
-                    </p>               
+                    </p>
+                    <div style="margin-top: 28px;">
+                        <h5 style="margin-bottom: 10px;">Follow Me</h5>
+                        <ul class="link-list">
+                            <li><a href="https://github.com/Nithish-Bharathwaj-N" target="_blank">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/nithish-bharathwaj-n-847a00379" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://leetcode.com/u/nithish_cit/" target="_blank">LeetCode</a></li>
+                        </ul>
+                        <h5 style="margin-top: 20px; margin-bottom: 10px;">Direct Contact</h5>
+                        <ul class="link-list">
+                            <li><a href="mailto:nithishbharathwajn@gmail.com">nithishbharathwajn@gmail.com</a></li>
+                            <li><a href="tel:+919363958388">+91 9363958388</a></li>
+                        </ul>
+                    </div>
                 </div> <!-- end section-footer__about -->
 
-                <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
-                    <div class="row">
-                        <div class="column xl-4 lg-5 md-6 tab-12">
-                            <h5>Follow Me</h5>
-                            <ul class="link-list">
-                                <li><a href="https://github.com/Nithish-Bharathwaj-N" target="_blank">GitHub</a></li>
-                                <li><a href="https://www.linkedin.com/in/nithish-bharathwaj-n-847a00379" target="_blank">LinkedIn</a></li>
-                                <li><a href="https://leetcode.com/u/nithish_cit/" target="_blank">LeetCode</a></li>
-                            </ul>
-                        </div>
-                        <div class="column xl-6 md-6 tab-12">
-                            <h5>Contact Me</h5>
-                            <ul class="link-list">
-                                <li><a href="mailto:nithishbharathwajn@gmail.com">nithishbharathwajn@gmail.com</a></li>
-                                <li><a href="tel:+919363958388">+91 9363958388</a></li>
-                            </ul> 
-                        </div>
-                    </div>                    
-                </div> <!-- end section-footer__site-links -->
+                <!-- Interactive Contact Form -->
+                <div class="column xl-6 md-12 s-footer__block">
+                    <div class="contact-form">
+                        <h4>Send a Message</h4>
+                        <form id="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="cf-name">Your Name</label>
+                                <input type="text" id="cf-name" name="name" placeholder="Nithish Bharathwaj" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cf-email">Email Address</label>
+                                <input type="email" id="cf-email" name="email" placeholder="you@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cf-message">Message</label>
+                                <textarea id="cf-message" name="message" placeholder="Tell me about an opportunity or project..." required></textarea>
+                            </div>
+                            <button type="submit" class="form-submit-btn" id="cf-submit">Send Message →</button>
+                            <div class="form-success-msg" id="cf-success">✅ Message sent! I'll get back to you soon.</div>
+                        </form>
+                    </div>
+                </div>
 
             </div> <!-- end section-footer__content -->
 
 
-            <div class="row s-footer__buttons">
+            <div class="row s-footer__buttons" style="margin-top: 32px;">
                
                 <div class="column xl-6 tab-12">
-                    <a href="mailto:nithishbharathwajn@gmail.com" class="btn btn--primary btn--large u-fullwidth">Message Me</a>
+                    <a href="mailto:nithishbharathwajn@gmail.com" class="btn btn--primary btn--large u-fullwidth">Email Me Directly</a>
                 </div>
           
                 <div class="column xl-6 tab-12">                    
@@ -964,6 +1310,143 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+    /* ===== SCROLL PROGRESS BAR ===== */
+    (function() {
+        const bar = document.createElement('div');
+        bar.id = 'scroll-progress';
+        document.body.prepend(bar);
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            bar.style.width = pct + '%';
+        }, { passive: true });
+    })();
+
+    /* ===== TYPED ROLE TEXT ===== */
+    (function() {
+        const roles = [
+            'Cybersecurity Engineer',
+            'AI & ML Engineer',
+            '3D WebGL Developer',
+            'Full-Stack Engineer',
+            'Digital Twin Builder'
+        ];
+        const el = document.getElementById('typed-role');
+        if (!el) return;
+        let roleIndex = 0, charIndex = 0, deleting = false;
+        function type() {
+            const current = roles[roleIndex];
+            if (deleting) {
+                el.textContent = current.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                el.textContent = current.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            let delay = deleting ? 50 : 90;
+            if (!deleting && charIndex === current.length) {
+                delay = 2000;
+                deleting = true;
+            } else if (deleting && charIndex === 0) {
+                deleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                delay = 400;
+            }
+            setTimeout(type, delay);
+        }
+        setTimeout(type, 1200);
+    })();
+
+    /* ===== SCROLL FADE-IN (IntersectionObserver) ===== */
+    (function() {
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.fade-in-up').forEach(function(el) {
+            observer.observe(el);
+        });
+    })();
+
+    /* ===== ANIMATED COUNTERS ===== */
+    (function() {
+        const counters = document.querySelectorAll('.counter-num');
+        if (!counters.length) return;
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.dataset.target);
+                    const suffix = el.dataset.suffix || '';
+                    const duration = 1800;
+                    const step = target / (duration / 16);
+                    let current = 0;
+                    observer.unobserve(el);
+                    const timer = setInterval(function() {
+                        current = Math.min(current + step, target);
+                        el.innerHTML = Math.floor(current) + (suffix ? '<span>' + suffix + '</span>' : '');
+                        if (current >= target) clearInterval(timer);
+                    }, 16);
+                }
+            });
+        }, { threshold: 0.4 });
+        counters.forEach(function(el) { observer.observe(el); });
+    })();
+
+    /* ===== PROJECT FILTER TABS ===== */
+    (function() {
+        const buttons = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.project-card[data-category]');
+        buttons.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                buttons.forEach(function(b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+                cards.forEach(function(card) {
+                    if (filter === 'all' || card.dataset.category.includes(filter)) {
+                        card.style.display = 'grid';
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(function() {
+                            card.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    })();
+
+    /* ===== CONTACT FORM (mailto fallback) ===== */
+    (function() {
+        const form = document.getElementById('contact-form');
+        if (!form) return;
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name    = document.getElementById('cf-name').value.trim();
+            const email   = document.getElementById('cf-email').value.trim();
+            const message = document.getElementById('cf-message').value.trim();
+            if (!name || !email || !message) return;
+            const subject = encodeURIComponent('Portfolio Inquiry from ' + name);
+            const body    = encodeURIComponent('Hi Nithish,\n\n' + message + '\n\n— ' + name + ' (' + email + ')');
+            window.location.href = 'mailto:nithishbharathwajn@gmail.com?subject=' + subject + '&body=' + body;
+            const success = document.getElementById('cf-success');
+            success.style.display = 'block';
+            form.reset();
+            setTimeout(function() { success.style.display = 'none'; }, 6000);
+        });
+    })();
+    </script>
 
 </body>
 </html>
