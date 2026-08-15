@@ -34,7 +34,7 @@ export default function Home() {
       });
     });
 
-    const secs = [...document.querySelectorAll('section[id]')];
+    const secs = [...document.querySelectorAll('section[id]')]
     const navAs = document.querySelectorAll('.nav-links a');
     function spy() {
       let cur = secs[0]?.id;
@@ -873,6 +873,325 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   border-radius: 12px;
 }
 
+
+/* KEY ACHIEVEMENTS DASHBOARD STYLING */
+#achievements {
+  background: var(--dark);
+  padding: 100px 80px;
+}
+
+/* TOP ROW: TITLE & MILESTONE TIMELINE */
+.ach-top-row {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 32px;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+@media(max-width:960px) { .ach-top-row { grid-template-columns: 1fr; } }
+
+.timeline-box {
+  background: var(--dark-2);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius-lg);
+  padding: 22px 28px;
+}
+.timeline-hdr {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+.timeline-track {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.timeline-track::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background: rgba(255,255,255,0.12);
+  z-index: 1;
+}
+.timeline-step {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+.t-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--dark-3);
+  border: 2px solid rgba(255,255,255,0.3);
+  margin-bottom: 8px;
+}
+.timeline-step.active .t-dot {
+  background: var(--accent);
+  border-color: #fff;
+  box-shadow: 0 0 12px var(--accent);
+}
+.timeline-step.now .t-dot {
+  background: #10b981;
+  border-color: #fff;
+  box-shadow: 0 0 12px #10b981;
+}
+.t-year {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 4px;
+}
+.timeline-step.active .t-year { color: var(--accent); }
+.timeline-step.now .t-year { color: #10b981; }
+.t-lbl {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.35;
+  max-width: 90px;
+}
+
+/* MIDDLE ROW: METRICS STACK + ACHIEVEMENTS CARDS */
+.ach-middle-row {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+@media(max-width:1024px) { .ach-middle-row { grid-template-columns: 1fr; } }
+
+/* METRICS STACK */
+.metrics-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.metric-row-card {
+  background: var(--dark-2);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all var(--t) var(--ease);
+}
+.metric-row-card:hover {
+  border-color: rgba(200,66,26,0.35);
+  transform: translateX(4px);
+}
+.m-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.m-info { flex: 1; }
+.m-num {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+}
+.m-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 2px;
+}
+.m-sub {
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.4);
+}
+.m-spark {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #10b981;
+  background: rgba(16,185,129,0.1);
+  padding: 3px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* OVERVIEW CARDS GRID */
+.ach-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 220px;
+  gap: 14px;
+}
+@media(max-width:1200px) { .ach-cards-grid { grid-template-columns: repeat(2, 1fr); } }
+@media(max-width:640px) { .ach-cards-grid { grid-template-columns: 1fr; } }
+
+.ach-overview-card {
+  background: var(--dark-2);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius-lg);
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--t) var(--ease);
+}
+.ach-overview-card:hover {
+  border-color: rgba(200,66,26,0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.4);
+}
+.wreath-badge {
+  width: 100%;
+  padding: 16px 12px;
+  border-radius: 10px;
+  background: radial-gradient(circle, rgba(200,66,26,0.12) 0%, rgba(13,13,13,0.8) 100%);
+  border: 1px solid rgba(200,66,26,0.25);
+  text-align: center;
+  margin-bottom: 14px;
+}
+.wreath-title {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+.wreath-sub {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.6);
+  margin-top: 2px;
+}
+.ach-item-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 2px;
+}
+.ach-item-status {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.ach-item-desc {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+.ach-item-logos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 10px;
+}
+
+/* MORE ACHIEVEMENTS LIST CARD */
+.more-ach-card {
+  background: var(--dark-2);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius-lg);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+}
+.more-ach-title {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.more-ach-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.more-ach-list li {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.4;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+.more-ach-list li::before {
+  content: '•';
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* BOTTOM CORE STRENGTHS BANNER */
+.strengths-banner {
+  background: var(--dark-2);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+}
+.strengths-hdr {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+@media(max-width:1024px) { .strengths-grid { grid-template-columns: repeat(3, 1fr); } }
+@media(max-width:640px) { .strengths-grid { grid-template-columns: 1fr; } }
+
+.strength-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.s-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+.s-name { font-size: 0.78rem; font-weight: 800; color: #fff; margin-bottom: 2px; }
+.s-desc { font-size: 0.68rem; color: rgba(255,255,255,0.45); line-height: 1.4; }
+
 ` }} />
       <div dangerouslySetInnerHTML={{ __html: `
 <a id="skip-link" href="#intro">Skip to content</a>
@@ -1332,43 +1651,209 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 
 <section id="achievements" aria-labelledby="ach-title">
   <div class="ach-wrap">
-    <div class="sec-label">04</div>
-    <h2 id="ach-title" class="sec-title" style="color:#fff">Key Achievements &amp; <span style="color:var(--accent)">Activity.</span></h2>
-    <p style="font-size:0.9rem;color:var(--text-muted);max-width:540px;margin-top:10px;line-height:1.65;">Verified metrics, continuous coding streaks, LeetCode problem solving, and live contribution heatmaps.</p>
-    
-    <div class="ach-grid">
-      <div class="ach-card fu"><span class="ach-icon">💻</span><div class="ach-num" data-target="500" data-suffix="+">0</div><div class="ach-title">LeetCode Solved</div><div class="ach-desc">Strong foundation in DSA, algorithms and problem solving.</div></div>
-      <div class="ach-card fu"><span class="ach-icon">📊</span><div class="ach-num" data-target="1771" data-suffix="">0</div><div class="ach-title">Peak Contest Rating</div><div class="ach-desc">Achieved a peak rating of 1771 with 118-day coding streak.</div></div>
-      <div class="ach-card fu"><span class="ach-icon">🏆</span><div class="ach-num">Top 8</div><div class="ach-title">Aerothon 2026 Finalist</div><div class="ach-desc">Ranked Top 8 nationwide in HAL &amp; IIT Indore Aerothon 2026.</div></div>
-      <div class="ach-card fu"><span class="ach-icon">🚀</span><div class="ach-num" data-target="5" data-suffix="+">0</div><div class="ach-title">National Hackathon Finalist</div><div class="ach-desc">Finalist in 5+ national-level hackathons across domains.</div></div>
+    <!-- TOP ROW: TITLE & MILESTONE TIMELINE -->
+    <div class="ach-top-row fu">
+      <div>
+        <div class="sec-label">04</div>
+        <h2 id="ach-title" class="sec-title" style="color:#fff">Key <span style="color:var(--accent)">Achievements.</span> 🏆</h2>
+        <p style="font-size:0.86rem;color:var(--text-muted);margin-top:8px;line-height:1.6;">A reflection of consistency, passion, and relentless pursuit of engineering excellence.</p>
+      </div>
+
+      <!-- MILESTONE TIMELINE -->
+      <div class="timeline-box">
+        <div class="timeline-hdr">
+          <span>📅 MILESTONE TIMELINE</span>
+          <span style="color:rgba(255,255,255,0.4);">JOURNEY OF GROWTH</span>
+        </div>
+        <div class="timeline-track">
+          <div class="timeline-step">
+            <div class="t-dot"></div>
+            <div class="t-year">2023</div>
+            <div class="t-lbl">Started Competitive Programming</div>
+          </div>
+          <div class="timeline-step">
+            <div class="t-dot"></div>
+            <div class="t-year">2024</div>
+            <div class="t-lbl">Cybersecurity Specialization</div>
+          </div>
+          <div class="timeline-step">
+            <div class="t-dot"></div>
+            <div class="t-year">2025</div>
+            <div class="t-lbl">Built Real-Time &amp; AI Systems</div>
+          </div>
+          <div class="timeline-step active">
+            <div class="t-dot"></div>
+            <div class="t-year">2026</div>
+            <div class="t-lbl">Top 8 Aerothon SubAERO</div>
+          </div>
+          <div class="timeline-step now">
+            <div class="t-dot"></div>
+            <div class="t-year">NOW</div>
+            <div class="t-lbl">Building Next-Gen Systems</div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- LIVE GITHUB & LEETCODE CONTRIBUTION GRAPHS -->
-    <div class="ach-graphs-wrap fu">
-      <!-- GITHUB GREEN BOXES HEATMAP -->
-      <div class="graph-box">
-        <div class="graph-hdr">
-          <div class="graph-title"><span>🐙</span> GitHub Live Contributions (Green Boxes Heatmap)</div>
-          <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener" class="graph-sub" style="color:var(--accent);text-decoration:none;">@Nithish-Bharathwaj-N ↗</a>
+    <!-- MIDDLE ROW: METRICS STACK + ACHIEVEMENTS OVERVIEW CARDS -->
+    <div class="ach-middle-row fu">
+      <!-- LEFT METRICS STACK -->
+      <div class="metrics-stack">
+        <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener" class="metric-row-card" style="text-decoration:none;">
+          <div class="m-icon-box">&lt;/&gt;</div>
+          <div class="m-info">
+            <div class="m-num">500+</div>
+            <div class="m-title">LeetCode Solved</div>
+            <div class="m-sub">Strong foundation in DSA &amp; Algorithms</div>
+          </div>
+          <span class="m-spark">▲ 202%</span>
+        </a>
+
+        <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener" class="metric-row-card" style="text-decoration:none;">
+          <div class="m-icon-box">📈</div>
+          <div class="m-info">
+            <div class="m-num">1771</div>
+            <div class="m-title">Peak Contest Rating</div>
+            <div class="m-sub">118-day continuous coding streak</div>
+          </div>
+          <span class="m-spark">▲ 18.7%</span>
+        </a>
+
+        <div class="metric-row-card">
+          <div class="m-icon-box">🏆</div>
+          <div class="m-info">
+            <div class="m-num">Top 8</div>
+            <div class="m-title">Aerothon 2026 Finalist</div>
+            <div class="m-sub">HAL x IIT Indore Aerothon 2026</div>
+          </div>
+          <span class="m-spark" style="color:var(--accent);background:rgba(200,66,26,0.15);">▲ Top 8</span>
         </div>
-        <div style="overflow-x:auto;padding:8px 0;text-align:center;">
-          <img src="https://ghchart.rshah.org/4ade80/Nithish-Bharathwaj-N" alt="Nithish Bharathwaj N GitHub Green Contribution Graph" class="gh-chart-img" loading="lazy">
+
+        <div class="metric-row-card">
+          <div class="m-icon-box">🚀</div>
+          <div class="m-info">
+            <div class="m-num">5+</div>
+            <div class="m-title">National Hackathon Finalist</div>
+            <div class="m-sub">Finalist in 5+ national hackathons</div>
+          </div>
+          <span class="m-spark">▲ 5+</span>
         </div>
       </div>
 
-      <!-- LEETCODE ACTIVITY CARD -->
-      <div class="graph-box">
-        <div class="graph-hdr">
-          <div class="graph-title"><span>⚡</span> LeetCode Live Stats &amp; Activity</div>
-          <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener" class="graph-sub" style="color:var(--accent);text-decoration:none;">@nithish_cit ↗</a>
+      <!-- CENTER & RIGHT: ACHIEVEMENTS OVERVIEW CARDS -->
+      <div class="ach-cards-grid">
+        <!-- Aerothon 2026 -->
+        <div class="ach-overview-card">
+          <div class="wreath-badge">
+            <div class="wreath-title">AEROTHON 2026</div>
+            <div class="wreath-sub">TOP 8 FINALIST</div>
+          </div>
+          <div>
+            <div class="ach-item-name">Aerothon 2026</div>
+            <div class="ach-item-status">Top 8 Finalist</div>
+            <div class="ach-item-desc">Built SubAERO — Real-Time Aero Engine Digital Twin Platform for HAL.</div>
+          </div>
+          <div class="ach-item-logos">
+            <span>HAL (Hindustan Aeronautics)</span>
+            <span>•</span>
+            <span>IIT INDORE</span>
+          </div>
         </div>
-        <div style="text-align:center;padding:10px 0;">
-          <img src="https://leetcard.jacoblin.cool/nithish_cit?theme=dark&font=Space%20Grotesk&ext=heatmap" alt="Nithish Bharathwaj N LeetCode Stats Card & Activity Heatmap" class="leet-card-img" loading="lazy">
+
+        <!-- CodeKaze 2025 -->
+        <div class="ach-overview-card">
+          <div class="wreath-badge" style="background:radial-gradient(circle, rgba(168,85,247,0.12) 0%, rgba(13,13,13,0.8) 100%);border-color:rgba(168,85,247,0.3);">
+            <div class="wreath-title" style="color:#a855f7;">CODEKAZE 2025</div>
+            <div class="wreath-sub">NATIONAL FINALIST</div>
+          </div>
+          <div>
+            <div class="ach-item-name">CodeKaze 2025</div>
+            <div class="ach-item-status" style="color:#a855f7;">National Finalist</div>
+            <div class="ach-item-desc">Threat Intelligence &amp; Log Analyzer platform with real-time anomaly detection.</div>
+          </div>
+          <div class="ach-item-logos">
+            <span>CODEKAZE</span>
+          </div>
+        </div>
+
+        <!-- Smart India Hackathon 2025 -->
+        <div class="ach-overview-card">
+          <div class="wreath-badge" style="background:radial-gradient(circle, rgba(16,185,129,0.12) 0%, rgba(13,13,13,0.8) 100%);border-color:rgba(16,185,129,0.3);">
+            <div class="wreath-title" style="color:#10b981;">SMART INDIA HACKATHON</div>
+            <div class="wreath-sub">FINALIST</div>
+          </div>
+          <div>
+            <div class="ach-item-name">Smart India Hackathon</div>
+            <div class="ach-item-status" style="color:#10b981;">Finalist</div>
+            <div class="ach-item-desc">AI-driven Queue Optimization System for healthcare workflow automation.</div>
+          </div>
+          <div class="ach-item-logos">
+            <span>SIH 2025</span>
+          </div>
+        </div>
+
+        <!-- MORE ACHIEVEMENTS LIST -->
+        <div class="more-ach-card">
+          <div class="more-ach-title">MORE ACHIEVEMENTS</div>
+          <ul class="more-ach-list">
+            <li>Secured SSBM Class XII (93.67%)</li>
+            <li>Selected for International Level Abacus Competition</li>
+            <li>District Level Throwball Player</li>
+            <li>Zonal Carrom Player</li>
+            <li>Athletics &amp; Cricket Tournament Participant</li>
+          </ul>
+          <div style="margin-top:12px;">
+            <a href="https://www.linkedin.com/in/nithish-bharathwaj-n-847a00379" target="_blank" rel="noopener" style="font-size:0.7rem;font-weight:800;color:var(--accent);text-decoration:none;">VIEW ALL ACHIEVEMENTS →</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="ach-cta" style="margin-top:32px;"><a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener" class="btn-outline-light">View Full LeetCode Profile ↗</a></div>
+    <!-- BOTTOM CORE STRENGTHS RECOGNIZED BANNER -->
+    <div class="strengths-banner fu">
+      <div class="strengths-hdr">⭐ CORE STRENGTHS RECOGNIZED</div>
+      <div class="strengths-grid">
+        <div class="strength-item">
+          <div class="s-icon">🎯</div>
+          <div>
+            <div class="s-name">Consistency</div>
+            <div class="s-desc">Maintaining long coding streaks and continuous learning.</div>
+          </div>
+        </div>
+
+        <div class="strength-item">
+          <div class="s-icon">🧠</div>
+          <div>
+            <div class="s-name">Problem Solver</div>
+            <div class="s-desc">Strong foundation in DSA, algorithms &amp; system design.</div>
+          </div>
+        </div>
+
+        <div class="strength-item">
+          <div class="s-icon">👥</div>
+          <div>
+            <div class="s-name">Team Player</div>
+            <div class="s-desc">Proven collaboration in national level hackathons.</div>
+          </div>
+        </div>
+
+        <div class="strength-item">
+          <div class="s-icon">🔨</div>
+          <div>
+            <div class="s-name">Builder</div>
+            <div class="s-desc">Building real-world systems that solve practical problems.</div>
+          </div>
+        </div>
+
+        <div class="strength-item">
+          <div class="s-icon">📖</div>
+          <div>
+            <div class="s-name">Learner</div>
+            <div class="s-desc">Always exploring new technologies and improving.</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
