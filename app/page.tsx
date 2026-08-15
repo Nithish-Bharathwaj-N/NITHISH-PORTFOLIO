@@ -2567,6 +2567,319 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   text-align: center;
 }
 
+
+/* ABOUT ME DASHBOARD STYLING */
+#about {
+  background: var(--light);
+  padding: 100px 80px 70px;
+}
+@media(max-width:860px) { #about { padding: 80px 24px 40px; } }
+
+.about-dashboard-grid {
+  display: grid;
+  grid-template-columns: 310px 1fr 300px;
+  gap: 20px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  align-items: stretch;
+}
+@media(max-width:1200px) { .about-dashboard-grid { grid-template-columns: 1fr; } }
+
+/* LEFT COLUMN: PHOTO HUD & SPEC LIST */
+.about-spec-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+}
+.hud-photo-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 18px;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 20px rgba(200,66,26,0.25);
+}
+.hud-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.spec-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.76rem;
+}
+.spec-item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 6px;
+}
+.spec-item:last-child { border-bottom: none; }
+.spec-lbl {
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dark-3);
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.spec-val {
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* CENTER COLUMN: WHO AM I & MY APPROACH */
+.about-center-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.who-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+}
+.who-hdr {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.who-text {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text-dark-2);
+  margin-bottom: 20px;
+}
+
+.who-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+@media(max-width:600px) { .who-stats-row { grid-template-columns: repeat(2, 1fr); } }
+
+.ws-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius);
+  padding: 14px 10px;
+  text-align: center;
+}
+.ws-icon { font-size: 1.1rem; color: var(--accent); margin-bottom: 4px; }
+.ws-num {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.1;
+}
+.ws-lbl {
+  font-size: 0.64rem;
+  font-weight: 700;
+  color: var(--text-dark-3);
+  margin-top: 2px;
+}
+
+.approach-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+}
+.approach-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  position: relative;
+
+}
+@media(max-width:600px) { .approach-steps { grid-template-columns: repeat(2, 1fr); } }
+
+.app-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.app-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(200,66,26,0.1);
+  border: 1.5px solid rgba(200,66,26,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.app-name {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+.app-desc {
+  font-size: 0.68rem;
+  color: var(--text-dark-3);
+  line-height: 1.35;
+}
+
+/* RIGHT COLUMN: SKILLS OVERVIEW & BEYOND CODE */
+.about-right-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.skills-ov-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+}
+.skill-bar-item {
+  margin-bottom: 10px;
+}
+.skill-bar-item:last-child { margin-bottom: 0; }
+.sb-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-dark-2);
+  margin-bottom: 4px;
+}
+.sb-bg {
+  height: 6px;
+  background: #f1f5f9;
+  border-radius: 99px;
+  overflow: hidden;
+}
+.sb-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #f97316);
+  border-radius: 99px;
+}
+
+.beyond-code-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+}
+.bc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+@media(max-width:600px) { .bc-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.bc-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-sm);
+  padding: 12px 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--t);
+}
+.bc-box:hover {
+  border-color: rgba(200,66,26,0.3);
+  transform: translateY(-2px);
+}
+.bc-icon { font-size: 1.1rem; margin-bottom: 4px; }
+.bc-title { font-size: 0.68rem; font-weight: 700; color: var(--text-dark-2); line-height: 1.25; }
+
+/* BOTTOM FULL WIDTH: MY JOURNEY SO FAR */
+.about-journey-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+}
+.aj-track {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  position: relative;
+}
+@media(max-width:1024px) { .aj-track { grid-template-columns: repeat(3, 1fr); } }
+@media(max-width:600px) { .aj-track { grid-template-columns: 1fr; } }
+
+.aj-step {
+  display: flex;
+  flex-direction: column;
+}
+.aj-time {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.aj-icon-node {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(200,66,26,0.1);
+  border: 1.5px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.aj-icon-node.now-node {
+  background: #10b981;
+  border-color: #fff;
+  color: #fff;
+  box-shadow: 0 0 12px #10b981;
+}
+.aj-title {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+.aj-desc {
+  font-size: 0.68rem;
+  color: var(--text-dark-3);
+  line-height: 1.45;
+}
+
 ` }} />
       <div dangerouslySetInnerHTML={{ __html: `
 <a id="skip-link" href="#intro">Skip to content</a>
@@ -2632,47 +2945,205 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 <section id="about" aria-labelledby="about-title">
   <div class="about-wrap">
     <div class="sec-label dark-lbl">01</div>
-    <h2 id="about-title" class="sec-title" style="color:var(--text-dark)">About Me.</h2>
-    <div class="about-grid">
-      <div class="about-photo-wrap fu">
-        <img src="images/about-photo.jpg" alt="Portrait of Nithish Bharathwaj N" loading="lazy" width="320" height="427">
+    <h2 id="about-title" class="sec-title" style="color:var(--text-dark)">ABOUT <span style="color:var(--accent)">ME.</span></h2>
+    <p style="font-size:0.9rem;color:var(--text-dark-3);margin-top:6px;margin-bottom:24px;font-style:italic;">"I enjoy solving complex problems, building real-world solutions, and constantly learning."</p>
+
+    <!-- MAIN 3-COLUMN DASHBOARD GRID -->
+    <div class="about-dashboard-grid fu">
+      <!-- LEFT COLUMN: PHOTO HUD & SPEC LIST -->
+      <div class="about-spec-card">
+        <div class="hud-photo-wrap">
+          <img src="images/nithish-photo.jpg" alt="Nithish Bharathwaj N Portrait">
+        </div>
+        <div class="spec-list">
+          <div class="spec-item">
+            <span class="spec-lbl">👤 NAME</span>
+            <span class="spec-val">Nithish Bharathwaj N</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-lbl">💼 ROLE</span>
+            <span class="spec-val">Cybersecurity • AI/ML • Full-Stack Engineer</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-lbl">🎓 EDUCATION</span>
+            <span class="spec-val">BE Cybersecurity | Chennai Institute of Technology</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-lbl">📍 LOCATION</span>
+            <span class="spec-val">Chennai, Tamil Nadu, India</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-lbl">✉️ EMAIL</span>
+            <span class="spec-val">nithishbharathwajn@gmail.com</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-lbl">🗣️ LANGUAGES</span>
+            <span class="spec-val">Tamil (Native) • English (Fluent)</span>
+          </div>
+        </div>
       </div>
-      <div class="about-body">
-        <p class="about-desc">I'm a <strong>Computer Science &amp; Engineering (Cyber Security)</strong> scholar at <strong>Chennai Institute of Technology</strong>. I specialise in engineering high-performance AI-driven systems, interactive 3D WebGL Digital Twin platforms, and secure full-stack software architectures.<br><br>Recognised as a <strong style="color:var(--accent)">Top 8 Finalist nationwide in Aerothon 2026</strong> hosted by HAL (Hindustan Aeronautics Limited) and IIT Indore for building the real-time SubAERO submarine telemetry twin platform. Passionate about solving complex algorithmic challenges with <strong>500+ LeetCode solutions</strong>, a <strong>1771 Contest Rating</strong>, and an active <strong>118-day continuous coding streak</strong>.<br><br>Driven by a commitment to zero-trust cybersecurity principles, modern cloud infrastructure (AWS/Docker), real-time WebSocket communication, and immersive web experiences powered by Three.js and React 19.</p>
-        <div class="stat-row">
-          <div class="stat-card fu"><div class="stat-icon">💻</div><div class="stat-num" data-target="500" data-suffix="+">0</div><div class="stat-lbl">LeetCode Solved</div></div>
-          <div class="stat-card fu"><div class="stat-icon">📈</div><div class="stat-num" data-target="1771" data-suffix="">0</div><div class="stat-lbl">Contest Rating</div></div>
-          <div class="stat-card fu"><div class="stat-icon">🏆</div><div class="stat-num">Top 8</div><div class="stat-lbl">Aerothon 2026</div></div>
-          <div class="stat-card fu"><div class="stat-icon">🚀</div><div class="stat-num" data-target="5" data-suffix="+">0</div><div class="stat-lbl">Hackathon Finalist</div></div>
+
+      <!-- CENTER COLUMN: WHO AM I & MY APPROACH -->
+      <div class="about-center-stack">
+        <!-- WHO AM I CARD -->
+        <div class="who-card">
+          <div class="who-hdr">👤 WHO AM I?</div>
+          <p class="who-text">
+            I'm a second-year BE Cybersecurity student at <strong>Chennai Institute of Technology</strong> with a strong passion for problem solving, building impactful projects, and exploring the intersection of security, AI, and full-stack development.<br><br>
+            I love learning by doing. From competitive programming to cybersecurity, from full-stack development to AI/ML, I enjoy turning ideas into real solutions. Hackathons, projects, and challenges keep me motivated to grow every day.
+          </p>
+
+          <div class="who-stats-row">
+            <div class="ws-box">
+              <div class="ws-icon">&lt;/&gt;</div>
+              <div class="ws-num">500+</div>
+              <div class="ws-lbl">LeetCode Problems</div>
+            </div>
+
+            <div class="ws-box">
+              <div class="ws-icon">🏆</div>
+              <div class="ws-num">5+</div>
+              <div class="ws-lbl">Hackathon Finalist</div>
+            </div>
+
+            <div class="ws-box">
+              <div class="ws-icon">🚀</div>
+              <div class="ws-num">3+</div>
+              <div class="ws-lbl">Projects Shipped</div>
+            </div>
+
+            <div class="ws-box">
+              <div class="ws-icon">⏱️</div>
+              <div class="ws-num">5-6 Hrs</div>
+              <div class="ws-lbl">Daily Learning</div>
+            </div>
+          </div>
         </div>
-        <div class="about-info">
-          <div class="fu">
-            <div class="info-col-title">Experience</div>
-            <div class="info-item"><strong>Generative AI Virtual Intern</strong><span>AWS Academy × AICTE × EduSkills</span></div>
-            <div class="info-item"><strong>SubAERO Digital Twin Lead</strong><span>HAL &amp; IIT Indore — Aerothon 2026</span></div>
-            <div class="info-item"><strong>Full-Stack AI Developer</strong><span>Open Source &amp; Personal Projects</span></div>
-          </div>
-          <div class="fu">
-            <div class="info-col-title">Education</div>
-            <div class="info-item"><strong>B.E. CSE (Cyber Security)</strong><span>Chennai Institute of Technology<br>2025 – Present</span></div>
-            <div class="info-item"><strong>Class XII — 93.67%</strong><span>SSBM</span></div>
-          </div>
-          <div class="fu">
-            <div class="info-col-title">Interests</div>
-            <div class="info-item"><strong>Cybersecurity, AI, Real-Time Systems</strong><span>3D Graphics, Problem Solving</span></div>
-            <div class="info-item"><strong>Competitive Programming</strong><span>118-day continuous streak</span></div>
-            <div class="info-item"><strong>Sports</strong><span>District Throwball, Zonal Carrom,<br>CM Trophy Athletics &amp; Cricket</span></div>
+
+        <!-- MY APPROACH CARD -->
+        <div class="approach-card">
+          <div class="who-hdr">💡 MY APPROACH</div>
+          <div class="approach-steps">
+            <div class="app-step">
+              <div class="app-icon-circle">💡</div>
+              <div class="app-name">Learn</div>
+              <div class="app-desc">Understand deeply and explore possibilities.</div>
+            </div>
+
+            <div class="app-step">
+              <div class="app-icon-circle">&lt;/&gt;</div>
+              <div class="app-name">Build</div>
+              <div class="app-desc">Build, break, debug and make it better.</div>
+            </div>
+
+            <div class="app-step">
+              <div class="app-icon-circle">🎯</div>
+              <div class="app-name">Solve</div>
+              <div class="app-desc">Solve real-world problems with impact.</div>
+            </div>
+
+            <div class="app-step">
+              <div class="app-icon-circle">📈</div>
+              <div class="app-name">Improve</div>
+              <div class="app-desc">Iterate, optimize and keep leveling up.</div>
+            </div>
           </div>
         </div>
-        <div class="certs-row fu">
-          <div class="certs-title">Certifications &amp; Honors</div>
-          <div class="cert-cards">
-            <span class="cert-card"><span class="cert-dot"></span>AWS Generative AI Internship</span>
-            <span class="cert-card"><span class="cert-dot"></span>Top 8 — HAL Aerothon 2026</span>
-            <span class="cert-card"><span class="cert-dot"></span>National Hackathon Finalist (5+)</span>
-            <span class="cert-card"><span class="cert-dot"></span>LeetCode Rating 1771</span>
-            <span class="cert-card"><span class="cert-dot"></span>District Throwball Champion</span>
+      </div>
+
+      <!-- RIGHT COLUMN: SKILLS OVERVIEW & BEYOND CODE -->
+      <div class="about-right-stack">
+        <!-- SKILLS OVERVIEW -->
+        <div class="skills-ov-card">
+          <div class="who-hdr">📊 SKILLS OVERVIEW</div>
+          <div class="skill-bar-item">
+            <div class="sb-info"><span>Cybersecurity</span><span>85%</span></div>
+            <div class="sb-bg"><div class="sb-fill" style="width:85%;"></div></div>
           </div>
+
+          <div class="skill-bar-item">
+            <div class="sb-info"><span>Web Development</span><span>80%</span></div>
+            <div class="sb-bg"><div class="sb-fill" style="width:80%;"></div></div>
+          </div>
+
+          <div class="skill-bar-item">
+            <div class="sb-info"><span>AI / Machine Learning</span><span>70%</span></div>
+            <div class="sb-bg"><div class="sb-fill" style="width:70%;"></div></div>
+          </div>
+
+          <div class="skill-bar-item">
+            <div class="sb-info"><span>Data Structures &amp; Algorithms</span><span>90%</span></div>
+            <div class="sb-bg"><div class="sb-fill" style="width:90%;"></div></div>
+          </div>
+
+          <div class="skill-bar-item">
+            <div class="sb-info"><span>Problem Solving</span><span>90%</span></div>
+            <div class="sb-bg"><div class="sb-fill" style="width:90%;"></div></div>
+          </div>
+
+          <div class="skill-bar-item">
+            <div class="sb-info"><span>Databases</span><span>75%</span></div>
+            <div class="sb-bg"><div class="sb-fill" style="width:75%;"></div></div>
+          </div>
+
+          <div class="skill-bar-item">
+            <div class="sb-info"><span>DevOps &amp; Tools</span><span>65%</span></div>
+            <div class="sb-bg"><div class="sb-fill" style="width:65%;"></div></div>
+          </div>
+        </div>
+
+        <!-- BEYOND CODE -->
+        <div class="beyond-code-card">
+          <div class="who-hdr">🎲 BEYOND CODE</div>
+          <div class="bc-grid">
+            <div class="bc-box"><div class="bc-icon">📖</div><div class="bc-title">Reading Books</div></div>
+            <div class="bc-box"><div class="bc-icon">🏋️</div><div class="bc-title">Workout &amp; Fitness</div></div>
+            <div class="bc-box"><div class="bc-icon">🎬</div><div class="bc-title">Tamil Movies</div></div>
+            <div class="bc-box"><div class="bc-icon">✈️</div><div class="bc-title">Travel &amp; Exploration</div></div>
+            <div class="bc-box"><div class="bc-icon">📈</div><div class="bc-title">Personal Growth</div></div>
+            <div class="bc-box"><div class="bc-icon">🎧</div><div class="bc-title">Music &amp; Focus</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM FULL-WIDTH: MY JOURNEY SO FAR -->
+    <div class="about-journey-card fu">
+      <div class="who-hdr">📅 MY JOURNEY SO FAR</div>
+      <div class="aj-track">
+        <div class="aj-step">
+          <div class="aj-time">Till 2025 Mid</div>
+          <div class="aj-icon-node">&lt;/&gt;</div>
+          <div class="aj-title">Competitive Programming</div>
+          <div class="aj-desc">Started my coding journey solving problems and building strong DSA foundation.</div>
+        </div>
+
+        <div class="aj-step">
+          <div class="aj-time">End 2025</div>
+          <div class="aj-icon-node">🛡️</div>
+          <div class="aj-title">Cybersecurity</div>
+          <div class="aj-desc">Explored security fundamentals, networking, ethical hacking and tools.</div>
+        </div>
+
+        <div class="aj-step">
+          <div class="aj-time">Early 2026</div>
+          <div class="aj-icon-node">💻</div>
+          <div class="aj-title">Full-Stack Development</div>
+          <div class="aj-desc">Building end-to-end web applications and real-world projects.</div>
+        </div>
+
+        <div class="aj-step">
+          <div class="aj-time">Mid 2026</div>
+          <div class="aj-icon-node">🧠</div>
+          <div class="aj-title">AI / Machine Learning</div>
+          <div class="aj-desc">Diving into ML models, data and intelligent systems.</div>
+        </div>
+
+        <div class="aj-step">
+          <div class="aj-time" style="color:#10b981;">Now</div>
+          <div class="aj-icon-node now-node">🚀</div>
+          <div class="aj-title">Projects &amp; Hackathons</div>
+          <div class="aj-desc">Building solutions, participating in hackathons and creating impact.</div>
         </div>
       </div>
     </div>
