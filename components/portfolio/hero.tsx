@@ -68,7 +68,10 @@ export function Hero() {
             View Selected Work →
           </a>
           <a
-            href="#contact"
+            href="/resume.pdf"
+            download="Nithish_Bharathwaj_N_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-transparent hover:border-white/60 text-white/80 hover:text-white font-bold text-xs uppercase tracking-wider rounded-md border-2 border-white/20 transition-all transform hover:-translate-y-0.5"
           >
             Download CV ↓
