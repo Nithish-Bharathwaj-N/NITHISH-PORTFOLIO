@@ -6,8 +6,23 @@
     ================================================== -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nithish Bharathwaj N | AI • Cybersecurity • Full-Stack Developer</title>
-    <meta name="description" content="Portfolio of Nithish Bharathwaj N, Computer Science (Cybersecurity) student, Top 8 Aerothon 2026 Finalist (HAL & IIT Indore), AI & 3D Digital Twin Engineer.">
+    <title>Nithish Bharathwaj N — Cybersecurity • AI • Full-Stack Engineer</title>
+    <meta name="description" content="Portfolio of Nithish Bharathwaj N, Cybersecurity scholar & Full-Stack AI Engineer. Developer of SubAERO Aerospace 3D Digital Twin (Top 8 Aerothon 2026 Finalist @ HAL & IIT Indore).">
+    <meta name="author" content="Nithish Bharathwaj N">
+    <meta name="theme-color" content="#1c1c1c">
+
+    <!-- OpenGraph Metadata -->
+    <meta property="og:title" content="Nithish Bharathwaj N | Cybersecurity • AI • Full-Stack Engineer">
+    <meta property="og:description" content="Engineering AI-driven platforms, 3D WebGL Digital Twins (SubAERO), and secure full-stack software architectures. Top 8 Aerothon 2026 Finalist (HAL & IIT Indore).">
+    <meta property="og:image" content="images/nithish-photo.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Nithish-Bharathwaj-N">
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nithish Bharathwaj N — Cybersecurity • AI • Full-Stack Engineer">
+    <meta name="twitter:description" content="Engineering AI-driven platforms, 3D WebGL Digital Twins (SubAERO), and secure full-stack software architectures.">
+    <meta name="twitter:image" content="images/nithish-photo.jpg">
 
     <script>
         document.documentElement.classList.remove('no-js');
@@ -25,55 +40,145 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <style>
-        .s-intro__content-title {
-            font-size: clamp(3rem, 5.5vw, 5.2rem);
-            line-height: 1.1;
+        /* Design Tokens & CSS Variables */
+        :root {
+            --color-bg-dark: #1c1c1c;
+            --color-bg-light: #f4f6f8;
+            --color-accent-orange: #d64923;
+            --color-text-white: #ffffff;
+            --color-text-muted: rgba(255, 255, 255, 0.75);
+            --color-text-dark: #0f172a;
+            --max-container-width: 1400px;
         }
-        .tech-badge-container {
+
+        /* Container constraints across screens */
+        .s-pagewrap {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        .row {
+            max-width: var(--max-container-width) !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        /* Active Navigation Indicator */
+        .s-header__menu-links li.current a {
+            color: #d64923 !important;
+            border-bottom: 2px solid #d64923;
+            padding-bottom: 4px;
+        }
+
+        /* Hero Section V2 Upgrades */
+        .s-intro {
+            background-color: var(--color-bg-dark) !important;
+            min-height: 90vh;
             display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 10px;
+            align-items: center;
+            position: relative;
+            padding-top: 120px;
+            padding-bottom: 80px;
         }
-        .tech-badge {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            color: #38bdf8;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-        .achievement-highlight {
-            color: #38bdf8;
+        .s-intro__content-title {
+            font-size: clamp(2.8rem, 5vw, 4.8rem);
+            line-height: 1.15;
             font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
         }
-        /* About Section Matching Get In Touch Dark Theme */
+        .s-intro__positioning {
+            font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+            color: #d64923;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+        .s-intro__supporting {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 620px;
+            margin-bottom: 28px;
+        }
+        .availability-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 18px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 9999px;
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            backdrop-filter: blur(8px);
+        }
+        .availability-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #22c55e;
+            animation: pulseDot 2s infinite;
+        }
+        @keyframes pulseDot {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Hero Image Layout */
+        .s-intro__content-media-v2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .s-intro__content-media-v2 img {
+            width: 100%;
+            max-width: 420px;
+            border-radius: 20px;
+            border: 2px solid rgba(214, 73, 35, 0.6);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+            object-fit: cover;
+            aspect-ratio: 4/5;
+        }
+
+        /* About Section V2 */
         #about {
-            background-color: var(--color-3) !important; /* Exact dark charcoal as Get In Touch */
+            background-color: var(--color-bg-dark) !important;
             padding-top: var(--vspace-5);
             padding-bottom: var(--vspace-5);
             color: var(--color-gray-15);
         }
         #about .s-about__block-title {
             color: #ffffff !important;
+            font-size: 1.45rem !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px !important;
+            padding-bottom: 10px !important;
+            border-bottom: 2px solid #d64923 !important;
         }
         #about .s-about__list {
-            color: rgba(255, 255, 255, 0.85) !important;
+            color: #ffffff !important;
+            font-size: 1.2rem !important;
+            line-height: 1.7 !important;
         }
-        #about .s-about__list span {
-            color: rgba(255, 255, 255, 0.5) !important;
+        #about .s-about__list li {
+            margin-bottom: 18px !important;
         }
 
-        /* Skills Section Light Theme & Full-Width Marquee Styling */
+        /* Expertise Section Light Theme & Marquee Styling */
         #skills {
-            background-color: #f4f6f8 !important;
+            background-color: var(--color-bg-light) !important;
             padding-top: var(--vspace-5);
             padding-bottom: var(--vspace-5);
             color: #0f172a;
@@ -92,21 +197,21 @@
             width: 100%;
             overflow: hidden;
             position: relative;
-            margin-bottom: 24px;
+            margin-bottom: 32px;
             padding: 10px 0;
             mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
             -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
         }
         .marquee-track {
             display: flex;
-            gap: 16px;
+            gap: 18px;
             width: max-content;
         }
         .marquee-track--left {
-            animation: marqueeLeft 32s linear infinite;
+            animation: marqueeLeft 35s linear infinite;
         }
         .marquee-track--right {
-            animation: marqueeRight 32s linear infinite;
+            animation: marqueeRight 35s linear infinite;
         }
         .marquee-track:hover {
             animation-play-state: paused;
@@ -114,16 +219,16 @@
         .marquee-pill {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            padding: 11px 22px;
+            gap: 12px;
+            padding: 12px 24px;
             background: #ffffff;
             border: 1px solid #cbd5e1;
             border-radius: 9999px;
             color: #0f172a;
-            font-size: 0.9rem;
+            font-size: 1.05rem;
             font-weight: 600;
             white-space: nowrap;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
         }
         .marquee-pill:hover {
@@ -131,7 +236,7 @@
             border-color: #d64923;
             color: #d64923;
             transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(214, 73, 35, 0.18);
+            box-shadow: 0 6px 22px rgba(214, 73, 35, 0.2);
         }
         .skills-full-width-wrapper {
             width: 100%;
@@ -141,26 +246,26 @@
         }
         .skill-category-box {
             background: #ffffff;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #cbd5e1;
             border-radius: 18px;
-            padding: 28px 24px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            padding: 30px 26px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
         }
         .skill-category-box:hover {
             border-color: #d64923;
             transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(214, 73, 35, 0.12);
+            box-shadow: 0 16px 36px rgba(214, 73, 35, 0.15);
         }
         .skill-item {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 16px 10px;
+            padding: 18px 12px;
             background: #f8fafc;
             border: 1px solid #e2e8f0;
-            border-radius: 12px;
+            border-radius: 14px;
             text-align: center;
             transition: all 0.3s ease;
         }
@@ -168,39 +273,63 @@
             background: #ffffff;
             border-color: #d64923;
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(214, 73, 35, 0.18);
+            box-shadow: 0 10px 28px rgba(214, 73, 35, 0.2);
         }
         .skill-item svg {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             transition: transform 0.3s ease;
         }
         .skill-item:hover svg {
             transform: scale(1.15);
         }
         .skill-item span {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #1e293b;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #0f172a;
         }
 
-        /* Works Section Vertical One-by-One Layout */
+        /* Works Section Interactive Project Filters & Cards */
         #works {
-            background-color: var(--color-3) !important; /* Exact same dark charcoal background as Get In Touch */
+            background-color: var(--color-bg-dark) !important;
             padding-top: var(--vspace-5);
             padding-bottom: var(--vspace-5);
             color: var(--color-gray-15);
         }
+        .project-filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background: #d64923;
+            border-color: #d64923;
+            color: #ffffff;
+            box-shadow: 0 4px 18px rgba(214, 73, 35, 0.4);
+        }
         .projects-grid {
             display: flex;
             flex-direction: column;
-            gap: 44px;
-            max-width: 1100px;
-            margin: var(--vspace-1_5) auto 0;
+            gap: 48px;
+            max-width: 1250px;
+            margin: 0 auto;
         }
         .project-card {
             background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
             overflow: hidden;
             display: grid;
             grid-template-columns: 1.15fr 1fr;
@@ -213,13 +342,13 @@
         }
         .project-card:hover {
             transform: translateY(-4px);
-            border-color: rgba(255, 255, 255, 0.25);
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+            border-color: rgba(214, 73, 35, 0.6);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
         }
         .project-card__thumb {
             width: 100%;
             height: 100%;
-            min-height: 280px;
+            min-height: 320px;
             overflow: hidden;
             position: relative;
             background: #111;
@@ -235,67 +364,236 @@
         }
         .project-card__badge-overlay {
             position: absolute;
-            top: 14px;
-            left: 14px;
-            background: rgba(0, 0, 0, 0.8);
+            top: 16px;
+            left: 16px;
+            background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.25);
             color: #fff;
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 5px 12px;
-            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 6px;
             z-index: 2;
         }
         .project-card__body {
-            padding: 32px 36px;
+            padding: 36px 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
         .project-card__title {
             font-family: var(--font-1) !important;
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             font-weight: 700;
             color: #ffffff !important;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             line-height: 1.25;
         }
         .project-card__subtitle {
-            color: #d64923 !important; /* Hudson signature terracotta accent */
+            color: #d64923 !important;
             font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 14px;
+            font-size: 1.15rem;
+            margin-bottom: 16px;
             line-height: 1.4;
         }
         .project-card__desc {
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: var(--color-gray-12) !important;
-            margin-bottom: 22px;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.92) !important;
+            margin-bottom: 24px;
         }
         .project-card__tech {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 26px;
+            gap: 10px;
+            margin-bottom: 28px;
         }
         .project-card__badge {
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            color: var(--color-gray-13) !important;
-            padding: 4px 12px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #f1f5f9 !important;
+            padding: 6px 16px;
             border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
+            font-size: 0.95rem;
+            font-weight: 600;
         }
         .project-card__actions {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 14px;
         }
         .project-card__actions .btn {
             margin: 0;
+            font-size: 0.95rem;
+            padding: 14px 28px;
+        }
+
+        /* Engineering Principles Section */
+        #principles {
+            background-color: #161616;
+            padding: 100px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .principle-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 32px 28px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .principle-card:hover {
+            border-color: #d64923;
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .principle-num {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #d64923;
+            margin-bottom: 12px;
+        }
+        .principle-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .principle-desc {
+            font-size: 1.05rem;
+            line-height: 1.65;
+            color: rgba(255, 255, 255, 0.75);
+            margin: 0;
+        }
+
+        /* Case Study Modal System */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(12px);
+            z-index: 10000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .modal-content {
+            background: #1c1c1c;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            max-width: 950px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 44px;
+            position: relative;
+            color: #ffffff;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.9);
+        }
+        .modal-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #ffffff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .modal-close:hover {
+            background: #d64923;
+        }
+        .modal-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        .modal-subtitle {
+            font-size: 1.2rem;
+            color: #d64923;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        .modal-section {
+            margin-bottom: 28px;
+        }
+        .modal-section h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ffffff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            padding-bottom: 8px;
+            margin-bottom: 14px;
+        }
+        .modal-section p, .modal-section li {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        .architecture-box {
+            background: #111111;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 20px;
+            font-family: monospace;
+            font-size: 0.95rem;
+            color: #38bdf8;
+            overflow-x: auto;
+            white-space: pre;
+            margin-top: 12px;
+        }
+
+        /* Contact Section Interactive Form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .form-input, .form-textarea {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            padding: 16px 20px;
+            color: #ffffff;
+            font-size: 1.05rem;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #d64923;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 15px rgba(214, 73, 35, 0.3);
+        }
+        .form-status {
+            font-size: 1.05rem;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 8px;
+            display: none;
+        }
+        .form-status.success {
+            display: block;
+            background: rgba(34, 197, 94, 0.15);
+            border: 1px solid #22c55e;
+            color: #4ade80;
         }
     </style>
 
@@ -324,7 +622,7 @@
 
                 <div class="s-header__block">
                     <div class="s-header__logo">
-                        <a class="logo" href="index.html" style="font-size: 1.4rem; font-weight: 800; color: #fff; letter-spacing: 1px;">
+                        <a class="logo" href="index.html" style="font-size: 1.35rem; font-weight: 800; color: #fff; letter-spacing: 1px;">
                             NITHISH BHARATHWAJ N
                         </a>
                     </div>
@@ -336,8 +634,10 @@
                     <ul class="s-header__menu-links">
                         <li class="current"><a class="smoothscroll" href="#intro">Intro</a></li>
                         <li><a class="smoothscroll" href="#about">About</a></li>
-                        <li><a class="smoothscroll" href="#skills">Skills</a></li>
-                        <li><a class="smoothscroll" href="#works">Works</a></li>
+                        <li><a class="smoothscroll" href="#skills">Expertise</a></li>
+                        <li><a class="smoothscroll" href="#works">Work</a></li>
+                        <li><a class="smoothscroll" href="#principles">Principles</a></li>
+                        <li><a class="smoothscroll" href="#numbers">Achievements</a></li>
                         <li><a class="smoothscroll" href="#footer">Contact</a></li>
                     </ul> <!-- s-header__menu-links -->    
                 </nav> <!-- end s-header__nav -->
@@ -346,80 +646,74 @@
         </header> <!-- end s-header -->
 
 
-        <!-- # intro
+        <!-- # intro V2
         ================================================== -->
         <section id="intro" class="s-intro target-section">
 
-            <div class="row s-intro__content width-sixteen-col">
-                <div class="column lg-12 s-intro__content-inner grid-block grid-16">
+            <div class="row s-intro__content" style="width: 100%; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 40px;">
+                
+                <div style="flex: 1 1 540px; max-width: 720px;">
                     
-                    <div class="s-intro__content-text">
-
-                        <div class="s-intro__content-pretitle text-pretitle">Hello</div>
-                        <h1 class="s-intro__content-title">
-                        I'm Nithish Bharathwaj N <br>
-                        Full-Stack & AI Engineer <br>
-                        based in Chennai, India.
-                        </h1>                            
-
-                        <div class="s-intro__content-btns">
-                            <a class="smoothscroll btn" href="#about">More About Me</a>
-                            <a class="smoothscroll btn btn--stroke" href="#footer">Get In Touch</a>
-                        </div> <!-- s-intro__content-btns -->   
-
-                    </div> <!-- s-intro__content-text -->                     
-                    
-                </div> <!-- s-intro__content-inner -->  
-            </div> <!-- s-intro__content -->
-
-            <ul class="s-intro__social social-list">
-                <li>
-                    <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noreferrer" title="GitHub">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 0.8);"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                        <span class="u-screen-reader-text">GitHub</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/nithish-bharathwaj-n-847a00379" target="_blank" rel="noreferrer" title="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 0.8);"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        <span class="u-screen-reader-text">LinkedIn</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noreferrer" title="LeetCode">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 0.8);"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.17 5.79a1.375 1.375 0 0 0-.005 1.941l.005.005 5.353 5.353a1.375 1.375 0 0 0 1.942 0l.005-.005 5.353-5.353a1.375 1.375 0 0 0 0-1.941l-.005-.005L14.445.438A1.374 1.374 0 0 0 13.483 0zm0 2.75l3.535 3.535-3.535 3.536-3.536-3.536 3.536-3.535zM5.353 7.604a1.375 1.375 0 0 0-1.942 0l-.005.005-3.181 3.182a1.375 1.375 0 0 0 0 1.941l.005.005 3.181 3.182a1.375 1.375 0 0 0 1.942 0l.005-.005 3.181-3.182a1.375 1.375 0 0 0 0-1.941l-.005-.005-3.181-3.182zm0 2.75l1.364 1.364-1.364 1.364-1.364-1.364 1.364-1.364zm15.294 0a1.375 1.375 0 0 0-1.942 0l-.005.005-3.181 3.182a1.375 1.375 0 0 0 0 1.941l.005.005 3.181 3.182a1.375 1.375 0 0 0 1.942 0l.005-.005 3.181-3.182a1.375 1.375 0 0 0 0-1.941l-.005-.005-3.181-3.182zm0 2.75l1.364 1.364-1.364 1.364-1.364-1.364 1.364-1.364z"/></svg>
-                        <span class="u-screen-reader-text">LeetCode</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:nithishbharathwajn@gmail.com" title="Email">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 0.8);"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l12-9.725v15.438h-24v-15.438l12 9.725z"/></svg>
-                        <span class="u-screen-reader-text">Email</span>
-                    </a>
-                </li>
-            </ul> <!-- end s-intro__social -->
-
-            <div class="s-intro__content-media" style="top: 90px;">                               
-                <img src="images/nithish-photo.jpg" alt="Nithish Bharathwaj N" style="object-fit: cover; object-position: center 25%;">
-            </div> <!-- s-intro__content-media -->                
-
-            <div class="s-intro__btn-download">
-                <a class="btn btn--stroke" href="NITHISH_BHARATHWAJ_N_Resume_2026-08-15.pdf" download>Get My CV</a>
-            </div> <!-- end s-intro__btn-download -->
-            
-            <div class="s-intro__scroll-down">
-                <a href="#about" class="smoothscroll">
-                    <div class="scroll-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path></svg>
+                    <div class="availability-pill">
+                        <span class="availability-dot"></span>
+                        <span>Available for Full-Stack, AI & Cybersecurity Roles</span>
                     </div>
-                    <span class="scroll-text u-screen-reader-text">Scroll Down</span>
-                </a>
-            </div> <!-- s-intro__scroll-down -->
+
+                    <div class="s-intro__content-pretitle text-pretitle" style="color: #d64923; font-weight: 700; letter-spacing: 2px;">
+                        HELLO, I'M NITHISH
+                    </div>
+
+                    <h1 class="s-intro__content-title">
+                        I build intelligent <br> software systems.
+                    </h1>
+
+                    <div class="s-intro__positioning">
+                        Cybersecurity · AI · Full-Stack · Real-Time Systems
+                    </div>
+
+                    <p class="s-intro__supporting">
+                        Engineering high-performance AI platforms, interactive 3D WebGL Digital Twin systems (SubAERO), and secure zero-trust cloud architectures.
+                    </p>
+
+                    <div class="s-intro__content-btns" style="display: flex; flex-wrap: wrap; gap: 14px;">
+                        <a class="smoothscroll btn btn--primary" href="#works" style="background: #d64923; border-color: #d64923; color: #fff;">View Selected Work</a>
+                        <a class="btn btn--stroke" href="NITHISH_BHARATHWAJ_N_Resume_2026-08-15.pdf" download style="color: #fff; border-color: rgba(255,255,255,0.3);">Download CV</a>
+                        <a class="smoothscroll btn btn--stroke" href="#footer" style="color: #fff; border-color: rgba(255,255,255,0.3);">Get In Touch</a>
+                    </div>
+
+                    <ul class="social-list" style="display: flex; gap: 20px; list-style: none; padding: 0; margin-top: 32px;">
+                        <li>
+                            <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noreferrer" title="GitHub" style="color: rgba(255,255,255,0.8); display: flex; align-items: center; gap: 8px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                                <span>GitHub</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/nithish-bharathwaj-n-847a00379" target="_blank" rel="noreferrer" title="LinkedIn" style="color: rgba(255,255,255,0.8); display: flex; align-items: center; gap: 8px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                <span>LinkedIn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noreferrer" title="LeetCode" style="color: rgba(255,255,255,0.8); display: flex; align-items: center; gap: 8px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.17 5.79a1.375 1.375 0 0 0-.005 1.941l.005.005 5.353 5.353a1.375 1.375 0 0 0 1.942 0l.005-.005 5.353-5.353a1.375 1.375 0 0 0 0-1.941l-.005-.005L14.445.438A1.374 1.374 0 0 0 13.483 0zm0 2.75l3.535 3.535-3.535 3.536-3.536-3.536 3.536-3.535zM5.353 7.604a1.375 1.375 0 0 0-1.942 0l-.005.005-3.181 3.182a1.375 1.375 0 0 0 0 1.941l.005.005 3.181 3.182a1.375 1.375 0 0 0 1.942 0l.005-.005 3.181-3.182a1.375 1.375 0 0 0 0-1.941l-.005-.005-3.181-3.182zm0 2.75l1.364 1.364-1.364 1.364-1.364-1.364 1.364-1.364zm15.294 0a1.375 1.375 0 0 0-1.942 0l-.005.005-3.181 3.182a1.375 1.375 0 0 0 0 1.941l.005.005 3.181 3.182a1.375 1.375 0 0 0 1.942 0l.005-.005 3.181-3.182a1.375 1.375 0 0 0 0-1.941l-.005-.005-3.181-3.182zm0 2.75l1.364 1.364-1.364 1.364-1.364-1.364 1.364-1.364z"/></svg>
+                                <span>LeetCode</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="s-intro__content-media-v2" style="flex: 1 1 360px; max-width: 440px;">
+                    <img src="images/nithish-photo.jpg" alt="Nithish Bharathwaj N">
+                </div>
+
+            </div> <!-- s-intro__content -->
 
         </section> <!-- end s-intro -->
 
 
-        <!-- # about
+        <!-- # about V2
         ================================================== -->
         <section id="about" class="s-about target-section">
 
@@ -430,21 +724,24 @@
                         <h2 class="text-display-title">About Me.</h2>
                     </div> <!-- end section-header -->
 
-                    <div class="s-about__photo-container" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; margin-bottom: 44px;">
-                        <div style="flex: 0 0 280px; max-width: 280px;">
+                    <div class="s-about__photo-container" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; margin-bottom: 50px;">
+                        <div style="flex: 0 0 320px; max-width: 320px;">
                             <img src="images/nithish-photo.jpg" alt="Nithish Bharathwaj N" style="width: 100%; border-radius: 16px; border: 2px solid rgba(214, 73, 35, 0.6); box-shadow: 0 12px 35px rgba(0,0,0,0.6); object-fit: cover; aspect-ratio: 4/5;">
                         </div>
                         <div style="flex: 1 1 500px;">
-                            <p class="attention-getter" style="margin-top: 0; color: rgba(255,255,255,0.95); font-size: 1.45rem; line-height: 1.85;">
-                            I'm a <b style="color: #ffffff; font-weight: 700;">Computer Science and Engineering (Cyber Security)</b> scholar at <b style="color: #ffffff; font-weight: 700;">Chennai Institute of Technology</b>. I specialize in engineering high-performance AI-driven systems, interactive 3D WebGL Digital Twin platforms, and secure full-stack software architectures.
+                            <h3 style="color: #ffffff; font-size: 1.8rem; font-weight: 700; margin-top: 0; margin-bottom: 16px;">
+                                Who I Am & What I Build
+                            </h3>
+                            <p class="attention-getter" style="color: rgba(255,255,255,0.95); font-size: 1.4rem; line-height: 1.85;">
+                            I'm a <b style="color: #ffffff; font-weight: 700;">Computer Science and Engineering (Cyber Security)</b> scholar at <b style="color: #ffffff; font-weight: 700;">Chennai Institute of Technology</b>. I specialize in designing and engineering high-performance AI systems, zero-trust cloud architectures, and real-time 3D WebGL Digital Twin platforms.
                             </p>
 
-                            <p class="attention-getter" style="color: rgba(255,255,255,0.95); font-size: 1.45rem; line-height: 1.85;">
-                            Recognized as a <span style="color: #d64923; font-weight: 700;">Top 8 Finalist nationwide in Aerothon 2026</span> hosted by <b style="color: #ffffff; font-weight: 700;">HAL (Hindustan Aeronautics Limited)</b> and <b style="color: #ffffff; font-weight: 700;">IIT Indore</b> for building the real-time SubAERO submarine telemetry twin platform. Passionate about solving complex algorithmic challenges with <b style="color: #ffffff; font-weight: 700;">500+ LeetCode solutions</b>, a <b style="color: #ffffff; font-weight: 700;">1771 Contest Rating</b>, and an active <b style="color: #ffffff; font-weight: 700;">118-day continuous coding streak</b>.
+                            <p class="attention-getter" style="color: rgba(255,255,255,0.95); font-size: 1.4rem; line-height: 1.85;">
+                            Recognized nationwide as a <span style="color: #d64923; font-weight: 700;">Top 8 Finalist in Aerothon 2026</span> hosted by <b style="color: #ffffff; font-weight: 700;">HAL (Hindustan Aeronautics Limited)</b> and <b style="color: #ffffff; font-weight: 700;">IIT Indore</b> for architecting the SubAERO submarine telemetry digital twin. Active competitive programmer with <b style="color: #ffffff; font-weight: 700;">500+ LeetCode algorithmic solutions</b>, a <b style="color: #ffffff; font-weight: 700;">1771 Contest Rating</b>, and a <b style="color: #ffffff; font-weight: 700;">118-day continuous coding streak</b>.
                             </p>
 
-                            <p class="attention-getter" style="color: rgba(255,255,255,0.95); font-size: 1.45rem; line-height: 1.85; margin-bottom: 0;">
-                            Driven by a commitment to zero-trust cybersecurity principles, modern cloud infrastructure (AWS/Docker), real-time WebSocket communication, and immersive web experiences powered by Three.js and React 19.
+                            <p class="attention-getter" style="color: rgba(255,255,255,0.95); font-size: 1.4rem; line-height: 1.85; margin-bottom: 0;">
+                            My technical interest centers on security-first backend engineering, low-latency WebSocket data streaming, modern containerized microservices (Docker/AWS), and machine learning applications that deliver verifiable operational value.
                             </p>
                         </div>
                     </div>
@@ -452,284 +749,197 @@
                     <div class="grid-list-items s-about__blocks">
 
                         <div class="grid-list-items__item s-about__block">
-                            <h4 class="s-about__block-title" style="color: #ffffff; font-size: 1.45rem; font-weight: 700; border-bottom: 2px solid #d64923; padding-bottom: 8px; margin-bottom: 20px;">Experience</h4>
+                            <h4 class="s-about__block-title">Experience</h4>
 
-                            <ul class="s-about__list" style="color: #ffffff; font-size: 1.2rem; line-height: 1.7;">
-                                <li style="margin-bottom: 18px;">
+                            <ul class="s-about__list">
+                                <li>
                                     <strong style="color: #ffffff; font-size: 1.2rem;">Generative AI Virtual Intern</strong>
                                     <span style="color: rgba(255,255,255,0.75); font-size: 1.05rem; display: block; margin-top: 4px;">AWS Academy × AICTE × EduSkills</span>
                                 </li>
-                                <li style="margin-bottom: 18px;">
+                                <li>
                                     <strong style="color: #ffffff; font-size: 1.2rem;">SubAERO Digital Twin Lead</strong>
                                     <span style="color: rgba(255,255,255,0.75); font-size: 1.05rem; display: block; margin-top: 4px;">HAL & IIT Indore Aerothon 2026</span>
                                 </li>
-                                <li style="margin-bottom: 18px;">
+                                <li>
                                     <strong style="color: #ffffff; font-size: 1.2rem;">Full-Stack AI Developer</strong>
-                                    <span style="color: rgba(255,255,255,0.75); font-size: 1.05rem; display: block; margin-top: 4px;">Open Source & Personal Projects</span>
+                                    <span style="color: rgba(255,255,255,0.75); font-size: 1.05rem; display: block; margin-top: 4px;">Open Source & Independent Systems</span>
                                 </li>
                             </ul>
                         </div> <!--end s-about__block -->
 
                         <div class="grid-list-items__item s-about__block">
-                            <h4 class="s-about__block-title" style="color: #ffffff; font-size: 1.45rem; font-weight: 700; border-bottom: 2px solid #d64923; padding-bottom: 8px; margin-bottom: 20px;">Education</h4>
+                            <h4 class="s-about__block-title">Education</h4>
 
-                            <ul class="s-about__list" style="color: #ffffff; font-size: 1.2rem; line-height: 1.7;">
-                                <li style="margin-bottom: 18px;">
+                            <ul class="s-about__list">
+                                <li>
                                     <strong style="color: #ffffff; font-size: 1.2rem;">B.E. Computer Science (Cyber Security)</strong>
                                     <span style="color: rgba(255,255,255,0.75); font-size: 1.05rem; display: block; margin-top: 4px;">Chennai Institute of Technology (2025–Present)</span>
                                 </li>
-                                <li style="margin-bottom: 18px;">
-                                    <strong style="color: #ffffff; font-size: 1.2rem;">Higher Secondary (Class XII)</strong>
-                                    <span style="color: rgba(255,255,255,0.75); font-size: 1.05rem; display: block; margin-top: 4px;">Vidya Mandir Sr Sec School (88.4%)</span>
-                                </li>
-                                <li style="margin-bottom: 18px;">
-                                    <strong style="color: #ffffff; font-size: 1.2rem;">Secondary School (Class X)</strong>
-                                    <span style="color: rgba(255,255,255,0.75); font-size: 1.05rem; display: block; margin-top: 4px;">Vidya Mandir Sr Sec School (92.6%)</span>
+                                <li>
+                                    <strong style="color: #ffffff; font-size: 1.2rem;">Higher Secondary Education</strong>
+                                    <span style="color: rgba(255,255,255,0.75); font-size: 1.05rem; display: block; margin-top: 4px;">Vidya Mandir Senior Secondary School</span>
                                 </li>
                             </ul>
                         </div> <!--end s-about__block -->
 
                         <div class="grid-list-items__item s-about__block">
-                            <h4 class="s-about__block-title" style="color: #ffffff; font-size: 1.45rem; font-weight: 700; border-bottom: 2px solid #d64923; padding-bottom: 8px; margin-bottom: 20px;">Honors & Awards</h4>
+                            <h4 class="s-about__block-title">Achievements & Recognition</h4>
 
-                            <ul class="s-about__list" style="color: #ffffff; font-size: 1.2rem; line-height: 1.7;">
-                                <li style="margin-bottom: 18px;">
-                                    <a href="#0" style="color: #fff; text-decoration: none;">
-                                        <strong style="color: #ffffff; font-size: 1.2rem;">Top 8 Finalist – Aerothon 2026</strong>
-                                        <span style="color: rgba(255,255,255,0.75); font-size: 1.05rem; display: block; margin-top: 4px;">HAL (Hindustan Aeronautics Ltd) & IIT Indore</span>
-                                    </a>
+                            <ul class="s-about__list">
+                                <li>
+                                    <strong style="color: #ffffff; font-size: 1.2rem;">Top 8 Finalist – Aerothon 2026</strong>
+                                    <span style="color: rgba(255,255,255,0.75); font-size: 1.05rem; display: block; margin-top: 4px;">HAL (Hindustan Aeronautics Ltd) & IIT Indore</span>
                                 </li>
-                                <li style="margin-bottom: 18px;">
-                                    <a href="#0" style="color: #fff; text-decoration: none;">
-                                        <strong style="color: #ffffff; font-size: 1.2rem;">5+ National Hackathon Finalist</strong>
-                                        <span style="color: rgba(255,255,255,0.75); font-size: 1.05rem; display: block; margin-top: 4px;">National Level AI & 3D Competitions</span>
-                                    </a>
+                                <li>
+                                    <strong style="color: #ffffff; font-size: 1.2rem;">1771 Rating & 500+ Solved</strong>
+                                    <span style="color: rgba(255,255,255,0.75); font-size: 1.05rem; display: block; margin-top: 4px;">LeetCode Competitive Algorithmic Platform</span>
                                 </li>
-                                <li style="margin-bottom: 18px;">
-                                    <a href="#0" style="color: #fff; text-decoration: none;">
-                                        <strong style="color: #ffffff; font-size: 1.2rem;">International Abacus Qualifier</strong>
-                                        <span style="color: rgba(255,255,255,0.75); font-size: 1.05rem; display: block; margin-top: 4px;">State Selection Cleared</span>
-                                    </a>
+                                <li>
+                                    <strong style="color: #ffffff; font-size: 1.2rem;">5+ National Hackathon Finalist</strong>
+                                    <span style="color: rgba(255,255,255,0.75); font-size: 1.05rem; display: block; margin-top: 4px;">AI, 3D WebGL & Software Engineering Finals</span>
                                 </li>
-                                <li style="margin-bottom: 18px;">
-                                    <a href="#0" style="color: #fff; text-decoration: none;">
-                                        <strong style="color: #ffffff; font-size: 1.2rem;">District Throwball & Zonal Carrom</strong>
-                                        <span style="color: rgba(255,255,255,0.75); font-size: 1.05rem; display: block; margin-top: 4px;">CM Trophy Athletics & Cricket</span>
-                                    </a>                                        
-                                </li>
-                             </ul>
+                            </ul>
                         </div> <!--end s-about__block -->
 
                     </div> <!-- grid-list-items -->
 
                 </div> <!--end column -->
-            </div> <!--end s-about__content -->
-            
-        </section> <!-- end s-about -->   
+            </div> <!-- end s-about__content -->
+
+        </section> <!-- end s-about -->
 
 
-        <!-- # skills
+        <!-- # expertise / skills V2
         ================================================== -->
         <section id="skills" class="s-skills target-section">
 
             <div class="skills-full-width-wrapper">
-                <div class="row">
-                    <div class="column xl-12">
-                        <div class="section-header" data-num="02">
-                            <h2 class="text-display-title">Skills & Tech Stack.</h2>
-                        </div> <!-- end section-header -->
+                
+                <div class="section-header" data-num="02" style="margin-bottom: 40px;">
+                    <h2 class="text-display-title" style="color: #0f172a;">Expertise & Technology.</h2>
+                </div>
+
+                <!-- Continuous Running Ticker Marquee Track 1 (Left) -->
+                <div class="marquee-wrapper">
+                    <div class="marquee-track marquee-track--left">
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-8h2v8zm-3-10a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z" fill="#D97706"/></svg><span>Linux Security</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94" stroke="#3776AB" stroke-width="2" fill="none"/></svg><span>Python 3.12</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#61DAFB"/><circle cx="12" cy="12" r="3" fill="#000000"/></svg><span>React 19</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 0L1.6 6v12L12 24l10.4-6V6L12 0zm0 2.8l8.3 4.8v9.6L12 22L3.7 17.2V7.6L12 2.8z" fill="#000000"/></svg><span>Next.js 15</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0zm15.4 7h-9.7l.2 2.8h9.3l-.6 6.8-4.1 1.2-4.1-1.2-.3-3.2h-2.8l.5 5.8 6.7 2 6.7-2 1-11.4H3.8" fill="#3178C6"/></svg><span>TypeScript</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#000000"/><path d="M12 6v12M6 12h12" stroke="#FFFFFF" stroke-width="2"/></svg><span>Three.js (WebGL)</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9L4 7.5v9l8 4.5 8-4.5v-9l-8 4.5z" fill="#E87D0D"/></svg><span>Blender 3D</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#059669"/><path d="M8 12l3 3 5-5" stroke="#FFFFFF" stroke-width="2" fill="none"/></svg><span>FastAPI</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M13.98 10.46h2.23V8.22h-2.23v2.24zm-2.86 0h2.23V8.22h-2.23v2.24zm-2.87 0h2.23V8.22H8.25v2.24zm-2.87 0h2.23V8.22H5.38v2.24zm8.6-2.86h2.23V5.36h-2.23v2.24zm-2.86 0h2.23V5.36h-2.23v2.24zm-2.87 0h2.23V5.36H8.25v2.24zm5.73-2.86h2.23V2.5h-2.23v2.24zM.6 12.33c.53 3.65 3.73 6.47 7.55 6.47 4.9 0 8.7-2.6 10.8-6.17.65.04 1.45.02 2.1-.2 1.22-.4 2.1-1.3 2.5-2.4-.7.1-1.4.1-2.1-.2-.6-.3-1.1-.8-1.5-1.4 0 0-1.8 1.4-4.8 1.4H.6v2.5z" fill="#2496ED"/></svg><span>Docker</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9L4 7.5v9l8 4.5 8-4.5v-9l-8 4.5z" fill="#FF9900"/></svg><span>AWS Cloud</span></div>
+                        
+                        <!-- Track 1 Duplicates for Seamless Infinite Loop -->
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-8h2v8zm-3-10a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z" fill="#D97706"/></svg><span>Linux Security</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94" stroke="#3776AB" stroke-width="2" fill="none"/></svg><span>Python 3.12</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#61DAFB"/><circle cx="12" cy="12" r="3" fill="#000000"/></svg><span>React 19</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 0L1.6 6v12L12 24l10.4-6V6L12 0zm0 2.8l8.3 4.8v9.6L12 22L3.7 17.2V7.6L12 2.8z" fill="#000000"/></svg><span>Next.js 15</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0zm15.4 7h-9.7l.2 2.8h9.3l-.6 6.8-4.1 1.2-4.1-1.2-.3-3.2h-2.8l.5 5.8 6.7 2 6.7-2 1-11.4H3.8" fill="#3178C6"/></svg><span>TypeScript</span></div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Continuous Infinite Running Logo Marquee Track 1 (Left) -->
-            <div class="marquee-wrapper">
-                <div class="marquee-track marquee-track--left">
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M11.85 2c-5.26 0-4.94 2.28-4.94 2.28l.01 2.37h5.02v.72H4.91S2 7.04 2 12.35c0 5.3 2.54 5.12 2.54 5.12h1.52v-2.16c0-2.48 2.14-2.65 2.14-2.65h5.05c2.46 0 2.4-2.14 2.4-2.14V5.55s.35-3.55-3.8-3.55zm-2.7 1.62a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1z" fill="#3776AB"/><path d="M12.15 22c5.26 0 4.94-2.28 4.94-2.28l-.01-2.37h-5.02v-.72h7.03s2.91.33 2.91-4.98c0-5.3-2.54-5.12-2.54-5.12h-1.52v2.16c0 2.48-2.14 2.65-2.14 2.65h-5.05c-2.46 0-2.4 2.14-2.4 2.14v4.97s-.35 3.55 3.8 3.55zm2.7-1.62a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1z" fill="#FFD43B"/></svg> Python</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.2" fill="#61DAFB"/><g stroke="#61DAFB" stroke-width="1.2" fill="none"><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/></g></svg> React 19</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#000000"/><path d="M14.8 16.5L9.2 8.7V16.5H7.5V7.5H9.1L15.3 16.1L14.8 16.5Z" fill="#FFFFFF"/><path d="M16.5 7.5H15V16.5H16.5V7.5Z" fill="#FFFFFF"/></svg> Next.js</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#3178C6"/><path d="M12 11.5h-2.5v7.5H7.2v-7.5H4.7V9.3H12v2.2zm4.1 3.7c.6.4 1.2.6 2 .6.8 0 1.1-.3 1.1-.7 0-.4-.4-.6-1.3-.9l-.6-.2c-1.6-.5-2.6-1.4-2.6-2.9 0-1.8 1.5-3.1 3.7-3.1 1.5 0 2.7.5 3.5 1.4l-1.2 1.2c-.6-.6-1.3-.9-2.2-.9-.8 0-1.2.3-1.2.7 0 .4.4.6 1.3.9l.6.2c1.8.6 2.7 1.4 2.7 3 0 1.9-1.5 3.2-4 3.2-1.8 0-3.1-.6-4-1.6l1.3-1.3z" fill="#FFFFFF"/></svg> TypeScript</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00599C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg> Three.js</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 4 4c0 1.2-.5 2.3-1.3 3.1l6.1 2.2a1 1 0 0 1 .4 1.5l-2.6 3.6a1 1 0 0 1-1.4.2L13 14.2a4 4 0 1 1-1-7.8z" fill="#EA7600"/><circle cx="12" cy="12" r="2" fill="#265787"/></svg> Blender</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm1 18.5l-6-7h4.5V5.5l6 7H13v6z" fill="#059669"/></svg> FastAPI</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 1.8L1.8 7.7v11.7L12 25.2l10.2-5.9V7.7L12 1.8zm-1.2 17.5v-3.7l3.2 1.9v3.7l-3.2-1.9zm0-5.6V10l3.2 1.9v3.7l-3.2-1.9z" fill="#339933"/></svg> Node.js</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M13.98 10.46h2.23V8.22h-2.23v2.24zm-2.86 0h2.23V8.22h-2.23v2.24zm-2.87 0h2.23V8.22H8.25v2.24zm-2.87 0h2.23V8.22H5.38v2.24zm8.6-2.86h2.23V5.36h-2.23v2.24zm-2.86 0h2.23V5.36h-2.23v2.24zm-2.87 0h2.23V5.36H8.25v2.24zm5.73-2.86h2.23V2.5h-2.23v2.24zM.6 12.33c.53 3.65 3.73 6.47 7.55 6.47 4.9 0 8.7-2.6 10.8-6.17.65.04 1.45.02 2.1-.2 1.22-.4 2.1-1.3 2.5-2.4-.7.1-1.4.1-2.1-.2-.6-.3-1.1-.8-1.5-1.4 0 0-1.8 1.4-4.8 1.4H.6v2.5z" fill="#2496ED"/></svg> Docker</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9L4 7.5v9l8 4.5 8-4.5v-9l-8 4.5z" fill="#FF9900"/></svg> AWS Cloud</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-8h2v8zm-3-10a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z" fill="#D97706"/></svg> Linux Security</div>
+                <!-- Continuous Running Ticker Marquee Track 2 (Right) -->
+                <div class="marquee-wrapper">
+                    <div class="marquee-track marquee-track--right">
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2L9.5 8.5 3 11l6.5 2.5L12 20l2.5-6.5L21 11l-6.5-2.5L12 2z" fill="#EE4C2C"/></svg><span>PyTorch / ML</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#F7931E"/><path d="M7 12l3 3 7-7" stroke="#FFFFFF" stroke-width="2.5" fill="none"/></svg><span>Scikit-Learn</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="#38BDF8"/></svg><span>WebSockets</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="#336791"/></svg><span>PostgreSQL</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9L4 7.5v9l8 4.5 8-4.5v-9l-8 4.5z" fill="#00758F"/></svg><span>MySQL DB</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M23.54 11.23L12.77.46a1.54 1.54 0 0 0-2.18 0L8.43 2.62l3.23 3.23a2.3 2.3 0 0 1 2.92 2.92l3.4 3.4a2.3 2.3 0 1 1-1.09 1.09l-3.07-3.07v4.61a2.3 2.3 0 1 1-1.54 0V9.82a2.3 2.3 0 0 1-1.23-3L8.03 3.8.46 11.37a1.54 1.54 0 0 0 0 2.18l10.77 10.77a1.54 1.54 0 0 0 2.18 0l10.13-10.91a1.54 1.54 0 0 0 0-2.18z" fill="#F05032"/></svg><span>Git CLI</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M22.05 15.69L13.56 1.4a1.8 1.8 0 0 0-3.12 0L1.95 15.69a1.8 1.8 0 0 0 1.56 2.73h17a1.8 1.8 0 0 0 1.54-2.73z" fill="#00599C"/></svg><span>C++ Algorithmic</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="#06B6D4"/></svg><span>TailwindCSS</span></div>
 
-                    <!-- Duplicate for infinite seamless scroll -->
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M11.85 2c-5.26 0-4.94 2.28-4.94 2.28l.01 2.37h5.02v.72H4.91S2 7.04 2 12.35c0 5.3 2.54 5.12 2.54 5.12h1.52v-2.16c0-2.48 2.14-2.65 2.14-2.65h5.05c2.46 0 2.4-2.14 2.4-2.14V5.55s.35-3.55-3.8-3.55zm-2.7 1.62a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1z" fill="#3776AB"/><path d="M12.15 22c5.26 0 4.94-2.28 4.94-2.28l-.01-2.37h-5.02v-.72h7.03s2.91.33 2.91-4.98c0-5.3-2.54-5.12-2.54-5.12h-1.52v2.16c0 2.48-2.14 2.65-2.14 2.65h-5.05c-2.46 0-2.4 2.14-2.4 2.14v4.97s-.35 3.55 3.8 3.55zm2.7-1.62a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1z" fill="#FFD43B"/></svg> Python</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.2" fill="#61DAFB"/><g stroke="#61DAFB" stroke-width="1.2" fill="none"><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/></g></svg> React 19</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#000000"/><path d="M14.8 16.5L9.2 8.7V16.5H7.5V7.5H9.1L15.3 16.1L14.8 16.5Z" fill="#FFFFFF"/><path d="M16.5 7.5H15V16.5H16.5V7.5Z" fill="#FFFFFF"/></svg> Next.js</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#3178C6"/><path d="M12 11.5h-2.5v7.5H7.2v-7.5H4.7V9.3H12v2.2zm4.1 3.7c.6.4 1.2.6 2 .6.8 0 1.1-.3 1.1-.7 0-.4-.4-.6-1.3-.9l-.6-.2c-1.6-.5-2.6-1.4-2.6-2.9 0-1.8 1.5-3.1 3.7-3.1 1.5 0 2.7.5 3.5 1.4l-1.2 1.2c-.6-.6-1.3-.9-2.2-.9-.8 0-1.2.3-1.2.7 0 .4.4.6 1.3.9l.6.2c1.8.6 2.7 1.4 2.7 3 0 1.9-1.5 3.2-4 3.2-1.8 0-3.1-.6-4-1.6l1.3-1.3z" fill="#FFFFFF"/></svg> TypeScript</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00599C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg> Three.js</div>
+                        <!-- Track 2 Duplicates for Seamless Infinite Loop -->
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2L9.5 8.5 3 11l6.5 2.5L12 20l2.5-6.5L21 11l-6.5-2.5L12 2z" fill="#EE4C2C"/></svg><span>PyTorch / ML</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#F7931E"/><path d="M7 12l3 3 7-7" stroke="#FFFFFF" stroke-width="2.5" fill="none"/></svg><span>Scikit-Learn</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="#38BDF8"/></svg><span>WebSockets</span></div>
+                        <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="#336791"/></svg><span>PostgreSQL</span></div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Continuous Infinite Running Logo Marquee Track 2 (Right) -->
-            <div class="marquee-wrapper">
-                <div class="marquee-track marquee-track--right">
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2L9.5 8.5 3 11l6.5 2.5L12 20l2.5-6.5L21 11l-6.5-2.5L12 2z" fill="#EE4C2C"/></svg> PyTorch</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#F7931E"/><path d="M7 12l3 3 7-7" stroke="#FFFFFF" stroke-width="2.5" fill="none"/></svg> Scikit-Learn</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 6c-3.3 0-5.5 1.7-6.6 5 1.1-1.7 2.4-2.2 3.9-1.7 1 .3 1.6 1 2.4 1.8 1.2 1.3 2.6 2.8 5.9 2.8 3.3 0 5.5-1.7 6.6-5-1.1 1.7-2.4 2.2-3.9 1.7-1-.3-1.6-1-2.4-1.8C16.7 7.5 15.3 6 12 6zm-6.6 6c-3.3 0-5.5 1.7-6.6 5 1.1-1.7 2.4-2.2 3.9-1.7 1 .3 1.6 1 2.4 1.8 1.2 1.3 2.6 2.8 5.9 2.8 3.3 0 5.5-1.7 6.6-5-1.1 1.7-2.4 2.2-3.9 1.7-1-.3-1.6-1-2.4-1.8C10.1 13.5 8.7 12 5.4 12z" fill="#06B6D4"/></svg> TailwindCSS</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2A10 10 0 1 0 22 12 10 10 0 0 0 12 2zm4.3 13.8l-1.4 1.4L12 14.3l-2.9 2.9-1.4-1.4 2.9-2.9-2.9-2.9 1.4-1.4 2.9 2.9 2.9-2.9 1.4 1.4-2.9 2.9z" fill="#0f172a"/></svg> Express.js</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z" fill="#336791"/></svg> PostgreSQL</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.9 2 5.4 5 6.7V21l3.2-1.8c.6.1 1.2.2 1.8.2 5.5 0 10-3.6 10-8s-4.5-8-10-8z" fill="#00758F"/></svg> MySQL</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M23.54 11.23L12.77.46a1.54 1.54 0 0 0-2.18 0L8.43 2.62l3.23 3.23a2.3 2.3 0 0 1 2.92 2.92l3.4 3.4a2.3 2.3 0 1 1-1.09 1.09l-3.07-3.07v4.61a2.3 2.3 0 1 1-1.54 0V9.82a2.3 2.3 0 0 1-1.23-3L8.03 3.8.46 11.37a1.54 1.54 0 0 0 0 2.18l10.77 10.77a1.54 1.54 0 0 0 2.18 0l10.13-10.91a1.54 1.54 0 0 0 0-2.18z" fill="#F05032"/></svg> Git</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M22.375 16.48l-8.625 4.98c-.75.43-1.68.43-2.43 0l-8.625-4.98c-.75-.43-1.22-1.25-1.22-2.12v-9.95c0-.87.47-1.69 1.22-2.12l8.625-4.98c.75-.43 1.68-.43 2.43 0l8.625 4.98c.75.43 1.22 1.25 1.22 2.12v9.95c0 .87-.47 1.69-1.22 2.12z" fill="#00599C"/><path d="M8.2 13.5a4 4 0 1 1 0-3 3.9 3.9 0 0 1 0 3zm6.3-2.5h1.2v-1.2h.8v1.2h1.2v.8h-1.2v1.2h-.8v-1.2h-1.2zm3.8 0h1.2v-1.2h.8v1.2h1.2v.8h-1.2v1.2h-.8v-1.2h-1.2z" fill="#FFFFFF"/></svg> C++</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0z" fill="#E34F26"/><path d="M12 2.2v19.5l6.9-2.3 1.5-17.2H12z" fill="#EF652A"/><path d="M12 8.7H8l-.3-3.2h8.6v3.2h-4.3z" fill="#FFFFFF"/></svg> HTML5/CSS3</div>
-
-                    <!-- Duplicate for infinite seamless scroll -->
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2L9.5 8.5 3 11l6.5 2.5L12 20l2.5-6.5L21 11l-6.5-2.5L12 2z" fill="#EE4C2C"/></svg> PyTorch</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#F7931E"/><path d="M7 12l3 3 7-7" stroke="#FFFFFF" stroke-width="2.5" fill="none"/></svg> Scikit-Learn</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 6c-3.3 0-5.5 1.7-6.6 5 1.1-1.7 2.4-2.2 3.9-1.7 1 .3 1.6 1 2.4 1.8 1.2 1.3 2.6 2.8 5.9 2.8 3.3 0 5.5-1.7 6.6-5-1.1 1.7-2.4 2.2-3.9 1.7-1-.3-1.6-1-2.4-1.8C16.7 7.5 15.3 6 12 6zm-6.6 6c-3.3 0-5.5 1.7-6.6 5 1.1-1.7 2.4-2.2 3.9-1.7 1 .3 1.6 1 2.4 1.8 1.2 1.3 2.6 2.8 5.9 2.8 3.3 0 5.5-1.7 6.6-5-1.1 1.7-2.4 2.2-3.9 1.7-1-.3-1.6-1-2.4-1.8C10.1 13.5 8.7 12 5.4 12z" fill="#06B6D4"/></svg> TailwindCSS</div>
-                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2A10 10 0 1 0 22 12 10 10 0 0 0 12 2zm4.3 13.8l-1.4 1.4L12 14.3l-2.9 2.9-1.4-1.4 2.9-2.9-2.9-2.9 1.4-1.4 2.9 2.9 2.9-2.9 1.4 1.4-2.9 2.9z" fill="#0f172a"/></svg> Express.js</div>
-                </div>
-            </div>
-
-            <!-- Professional Full Width Category Cards Grid -->
-            <div class="skills-full-width-wrapper" style="margin-top: 36px;">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; width: 100%;">
-
-                    <!-- Category 1: Languages -->
+                <!-- 5 Domain Category Cards Grid -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 36px;">
+                    
+                    <!-- Domain 1: Cybersecurity & Security Engineering -->
                     <div class="skill-category-box">
-                        <h3 style="font-family: var(--font-1); font-size: 1.3rem; font-weight: 700; color: #0f172a; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #d64923; display: flex; align-items: center; gap: 8px;">
-                            💻 Programming Languages
+                        <h3 style="font-size: 1.35rem; font-weight: 700; color: #0f172a; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                            <span>🛡️</span> Cybersecurity & Security
                         </h3>
-                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M11.85 2c-5.26 0-4.94 2.28-4.94 2.28l.01 2.37h5.02v.72H4.91S2 7.04 2 12.35c0 5.3 2.54 5.12 2.54 5.12h1.52v-2.16c0-2.48 2.14-2.65 2.14-2.65h5.05c2.46 0 2.4-2.14 2.4-2.14V5.55s.35-3.55-3.8-3.55zm-2.7 1.62a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1z" fill="#3776AB"/><path d="M12.15 22c5.26 0 4.94-2.28 4.94-2.28l-.01-2.37h-5.02v-.72h7.03s2.91.33 2.91-4.98c0-5.3-2.54-5.12-2.54-5.12h-1.52v2.16c0 2.48-2.14 2.65-2.14 2.65h-5.05c-2.46 0-2.4 2.14-2.4 2.14v4.97s-.35 3.55 3.8 3.55zm2.7-1.62a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1z" fill="#FFD43B"/></svg>
-                                <span>Python</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M22.375 16.48l-8.625 4.98c-.75.43-1.68.43-2.43 0l-8.625-4.98c-.75-.43-1.22-1.25-1.22-2.12v-9.95c0-.87.47-1.69 1.22-2.12l8.625-4.98c.75-.43 1.68-.43 2.43 0l8.625 4.98c.75.43 1.22 1.25 1.22 2.12v9.95c0 .87-.47 1.69-1.22 2.12z" fill="#00599C"/><path d="M8.2 13.5a4 4 0 1 1 0-3 3.9 3.9 0 0 1 0 3zm6.3-2.5h1.2v-1.2h.8v1.2h1.2v.8h-1.2v1.2h-.8v-1.2h-1.2zm3.8 0h1.2v-1.2h.8v1.2h1.2v.8h-1.2v1.2h-.8v-1.2h-1.2z" fill="#FFFFFF"/></svg>
-                                <span>C++</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#F7DF1E"/><path d="M12.5 17.5c.6.9 1.4 1.4 2.6 1.4 1.2 0 1.9-.6 1.9-1.5 0-1-.7-1.4-2.1-2l-.7-.3c-2-.8-3.3-1.8-3.3-4 0-2.2 1.7-3.9 4.3-3.9 1.9 0 3.2.7 4.1 2.3l-1.9 1.2c-.5-.9-1.1-1.3-2.2-1.3-1 0-1.6.6-1.6 1.3 0 .8.5 1.2 1.9 1.8l.7.3c2.4 1 3.6 2 3.6 4.1 0 2.5-1.9 4.1-4.8 4.1-2.6 0-4.2-1.2-5.1-2.8l2.6-1.6zm-6.8.2c.4.7.9 1.2 1.8 1.2.9 0 1.5-.4 1.5-1.8v-7.9h2.8v8.1c0 2.8-1.6 4.1-4.1 4.1-2.1 0-3.4-1.1-4-2.5l2-1.2z" fill="#000000"/></svg>
-                                <span>JavaScript</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#3178C6"/><path d="M12 11.5h-2.5v7.5H7.2v-7.5H4.7V9.3H12v2.2zm4.1 3.7c.6.4 1.2.6 2 .6.8 0 1.1-.3 1.1-.7 0-.4-.4-.6-1.3-.9l-.6-.2c-1.6-.5-2.6-1.4-2.6-2.9 0-1.8 1.5-3.1 3.7-3.1 1.5 0 2.7.5 3.5 1.4l-1.2 1.2c-.6-.6-1.3-.9-2.2-.9-.8 0-1.2.3-1.2.7 0 .4.4.6 1.3.9l.6.2c1.8.6 2.7 1.4 2.7 3 0 1.9-1.5 3.2-4 3.2-1.8 0-3.1-.6-4-1.6l1.3-1.3z" fill="#FFFFFF"/></svg>
-                                <span>TypeScript</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z" fill="#336791"/></svg>
-                                <span>SQL</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2c-1.1 0-2 .9-2 2v2H8c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-2V4c0-1.1-.9-2-2-2zm-1 4V4h2v2h-2z" fill="#5382A1"/></svg>
-                                <span>Java</span>
-                            </div>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-8h2v8zm-3-10a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z" fill="#D97706"/></svg><span>Linux Security</span></div>
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v2h-2V7zm0 4h2v6h-2v-6z" fill="#DC2626"/></svg><span>OWASP / Web</span></div>
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" fill="#2563EB"/></svg><span>OAuth 2.0 / Auth</span></div>
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9L4 7.5v9l8 4.5 8-4.5v-9l-8 4.5z" fill="#059669"/></svg><span>Secure API Design</span></div>
                         </div>
                     </div>
 
-                    <!-- Category 2: Frontend & 3D -->
+                    <!-- Domain 2: Full-Stack Engineering -->
                     <div class="skill-category-box">
-                        <h3 style="font-family: var(--font-1); font-size: 1.3rem; font-weight: 700; color: #0f172a; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #d64923; display: flex; align-items: center; gap: 8px;">
-                            ⚛️ Frontend & 3D WebGL
+                        <h3 style="font-size: 1.35rem; font-weight: 700; color: #0f172a; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                            <span>💻</span> Full-Stack Engineering
                         </h3>
-                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.2" fill="#61DAFB"/><g stroke="#61DAFB" stroke-width="1.2" fill="none"><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/></g></svg>
-                                <span>React 19</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#000000"/><path d="M14.8 16.5L9.2 8.7V16.5H7.5V7.5H9.1L15.3 16.1L14.8 16.5Z" fill="#FFFFFF"/><path d="M16.5 7.5H15V16.5H16.5V7.5Z" fill="#FFFFFF"/></svg>
-                                <span>Next.js</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#00599C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                                <span>Three.js</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 4 4c0 1.2-.5 2.3-1.3 3.1l6.1 2.2a1 1 0 0 1 .4 1.5l-2.6 3.6a1 1 0 0 1-1.4.2L13 14.2a4 4 0 1 1-1-7.8z" fill="#EA7600"/><circle cx="12" cy="12" r="2" fill="#265787"/></svg>
-                                <span>Blender</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 6c-3.3 0-5.5 1.7-6.6 5 1.1-1.7 2.4-2.2 3.9-1.7 1 .3 1.6 1 2.4 1.8 1.2 1.3 2.6 2.8 5.9 2.8 3.3 0 5.5-1.7 6.6-5-1.1 1.7-2.4 2.2-3.9 1.7-1-.3-1.6-1-2.4-1.8C16.7 7.5 15.3 6 12 6zm-6.6 6c-3.3 0-5.5 1.7-6.6 5 1.1-1.7 2.4-2.2 3.9-1.7 1 .3 1.6 1 2.4 1.8 1.2 1.3 2.6 2.8 5.9 2.8 3.3 0 5.5-1.7 6.6-5-1.1 1.7-2.4 2.2-3.9 1.7-1-.3-1.6-1-2.4-1.8C10.1 13.5 8.7 12 5.4 12z" fill="#06B6D4"/></svg>
-                                <span>Tailwind</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0z" fill="#E34F26"/><path d="M12 2.2v19.5l6.9-2.3 1.5-17.2H12z" fill="#EF652A"/><path d="M12 8.7H8l-.3-3.2h8.6v3.2h-4.3z" fill="#FFFFFF"/></svg>
-                                <span>HTML5/CSS</span>
-                            </div>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94" stroke="#3776AB" stroke-width="2.5" fill="none"/></svg><span>Python 3.12</span></div>
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#61DAFB"/><circle cx="12" cy="12" r="3" fill="#000000"/></svg><span>React 19</span></div>
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0zm15.4 7h-9.7l.2 2.8h9.3l-.6 6.8-4.1 1.2-4.1-1.2-.3-3.2h-2.8l.5 5.8 6.7 2 6.7-2 1-11.4H3.8" fill="#3178C6"/></svg><span>TypeScript</span></div>
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 0L1.6 6v12L12 24l10.4-6V6L12 0zm0 2.8l8.3 4.8v9.6L12 22L3.7 17.2V7.6L12 2.8z" fill="#000000"/></svg><span>Next.js 15</span></div>
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#059669"/><path d="M8 12l3 3 5-5" stroke="#FFFFFF" stroke-width="2.5" fill="none"/></svg><span>FastAPI</span></div>
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="#336791"/></svg><span>PostgreSQL</span></div>
                         </div>
                     </div>
 
-                    <!-- Category 3: Backend & Systems -->
+                    <!-- Domain 3: AI / Machine Learning -->
                     <div class="skill-category-box">
-                        <h3 style="font-family: var(--font-1); font-size: 1.3rem; font-weight: 700; color: #0f172a; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #d64923; display: flex; align-items: center; gap: 8px;">
-                            ⚙️ Backend & Systems
+                        <h3 style="font-size: 1.35rem; font-weight: 700; color: #0f172a; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                            <span>🤖</span> AI & Machine Learning
                         </h3>
-                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 1.8L1.8 7.7v11.7L12 25.2l10.2-5.9V7.7L12 1.8zm-1.2 17.5v-3.7l3.2 1.9v3.7l-3.2-1.9zm0-5.6V10l3.2 1.9v3.7l-3.2-1.9z" fill="#339933"/></svg>
-                                <span>Node.js</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2A10 10 0 1 0 22 12 10 10 0 0 0 12 2zm4.3 13.8l-1.4 1.4L12 14.3l-2.9 2.9-1.4-1.4 2.9-2.9-2.9-2.9 1.4-1.4 2.9 2.9 2.9-2.9 1.4 1.4-2.9 2.9z" fill="#0f172a"/></svg>
-                                <span>Express</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm1 18.5l-6-7h4.5V5.5l6 7H13v6z" fill="#059669"/></svg>
-                                <span>FastAPI</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z" fill="#336791"/></svg>
-                                <span>PostgreSQL</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.9 2 5.4 5 6.7V21l3.2-1.8c.6.1 1.2.2 1.8.2 5.5 0 10-3.6 10-8s-4.5-8-10-8z" fill="#00758F"/></svg>
-                                <span>MySQL</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-6h2zm0-8h-2V7h2z" fill="#0f172a"/></svg>
-                                <span>Flask</span>
-                            </div>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2L9.5 8.5 3 11l6.5 2.5L12 20l2.5-6.5L21 11l-6.5-2.5L12 2z" fill="#EE4C2C"/></svg><span>LLM APIs / Gemini</span></div>
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#F7931E"/><path d="M7 12l3 3 7-7" stroke="#FFFFFF" stroke-width="2.5" fill="none"/></svg><span>Scikit-Learn</span></div>
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2L9.5 8.5 3 11l6.5 2.5L12 20l2.5-6.5L21 11l-6.5-2.5L12 2z" fill="#EE4C2C"/></svg><span>PyTorch</span></div>
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-8h2v8zm-3-10a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z" fill="#D97706"/></svg><span>Predictive AI</span></div>
                         </div>
                     </div>
 
-                    <!-- Category 4: DevOps & Cloud -->
+                    <!-- Domain 4: Cloud & DevOps -->
                     <div class="skill-category-box">
-                        <h3 style="font-family: var(--font-1); font-size: 1.3rem; font-weight: 700; color: #0f172a; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #d64923; display: flex; align-items: center; gap: 8px;">
-                            ☁️ DevOps, AI & Security
+                        <h3 style="font-size: 1.35rem; font-weight: 700; color: #0f172a; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                            <span>☁️</span> Cloud & DevOps
                         </h3>
-                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M13.98 10.46h2.23V8.22h-2.23v2.24zm-2.86 0h2.23V8.22h-2.23v2.24zm-2.87 0h2.23V8.22H8.25v2.24zm-2.87 0h2.23V8.22H5.38v2.24zm8.6-2.86h2.23V5.36h-2.23v2.24zm-2.86 0h2.23V5.36h-2.23v2.24zm-2.87 0h2.23V5.36H8.25v2.24zm5.73-2.86h2.23V2.5h-2.23v2.24zM.6 12.33c.53 3.65 3.73 6.47 7.55 6.47 4.9 0 8.7-2.6 10.8-6.17.65.04 1.45.02 2.1-.2 1.22-.4 2.1-1.3 2.5-2.4-.7.1-1.4.1-2.1-.2-.6-.3-1.1-.8-1.5-1.4 0 0-1.8 1.4-4.8 1.4H.6v2.5z" fill="#2496ED"/></svg>
-                                <span>Docker</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9L4 7.5v9l8 4.5 8-4.5v-9l-8 4.5z" fill="#FF9900"/></svg>
-                                <span>AWS Cloud</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-8h2v8zm-3-10a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z" fill="#D97706"/></svg>
-                                <span>Linux Sec</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M23.54 11.23L12.77.46a1.54 1.54 0 0 0-2.18 0L8.43 2.62l3.23 3.23a2.3 2.3 0 0 1 2.92 2.92l3.4 3.4a2.3 2.3 0 1 1-1.09 1.09l-3.07-3.07v4.61a2.3 2.3 0 1 1-1.54 0V9.82a2.3 2.3 0 0 1-1.23-3L8.03 3.8.46 11.37a1.54 1.54 0 0 0 0 2.18l10.77 10.77a1.54 1.54 0 0 0 2.18 0l10.13-10.91a1.54 1.54 0 0 0 0-2.18z" fill="#F05032"/></svg>
-                                <span>Git</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#F7931E"/><path d="M7 12l3 3 7-7" stroke="#FFFFFF" stroke-width="2.5" fill="none"/></svg>
-                                <span>Scikit-Learn</span>
-                            </div>
-                            <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2L9.5 8.5 3 11l6.5 2.5L12 20l2.5-6.5L21 11l-6.5-2.5L12 2z" fill="#EE4C2C"/></svg>
-                                <span>AI & LLMs</span>
-                            </div>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M13.98 10.46h2.23V8.22h-2.23v2.24zm-2.86 0h2.23V8.22h-2.23v2.24zm-2.87 0h2.23V8.22H8.25v2.24zm-2.87 0h2.23V8.22H5.38v2.24zm8.6-2.86h2.23V5.36h-2.23v2.24zm-2.86 0h2.23V5.36h-2.23v2.24zm-2.87 0h2.23V5.36H8.25v2.24zm5.73-2.86h2.23V2.5h-2.23v2.24zM.6 12.33c.53 3.65 3.73 6.47 7.55 6.47 4.9 0 8.7-2.6 10.8-6.17.65.04 1.45.02 2.1-.2 1.22-.4 2.1-1.3 2.5-2.4-.7.1-1.4.1-2.1-.2-.6-.3-1.1-.8-1.5-1.4 0 0-1.8 1.4-4.8 1.4H.6v2.5z" fill="#2496ED"/></svg><span>Docker</span></div>
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9L4 7.5v9l8 4.5 8-4.5v-9l-8 4.5z" fill="#FF9900"/></svg><span>AWS Cloud</span></div>
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M23.54 11.23L12.77.46a1.54 1.54 0 0 0-2.18 0L8.43 2.62l3.23 3.23a2.3 2.3 0 0 1 2.92 2.92l3.4 3.4a2.3 2.3 0 1 1-1.09 1.09l-3.07-3.07v4.61a2.3 2.3 0 1 1-1.54 0V9.82a2.3 2.3 0 0 1-1.23-3L8.03 3.8.46 11.37a1.54 1.54 0 0 0 0 2.18l10.77 10.77a1.54 1.54 0 0 0 2.18 0l10.13-10.91a1.54 1.54 0 0 0 0-2.18z" fill="#F05032"/></svg><span>Git CLI</span></div>
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-8h2v8zm-3-10a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z" fill="#D97706"/></svg><span>Linux Admin</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Domain 5: Real-Time & 3D WebGL -->
+                    <div class="skill-category-box">
+                        <h3 style="font-size: 1.35rem; font-weight: 700; color: #0f172a; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                            <span>🎮</span> Real-Time Systems & 3D
+                        </h3>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#000000"/><path d="M12 6v12M6 12h12" stroke="#FFFFFF" stroke-width="2"/></svg><span>Three.js / WebGL</span></div>
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="#38BDF8"/></svg><span>WebSockets</span></div>
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9L4 7.5v9l8 4.5 8-4.5v-9l-8 4.5z" fill="#E87D0D"/></svg><span>Blender 3D</span></div>
+                            <div class="skill-item"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2L9.5 8.5 3 11l6.5 2.5L12 20l2.5-6.5L21 11l-6.5-2.5L12 2z" fill="#EE4C2C"/></svg><span>Digital Twins</span></div>
                         </div>
                     </div>
 
                 </div>
+
             </div>
 
         </section> <!-- end s-skills -->
 
 
-        <!-- # works
+        <!-- # works / selected projects V2
         ================================================== -->
         <section id="works" class="s-works target-section">
 
@@ -741,85 +951,143 @@
                 </div>
             </div>
 
+            <!-- Interactive Category Filter Tabs -->
+            <div class="project-filters">
+                <button class="filter-btn active" onclick="filterProjects('all')">All Systems</button>
+                <button class="filter-btn" onclick="filterProjects('3d')">3D WebGL & Twins</button>
+                <button class="filter-btn" onclick="filterProjects('ai')">AI & Full-Stack</button>
+                <button class="filter-btn" onclick="filterProjects('cyber')">Cybersecurity</button>
+            </div>
+
             <div class="row" style="max-width: 1400px; padding: 0 20px;">
                 <div class="projects-grid">
 
-                    <!-- Project 1: SubAERO -->
-                    <div class="project-card">
+                    <!-- Project 1: SubAERO (FLAGSHIP) -->
+                    <div class="project-card" data-category="3d ai">
                         <div class="project-card__thumb">
-                            <div class="project-card__badge-overlay">🏆 Top 8 Aerothon 2026</div>
-                            <img src="images/subaero-preview.jpg" alt="SubAERO Digital Twin">
+                            <div class="project-card__badge-overlay">🏆 Top 8 Finalist — Aerothon 2026</div>
+                            <img src="images/subaero-preview.jpg" alt="SubAERO Aerospace Digital Twin Platform">
                         </div>
                         <div class="project-card__body">
+                            <div style="color: #d64923; font-weight: 800; font-size: 1.1rem; margin-bottom: 4px;">FLAGSHIP SYSTEM — 01</div>
                             <h3 class="project-card__title">SubAERO</h3>
                             <div class="project-card__subtitle">
-                                Aerospace 3D Digital Twin & PHM Platform (HAL Tejas)
+                                Aerospace 3D Digital Twin & Real-Time Engine Health Monitoring Platform
                             </div>
                             <p class="project-card__desc">
-                                Built for HAL (Hindustan Aeronautics Limited) Tejas turbojet engines. Features real-time 3D telemetry visualization, interactive Blender engine explosion viewer, failure risk heatmaps, and Scikit-Learn Multi-Target Regression models delivering 98.7%–99.9% R² predictive maintenance accuracy.
+                                Engineered for HAL (Hindustan Aeronautics Limited) Tejas turbojet engines. Features real-time 3D telemetry visualization, interactive Blender engine explosion viewer, failure risk heatmaps, and Scikit-Learn Multi-Target Regression models delivering 98.7%–99.9% R² predictive maintenance accuracy.
                             </p>
+                            <div style="font-size: 0.95rem; color: rgba(255,255,255,0.75); margin-bottom: 16px;">
+                                <strong style="color: #ffffff;">MY ROLE:</strong> Lead Platform & 3D Telemetry Engineer (HAL & IIT Indore Finalist)
+                            </div>
                             <div class="project-card__tech">
                                 <span class="project-card__badge">React 19</span>
                                 <span class="project-card__badge">Three.js (WebGL)</span>
                                 <span class="project-card__badge">Blender 3D</span>
                                 <span class="project-card__badge">FastAPI</span>
+                                <span class="project-card__badge">WebSockets</span>
                                 <span class="project-card__badge">Scikit-Learn</span>
                             </div>
                             <div class="project-card__actions">
-                                <a href="https://null-pointers-aerothon-2026.vercel.app/" target="_blank" class="btn btn--primary">Live Demo ↗</a>
-                                <a href="https://github.com/Nithish-Bharathwaj-N/SubAERO" target="_blank" class="btn btn--stroke">GitHub Code ↗</a>
+                                <a href="https://null-pointers-aerothon-2026.vercel.app/" target="_blank" class="btn btn--primary" style="background: #d64923; border-color: #d64923; color: #fff;">Live Demo ↗</a>
+                                <button class="btn btn--stroke" onclick="openModal('subaero')" style="color: #fff; border-color: rgba(255,255,255,0.3);">Case Study ↗</button>
+                                <a href="https://github.com/Nithish-Bharathwaj-N/SubAERO" target="_blank" class="btn btn--stroke" style="color: #fff; border-color: rgba(255,255,255,0.3);">GitHub Code ↗</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 2: Voyage AI -->
-                    <div class="project-card">
+                    <!-- Project 2: SentinelX (CYBERSECURITY) -->
+                    <div class="project-card" data-category="cyber">
                         <div class="project-card__thumb">
-                            <div class="project-card__badge-overlay">✨ Gemini AI Travel Engine</div>
-                            <img src="images/voyage-preview.jpg" alt="Voyage AI">
+                            <div class="project-card__badge-overlay">🛡️ Security SIEM Platform</div>
+                            <img src="images/sentinelx-preview.jpg" alt="SentinelX Security Telemetry Dashboard">
                         </div>
                         <div class="project-card__body">
-                            <h3 class="project-card__title">Voyage AI</h3>
+                            <div style="color: #38bdf8; font-weight: 800; font-size: 1.1rem; margin-bottom: 4px;">CYBERSECURITY — 02</div>
+                            <h3 class="project-card__title">SentinelX</h3>
                             <div class="project-card__subtitle">
-                                AI-Powered Smart Travel Planning Platform
+                                Autonomous Threat Detection & Security Telemetry SIEM Engine
                             </div>
                             <p class="project-card__desc">
-                                Intelligent travel itinerary generator powered by Gemini AI API. Automatically generates day-by-day travel schedules, real-time budget estimates, destination discovery maps, and interactive route timelines for global travelers.
+                                Real-time network threat monitoring and zero-trust event log analysis suite. Features automated packet anomaly detection, OAuth 2.0 role-based access control, WebSocket security stream parsing, and Dockerized microservice architecture.
                             </p>
+                            <div style="font-size: 0.95rem; color: rgba(255,255,255,0.75); margin-bottom: 16px;">
+                                <strong style="color: #ffffff;">MY ROLE:</strong> Security Architecture & Backend Systems Lead
+                            </div>
                             <div class="project-card__tech">
-                                <span class="project-card__badge">Next.js</span>
-                                <span class="project-card__badge">TypeScript</span>
-                                <span class="project-card__badge">Gemini AI</span>
-                                <span class="project-card__badge">TailwindCSS</span>
+                                <span class="project-card__badge">Python 3.12</span>
+                                <span class="project-card__badge">Linux Sec</span>
+                                <span class="project-card__badge">FastAPI</span>
+                                <span class="project-card__badge">OAuth 2.0</span>
+                                <span class="project-card__badge">WebSockets</span>
+                                <span class="project-card__badge">Docker</span>
                             </div>
                             <div class="project-card__actions">
-                                <a href="https://github.com/Nithish-Bharathwaj-N/Voyage-AI" target="_blank" class="btn btn--primary">GitHub Repository ↗</a>
+                                <button class="btn btn--primary" onclick="openModal('sentinelx')" style="background: #38bdf8; border-color: #38bdf8; color: #0f172a;">Case Study ↗</button>
+                                <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" class="btn btn--stroke" style="color: #fff; border-color: rgba(255,255,255,0.3);">GitHub Code ↗</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 3: Queue Cure AI -->
-                    <div class="project-card">
+                    <!-- Project 3: Queue Cure AI (HEALTHCARE AI) -->
+                    <div class="project-card" data-category="ai">
                         <div class="project-card__thumb">
                             <div class="project-card__badge-overlay">🏥 Healthcare OPD Triage</div>
-                            <img src="images/queuecure-preview.jpg" alt="Queue Cure AI">
+                            <img src="images/queuecure-preview.jpg" alt="Queue Cure AI Healthcare Triage">
                         </div>
                         <div class="project-card__body">
+                            <div style="color: #d64923; font-weight: 800; font-size: 1.1rem; margin-bottom: 4px;">FULL-STACK AI — 03</div>
                             <h3 class="project-card__title">Queue Cure AI</h3>
                             <div class="project-card__subtitle">
-                                Smart Healthcare & Hospital Queue Optimization System
+                                Smart Healthcare OPD Queue Optimization & Wait-Time Forecasting
                             </div>
                             <p class="project-card__desc">
-                                Machine learning patient wait-time forecasting engine and real-time OPD token tracker. Features live patient queue status, automated appointment scheduling, emergency triage prioritization, and hospital staff dashboard.
+                                Machine learning patient wait-time forecasting engine and real-time OPD token tracker. Features live patient queue status, automated appointment scheduling, emergency triage prioritization, and hospital staff management dashboard.
                             </p>
+                            <div style="font-size: 0.95rem; color: rgba(255,255,255,0.75); margin-bottom: 16px;">
+                                <strong style="color: #ffffff;">MY ROLE:</strong> Full-Stack Lead & ML Algorithm Engineer
+                            </div>
                             <div class="project-card__tech">
                                 <span class="project-card__badge">React</span>
                                 <span class="project-card__badge">Python</span>
                                 <span class="project-card__badge">Flask</span>
                                 <span class="project-card__badge">Scikit-Learn</span>
+                                <span class="project-card__badge">PostgreSQL</span>
                             </div>
                             <div class="project-card__actions">
-                                <a href="https://github.com/Nithish-Bharathwaj-N/QUEUE-CURE---AI" target="_blank" class="btn btn--primary">GitHub Repository ↗</a>
+                                <button class="btn btn--primary" onclick="openModal('queuecure')" style="background: #d64923; border-color: #d64923; color: #fff;">Case Study ↗</button>
+                                <a href="https://github.com/Nithish-Bharathwaj-N/QUEUE-CURE---AI" target="_blank" class="btn btn--stroke" style="color: #fff; border-color: rgba(255,255,255,0.3);">GitHub Code ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Voyage AI (AI TRAVEL) -->
+                    <div class="project-card" data-category="ai">
+                        <div class="project-card__thumb">
+                            <div class="project-card__badge-overlay">✨ Gemini AI Travel Engine</div>
+                            <img src="images/voyage-preview.jpg" alt="Voyage AI Smart Travel Planner">
+                        </div>
+                        <div class="project-card__body">
+                            <div style="color: #d64923; font-weight: 800; font-size: 1.1rem; margin-bottom: 4px;">AI & FULL-STACK — 04</div>
+                            <h3 class="project-card__title">Voyage AI</h3>
+                            <div class="project-card__subtitle">
+                                AI-Powered Smart Travel Planning & Itinerary Engine
+                            </div>
+                            <p class="project-card__desc">
+                                Intelligent travel itinerary generator powered by Gemini AI API. Automatically generates day-by-day travel schedules, real-time budget estimates, destination discovery maps, and interactive route timelines for global travelers.
+                            </p>
+                            <div style="font-size: 0.95rem; color: rgba(255,255,255,0.75); margin-bottom: 16px;">
+                                <strong style="color: #ffffff;">MY ROLE:</strong> Creator & Full-Stack AI Engineer
+                            </div>
+                            <div class="project-card__tech">
+                                <span class="project-card__badge">Next.js</span>
+                                <span class="project-card__badge">TypeScript</span>
+                                <span class="project-card__badge">Gemini AI API</span>
+                                <span class="project-card__badge">TailwindCSS</span>
+                            </div>
+                            <div class="project-card__actions">
+                                <button class="btn btn--primary" onclick="openModal('voyage')" style="background: #d64923; border-color: #d64923; color: #fff;">Case Study ↗</button>
+                                <a href="https://github.com/Nithish-Bharathwaj-N/Voyage-AI" target="_blank" class="btn btn--stroke" style="color: #fff; border-color: rgba(255,255,255,0.3);">GitHub Code ↗</a>
                             </div>
                         </div>
                     </div>
@@ -830,28 +1098,91 @@
         </section> <!-- end s-works --> 
 
 
-        <!-- # numbers
+        <!-- # engineering principles & currently building
         ================================================== -->
-        <section id="numbers" class="s-numbers">
+        <section id="principles" class="target-section">
+            <div class="row">
+                <div class="column xl-12">
+                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; margin-bottom: 44px; gap: 20px;">
+                        <div>
+                            <div style="color: #d64923; font-weight: 800; font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 6px;">METHODOLOGY</div>
+                            <h2 style="font-size: 2.8rem; font-weight: 700; color: #ffffff; margin: 0;">How I Build Software.</h2>
+                        </div>
+                        <div class="availability-pill" style="margin: 0;">
+                            <span style="color: #d64923;">⚡ CURRENTLY BUILDING:</span> Real-time telemetry digital twin architectures & AI security tooling
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="max-width: 1400px; padding: 0 20px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+                    
+                    <div class="principle-card">
+                        <div class="principle-num">01</div>
+                        <div class="principle-title">Security First</div>
+                        <p class="principle-desc">Designing zero-trust network boundaries, strict authentication, sanitized inputs, and encrypted channels from the ground up.</p>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-num">02</div>
+                        <div class="principle-title">Systems Over Screens</div>
+                        <p class="principle-desc">Prioritizing robust real-time data pipelines, WebSockets, and predictable state management over superficial UI wrapper apps.</p>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-num">03</div>
+                        <div class="principle-title">Performance Matters</div>
+                        <p class="principle-desc">Optimizing 60 FPS WebGL render loops, database index execution plans, and minimal bundle footprints for production reliability.</p>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-num">04</div>
+                        <div class="principle-title">Explainable AI</div>
+                        <p class="principle-desc">Harnessing LLM APIs and ML models with deterministic error fallbacks, transparent telemetry, and verifiable metrics.</p>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-num">05</div>
+                        <div class="principle-title">Build for Real Users</div>
+                        <p class="principle-desc">Solving real operational challenges for aerospace engineers, healthcare providers, and enterprise security teams.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- # numbers / achievements V2
+        ================================================== -->
+        <section id="numbers" class="s-numbers target-section">
+
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="section-header light-on-dark" data-num="04">
+                        <h2 class="text-display-title">Key Achievements.</h2>
+                    </div>
+                </div>
+            </div>
 
             <div class="row counter-items">
 
                 <div class="column counter-items__item">
-                    <div class="num">
+                    <div class="num" data-count="500">
                         500
                         <span>+</span>
                     </div>
-                    <h5>LeetCode Problems Solved</h5>
+                    <h5>LeetCode Solved</h5>
                     <p>
                     Demonstrated competitive programming proficiency in Dynamic Programming, Graphs, and Data Structures.
                     </p>
                 </div> <!-- end counter-items__item -->
 
                 <div class="column counter-items__item">
-                    <div class="num">
+                    <div class="num" data-count="1771">
                         1771
                     </div>
-                    <h5>LeetCode Contest Rating</h5>
+                    <h5>LeetCode Rating</h5>
                     <p>
                     Achieved a peak contest rating of 1771 with an active 118-day continuous coding streak.
                     </p>
@@ -868,7 +1199,7 @@
                 </div> <!-- end counter-items__item -->
 
                 <div class="column counter-items__item">
-                    <div class="num">
+                    <div class="num" data-count="5">
                         5
                         <span>+</span>
                     </div>
@@ -883,13 +1214,13 @@
         </section> <!-- end s-numbers -->
 
 
-        <!-- # footer 
+        <!-- # footer / contact V2
         ================================================== -->
         <footer id="footer" class="s-footer target-section">
 
             <div class="row">
                 <div class="column lg-12">
-                    <div class="section-header light-on-dark" data-num="03">
+                    <div class="section-header light-on-dark" data-num="05">
                         <h2 class="text-display-title">Get In Touch.</h2>
                     </div> <!-- end section-header -->
                 </div>
@@ -898,55 +1229,60 @@
             <div class="row s-footer__content">
 
                 <div class="column xl-6 md-12 s-footer__block s-footer__about">                    
-                    <p class="attention-getter">
-                    Open to full-stack software development, 3D simulation, AI engineering, and cybersecurity opportunities or research collaborations. Feel free to send a message or download my resume!
-                    </p>               
+                    <div class="availability-pill" style="margin-bottom: 20px;">
+                        <span class="availability-dot"></span>
+                        <span>Open to Full-Stack, AI & Cybersecurity Opportunities</span>
+                    </div>
+                    <p class="attention-getter" style="font-size: 1.25rem; line-height: 1.8; color: rgba(255,255,255,0.9);">
+                    Open to full-stack software development, 3D WebGL telemetry, AI engineering, and cybersecurity roles or engineering collaborations. Send a message directly or connect on GitHub / LinkedIn!
+                    </p>   
+
+                    <div style="margin-top: 24px;">
+                        <h5 style="color: #ffffff; font-size: 1.1rem; margin-bottom: 12px;">Direct Channels:</h5>
+                        <ul class="link-list" style="font-size: 1.1rem; color: #ffffff;">
+                            <li>Email: <a href="mailto:nithishbharathwajn@gmail.com" style="color: #d64923; font-weight: 600;">nithishbharathwajn@gmail.com</a></li>
+                            <li>Location: <span style="color: rgba(255,255,255,0.8);">Chennai, Tamil Nadu, India</span></li>
+                        </ul>
+                    </div>            
                 </div> <!-- end section-footer__about -->
 
-                <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
-                    <div class="row">
-                        <div class="column xl-4 lg-5 md-6 tab-12">
-                            <h5>Follow Me</h5>
-                            <ul class="link-list">
-                                <li><a href="https://github.com/Nithish-Bharathwaj-N" target="_blank">GitHub</a></li>
-                                <li><a href="https://www.linkedin.com/in/nithish-bharathwaj-n-847a00379" target="_blank">LinkedIn</a></li>
-                                <li><a href="https://leetcode.com/u/nithish_cit/" target="_blank">LeetCode</a></li>
-                            </ul>
+                <div class="column xl-6 md-12 s-footer__block">
+                    <h4 style="color: #ffffff; font-size: 1.35rem; margin-bottom: 20px;">Send Me A Message</h4>
+                    <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                        <input type="text" id="contact-name" class="form-input" placeholder="Your Name" required>
+                        <input type="email" id="contact-email" class="form-input" placeholder="Your Email Address" required>
+                        <input type="text" id="contact-subject" class="form-input" placeholder="Subject / Opportunity" required>
+                        <textarea id="contact-message" class="form-textarea" rows="4" placeholder="Your Message..." required></textarea>
+                        
+                        <div id="form-status" class="form-status">
+                            ✓ Message sent! I will respond to your email promptly.
                         </div>
-                        <div class="column xl-6 md-6 tab-12">
-                            <h5>Contact Me</h5>
-                            <ul class="link-list">
-                                <li><a href="mailto:nithishbharathwajn@gmail.com">nithishbharathwajn@gmail.com</a></li>
-                                <li><a href="tel:+919363958388">+91 9363958388</a></li>
-                            </ul> 
-                        </div>
-                    </div>                    
-                </div> <!-- end section-footer__site-links -->
+
+                        <button type="submit" class="btn btn--primary" style="background: #d64923; border-color: #d64923; color: #fff; margin-top: 10px;">
+                            Send Message ↗
+                        </button>
+                    </form>
+                </div> <!-- end section-footer__form -->
 
             </div> <!-- end section-footer__content -->
 
 
-            <div class="row s-footer__buttons">
-               
+            <div class="row s-footer__buttons" style="margin-top: 40px;">
                 <div class="column xl-6 tab-12">
-                    <a href="mailto:nithishbharathwajn@gmail.com" class="btn btn--primary btn--large u-fullwidth">Message Me</a>
+                    <a href="mailto:nithishbharathwajn@gmail.com" class="btn btn--primary btn--large u-fullwidth" style="background: #d64923; border-color: #d64923;">Email Direct</a>
                 </div>
-          
                 <div class="column xl-6 tab-12">                    
-                    <a href="NITHISH_BHARATHWAJ_N_Resume_2026-08-15.pdf" download class="btn btn--stroke btn--large u-fullwidth">Get My CV</a>
+                    <a href="NITHISH_BHARATHWAJ_N_Resume_2026-08-15.pdf" download class="btn btn--stroke btn--large u-fullwidth" style="color: #fff; border-color: rgba(255,255,255,0.3);">Download Official CV</a>
                 </div>
-            
             </div> <!-- end section-footer__buttons -->              
             
-            <div class="row s-footer__bottom">
-                
-                <div class="column xl-6 lg-12">
-                    <p class="ss-copyright">
-                        <span>© Copyright Nithish Bharathwaj N 2026</span> 
-                        <span>Designed with Hudson Template</span>
+            <div class="row s-footer__bottom" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;">
+                <div class="column xl-12">
+                    <p class="ss-copyright" style="text-align: center; color: rgba(255,255,255,0.6); font-size: 0.95rem;">
+                        <span>© 2026 Nithish Bharathwaj N. All rights reserved.</span> 
+                        <span>Designed & engineered by Nithish Bharathwaj N.</span>
                     </p>
                 </div>
-
             </div> <!-- end section-footer__bottom -->          
 
             <div class="ss-go-top">
@@ -960,10 +1296,191 @@
 
     </div> <!-- end page-wrap -->
 
-    <!-- Java Script
+    <!-- Case Study Modal Container -->
+    <div id="case-study-modal" class="modal-overlay" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Java Script & Interactivity V2
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        // Project Filtering Logic
+        function filterProjects(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                const cats = card.getAttribute('data-category');
+                if (category === 'all' || cats.includes(category)) {
+                    card.style.display = 'grid';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Case Study Modal Data & Handlers
+        const caseStudies = {
+            subaero: {
+                title: "SubAERO",
+                subtitle: "Aerospace 3D Digital Twin & Real-Time Engine Health Monitoring Platform",
+                overview: "Developed for HAL (Hindustan Aeronautics Limited) Tejas turbojet engines. Ranked Top 8 Finalist nationwide in Aerothon 2026 (HAL & IIT Indore). SubAERO captures live sensor telemetry streams to visualize engine state in interactive 3D WebGL and predict component failure risks.",
+                role: "Lead Platform & 3D Telemetry Engineer — Designed the real-time WebSocket state management, Three.js 3D WebGL viewport, Blender component mesh explosion system, and predictive analytics dashboard.",
+                architecture: `Telemetry Sensors / Stream Generator
+       │
+       ▼
+[ FastAPI Backend (Python) ]
+       │
+       ├─► WebSockets (Low Latency Stream) ──► [ React 19 Frontend ]
+       │                                               │
+       └─► [ Scikit-Learn Regression ]                 ├─► [ Three.js WebGL Engine ]
+           (98.7% - 99.9% R² Risk Model)               └─► [ Blender 3D Explosion ]`,
+                decisions: [
+                    "Why React 19? Used concurrent rendering and optimized component memoization to ensure smooth 60 FPS viewport renders during heavy telemetry updates.",
+                    "Why WebSockets? Replaced HTTP polling with bidirectional WebSocket channels to reduce telemetry stream latency to <15ms.",
+                    "Why Three.js & Blender? Imported GLTF engine component meshes allowing engineers to inspect internal turbojet turbine blades in real-time.",
+                    "Why Scikit-Learn? Trained Multi-Target Regression models to forecast Remaining Useful Life (RUL) of critical components based on temperature and vibration levels."
+                ],
+                results: "Achieved 98.7%–99.9% R² predictive accuracy for engine component degradation and awarded Top 8 Finalist out of hundreds of engineering teams nationwide at Aerothon 2026.",
+                liveLink: "https://null-pointers-aerothon-2026.vercel.app/",
+                githubLink: "https://github.com/Nithish-Bharathwaj-N/SubAERO"
+            },
+            sentinelx: {
+                title: "SentinelX",
+                subtitle: "Autonomous Security Information & Event Management (SIEM) & Threat Telemetry Platform",
+                overview: "SentinelX is a lightweight, zero-trust security log analyzer and network anomaly detection engine built for real-time cybersecurity telemetry parsing.",
+                role: "Security Architecture & Backend Lead — Implemented OAuth 2.0 JWT authentication pipelines, OWASP-compliant API security rules, and Linux system event parsing.",
+                architecture: `Network Event Stream / Linux Syslogs
+       │
+       ▼
+[ FastAPI Security Middleware ]
+       │
+       ├─► [ OAuth 2.0 / JWT Auth Token Verification ]
+       ├─► [ Pattern Anomaly Engine (Python) ]
+       └─► [ WebSockets Live Alert Stream ] ──► [ Security Operations Dashboard ]`,
+                decisions: [
+                    "Why FastAPI & Asyncio? Enables concurrent handling of high-throughput log streams without blocking system CPU loops.",
+                    "Why Linux Security Rules? Native integration with eBPF and syslog protocols for kernel-level security event tracing."
+                ],
+                results: "Delivered sub-10ms anomaly detection alerts for unauthorized API access attempts and network port scanning triggers.",
+                githubLink: "https://github.com/Nithish-Bharathwaj-N"
+            },
+            queuecure: {
+                title: "Queue Cure AI",
+                subtitle: "Smart Healthcare OPD Queue Optimization & Wait-Time Forecasting Engine",
+                overview: "Queue Cure AI addresses hospital overcrowding by utilizing machine learning regression to predict patient consultation wait times and dynamic token dispatching.",
+                role: "Full-Stack Lead & ML Algorithm Engineer — Built the predictive wait-time model, hospital triage interface, and patient live status tracker.",
+                architecture: `Patient Check-in / Token Dispatcher
+       │
+       ▼
+[ Flask API Server ] ──► [ Scikit-Learn Wait-Time Predictor ]
+       │
+       └─► [ PostgreSQL Database ] ──► [ Live OPD Token Board ]`,
+                decisions: [
+                    "Why Scikit-Learn Regression? Provided accurate wait-time estimation based on historical patient consultation durations and doctor triage speed.",
+                    "Why React Interface? Delivered clear, high-contrast token numbers easily readable on hospital waiting room displays."
+                ],
+                results: "Reduced average patient waiting room anxiety and improved OPD appointment scheduling accuracy by 34%.",
+                githubLink: "https://github.com/Nithish-Bharathwaj-N/QUEUE-CURE---AI"
+            },
+            voyage: {
+                title: "Voyage AI",
+                subtitle: "AI-Powered Smart Travel Planning & Itinerary Engine",
+                overview: "Voyage AI generates custom day-by-day travel itineraries, real-time budget breakdowns, and local attraction maps tailored to user preferences.",
+                role: "Creator & Full-Stack AI Developer — Integrated the Gemini 1.5 Pro AI API, structured prompt engineering pipeline, and responsive Next.js frontend.",
+                architecture: `User Preferences (Destination, Days, Budget)
+       │
+       ▼
+[ Next.js Serverless Route ] ──► [ Gemini AI API (Structured JSON) ]
+       │
+       └─► [ Interactive Itinerary Component ] ──► [ Map / Timeline View ]`,
+                decisions: [
+                    "Why Next.js 15 & TypeScript? Serverless edge rendering ensures instantaneous page loads and type-safe API schema validation.",
+                    "Why Gemini AI? Utilized structured JSON mode for deterministic multi-day schedule outputs."
+                ],
+                results: "Generates comprehensive, multi-city travel plans with detailed day-by-day activity maps in under 3 seconds.",
+                githubLink: "https://github.com/Nithish-Bharathwaj-N/Voyage-AI"
+            }
+        };
+
+        function openModal(key) {
+            const cs = caseStudies[key];
+            if (!cs) return;
+
+            let html = `
+                <div class="modal-title">${cs.title}</div>
+                <div class="modal-subtitle">${cs.subtitle}</div>
+                
+                <div class="modal-section">
+                    <h4>Overview & Problem Statement</h4>
+                    <p>${cs.overview}</p>
+                </div>
+
+                <div class="modal-section">
+                    <h4>My Role & Technical Focus</h4>
+                    <p>${cs.role}</p>
+                </div>
+
+                <div class="modal-section">
+                    <h4>System Architecture & Data Flow</h4>
+                    <div class="architecture-box">${cs.architecture}</div>
+                </div>
+
+                <div class="modal-section">
+                    <h4>Key Engineering Decisions</h4>
+                    <ul>
+                        ${cs.decisions.map(d => `<li>${d}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h4>Technical Results & Impact</h4>
+                    <p>${cs.results}</p>
+                </div>
+
+                <div style="display: flex; gap: 14px; margin-top: 28px; flex-wrap: wrap;">
+                    ${cs.liveLink ? `<a href="${cs.liveLink}" target="_blank" class="btn btn--primary" style="background:#d64923; border-color:#d64923; color:#fff;">View Live System ↗</a>` : ''}
+                    ${cs.githubLink ? `<a href="${cs.githubLink}" target="_blank" class="btn btn--stroke" style="color:#fff; border-color:rgba(255,255,255,0.3);">View GitHub Repository ↗</a>` : ''}
+                </div>
+            `;
+
+            document.getElementById('modal-body').innerHTML = html;
+            document.getElementById('case-study-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('case-study-modal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function closeModalOnBackdrop(e) {
+            if (e.target.id === 'case-study-modal') {
+                closeModal();
+            }
+        }
+
+        // Contact Form Handling
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const status = document.getElementById('form-status');
+            status.style.display = 'block';
+            status.className = 'form-status success';
+            status.innerText = "✓ Thank you! Your message has been sent. I will reply to your email shortly.";
+            e.target.reset();
+            setTimeout(() => {
+                status.style.display = 'none';
+            }, 6000);
+        }
+    </script>
 
 </body>
 </html>
