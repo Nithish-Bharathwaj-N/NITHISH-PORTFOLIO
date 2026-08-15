@@ -4355,6 +4355,187 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   box-shadow: 0 8px 24px rgba(200,66,26,0.2);
 }
 
+
+/* COMPREHENSIVE MOBILE RESPONSIVENESS (PHONES & TABLETS) */
+@media(max-width:768px) {
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+
+  /* Container padding */
+  .about-exact-container,
+  .about-ref-container,
+  .skills-wrap,
+  .projects-wrap,
+  .ach-wrap,
+  .contact-wrap,
+  .about-wrap {
+    width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Section Spacing */
+  section {
+    padding-top: 60px !important;
+    padding-bottom: 50px !important;
+  }
+
+  /* Typography Scaling */
+  .sec-title, .ref-about-h2 {
+    font-size: clamp(2rem, 7vw, 2.8rem) !important;
+    line-height: 1.1 !important;
+  }
+  .hero-h1 {
+    font-size: clamp(2.2rem, 8vw, 3.2rem) !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Hero Section Mobile */
+  #intro {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+  }
+  .hero-copy {
+    padding: 32px 18px 24px !important;
+  }
+  .hero-btns {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .hero-btns a {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 14px 20px !important;
+  }
+  .hero-photo-panel {
+    min-height: 340px !important;
+    max-height: 420px !important;
+  }
+
+  /* About Section Mobile */
+  .about-ref-top-grid, .about-dashboard-grid, .about-exact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .ref-photo-stage, .circle-photo-wrapper, .arch-photo-wrapper {
+    width: 180px !important;
+    height: 180px !important;
+    margin: 0 auto 20px !important;
+  }
+  .ref-portrait-img, .circle-photo-img {
+    width: 180px !important;
+    height: 180px !important;
+  }
+  .ref-peach-circle {
+    width: 160px !important;
+    height: 160px !important;
+  }
+  .ref-orbit-arcs, .ref-dots-grid {
+    display: none !important;
+  }
+  .ref-4stats-row, .who-stats-row, .w4s-box {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+  .approach-steps-exact, .approach-steps {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+  .ref-beyond-5grid, .beyond-8grid, .bt-items-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+  .ref-jt-grid, .je-track, .journey-track-nodes {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+  .ref-jt-grid::before, .journey-track-nodes::before {
+    display: none !important;
+  }
+
+  /* Skills Section Mobile */
+  .skill-cats {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+  .skills-hdr {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+
+  /* Projects Section Mobile */
+  .projects-hdr-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .p-hdr-stats {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+  .subaero-hero-card {
+    grid-template-columns: 1fr !important;
+    padding: 20px 16px !important;
+    gap: 18px !important;
+  }
+  .sh-title {
+    font-size: 1.8rem !important;
+  }
+  .sh-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .sh-actions a {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 12px 16px !important;
+  }
+  .secondary-projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .sec-proj-card {
+    grid-template-columns: 1fr !important;
+    padding: 16px !important;
+  }
+  .projects-bottom-bar {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 12px !important;
+  }
+
+  /* Achievements Section Mobile */
+  .ach-top-metrics-row {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .ach-badge-cards {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  /* Contact Section Mobile */
+  .contact-main-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .c-meta-row {
+    grid-template-columns: 1fr !important;
+  }
+  .contact-form-card {
+    padding: 22px 16px !important;
+  }
+  /* Prevent iOS input auto-zoom */
+  .c-finput, .c-ftextarea, input, textarea {
+    font-size: 16px !important;
+  }
+}
+
 ` }} />
       <div dangerouslySetInnerHTML={{ __html: `
 <a id="skip-link" href="#intro">Skip to content</a>
