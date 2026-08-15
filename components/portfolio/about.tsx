@@ -17,7 +17,7 @@ export function About() {
           <div className="relative">
             <div className="absolute top-3.5 left-3.5 -right-3.5 -bottom-3.5 border-[1.5px] border-[#c8421a]/30 rounded-2xl z-0" />
             <img
-              src="/images/nithish-photo.jpg"
+              src="/images/about-photo.jpg"
               alt="Portrait of Nithish Bharathwaj N"
               className="w-full aspect-[3/4] object-cover rounded-2xl relative z-10 shadow-lg"
             />
