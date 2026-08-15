@@ -71,27 +71,94 @@
             color: rgba(255, 255, 255, 0.5) !important;
         }
 
-        /* Skills Section Styling */
+        /* Skills Section Dark Aesthetic & Marquee Styling */
+        #skills {
+            background-color: var(--color-3) !important;
+            padding-top: var(--vspace-5);
+            padding-bottom: var(--vspace-5);
+            color: var(--color-gray-15);
+        }
+        @keyframes marqueeLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes marqueeRight {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+        .marquee-wrapper {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 24px;
+            padding: 8px 0;
+            mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+        }
+        .marquee-track {
+            display: flex;
+            gap: 16px;
+            width: max-content;
+        }
+        .marquee-track--left {
+            animation: marqueeLeft 35s linear infinite;
+        }
+        .marquee-track--right {
+            animation: marqueeRight 35s linear infinite;
+        }
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+        .marquee-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 9999px;
+            color: #ffffff;
+            font-size: 0.875rem;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+        .marquee-pill:hover {
+            background: rgba(214, 73, 35, 0.2);
+            border-color: #d64923;
+            transform: scale(1.04);
+        }
+        .skill-category-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            padding: 26px 22px;
+            transition: all 0.3s ease;
+        }
+        .skill-category-box:hover {
+            border-color: rgba(214, 73, 35, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+        }
         .skill-item {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 16px 8px;
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
+            padding: 14px 8px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
             text-align: center;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.3s ease;
         }
         .skill-item:hover {
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.08);
             border-color: #d64923;
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(214, 73, 35, 0.15);
+            transform: translateY(-3px);
         }
         .skill-item svg {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             transition: transform 0.3s ease;
         }
         .skill-item:hover svg {
@@ -100,7 +167,7 @@
         .skill-item span {
             font-size: 0.8rem;
             font-weight: 600;
-            color: #1e293b;
+            color: #ffffff;
         }
 
         /* Works Section Vertical One-by-One Layout */
@@ -352,15 +419,15 @@
 
                     <div class="s-about__photo-container" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; margin-bottom: 40px;">
                         <div style="flex: 0 0 260px; max-width: 260px;">
-                            <img src="images/nithish-photo.jpg" alt="Nithish Bharathwaj N" style="width: 100%; border-radius: 16px; border: 2px solid rgba(214, 73, 35, 0.4); box-shadow: 0 12px 35px rgba(0,0,0,0.6); object-fit: cover; aspect-ratio: 4/5;">
+                            <img src="images/nithish-photo.jpg" alt="Nithish Bharathwaj N" style="width: 100%; border-radius: 16px; border: 2px solid rgba(214, 73, 35, 0.5); box-shadow: 0 12px 35px rgba(0,0,0,0.6); object-fit: cover; aspect-ratio: 4/5;">
                         </div>
                         <div style="flex: 1 1 500px;">
-                            <p class="attention-getter" style="margin-top: 0; color: rgba(255,255,255,0.85);">
-                            I'm a <b>Computer Science and Engineering (Cyber Security)</b> student at <b>Chennai Institute of Technology</b>. I specialize in building AI-powered applications, 3D WebGL Digital Twin platforms, and secure full-stack software systems.
+                            <p class="attention-getter" style="margin-top: 0; color: rgba(255,255,255,0.92); font-size: 1.15rem; line-height: 1.7;">
+                            I'm a <b style="color: #ffffff; font-weight: 700;">Computer Science and Engineering (Cyber Security)</b> student at <b style="color: #ffffff; font-weight: 700;">Chennai Institute of Technology</b>. I specialize in building AI-powered applications, 3D WebGL Digital Twin platforms, and secure full-stack software systems.
                             </p>
 
-                            <p class="attention-getter" style="color: rgba(255,255,255,0.85);">
-                            Recognized as a <span style="color: #d64923; font-weight: 700;">Top 8 Finalist nationwide in Aerothon 2026</span> conducted by <b>HAL (Hindustan Aeronautics Limited)</b> and <b>IIT Indore</b>. Solved <b>500+ LeetCode problems</b> with a <b>1771 Contest Rating</b> and a <b>118-day continuous coding streak</b>.
+                            <p class="attention-getter" style="color: rgba(255,255,255,0.92); font-size: 1.15rem; line-height: 1.7;">
+                            Recognized as a <span style="color: #d64923; font-weight: 700;">Top 8 Finalist nationwide in Aerothon 2026</span> conducted by <b style="color: #ffffff; font-weight: 700;">HAL (Hindustan Aeronautics Limited)</b> and <b style="color: #ffffff; font-weight: 700;">IIT Indore</b>. Solved <b style="color: #ffffff; font-weight: 700;">500+ LeetCode problems</b> with a <b style="color: #ffffff; font-weight: 700;">1771 Contest Rating</b> and a <b style="color: #ffffff; font-weight: 700;">118-day continuous coding streak</b>.
                             </p>
                         </div>
                     </div>
@@ -446,146 +513,192 @@
 
         <!-- # skills
         ================================================== -->
-        <section id="skills" class="s-skills target-section" style="padding-top: var(--vspace-5); padding-bottom: var(--vspace-5); background: #f3f4f6;">
+        <section id="skills" class="s-skills target-section">
 
             <div class="row">
                 <div class="column xl-12">
-                    <div class="section-header" data-num="02">
+                    <div class="section-header light-on-dark" data-num="02">
                         <h2 class="text-display-title">Skills & Tech Stack.</h2>
                     </div> <!-- end section-header -->
                 </div>
             </div>
 
-            <div class="row" style="max-width: 1240px; margin: 0 auto; padding: 0 20px;">
+            <!-- Continuous Infinite Running Logo Marquee Track 1 (Left) -->
+            <div class="marquee-wrapper">
+                <div class="marquee-track marquee-track--left">
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M11.85 2c-5.26 0-4.94 2.28-4.94 2.28l.01 2.37h5.02v.72H4.91S2 7.04 2 12.35c0 5.3 2.54 5.12 2.54 5.12h1.52v-2.16c0-2.48 2.14-2.65 2.14-2.65h5.05c2.46 0 2.4-2.14 2.4-2.14V5.55s.35-3.55-3.8-3.55zm-2.7 1.62a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1z" fill="#3776AB"/><path d="M12.15 22c5.26 0 4.94-2.28 4.94-2.28l-.01-2.37h-5.02v-.72h7.03s2.91.33 2.91-4.98c0-5.3-2.54-5.12-2.54-5.12h-1.52v2.16c0 2.48-2.14 2.65-2.14 2.65h-5.05c-2.46 0-2.4 2.14-2.4 2.14v4.97s-.35 3.55 3.8 3.55zm2.7-1.62a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1z" fill="#FFD43B"/></svg> Python</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.2" fill="#61DAFB"/><g stroke="#61DAFB" stroke-width="1.2" fill="none"><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/></g></svg> React 19</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#FFFFFF"/><path d="M14.8 16.5L9.2 8.7V16.5H7.5V7.5H9.1L15.3 16.1L14.8 16.5Z" fill="#000000"/><path d="M16.5 7.5H15V16.5H16.5V7.5Z" fill="#000000"/></svg> Next.js</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#3178C6"/><path d="M12 11.5h-2.5v7.5H7.2v-7.5H4.7V9.3H12v2.2zm4.1 3.7c.6.4 1.2.6 2 .6.8 0 1.1-.3 1.1-.7 0-.4-.4-.6-1.3-.9l-.6-.2c-1.6-.5-2.6-1.4-2.6-2.9 0-1.8 1.5-3.1 3.7-3.1 1.5 0 2.7.5 3.5 1.4l-1.2 1.2c-.6-.6-1.3-.9-2.2-.9-.8 0-1.2.3-1.2.7 0 .4.4.6 1.3.9l.6.2c1.8.6 2.7 1.4 2.7 3 0 1.9-1.5 3.2-4 3.2-1.8 0-3.1-.6-4-1.6l1.3-1.3z" fill="#FFFFFF"/></svg> TypeScript</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#61DAFB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg> Three.js</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 4 4c0 1.2-.5 2.3-1.3 3.1l6.1 2.2a1 1 0 0 1 .4 1.5l-2.6 3.6a1 1 0 0 1-1.4.2L13 14.2a4 4 0 1 1-1-7.8z" fill="#EA7600"/><circle cx="12" cy="12" r="2" fill="#265787"/></svg> Blender</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm1 18.5l-6-7h4.5V5.5l6 7H13v6z" fill="#059669"/></svg> FastAPI</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 1.8L1.8 7.7v11.7L12 25.2l10.2-5.9V7.7L12 1.8zm-1.2 17.5v-3.7l3.2 1.9v3.7l-3.2-1.9zm0-5.6V10l3.2 1.9v3.7l-3.2-1.9z" fill="#339933"/></svg> Node.js</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M13.98 10.46h2.23V8.22h-2.23v2.24zm-2.86 0h2.23V8.22h-2.23v2.24zm-2.87 0h2.23V8.22H8.25v2.24zm-2.87 0h2.23V8.22H5.38v2.24zm8.6-2.86h2.23V5.36h-2.23v2.24zm-2.86 0h2.23V5.36h-2.23v2.24zm-2.87 0h2.23V5.36H8.25v2.24zm5.73-2.86h2.23V2.5h-2.23v2.24zM.6 12.33c.53 3.65 3.73 6.47 7.55 6.47 4.9 0 8.7-2.6 10.8-6.17.65.04 1.45.02 2.1-.2 1.22-.4 2.1-1.3 2.5-2.4-.7.1-1.4.1-2.1-.2-.6-.3-1.1-.8-1.5-1.4 0 0-1.8 1.4-4.8 1.4H.6v2.5z" fill="#2496ED"/></svg> Docker</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9L4 7.5v9l8 4.5 8-4.5v-9l-8 4.5z" fill="#FF9900"/></svg> AWS Cloud</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-8h2v8zm-3-10a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z" fill="#FCC624"/></svg> Linux Security</div>
+
+                    <!-- Duplicate for infinite seamless scroll -->
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M11.85 2c-5.26 0-4.94 2.28-4.94 2.28l.01 2.37h5.02v.72H4.91S2 7.04 2 12.35c0 5.3 2.54 5.12 2.54 5.12h1.52v-2.16c0-2.48 2.14-2.65 2.14-2.65h5.05c2.46 0 2.4-2.14 2.4-2.14V5.55s.35-3.55-3.8-3.55zm-2.7 1.62a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1z" fill="#3776AB"/><path d="M12.15 22c5.26 0 4.94-2.28 4.94-2.28l-.01-2.37h-5.02v-.72h7.03s2.91.33 2.91-4.98c0-5.3-2.54-5.12-2.54-5.12h-1.52v2.16c0 2.48-2.14 2.65-2.14 2.65h-5.05c-2.46 0-2.4 2.14-2.4 2.14v4.97s-.35 3.55 3.8 3.55zm2.7-1.62a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1z" fill="#FFD43B"/></svg> Python</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.2" fill="#61DAFB"/><g stroke="#61DAFB" stroke-width="1.2" fill="none"><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/></g></svg> React 19</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#FFFFFF"/><path d="M14.8 16.5L9.2 8.7V16.5H7.5V7.5H9.1L15.3 16.1L14.8 16.5Z" fill="#000000"/><path d="M16.5 7.5H15V16.5H16.5V7.5Z" fill="#000000"/></svg> Next.js</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#3178C6"/><path d="M12 11.5h-2.5v7.5H7.2v-7.5H4.7V9.3H12v2.2zm4.1 3.7c.6.4 1.2.6 2 .6.8 0 1.1-.3 1.1-.7 0-.4-.4-.6-1.3-.9l-.6-.2c-1.6-.5-2.6-1.4-2.6-2.9 0-1.8 1.5-3.1 3.7-3.1 1.5 0 2.7.5 3.5 1.4l-1.2 1.2c-.6-.6-1.3-.9-2.2-.9-.8 0-1.2.3-1.2.7 0 .4.4.6 1.3.9l.6.2c1.8.6 2.7 1.4 2.7 3 0 1.9-1.5 3.2-4 3.2-1.8 0-3.1-.6-4-1.6l1.3-1.3z" fill="#FFFFFF"/></svg> TypeScript</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#61DAFB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg> Three.js</div>
+                </div>
+            </div>
+
+            <!-- Continuous Infinite Running Logo Marquee Track 2 (Right) -->
+            <div class="marquee-wrapper">
+                <div class="marquee-track marquee-track--right">
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2L9.5 8.5 3 11l6.5 2.5L12 20l2.5-6.5L21 11l-6.5-2.5L12 2z" fill="#EE4C2C"/></svg> PyTorch</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#F7931E"/><path d="M7 12l3 3 7-7" stroke="#FFFFFF" stroke-width="2.5" fill="none"/></svg> Scikit-Learn</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 6c-3.3 0-5.5 1.7-6.6 5 1.1-1.7 2.4-2.2 3.9-1.7 1 .3 1.6 1 2.4 1.8 1.2 1.3 2.6 2.8 5.9 2.8 3.3 0 5.5-1.7 6.6-5-1.1 1.7-2.4 2.2-3.9 1.7-1-.3-1.6-1-2.4-1.8C16.7 7.5 15.3 6 12 6zm-6.6 6c-3.3 0-5.5 1.7-6.6 5 1.1-1.7 2.4-2.2 3.9-1.7 1 .3 1.6 1 2.4 1.8 1.2 1.3 2.6 2.8 5.9 2.8 3.3 0 5.5-1.7 6.6-5-1.1 1.7-2.4 2.2-3.9 1.7-1-.3-1.6-1-2.4-1.8C10.1 13.5 8.7 12 5.4 12z" fill="#06B6D4"/></svg> TailwindCSS</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2A10 10 0 1 0 22 12 10 10 0 0 0 12 2zm4.3 13.8l-1.4 1.4L12 14.3l-2.9 2.9-1.4-1.4 2.9-2.9-2.9-2.9 1.4-1.4 2.9 2.9 2.9-2.9 1.4 1.4-2.9 2.9z" fill="#FFFFFF"/></svg> Express.js</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z" fill="#4169E1"/></svg> PostgreSQL</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.9 2 5.4 5 6.7V21l3.2-1.8c.6.1 1.2.2 1.8.2 5.5 0 10-3.6 10-8s-4.5-8-10-8z" fill="#4479A1"/></svg> MySQL</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M23.54 11.23L12.77.46a1.54 1.54 0 0 0-2.18 0L8.43 2.62l3.23 3.23a2.3 2.3 0 0 1 2.92 2.92l3.4 3.4a2.3 2.3 0 1 1-1.09 1.09l-3.07-3.07v4.61a2.3 2.3 0 1 1-1.54 0V9.82a2.3 2.3 0 0 1-1.23-3L8.03 3.8.46 11.37a1.54 1.54 0 0 0 0 2.18l10.77 10.77a1.54 1.54 0 0 0 2.18 0l10.13-10.91a1.54 1.54 0 0 0 0-2.18z" fill="#F05032"/></svg> Git</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M22.375 16.48l-8.625 4.98c-.75.43-1.68.43-2.43 0l-8.625-4.98c-.75-.43-1.22-1.25-1.22-2.12v-9.95c0-.87.47-1.69 1.22-2.12l8.625-4.98c.75-.43 1.68-.43 2.43 0l8.625 4.98c.75.43 1.22 1.25 1.22 2.12v9.95c0 .87-.47 1.69-1.22 2.12z" fill="#00599C"/><path d="M8.2 13.5a4 4 0 1 1 0-3 3.9 3.9 0 0 1 0 3zm6.3-2.5h1.2v-1.2h.8v1.2h1.2v.8h-1.2v1.2h-.8v-1.2h-1.2zm3.8 0h1.2v-1.2h.8v1.2h1.2v.8h-1.2v1.2h-.8v-1.2h-1.2z" fill="#FFFFFF"/></svg> C++</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0z" fill="#E34F26"/><path d="M12 2.2v19.5l6.9-2.3 1.5-17.2H12z" fill="#EF652A"/><path d="M12 8.7H8l-.3-3.2h8.6v3.2h-4.3z" fill="#FFFFFF"/></svg> HTML5/CSS3</div>
+
+                    <!-- Duplicate for infinite seamless scroll -->
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2L9.5 8.5 3 11l6.5 2.5L12 20l2.5-6.5L21 11l-6.5-2.5L12 2z" fill="#EE4C2C"/></svg> PyTorch</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#F7931E"/><path d="M7 12l3 3 7-7" stroke="#FFFFFF" stroke-width="2.5" fill="none"/></svg> Scikit-Learn</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 6c-3.3 0-5.5 1.7-6.6 5 1.1-1.7 2.4-2.2 3.9-1.7 1 .3 1.6 1 2.4 1.8 1.2 1.3 2.6 2.8 5.9 2.8 3.3 0 5.5-1.7 6.6-5-1.1 1.7-2.4 2.2-3.9 1.7-1-.3-1.6-1-2.4-1.8C16.7 7.5 15.3 6 12 6zm-6.6 6c-3.3 0-5.5 1.7-6.6 5 1.1-1.7 2.4-2.2 3.9-1.7 1 .3 1.6 1 2.4 1.8 1.2 1.3 2.6 2.8 5.9 2.8 3.3 0 5.5-1.7 6.6-5-1.1 1.7-2.4 2.2-3.9 1.7-1-.3-1.6-1-2.4-1.8C10.1 13.5 8.7 12 5.4 12z" fill="#06B6D4"/></svg> TailwindCSS</div>
+                    <div class="marquee-pill"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2A10 10 0 1 0 22 12 10 10 0 0 0 12 2zm4.3 13.8l-1.4 1.4L12 14.3l-2.9 2.9-1.4-1.4 2.9-2.9-2.9-2.9 1.4-1.4 2.9 2.9 2.9-2.9 1.4 1.4-2.9 2.9z" fill="#FFFFFF"/></svg> Express.js</div>
+                </div>
+            </div>
+
+            <!-- Professional Category Cards Grid -->
+            <div class="row" style="max-width: 1240px; margin: 30px auto 0; padding: 0 20px;">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 24px; width: 100%;">
 
                     <!-- Category 1: Languages -->
-                    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 26px 22px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); transition: transform 0.3s ease;">
-                        <h3 style="font-family: var(--font-1); font-size: 1.25rem; font-weight: 700; color: #0f172a; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #d64923; display: flex; align-items: center; gap: 8px;">
+                    <div class="skill-category-box">
+                        <h3 style="font-family: var(--font-1); font-size: 1.25rem; font-weight: 700; color: #ffffff; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #d64923; display: flex; align-items: center; gap: 8px;">
                             💻 Programming Languages
                         </h3>
                         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M11.85 2c-5.26 0-4.94 2.28-4.94 2.28l.01 2.37h5.02v.72H4.91S2 7.04 2 12.35c0 5.3 2.54 5.12 2.54 5.12h1.52v-2.16c0-2.48 2.14-2.65 2.14-2.65h5.05c2.46 0 2.4-2.14 2.4-2.14V5.55s.35-3.55-3.8-3.55zm-2.7 1.62a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1z" fill="#3776AB"/><path d="M12.15 22c5.26 0 4.94-2.28 4.94-2.28l-.01-2.37h-5.02v-.72h7.03s2.91.33 2.91-4.98c0-5.3-2.54-5.12-2.54-5.12h-1.52v2.16c0 2.48-2.14 2.65-2.14 2.65h-5.05c-2.46 0-2.4 2.14-2.4 2.14v4.97s-.35 3.55 3.8 3.55zm2.7-1.62a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1z" fill="#FFD43B"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M11.85 2c-5.26 0-4.94 2.28-4.94 2.28l.01 2.37h5.02v.72H4.91S2 7.04 2 12.35c0 5.3 2.54 5.12 2.54 5.12h1.52v-2.16c0-2.48 2.14-2.65 2.14-2.65h5.05c2.46 0 2.4-2.14 2.4-2.14V5.55s.35-3.55-3.8-3.55zm-2.7 1.62a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1z" fill="#3776AB"/><path d="M12.15 22c5.26 0 4.94-2.28 4.94-2.28l-.01-2.37h-5.02v-.72h7.03s2.91.33 2.91-4.98c0-5.3-2.54-5.12-2.54-5.12h-1.52v2.16c0 2.48-2.14 2.65-2.14 2.65h-5.05c-2.46 0-2.4 2.14-2.4 2.14v4.97s-.35 3.55 3.8 3.55zm2.7-1.62a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1z" fill="#FFD43B"/></svg>
                                 <span>Python</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M22.375 16.48l-8.625 4.98c-.75.43-1.68.43-2.43 0l-8.625-4.98c-.75-.43-1.22-1.25-1.22-2.12v-9.95c0-.87.47-1.69 1.22-2.12l8.625-4.98c.75-.43 1.68-.43 2.43 0l8.625 4.98c.75.43 1.22 1.25 1.22 2.12v9.95c0 .87-.47 1.69-1.22 2.12z" fill="#00599C"/><path d="M8.2 13.5a4 4 0 1 1 0-3 3.9 3.9 0 0 1 0 3zm6.3-2.5h1.2v-1.2h.8v1.2h1.2v.8h-1.2v1.2h-.8v-1.2h-1.2zm3.8 0h1.2v-1.2h.8v1.2h1.2v.8h-1.2v1.2h-.8v-1.2h-1.2z" fill="#FFFFFF"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><path d="M22.375 16.48l-8.625 4.98c-.75.43-1.68.43-2.43 0l-8.625-4.98c-.75-.43-1.22-1.25-1.22-2.12v-9.95c0-.87.47-1.69 1.22-2.12l8.625-4.98c.75-.43 1.68-.43 2.43 0l8.625 4.98c.75.43 1.22 1.25 1.22 2.12v9.95c0 .87-.47 1.69-1.22 2.12z" fill="#00599C"/><path d="M8.2 13.5a4 4 0 1 1 0-3 3.9 3.9 0 0 1 0 3zm6.3-2.5h1.2v-1.2h.8v1.2h1.2v.8h-1.2v1.2h-.8v-1.2h-1.2zm3.8 0h1.2v-1.2h.8v1.2h1.2v.8h-1.2v1.2h-.8v-1.2h-1.2z" fill="#FFFFFF"/></svg>
                                 <span>C++</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#F7DF1E"/><path d="M12.5 17.5c.6.9 1.4 1.4 2.6 1.4 1.2 0 1.9-.6 1.9-1.5 0-1-.7-1.4-2.1-2l-.7-.3c-2-.8-3.3-1.8-3.3-4 0-2.2 1.7-3.9 4.3-3.9 1.9 0 3.2.7 4.1 2.3l-1.9 1.2c-.5-.9-1.1-1.3-2.2-1.3-1 0-1.6.6-1.6 1.3 0 .8.5 1.2 1.9 1.8l.7.3c2.4 1 3.6 2 3.6 4.1 0 2.5-1.9 4.1-4.8 4.1-2.6 0-4.2-1.2-5.1-2.8l2.6-1.6zm-6.8.2c.4.7.9 1.2 1.8 1.2.9 0 1.5-.4 1.5-1.8v-7.9h2.8v8.1c0 2.8-1.6 4.1-4.1 4.1-2.1 0-3.4-1.1-4-2.5l2-1.2z" fill="#000000"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#F7DF1E"/><path d="M12.5 17.5c.6.9 1.4 1.4 2.6 1.4 1.2 0 1.9-.6 1.9-1.5 0-1-.7-1.4-2.1-2l-.7-.3c-2-.8-3.3-1.8-3.3-4 0-2.2 1.7-3.9 4.3-3.9 1.9 0 3.2.7 4.1 2.3l-1.9 1.2c-.5-.9-1.1-1.3-2.2-1.3-1 0-1.6.6-1.6 1.3 0 .8.5 1.2 1.9 1.8l.7.3c2.4 1 3.6 2 3.6 4.1 0 2.5-1.9 4.1-4.8 4.1-2.6 0-4.2-1.2-5.1-2.8l2.6-1.6zm-6.8.2c.4.7.9 1.2 1.8 1.2.9 0 1.5-.4 1.5-1.8v-7.9h2.8v8.1c0 2.8-1.6 4.1-4.1 4.1-2.1 0-3.4-1.1-4-2.5l2-1.2z" fill="#000000"/></svg>
                                 <span>JavaScript</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#3178C6"/><path d="M12 11.5h-2.5v7.5H7.2v-7.5H4.7V9.3H12v2.2zm4.1 3.7c.6.4 1.2.6 2 .6.8 0 1.1-.3 1.1-.7 0-.4-.4-.6-1.3-.9l-.6-.2c-1.6-.5-2.6-1.4-2.6-2.9 0-1.8 1.5-3.1 3.7-3.1 1.5 0 2.7.5 3.5 1.4l-1.2 1.2c-.6-.6-1.3-.9-2.2-.9-.8 0-1.2.3-1.2.7 0 .4.4.6 1.3.9l.6.2c1.8.6 2.7 1.4 2.7 3 0 1.9-1.5 3.2-4 3.2-1.8 0-3.1-.6-4-1.6l1.3-1.3z" fill="#FFFFFF"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#3178C6"/><path d="M12 11.5h-2.5v7.5H7.2v-7.5H4.7V9.3H12v2.2zm4.1 3.7c.6.4 1.2.6 2 .6.8 0 1.1-.3 1.1-.7 0-.4-.4-.6-1.3-.9l-.6-.2c-1.6-.5-2.6-1.4-2.6-2.9 0-1.8 1.5-3.1 3.7-3.1 1.5 0 2.7.5 3.5 1.4l-1.2 1.2c-.6-.6-1.3-.9-2.2-.9-.8 0-1.2.3-1.2.7 0 .4.4.6 1.3.9l.6.2c1.8.6 2.7 1.4 2.7 3 0 1.9-1.5 3.2-4 3.2-1.8 0-3.1-.6-4-1.6l1.3-1.3z" fill="#FFFFFF"/></svg>
                                 <span>TypeScript</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z" fill="#4169E1"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z" fill="#4169E1"/></svg>
                                 <span>SQL</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2c-1.1 0-2 .9-2 2v2H8c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-2V4c0-1.1-.9-2-2-2zm-1 4V4h2v2h-2z" fill="#5382A1"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><path d="M12 2c-1.1 0-2 .9-2 2v2H8c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-2V4c0-1.1-.9-2-2-2zm-1 4V4h2v2h-2z" fill="#5382A1"/></svg>
                                 <span>Java</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Category 2: Frontend & 3D -->
-                    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 26px 22px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); transition: transform 0.3s ease;">
-                        <h3 style="font-family: var(--font-1); font-size: 1.3rem; font-weight: 700; color: #0f172a; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #d64923; display: flex; align-items: center; gap: 10px;">
+                    <div class="skill-category-box">
+                        <h3 style="font-family: var(--font-1); font-size: 1.25rem; font-weight: 700; color: #ffffff; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #d64923; display: flex; align-items: center; gap: 8px;">
                             ⚛️ Frontend & 3D WebGL
                         </h3>
                         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.2" fill="#61DAFB"/><g stroke="#61DAFB" stroke-width="1.2" fill="none"><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/></g></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.2" fill="#61DAFB"/><g stroke="#61DAFB" stroke-width="1.2" fill="none"><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/></g></svg>
                                 <span>React 19</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#000000"/><path d="M14.8 16.5L9.2 8.7V16.5H7.5V7.5H9.1L15.3 16.1L14.8 16.5Z" fill="#FFFFFF"/><path d="M16.5 7.5H15V16.5H16.5V7.5Z" fill="#FFFFFF"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#FFFFFF"/><path d="M14.8 16.5L9.2 8.7V16.5H7.5V7.5H9.1L15.3 16.1L14.8 16.5Z" fill="#000000"/><path d="M16.5 7.5H15V16.5H16.5V7.5Z" fill="#000000"/></svg>
                                 <span>Next.js</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#61DAFB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                                 <span>Three.js</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 4 4c0 1.2-.5 2.3-1.3 3.1l6.1 2.2a1 1 0 0 1 .4 1.5l-2.6 3.6a1 1 0 0 1-1.4.2L13 14.2a4 4 0 1 1-1-7.8z" fill="#EA7600"/><circle cx="12" cy="12" r="2" fill="#265787"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 4 4c0 1.2-.5 2.3-1.3 3.1l6.1 2.2a1 1 0 0 1 .4 1.5l-2.6 3.6a1 1 0 0 1-1.4.2L13 14.2a4 4 0 1 1-1-7.8z" fill="#EA7600"/><circle cx="12" cy="12" r="2" fill="#265787"/></svg>
                                 <span>Blender</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 6c-3.3 0-5.5 1.7-6.6 5 1.1-1.7 2.4-2.2 3.9-1.7 1 .3 1.6 1 2.4 1.8 1.2 1.3 2.6 2.8 5.9 2.8 3.3 0 5.5-1.7 6.6-5-1.1 1.7-2.4 2.2-3.9 1.7-1-.3-1.6-1-2.4-1.8C16.7 7.5 15.3 6 12 6zm-6.6 6c-3.3 0-5.5 1.7-6.6 5 1.1-1.7 2.4-2.2 3.9-1.7 1 .3 1.6 1 2.4 1.8 1.2 1.3 2.6 2.8 5.9 2.8 3.3 0 5.5-1.7 6.6-5-1.1 1.7-2.4 2.2-3.9 1.7-1-.3-1.6-1-2.4-1.8C10.1 13.5 8.7 12 5.4 12z" fill="#06B6D4"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><path d="M12 6c-3.3 0-5.5 1.7-6.6 5 1.1-1.7 2.4-2.2 3.9-1.7 1 .3 1.6 1 2.4 1.8 1.2 1.3 2.6 2.8 5.9 2.8 3.3 0 5.5-1.7 6.6-5-1.1 1.7-2.4 2.2-3.9 1.7-1-.3-1.6-1-2.4-1.8C16.7 7.5 15.3 6 12 6zm-6.6 6c-3.3 0-5.5 1.7-6.6 5 1.1-1.7 2.4-2.2 3.9-1.7 1 .3 1.6 1 2.4 1.8 1.2 1.3 2.6 2.8 5.9 2.8 3.3 0 5.5-1.7 6.6-5-1.1 1.7-2.4 2.2-3.9 1.7-1-.3-1.6-1-2.4-1.8C10.1 13.5 8.7 12 5.4 12z" fill="#06B6D4"/></svg>
                                 <span>Tailwind</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0z" fill="#E34F26"/><path d="M12 2.2v19.5l6.9-2.3 1.5-17.2H12z" fill="#EF652A"/><path d="M12 8.7H8l-.3-3.2h8.6v3.2h-4.3z" fill="#FFFFFF"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><path d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0z" fill="#E34F26"/><path d="M12 2.2v19.5l6.9-2.3 1.5-17.2H12z" fill="#EF652A"/><path d="M12 8.7H8l-.3-3.2h8.6v3.2h-4.3z" fill="#FFFFFF"/></svg>
                                 <span>HTML5/CSS</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Category 3: Backend & Systems -->
-                    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 26px 22px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); transition: transform 0.3s ease;">
-                        <h3 style="font-family: var(--font-1); font-size: 1.3rem; font-weight: 700; color: #0f172a; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #d64923; display: flex; align-items: center; gap: 10px;">
+                    <div class="skill-category-box">
+                        <h3 style="font-family: var(--font-1); font-size: 1.25rem; font-weight: 700; color: #ffffff; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #d64923; display: flex; align-items: center; gap: 8px;">
                             ⚙️ Backend & Systems
                         </h3>
                         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 1.8L1.8 7.7v11.7L12 25.2l10.2-5.9V7.7L12 1.8zm-1.2 17.5v-3.7l3.2 1.9v3.7l-3.2-1.9zm0-5.6V10l3.2 1.9v3.7l-3.2-1.9z" fill="#339933"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><path d="M12 1.8L1.8 7.7v11.7L12 25.2l10.2-5.9V7.7L12 1.8zm-1.2 17.5v-3.7l3.2 1.9v3.7l-3.2-1.9zm0-5.6V10l3.2 1.9v3.7l-3.2-1.9z" fill="#339933"/></svg>
                                 <span>Node.js</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2A10 10 0 1 0 22 12 10 10 0 0 0 12 2zm4.3 13.8l-1.4 1.4L12 14.3l-2.9 2.9-1.4-1.4 2.9-2.9-2.9-2.9 1.4-1.4 2.9 2.9 2.9-2.9 1.4 1.4-2.9 2.9z" fill="#000000"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><path d="M12 2A10 10 0 1 0 22 12 10 10 0 0 0 12 2zm4.3 13.8l-1.4 1.4L12 14.3l-2.9 2.9-1.4-1.4 2.9-2.9-2.9-2.9 1.4-1.4 2.9 2.9 2.9-2.9 1.4 1.4-2.9 2.9z" fill="#FFFFFF"/></svg>
                                 <span>Express</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm1 18.5l-6-7h4.5V5.5l6 7H13v6z" fill="#059669"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm1 18.5l-6-7h4.5V5.5l6 7H13v6z" fill="#059669"/></svg>
                                 <span>FastAPI</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z" fill="#4169E1"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z" fill="#4169E1"/></svg>
                                 <span>PostgreSQL</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.9 2 5.4 5 6.7V21l3.2-1.8c.6.1 1.2.2 1.8.2 5.5 0 10-3.6 10-8s-4.5-8-10-8z" fill="#4479A1"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.9 2 5.4 5 6.7V21l3.2-1.8c.6.1 1.2.2 1.8.2 5.5 0 10-3.6 10-8s-4.5-8-10-8z" fill="#4479A1"/></svg>
                                 <span>MySQL</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-6h2zm0-8h-2V7h2z" fill="#000000"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-6h2zm0-8h-2V7h2z" fill="#FFFFFF"/></svg>
                                 <span>Flask</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Category 4: DevOps & Cloud -->
-                    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 26px 22px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); transition: transform 0.3s ease;">
-                        <h3 style="font-family: var(--font-1); font-size: 1.3rem; font-weight: 700; color: #0f172a; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #d64923; display: flex; align-items: center; gap: 10px;">
+                    <div class="skill-category-box">
+                        <h3 style="font-family: var(--font-1); font-size: 1.25rem; font-weight: 700; color: #ffffff; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #d64923; display: flex; align-items: center; gap: 8px;">
                             ☁️ DevOps, AI & Security
                         </h3>
                         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M13.98 10.46h2.23V8.22h-2.23v2.24zm-2.86 0h2.23V8.22h-2.23v2.24zm-2.87 0h2.23V8.22H8.25v2.24zm-2.87 0h2.23V8.22H5.38v2.24zm8.6-2.86h2.23V5.36h-2.23v2.24zm-2.86 0h2.23V5.36h-2.23v2.24zm-2.87 0h2.23V5.36H8.25v2.24zm5.73-2.86h2.23V2.5h-2.23v2.24zM.6 12.33c.53 3.65 3.73 6.47 7.55 6.47 4.9 0 8.7-2.6 10.8-6.17.65.04 1.45.02 2.1-.2 1.22-.4 2.1-1.3 2.5-2.4-.7.1-1.4.1-2.1-.2-.6-.3-1.1-.8-1.5-1.4 0 0-1.8 1.4-4.8 1.4H.6v2.5z" fill="#2496ED"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><path d="M13.98 10.46h2.23V8.22h-2.23v2.24zm-2.86 0h2.23V8.22h-2.23v2.24zm-2.87 0h2.23V8.22H8.25v2.24zm-2.87 0h2.23V8.22H5.38v2.24zm8.6-2.86h2.23V5.36h-2.23v2.24zm-2.86 0h2.23V5.36h-2.23v2.24zm-2.87 0h2.23V5.36H8.25v2.24zm5.73-2.86h2.23V2.5h-2.23v2.24zM.6 12.33c.53 3.65 3.73 6.47 7.55 6.47 4.9 0 8.7-2.6 10.8-6.17.65.04 1.45.02 2.1-.2 1.22-.4 2.1-1.3 2.5-2.4-.7.1-1.4.1-2.1-.2-.6-.3-1.1-.8-1.5-1.4 0 0-1.8 1.4-4.8 1.4H.6v2.5z" fill="#2496ED"/></svg>
                                 <span>Docker</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9L4 7.5v9l8 4.5 8-4.5v-9l-8 4.5z" fill="#FF9900"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9L4 7.5v9l8 4.5 8-4.5v-9l-8 4.5z" fill="#FF9900"/></svg>
                                 <span>AWS Cloud</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-8h2v8zm-3-10a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z" fill="#FCC624"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-8h2v8zm-3-10a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z" fill="#FCC624"/></svg>
                                 <span>Linux Sec</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M23.54 11.23L12.77.46a1.54 1.54 0 0 0-2.18 0L8.43 2.62l3.23 3.23a2.3 2.3 0 0 1 2.92 2.92l3.4 3.4a2.3 2.3 0 1 1-1.09 1.09l-3.07-3.07v4.61a2.3 2.3 0 1 1-1.54 0V9.82a2.3 2.3 0 0 1-1.23-3L8.03 3.8.46 11.37a1.54 1.54 0 0 0 0 2.18l10.77 10.77a1.54 1.54 0 0 0 2.18 0l10.13-10.91a1.54 1.54 0 0 0 0-2.18z" fill="#F05032"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><path d="M23.54 11.23L12.77.46a1.54 1.54 0 0 0-2.18 0L8.43 2.62l3.23 3.23a2.3 2.3 0 0 1 2.92 2.92l3.4 3.4a2.3 2.3 0 1 1-1.09 1.09l-3.07-3.07v4.61a2.3 2.3 0 1 1-1.54 0V9.82a2.3 2.3 0 0 1-1.23-3L8.03 3.8.46 11.37a1.54 1.54 0 0 0 0 2.18l10.77 10.77a1.54 1.54 0 0 0 2.18 0l10.13-10.91a1.54 1.54 0 0 0 0-2.18z" fill="#F05032"/></svg>
                                 <span>Git</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#F7931E"/><path d="M7 12l3 3 7-7" stroke="#FFFFFF" stroke-width="2.5" fill="none"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#F7931E"/><path d="M7 12l3 3 7-7" stroke="#FFFFFF" stroke-width="2.5" fill="none"/></svg>
                                 <span>Scikit-Learn</span>
                             </div>
                             <div class="skill-item">
-                                <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2L9.5 8.5 3 11l6.5 2.5L12 20l2.5-6.5L21 11l-6.5-2.5L12 2z" fill="#EE4C2C"/></svg>
+                                <svg width="32" height="32" viewBox="0 0 24 24"><path d="M12 2L9.5 8.5 3 11l6.5 2.5L12 20l2.5-6.5L21 11l-6.5-2.5L12 2z" fill="#EE4C2C"/></svg>
                                 <span>AI & LLMs</span>
                             </div>
                         </div>
