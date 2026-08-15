@@ -1867,6 +1867,52 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   text-overflow: ellipsis;
 }
 
+
+/* ACHIEVEMENTS BLOCK LAYOUT & NO OVERLAP */
+#achievements {
+  background: var(--dark);
+  padding: 90px 60px 60px;
+}
+.ach-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.ach-top-block {
+  margin-top: 10px;
+  margin-bottom: 32px;
+}
+.ach-badge-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+@media(max-width:1024px) { .ach-badge-cards { grid-template-columns: repeat(3, 1fr); } }
+@media(max-width:600px) { .ach-badge-cards { grid-template-columns: repeat(2, 1fr); } }
+
+.badge-card {
+  background: var(--dark-2);
+  border: 1px solid var(--border-d);
+  border-radius: 14px;
+  padding: 20px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 180px;
+  transition: all var(--t) var(--ease);
+}
+.badge-card.featured {
+  background: radial-gradient(circle at center, rgba(200,66,26,0.18) 0%, var(--dark-2) 100%);
+  border: 1.5px solid var(--accent);
+  box-shadow: 0 0 20px rgba(200,66,26,0.25);
+}
+.badge-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
 ` }} />
       <div dangerouslySetInnerHTML={{ __html: `
 <a id="skip-link" href="#intro">Skip to content</a>
@@ -1887,7 +1933,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Expertise</a></li>
     <li><a href="#works">Work</a></li>
-    <li><a href="#achievements">Achievements</a><a href="#activity">Activity</a></li>
+    <li><a href="#achievements">Achievements</a></li>
     <li><a href="#activity">Activity</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -1898,7 +1944,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 </nav>
 <div id="mobile-nav" role="dialog" aria-label="Mobile navigation">
   <a href="#intro">Intro</a><a href="#about">About</a><a href="#skills">Expertise</a>
-  <a href="#works">Work</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
+  <a href="#works">Work</a><a href="#achievements">Achievements</a><a href="#activity">Activity</a><a href="#contact">Contact</a>
 </div>
 
 <section id="intro" aria-label="Introduction">
@@ -2328,14 +2374,14 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 <section id="achievements" aria-labelledby="ach-title">
   <div class="ach-wrap">
     <!-- TOP ROW: TITLE + 5 BADGE CARDS -->
-    <div class="ach-top-grid fu">
-      <div>
+    <div class="ach-top-block fu">
+      <div class="ach-header-content">
         <div class="sec-label">05</div>
-        <h2 id="ach-title" class="sec-title" style="color:#fff">KEY <span style="color:var(--accent)">ACHIEVEMENTS.</span></h2>
-        <p style="font-size:0.86rem;color:var(--text-muted);margin-top:10px;line-height:1.65;">Milestones that reflect hard work, consistency, and the drive to solve real-world problems.</p>
+        <h2 id="ach-title" class="sec-title" style="color:#fff;font-size:clamp(2rem, 3.5vw, 2.8rem);margin-bottom:8px;">KEY <span style="color:var(--accent)">ACHIEVEMENTS.</span></h2>
+        <p style="font-size:0.86rem;color:var(--text-muted);margin-bottom:24px;line-height:1.65;max-width:600px;">Milestones that reflect hard work, consistency, and the drive to solve real-world problems.</p>
       </div>
 
-      <!-- 5 BADGE CARDS -->
+      <!-- 5 BADGE CARDS ROW -->
       <div class="ach-badge-cards">
         <!-- Aerothon 2026 -->
         <div class="badge-card featured">

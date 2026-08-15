@@ -91,47 +91,46 @@ export function Achievements() {
   return (
     <section id="achievements" className="bg-[#0d0d0d] py-20 lg:py-24 px-6 lg:px-16 text-white">
       <div className="max-w-7xl mx-auto">
-        {/* TOP ROW: TITLE & 5 BADGE CARDS */}
-        <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-6 items-center mb-8">
-          <div>
-            <div className="flex items-center gap-2.5 text-xs font-extrabold uppercase tracking-widest text-slate-400 mb-3">
-              05 <span className="w-7 h-[1px] bg-slate-400 inline-block" />
-            </div>
-            <h2 id="ach-title" className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight leading-none">
-              KEY <span className="text-[#c8421a]">ACHIEVEMENTS.</span>
-            </h2>
-            <p className="text-xs text-slate-400 mt-3 leading-relaxed">
-              Milestones that reflect hard work, consistency, and the drive to solve real-world problems.
-            </p>
+        {/* HEADER BLOCK */}
+        <div className="mb-8">
+          <div className="flex items-center gap-2.5 text-xs font-extrabold uppercase tracking-widest text-slate-400 mb-3">
+            05 <span className="w-7 h-[1px] bg-slate-400 inline-block" />
           </div>
+          <h2 id="ach-title" className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight mb-2">
+            KEY <span className="text-[#c8421a]">ACHIEVEMENTS.</span>
+          </h2>
+          <p className="text-sm text-slate-400 max-w-xl leading-relaxed">
+            Milestones that reflect hard work, consistency, and the drive to solve real-world problems.
+          </p>
+        </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
-            {badgeCards.map((b) => (
+        {/* 5 BADGE CARDS ROW */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 mb-8">
+          {badgeCards.map((b) => (
+            <div
+              key={b.sub}
+              className={`rounded-2xl p-4 text-center flex flex-col items-center justify-between min-h-[180px] transition-all hover:-translate-y-1 ${
+                b.featured
+                  ? 'bg-gradient-to-b from-[#c8421a]/20 to-[#111111] border-2 border-[#c8421a] shadow-[0_0_24px_rgba(200,66,26,0.25)]'
+                  : 'bg-[#111111] border border-white/10 hover:border-[#c8421a]'
+              }`}
+            >
               <div
-                key={b.sub}
-                className={`rounded-xl p-3.5 text-center flex flex-col items-center justify-between min-h-[170px] transition-all hover:-translate-y-1 ${
+                className={`w-11 h-11 mb-2.5 flex items-center justify-center text-base font-bold ${
                   b.featured
-                    ? 'bg-gradient-to-b from-[#c8421a]/20 to-[#111111] border-2 border-[#c8421a] shadow-[0_0_20px_rgba(200,66,26,0.25)]'
-                    : 'bg-[#111111] border border-white/10 hover:border-[#c8421a]'
+                    ? 'bg-[#c8421a] text-white rounded-xl shadow-[0_0_12px_#c8421a]'
+                    : 'bg-[#c8421a]/15 text-[#c8421a] rounded-xl border border-[#c8421a]/30'
                 }`}
               >
-                <div
-                  className={`w-10 h-10 mb-2 flex items-center justify-center text-sm font-bold ${
-                    b.featured
-                      ? 'bg-[#c8421a] text-white rounded-lg shadow-[0_0_12px_#c8421a]'
-                      : 'bg-[#c8421a]/15 text-[#c8421a] rounded-lg border border-[#c8421a]/30'
-                  }`}
-                >
-                  {b.icon}
-                </div>
-                <div className="text-[0.58rem] font-extrabold uppercase tracking-wider text-white/50 mb-0.5 truncate w-full">{b.sub}</div>
-                <div className={`font-display text-[0.82rem] font-black uppercase tracking-wider my-1 leading-tight ${b.featured ? 'text-[#c8421a]' : 'text-white'}`}>
-                  {b.title}
-                </div>
-                <div className="text-[0.58rem] font-bold text-white/40 pt-1.5 border-t border-white/10 w-full truncate">{b.tag}</div>
+                {b.icon}
               </div>
-            ))}
-          </div>
+              <div className="text-[0.6rem] font-extrabold uppercase tracking-wider text-white/50 mb-0.5 truncate w-full">{b.sub}</div>
+              <div className={`font-display text-xs font-black uppercase tracking-wider my-1 leading-tight ${b.featured ? 'text-[#c8421a]' : 'text-white'}`}>
+                {b.title}
+              </div>
+              <div className="text-[0.6rem] font-bold text-white/40 pt-1.5 border-t border-white/10 w-full truncate">{b.tag}</div>
+            </div>
+          ))}
         </div>
 
         {/* MIDDLE PANEL: MY JOURNEY */}
