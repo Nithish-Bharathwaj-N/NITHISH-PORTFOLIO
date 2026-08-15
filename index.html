@@ -4883,6 +4883,178 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   white-space: nowrap;
 }
 
+
+/* SECTION 07 - HOBBIES & PASSIONS (LIGHT THEME) */
+#hobbies {
+  background: #ffffff;
+  padding: 100px 48px;
+  border-top: 1px solid #f1f5f9;
+}
+@media(max-width:860px) { #hobbies { padding: 60px 20px 40px; } }
+
+.hobbies-wrap {
+  max-width: 1680px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.hobbies-hdr-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+}
+@media(max-width:860px) { .hobbies-hdr-row { flex-direction: column; align-items: flex-start; gap: 12px; } }
+
+.hobbies-subdesc {
+  font-size: 0.9rem;
+  color: #64748b;
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+@media(max-width:1100px) { .hobbies-grid { grid-template-columns: repeat(2, 1fr); } }
+@media(max-width:680px) { .hobbies-grid { grid-template-columns: 1fr; } }
+
+.hobby-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius-lg);
+  padding: 32px 26px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--t) var(--ease);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+.hobby-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), #f97316);
+  opacity: 0;
+  transition: opacity var(--t) var(--ease);
+}
+.hobby-card:hover {
+  border-color: rgba(200,66,26,0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+}
+.hobby-card:hover::before {
+  opacity: 1;
+}
+
+.hc-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.hc-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(200,66,26,0.08);
+  border: 1px solid rgba(200,66,26,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+.hc-badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  background: rgba(200,66,26,0.08);
+  padding: 4px 10px;
+  border-radius: 99px;
+  border: 1px solid rgba(200,66,26,0.2);
+}
+
+.hc-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+.hc-desc {
+  font-size: 0.84rem;
+  color: #475569;
+  line-height: 1.65;
+  margin-bottom: 22px;
+  flex: 1;
+}
+
+.hc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.hc-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #475569;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 4px 11px;
+  border-radius: 6px;
+}
+
+.hobbies-banner {
+  background: linear-gradient(135deg, #ffffff 0%, #fff7ed 100%);
+  border: 1px solid rgba(200,66,26,0.2);
+  border-radius: var(--radius-lg);
+  padding: 36px 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 4px 20px rgba(200,66,26,0.05);
+}
+@media(max-width:860px) { .hobbies-banner { flex-direction: column; text-align: center; padding: 28px 20px; } }
+
+.hb-quote {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.45;
+}
+.hb-quote span {
+  color: var(--accent);
+}
+.hb-author {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+/* SECTION 08 - GET IN TOUCH (LIGHT THEME) */
+#contact {
+  background: #f8fafc;
+  padding: 100px 48px;
+  border-top: 1px solid #e2e8f0;
+}
+@media(max-width:860px) { #contact { padding: 60px 20px 40px; } }
+
 </style>
 </head>
 <body>
@@ -5713,8 +5885,8 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   <div class="hobbies-wrap">
     <div class="hobbies-hdr-row fu">
       <div>
-        <div class="sec-label dark-lbl">07 —— BEYOND THE CODE</div>
-        <h2 id="hobbies-title" class="sec-title" style="color:#fff;">HOBBIES &amp; PASSIONS.</h2>
+        <div class="sec-label" style="color:var(--accent);">07 —— BEYOND THE CODE</div>
+        <h2 id="hobbies-title" class="sec-title" style="color:#0f172a;">HOBBIES &amp; PASSIONS.</h2>
       </div>
       <p class="hobbies-subdesc">What keeps me curious, disciplined, and energized outside of engineering and software architecture.</p>
     </div>

@@ -49,18 +49,18 @@ export function Hobbies() {
   ];
 
   return (
-    <section id="hobbies" className="bg-[#111111] py-20 lg:py-24 px-6 lg:px-12 text-white border-t border-white/10">
+    <section id="hobbies" className="bg-white py-20 lg:py-24 px-6 lg:px-12 text-[#0f172a] border-t border-slate-100">
       <div className="max-w-[1680px] w-[95%] mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 gap-3">
           <div>
-            <div className="text-xs font-extrabold uppercase tracking-widest text-slate-400 mb-2">
-              07 <span className="text-slate-600">——</span> BEYOND THE CODE
+            <div className="text-xs font-extrabold uppercase tracking-widest text-[#c8421a] mb-2">
+              07 <span className="text-slate-300">——</span> BEYOND THE CODE
             </div>
-            <h2 id="hobbies-title" className="font-display text-4xl sm:text-5xl font-black text-white leading-tight tracking-tight">
+            <h2 id="hobbies-title" className="font-display text-4xl sm:text-5xl font-black text-[#0f172a] leading-tight tracking-tight">
               HOBBIES & PASSIONS.
             </h2>
           </div>
-          <p className="text-sm text-slate-400 max-w-lg leading-relaxed">
+          <p className="text-sm text-slate-500 max-w-lg leading-relaxed">
             What keeps me curious, disciplined, and energized outside of engineering and software architecture.
           </p>
         </div>
@@ -70,28 +70,28 @@ export function Hobbies() {
           {hobbies.map((h) => (
             <div
               key={h.title}
-              className="bg-[#161616] border border-white/10 rounded-2xl p-7 flex flex-col justify-between hover:border-[#c8421a]/40 hover:-translate-y-1.5 transition-all duration-300 group"
+              className="bg-white border border-slate-200 rounded-2xl p-7 flex flex-col justify-between hover:border-[#c8421a]/40 hover:-translate-y-1.5 transition-all duration-300 shadow-sm hover:shadow-xl"
             >
               <div>
                 <div className="flex items-center justify-between mb-5">
-                  <div className="w-13 h-13 rounded-xl bg-[#c8421a]/15 border border-[#c8421a]/30 flex items-center justify-center text-2xl">
+                  <div className="w-13 h-13 rounded-xl bg-[#c8421a]/10 border border-[#c8421a]/20 flex items-center justify-center text-2xl text-[#c8421a]">
                     {h.icon}
                   </div>
                   <span className="text-[0.65rem] font-extrabold uppercase tracking-wider text-[#c8421a] bg-[#c8421a]/10 px-2.5 py-1 rounded-full border border-[#c8421a]/20">
                     {h.badge}
                   </span>
                 </div>
-                <h3 className="font-display text-xl font-extrabold text-white mb-2.5 leading-snug">
+                <h3 className="font-display text-xl font-extrabold text-[#0f172a] mb-2.5 leading-snug">
                   {h.title}
                 </h3>
-                <p className="text-xs text-slate-400 leading-relaxed mb-6">
+                <p className="text-xs text-slate-600 leading-relaxed mb-6">
                   {h.desc}
                 </p>
               </div>
 
               <div className="flex flex-wrap gap-1.5 pt-2">
                 {h.tags.map((t) => (
-                  <span key={t} className="text-[0.7rem] font-semibold text-slate-300 bg-white/5 border border-white/10 px-2.5 py-1 rounded-md">
+                  <span key={t} className="text-[0.7rem] font-semibold text-slate-600 bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-md">
                     {t}
                   </span>
                 ))}
@@ -101,11 +101,11 @@ export function Hobbies() {
         </div>
 
         {/* BANNER */}
-        <div className="bg-gradient-to-r from-[#161616] to-[#c8421a]/15 border border-white/10 rounded-2xl p-8 lg:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="font-display text-lg sm:text-xl font-bold text-white text-center md:text-left">
+        <div className="bg-gradient-to-r from-white to-orange-50/80 border border-[#c8421a]/20 rounded-2xl p-8 lg:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+          <div className="font-display text-lg sm:text-xl font-bold text-[#0f172a] text-center md:text-left">
             "Engineering builds the <span className="text-[#c8421a]">systems</span>, but curiosity and passion build the <span className="text-[#c8421a]">engineer</span>."
           </div>
-          <div className="text-xs font-bold uppercase tracking-widest text-slate-400 whitespace-nowrap">
+          <div className="text-xs font-bold uppercase tracking-widest text-slate-500 whitespace-nowrap">
             Nithish Bharathwaj N
           </div>
         </div>
