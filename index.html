@@ -54,168 +54,113 @@
             color: #38bdf8;
             font-weight: 700;
         }
-        
-        /* Dynamic High-End Works Section */
+             /* Works Section Matching Get In Touch Style */
         #works {
-            background: #090d16 !important;
-            padding-top: 100px;
-            padding-bottom: 120px;
-            position: relative;
-        }
-        #works .section-header .text-display-title {
-            font-family: 'Plus Jakarta Sans', sans-serif !important;
-            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 800;
-            font-size: clamp(2.5rem, 4vw, 3.8rem);
+            background-color: var(--color-3) !important; /* Exact same dark charcoal background as Get In Touch */
+            padding-top: var(--vspace-5);
+            padding-bottom: var(--vspace-5);
+            color: var(--color-gray-15);
         }
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 36px;
-            margin-top: 50px;
-            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 32px;
+            margin-top: var(--vspace-1_5);
         }
         .project-card {
-            background: rgba(15, 23, 42, 0.85);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(16px);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
+            transition: all 0.3s ease;
         }
         .project-card:hover {
-            transform: translateY(-8px) scale(1.01);
-            border-color: rgba(56, 189, 248, 0.6);
-            box-shadow: 0 25px 60px -10px rgba(56, 189, 248, 0.25), 0 0 30px rgba(14, 165, 233, 0.15);
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
         }
         .project-card__thumb {
             width: 100%;
             aspect-ratio: 16 / 9;
             overflow: hidden;
             position: relative;
-            background: #020617;
+            background: #111;
         }
         .project-card__thumb img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: transform 0.5s ease;
         }
         .project-card:hover .project-card__thumb img {
-            transform: scale(1.08);
+            transform: scale(1.05);
         }
         .project-card__badge-overlay {
             position: absolute;
-            top: 14px;
-            left: 14px;
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(56, 189, 248, 0.4);
-            color: #38bdf8;
+            top: 12px;
+            left: 12px;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
             font-size: 0.75rem;
-            font-weight: 700;
-            padding: 5px 12px;
-            border-radius: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 4px;
             z-index: 2;
         }
         .project-card__body {
-            padding: 28px 30px 30px;
+            padding: 24px 24px 28px;
             display: flex;
             flex-direction: column;
             flex: 1;
         }
         .project-card__title {
-            font-family: 'Plus Jakarta Sans', sans-serif !important;
-            font-size: 1.65rem;
-            font-weight: 800;
+            font-family: var(--font-1) !important;
+            font-size: 1.6rem;
+            font-weight: 700;
             color: #ffffff !important;
             margin-bottom: 6px;
-            line-height: 1.2;
-            letter-spacing: -0.02em;
+            line-height: 1.25;
         }
         .project-card__subtitle {
-            font-family: 'Plus Jakarta Sans', sans-serif !important;
-            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 700;
-            font-size: 0.95rem;
-            margin-bottom: 14px;
+            color: #d64923 !important; /* Hudson signature terracotta accent */
+            font-weight: 600;
+            font-size: 0.925rem;
+            margin-bottom: 12px;
             line-height: 1.4;
         }
         .project-card__desc {
-            font-family: 'Plus Jakarta Sans', sans-serif !important;
             font-size: 0.95rem;
-            line-height: 1.7;
-            color: #94a3b8 !important;
-            margin-bottom: 24px;
+            line-height: 1.65;
+            color: var(--color-gray-12) !important;
+            margin-bottom: 20px;
             flex: 1;
         }
         .project-card__tech {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-bottom: 26px;
+            margin-bottom: 24px;
         }
         .project-card__badge {
-            background: rgba(56, 189, 248, 0.08);
-            border: 1px solid rgba(56, 189, 248, 0.25);
-            color: #38bdf8 !important;
-            padding: 5px 14px;
-            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--color-gray-13) !important;
+            padding: 4px 12px;
+            border-radius: 20px;
             font-size: 0.8rem;
-            font-weight: 600;
-            transition: all 0.2s ease;
-        }
-        .project-card__badge:hover {
-            background: rgba(56, 189, 248, 0.2);
-            border-color: #38bdf8;
+            font-weight: 500;
         }
         .project-card__actions {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
         }
-        .project-card__btn {
-            padding: 10px 22px;
-            font-size: 0.875rem;
-            font-weight: 700;
-            border-radius: 10px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            font-family: 'Plus Jakarta Sans', sans-serif !important;
-        }
-        .project-card__btn--primary {
-            background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
-            color: #ffffff !important;
-            border: none;
-            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
-        }
-        .project-card__btn--primary:hover {
-            background: linear-gradient(135deg, #0369a1 0%, #1d4ed8 100%);
-            box-shadow: 0 6px 20px rgba(2, 132, 199, 0.5);
-            transform: translateY(-2px);
-        }
-        .project-card__btn--outline {
-            background: rgba(255, 255, 255, 0.05);
-            color: #f1f5f9 !important;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-        }
-        .project-card__btn--outline:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: #38bdf8;
-            color: #38bdf8 !important;
-            transform: translateY(-2px);
+        .project-card__actions .btn {
+            margin: 0;
         }
     </style>
 
@@ -474,7 +419,7 @@
 
             <div class="row">
                 <div class="column xl-12">
-                    <div class="section-header" data-num="02">
+                    <div class="section-header light-on-dark" data-num="02">
                         <h2 class="text-display-title">Selected Works.</h2>
                     </div> <!-- end section-header -->
                 </div>
@@ -505,8 +450,8 @@
                                 <span class="project-card__badge">Scikit-Learn</span>
                             </div>
                             <div class="project-card__actions">
-                                <a href="https://null-pointers-aerothon-2026.vercel.app/" target="_blank" class="project-card__btn project-card__btn--primary">Live Demo ↗</a>
-                                <a href="https://github.com/Nithish-Bharathwaj-N/SubAERO" target="_blank" class="project-card__btn project-card__btn--outline">GitHub Repository ↗</a>
+                                <a href="https://null-pointers-aerothon-2026.vercel.app/" target="_blank" class="btn btn--primary">Live Demo ↗</a>
+                                <a href="https://github.com/Nithish-Bharathwaj-N/SubAERO" target="_blank" class="btn btn--stroke">GitHub Code ↗</a>
                             </div>
                         </div>
                     </div>
@@ -532,7 +477,7 @@
                                 <span class="project-card__badge">TailwindCSS</span>
                             </div>
                             <div class="project-card__actions">
-                                <a href="https://github.com/Nithish-Bharathwaj-N/Voyage-AI" target="_blank" class="project-card__btn project-card__btn--primary">GitHub Repository ↗</a>
+                                <a href="https://github.com/Nithish-Bharathwaj-N/Voyage-AI" target="_blank" class="btn btn--primary">GitHub Repository ↗</a>
                             </div>
                         </div>
                     </div>
@@ -558,7 +503,7 @@
                                 <span class="project-card__badge">Scikit-Learn</span>
                             </div>
                             <div class="project-card__actions">
-                                <a href="https://github.com/Nithish-Bharathwaj-N/QUEUE-CURE---AI" target="_blank" class="project-card__btn project-card__btn--primary">GitHub Repository ↗</a>
+                                <a href="https://github.com/Nithish-Bharathwaj-N/QUEUE-CURE---AI" target="_blank" class="btn btn--primary">GitHub Repository ↗</a>
                             </div>
                         </div>
                     </div>
