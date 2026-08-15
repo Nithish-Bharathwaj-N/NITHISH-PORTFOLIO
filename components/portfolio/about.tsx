@@ -82,7 +82,7 @@ export function About() {
                     <span className="text-[0.78rem] text-slate-500">Chennai Institute of Technology (2025–Present)</span>
                   </div>
                   <div>
-                    <strong className="block text-xs font-bold text-slate-800">Class XII — 88.4%</strong>
+                    <strong className="block text-xs font-bold text-slate-800">Class XII — 93.67%</strong>
                     <span className="text-[0.78rem] text-slate-500">SSBM</span>
                   </div>
                 </div>

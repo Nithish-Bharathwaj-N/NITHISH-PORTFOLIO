@@ -471,7 +471,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
           <div class="fu">
             <div class="info-col-title">Education</div>
             <div class="info-item"><strong>B.E. CSE (Cyber Security)</strong><span>Chennai Institute of Technology<br>2025 – Present</span></div>
-            <div class="info-item"><strong>Class XII — 88.4%</strong><span>SSBM</span></div>
+            <div class="info-item"><strong>Class XII — 93.67%</strong><span>SSBM</span></div>
           </div>
           <div class="fu">
             <div class="info-col-title">Interests</div>
