@@ -25,6 +25,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         .s-intro__content-title {
@@ -50,26 +54,45 @@
             color: #38bdf8;
             font-weight: 700;
         }
+        
+        /* Dynamic High-End Works Section */
+        #works {
+            background: #090d16 !important;
+            padding-top: 100px;
+            padding-bottom: 120px;
+            position: relative;
+        }
+        #works .section-header .text-display-title {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+            font-size: clamp(2.5rem, 4vw, 3.8rem);
+        }
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 32px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 36px;
+            margin-top: 50px;
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
         }
         .project-card {
-            background: #0f172a;
-            border: 1px solid #1e293b;
-            border-radius: 16px;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(16px);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
         }
         .project-card:hover {
-            transform: translateY(-6px);
-            border-color: #38bdf8;
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+            transform: translateY(-8px) scale(1.01);
+            border-color: rgba(56, 189, 248, 0.6);
+            box-shadow: 0 25px 60px -10px rgba(56, 189, 248, 0.25), 0 0 30px rgba(14, 165, 233, 0.15);
         }
         .project-card__thumb {
             width: 100%;
@@ -82,52 +105,78 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .project-card:hover .project-card__thumb img {
-            transform: scale(1.05);
+            transform: scale(1.08);
+        }
+        .project-card__badge-overlay {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            color: #38bdf8;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 2;
         }
         .project-card__body {
-            padding: 24px 28px 28px;
+            padding: 28px 30px 30px;
             display: flex;
             flex-direction: column;
             flex: 1;
         }
         .project-card__title {
-            font-size: 1.5rem;
-            font-weight: 700;
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: 1.65rem;
+            font-weight: 800;
             color: #ffffff !important;
             margin-bottom: 6px;
-            line-height: 1.25;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
         }
         .project-card__subtitle {
-            color: #38bdf8 !important;
-            font-weight: 600;
-            font-size: 0.925rem;
-            margin-bottom: 12px;
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 14px;
             line-height: 1.4;
         }
         .project-card__desc {
-            font-size: 0.925rem;
-            line-height: 1.65;
-            color: #cbd5e1 !important;
-            margin-bottom: 20px;
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #94a3b8 !important;
+            margin-bottom: 24px;
             flex: 1;
         }
         .project-card__tech {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-bottom: 22px;
+            margin-bottom: 26px;
         }
         .project-card__badge {
-            background: rgba(56, 189, 248, 0.12);
-            border: 1px solid rgba(56, 189, 248, 0.3);
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.25);
             color: #38bdf8 !important;
-            padding: 4px 12px;
-            border-radius: 20px;
+            padding: 5px 14px;
+            border-radius: 9999px;
             font-size: 0.8rem;
             font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .project-card__badge:hover {
+            background: rgba(56, 189, 248, 0.2);
+            border-color: #38bdf8;
         }
         .project-card__actions {
             display: flex;
@@ -135,34 +184,38 @@
             gap: 12px;
         }
         .project-card__btn {
-            padding: 8px 18px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            border-radius: 8px;
+            padding: 10px 22px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            border-radius: 10px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            transition: all 0.2s ease;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
         }
         .project-card__btn--primary {
-            background: #0284c7;
+            background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
             color: #ffffff !important;
-            border: 1px solid #0284c7;
+            border: none;
+            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
         }
         .project-card__btn--primary:hover {
-            background: #0369a1;
-            border-color: #0369a1;
-            color: #ffffff !important;
+            background: linear-gradient(135deg, #0369a1 0%, #1d4ed8 100%);
+            box-shadow: 0 6px 20px rgba(2, 132, 199, 0.5);
+            transform: translateY(-2px);
         }
         .project-card__btn--outline {
-            background: transparent;
-            color: #ffffff !important;
-            border: 1px solid #334155;
+            background: rgba(255, 255, 255, 0.05);
+            color: #f1f5f9 !important;
+            border: 1px solid rgba(255, 255, 255, 0.15);
         }
         .project-card__btn--outline:hover {
+            background: rgba(255, 255, 255, 0.1);
             border-color: #38bdf8;
             color: #38bdf8 !important;
+            transform: translateY(-2px);
         }
     </style>
 
@@ -433,12 +486,13 @@
                     <!-- Project 1: SubAERO -->
                     <div class="project-card">
                         <div class="project-card__thumb">
+                            <div class="project-card__badge-overlay">🏆 Top 8 Aerothon 2026</div>
                             <img src="images/subaero-preview.jpg" alt="SubAERO Digital Twin">
                         </div>
                         <div class="project-card__body">
                             <h3 class="project-card__title">SubAERO</h3>
                             <div class="project-card__subtitle">
-                                Aerospace 3D Digital Twin & PHM Platform • Top 8 Aerothon 2026 Finalist
+                                Aerospace 3D Digital Twin & PHM Platform (HAL Tejas)
                             </div>
                             <p class="project-card__desc">
                                 Built for HAL (Hindustan Aeronautics Limited) Tejas turbojet engines. Features real-time 3D telemetry visualization, interactive Blender engine explosion viewer, failure risk heatmaps, and Scikit-Learn Multi-Target Regression models delivering 98.7%–99.9% R² predictive maintenance accuracy.
@@ -448,8 +502,7 @@
                                 <span class="project-card__badge">Three.js (WebGL)</span>
                                 <span class="project-card__badge">Blender 3D</span>
                                 <span class="project-card__badge">FastAPI</span>
-                                <span class="project-card__badge">Scikit-Learn (99.9% R²)</span>
-                                <span class="project-card__badge">Python</span>
+                                <span class="project-card__badge">Scikit-Learn</span>
                             </div>
                             <div class="project-card__actions">
                                 <a href="https://null-pointers-aerothon-2026.vercel.app/" target="_blank" class="project-card__btn project-card__btn--primary">Live Demo ↗</a>
@@ -461,6 +514,7 @@
                     <!-- Project 2: Voyage AI -->
                     <div class="project-card">
                         <div class="project-card__thumb">
+                            <div class="project-card__badge-overlay">✨ Gemini AI Travel Engine</div>
                             <img src="images/voyage-preview.jpg" alt="Voyage AI">
                         </div>
                         <div class="project-card__body">
@@ -474,9 +528,8 @@
                             <div class="project-card__tech">
                                 <span class="project-card__badge">Next.js</span>
                                 <span class="project-card__badge">TypeScript</span>
-                                <span class="project-card__badge">Gemini AI API</span>
+                                <span class="project-card__badge">Gemini AI</span>
                                 <span class="project-card__badge">TailwindCSS</span>
-                                <span class="project-card__badge">Node.js</span>
                             </div>
                             <div class="project-card__actions">
                                 <a href="https://github.com/Nithish-Bharathwaj-N/Voyage-AI" target="_blank" class="project-card__btn project-card__btn--primary">GitHub Repository ↗</a>
@@ -487,6 +540,7 @@
                     <!-- Project 3: Queue Cure AI -->
                     <div class="project-card">
                         <div class="project-card__thumb">
+                            <div class="project-card__badge-overlay">🏥 Healthcare OPD Triage</div>
                             <img src="images/queuecure-preview.jpg" alt="Queue Cure AI">
                         </div>
                         <div class="project-card__body">
@@ -502,7 +556,6 @@
                                 <span class="project-card__badge">Python</span>
                                 <span class="project-card__badge">Flask</span>
                                 <span class="project-card__badge">Scikit-Learn</span>
-                                <span class="project-card__badge">Socket.IO</span>
                             </div>
                             <div class="project-card__actions">
                                 <a href="https://github.com/Nithish-Bharathwaj-N/QUEUE-CURE---AI" target="_blank" class="project-card__btn project-card__btn--primary">GitHub Repository ↗</a>
