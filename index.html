@@ -1397,6 +1397,246 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   line-height: 1.45;
 }
 
+
+/* ACHIEVEMENTS & ACTIVITY RESTRUCTURED STYLING */
+#achievements {
+  background: var(--dark);
+  padding: 100px 80px 60px;
+}
+#activity {
+  background: var(--dark-2);
+  padding: 80px 80px 100px;
+  border-top: 1px solid var(--border-d);
+}
+@media(max-width:860px) {
+  #achievements { padding: 80px 24px 40px; }
+  #activity { padding: 60px 24px 80px; }
+}
+
+/* 05 KEY ACHIEVEMENTS TOP ROW */
+.ach-top-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  margin-top: 24px;
+  margin-bottom: 28px;
+  align-items: stretch;
+}
+@media(max-width:1100px) { .ach-top-grid { grid-template-columns: 1fr; } }
+
+.ach-badge-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+@media(max-width:1024px) { .ach-badge-cards { grid-template-columns: repeat(3, 1fr); } }
+@media(max-width:600px) { .ach-badge-cards { grid-template-columns: repeat(2, 1fr); } }
+
+.badge-card {
+  background: var(--dark-2);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius-lg);
+  padding: 22px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--t) var(--ease);
+}
+.badge-card.featured {
+  background: radial-gradient(circle, rgba(200,66,26,0.14) 0%, var(--dark-2) 100%);
+  border-color: var(--accent);
+  box-shadow: 0 0 24px rgba(200,66,26,0.25);
+}
+.badge-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+.hex-icon-wrap {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(200,66,26,0.12);
+  border: 1px solid rgba(200,66,26,0.3);
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+.badge-card.featured .hex-icon-wrap {
+  background: var(--accent);
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 16px var(--accent);
+}
+.bc-sub { font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.45); margin-bottom: 2px; }
+.bc-title { font-family: var(--font-display); font-size: 0.95rem; font-weight: 900; color: #fff; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 8px; }
+.badge-card.featured .bc-title { color: var(--accent); }
+.bc-tag { font-size: 0.65rem; font-weight: 700; color: rgba(255,255,255,0.4); border-top: 1px solid rgba(255,255,255,0.06); padding-top: 6px; width: 100%; }
+
+/* MY JOURNEY PANEL */
+.journey-box {
+  background: var(--dark-2);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin-bottom: 28px;
+}
+.j-hdr-title {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.j-hdr-sub { font-size: 0.72rem; color: rgba(255,255,255,0.45); margin-bottom: 26px; }
+
+.journey-track-nodes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  position: relative;
+}
+@media(max-width:1024px) { .journey-track-nodes { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+@media(max-width:600px) { .journey-track-nodes { grid-template-columns: 1fr; } }
+
+.journey-track-nodes::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent) 0%, #3b82f6 50%, #a855f7 75%, #10b981 100%);
+  z-index: 1;
+}
+@media(max-width:1024px) { .journey-track-nodes::before { display: none; } }
+
+.j-step-item {
+  position: relative;
+  z-index: 2;
+}
+.j-step-hdr {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+.j-time-lbl {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.j-node-hex {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark-3);
+  border: 2px solid var(--accent);
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+.j-node-hex.now-node {
+  background: #10b981;
+  border-color: #fff;
+  color: #fff;
+  border-radius: 50%;
+  clip-path: none;
+  box-shadow: 0 0 16px #10b981;
+}
+.j-step-title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 4px;
+  line-height: 1.35;
+}
+.j-step-desc {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.45;
+}
+
+/* BEYOND TECHNOLOGY BANNER */
+.beyond-tech-panel {
+  background: var(--dark-2);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+}
+.bt-hdr-title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+.bt-hdr-sub { font-size: 0.7rem; color: rgba(255,255,255,0.45); margin-bottom: 20px; }
+
+.bt-items-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+@media(max-width:1024px) { .bt-items-grid { grid-template-columns: repeat(3, 1fr); } }
+@media(max-width:600px) { .bt-items-grid { grid-template-columns: 1fr; } }
+
+.bt-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(13,13,13,0.5);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  transition: all var(--t) var(--ease);
+}
+.bt-item:hover {
+  border-color: rgba(200,66,26,0.35);
+  transform: translateY(-2px);
+}
+.bt-circle-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(200,66,26,0.12);
+  border: 1.5px solid rgba(200,66,26,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.bt-lbl {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
 </style>
 </head>
 <body>
@@ -1418,7 +1658,8 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Expertise</a></li>
     <li><a href="#works">Work</a></li>
-    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#achievements">Achievements</a><a href="#activity">Activity</a></li>
+    <li><a href="#activity">Activity</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-right">
@@ -1857,63 +2098,200 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 
 <section id="achievements" aria-labelledby="ach-title">
   <div class="ach-wrap">
-    <!-- TOP ROW: TITLE & 4 METRICS CARDS -->
-    <div class="ach-top-container fu">
+    <!-- TOP ROW: TITLE + 5 BADGE CARDS -->
+    <div class="ach-top-grid fu">
       <div>
-        <div class="sec-label">04</div>
-        <h2 id="ach-title" class="sec-title" style="color:#fff">Key <span style="color:var(--accent)">Achievements.</span></h2>
-        <p style="font-size:0.85rem;color:var(--text-muted);margin-top:8px;line-height:1.6;">Evidence of consistency, dedication, and results across coding, competitions, and real-world building.</p>
+        <div class="sec-label">05</div>
+        <h2 id="ach-title" class="sec-title" style="color:#fff">KEY <span style="color:var(--accent)">ACHIEVEMENTS.</span></h2>
+        <p style="font-size:0.86rem;color:var(--text-muted);margin-top:10px;line-height:1.65;">Milestones that reflect hard work, consistency, and the drive to solve real-world problems.</p>
       </div>
 
-      <!-- 4 TOP METRIC CARDS WITH SPARKLINES -->
-      <div class="ach-top-metrics">
-        <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener" class="top-metric-card" style="text-decoration:none;">
-          <div>
-            <div class="tm-icon-title">
-              <div class="tm-icon">&lt;/&gt;</div>
-              <div class="tm-num">500+</div>
-            </div>
-            <div class="tm-title">LeetCode Problems Solved</div>
-            <div class="tm-sub">Across All Difficulty Levels</div>
-          </div>
-          <svg class="tm-sparkline" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,15 L20,10 L40,14 L60,6 L80,12 L100,2" fill="none" stroke="#c8421a" stroke-width="2"/></svg>
-        </a>
-
-        <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener" class="top-metric-card" style="text-decoration:none;">
-          <div>
-            <div class="tm-icon-title">
-              <div class="tm-icon">📈</div>
-              <div class="tm-num">1771</div>
-            </div>
-            <div class="tm-title">Peak Contest Rating</div>
-            <div class="tm-sub">118-day Coding Streak</div>
-          </div>
-          <svg class="tm-sparkline" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,16 L20,12 L40,8 L60,11 L80,5 L100,2" fill="none" stroke="#a855f7" stroke-width="2"/></svg>
-        </a>
-
-        <div class="top-metric-card">
-          <div>
-            <div class="tm-icon-title">
-              <div class="tm-icon">🏆</div>
-              <div class="tm-num">Top 8</div>
-            </div>
-            <div class="tm-title">Aerothon 2026 Finalist</div>
-            <div class="tm-sub">HAL x IIT Indore</div>
-          </div>
-          <svg class="tm-sparkline" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,18 L20,14 L40,10 L60,12 L80,4 L100,2" fill="none" stroke="#c8421a" stroke-width="2"/></svg>
+      <!-- 5 BADGE CARDS -->
+      <div class="ach-badge-cards">
+        <!-- Aerothon 2026 -->
+        <div class="badge-card featured">
+          <div class="hex-icon-wrap">🏆</div>
+          <div class="bc-sub">AEROTHON 2026</div>
+          <div class="bc-title">TOP 8 FINALIST</div>
+          <div class="bc-tag">HAL × IIT INDORE</div>
         </div>
 
-        <div class="top-metric-card">
-          <div>
-            <div class="tm-icon-title">
-              <div class="tm-icon">🚀</div>
-              <div class="tm-num">5+</div>
-            </div>
-            <div class="tm-title">National Hackathon Finalist</div>
-            <div class="tm-sub">Across Multiple Domains</div>
-          </div>
-          <svg class="tm-sparkline" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,15 L20,12 L40,14 L60,8 L80,6 L100,2" fill="none" stroke="#10b981" stroke-width="2"/></svg>
+        <!-- Smart Horizon 2026 -->
+        <div class="badge-card">
+          <div class="hex-icon-wrap">🎖️</div>
+          <div class="bc-sub">SMART HORIZON 2026</div>
+          <div class="bc-title">FINALIST</div>
+          <div class="bc-tag">National Level Hackathon</div>
         </div>
+
+        <!-- Codeathon 2025 -->
+        <div class="badge-card">
+          <div class="hex-icon-wrap">&lt;/&gt;</div>
+          <div class="bc-sub">CODEATHON 2025</div>
+          <div class="bc-title">FINALIST</div>
+          <div class="bc-tag">National Level Hackathon</div>
+        </div>
+
+        <!-- CIT SDG Hackathon 2025 -->
+        <div class="badge-card">
+          <div class="hex-icon-wrap">🌿</div>
+          <div class="bc-sub">CIT SDG HACKATHON 2025</div>
+          <div class="bc-title">FINALIST</div>
+          <div class="bc-tag">National Level Hackathon</div>
+        </div>
+
+        <!-- Abacus Competition -->
+        <div class="badge-card">
+          <div class="hex-icon-wrap">🧮</div>
+          <div class="bc-sub">ABACUS COMPETITION</div>
+          <div class="bc-title">QUALIFIER</div>
+          <div class="bc-tag">International Level Qualified</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MIDDLE PANEL: MY JOURNEY TIMELINE -->
+    <div class="journey-box fu">
+      <div class="j-hdr-title">🚀 MY JOURNEY</div>
+      <div class="j-hdr-sub">A continuous path of learning, exploring, and building.</div>
+
+      <div class="journey-track-nodes">
+        <div class="j-step-item">
+          <div class="j-step-hdr">
+            <span class="j-time-lbl">MID 2025</span>
+            <div class="j-node-hex">&lt;/&gt;</div>
+          </div>
+          <div class="j-step-title">Started Competitive Programming</div>
+          <div class="j-step-desc">Building problem solving skills and algorithms foundation.</div>
+        </div>
+
+        <div class="j-step-item">
+          <div class="j-step-hdr">
+            <span class="j-time-lbl">END 2025</span>
+            <div class="j-node-hex">🛡️</div>
+          </div>
+          <div class="j-step-title">Cybersecurity</div>
+          <div class="j-step-desc">Explored security fundamentals, networking, and ethical hacking concepts.</div>
+        </div>
+
+        <div class="j-step-item">
+          <div class="j-step-hdr">
+            <span class="j-time-lbl" style="color:#3b82f6;">EARLY 2026</span>
+            <div class="j-node-hex" style="border-color:#3b82f6;color:#3b82f6;">💻</div>
+          </div>
+          <div class="j-step-title">Full-Stack Development</div>
+          <div class="j-step-desc">Started building end-to-end web applications and dynamic user experiences.</div>
+        </div>
+
+        <div class="j-step-item">
+          <div class="j-step-hdr">
+            <span class="j-time-lbl" style="color:#a855f7;">MID 2026</span>
+            <div class="j-node-hex" style="border-color:#a855f7;color:#a855f7;">🧠</div>
+          </div>
+          <div class="j-step-title">AI / Machine Learning</div>
+          <div class="j-step-desc">Diving into ML models, data, and intelligent system building.</div>
+        </div>
+
+        <div class="j-step-item">
+          <div class="j-step-hdr">
+            <span class="j-time-lbl" style="color:#10b981;">NOW</span>
+            <div class="j-node-hex now-node">🚀</div>
+          </div>
+          <div class="j-step-title">Working on Projects &amp; Hackathons</div>
+          <div class="j-step-desc">Building impactful solutions and participating in real-world hackathons.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM PANEL: BEYOND TECHNOLOGY -->
+    <div class="beyond-tech-panel fu">
+      <div class="bt-hdr-title">⭐ BEYOND TECHNOLOGY</div>
+      <div class="bt-hdr-sub">Sports, competitions, and activities that keep me balanced and driven.</div>
+
+      <div class="bt-items-grid">
+        <div class="bt-item">
+          <div class="bt-circle-icon">🏐</div>
+          <div class="bt-lbl">District Level<br>Throwball</div>
+        </div>
+
+        <div class="bt-item">
+          <div class="bt-circle-icon">🎲</div>
+          <div class="bt-lbl">Zonal Level<br>Carrom Player</div>
+        </div>
+
+        <div class="bt-item">
+          <div class="bt-circle-icon">🏃</div>
+          <div class="bt-lbl">Athlete</div>
+        </div>
+
+        <div class="bt-item">
+          <div class="bt-circle-icon">🏏</div>
+          <div class="bt-lbl">Cricket<br>Player</div>
+        </div>
+
+        <div class="bt-item">
+          <div class="bt-circle-icon">🧮</div>
+          <div class="bt-lbl">Abacus International<br>Level Qualifier</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="activity" aria-labelledby="act-title">
+  <div class="skills-wrap">
+    <div class="sec-label">06</div>
+    <h2 id="act-title" class="sec-title" style="color:#fff">Coding <span style="color:var(--accent)">Activity &amp; Heatmaps.</span></h2>
+    <p style="font-size:0.86rem;color:var(--text-muted);margin-top:8px;margin-bottom:32px;line-height:1.65;">Live contribution graphs, solved problems breakdown, and continuous activity metrics.</p>
+
+    <!-- 4 TOP METRIC CARDS WITH SPARKLINES -->
+    <div class="ach-top-metrics" style="margin-bottom:28px;">
+      <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener" class="top-metric-card" style="text-decoration:none;">
+        <div>
+          <div class="tm-icon-title">
+            <div class="tm-icon">&lt;/&gt;</div>
+            <div class="tm-num">500+</div>
+          </div>
+          <div class="tm-title">LeetCode Problems Solved</div>
+          <div class="tm-sub">Across All Difficulty Levels</div>
+        </div>
+        <svg class="tm-sparkline" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,15 L20,10 L40,14 L60,6 L80,12 L100,2" fill="none" stroke="#c8421a" stroke-width="2"/></svg>
+      </a>
+
+      <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener" class="top-metric-card" style="text-decoration:none;">
+        <div>
+          <div class="tm-icon-title">
+            <div class="tm-icon">📈</div>
+            <div class="tm-num">1771</div>
+          </div>
+          <div class="tm-title">Peak Contest Rating</div>
+          <div class="tm-sub">118-day Coding Streak</div>
+        </div>
+        <svg class="tm-sparkline" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,16 L20,12 L40,8 L60,11 L80,5 L100,2" fill="none" stroke="#a855f7" stroke-width="2"/></svg>
+      </a>
+
+      <div class="top-metric-card">
+        <div>
+          <div class="tm-icon-title">
+            <div class="tm-icon">🏆</div>
+            <div class="tm-num">Top 8</div>
+          </div>
+          <div class="tm-title">Aerothon 2026 Finalist</div>
+          <div class="tm-sub">HAL x IIT Indore</div>
+        </div>
+        <svg class="tm-sparkline" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,18 L20,14 L40,10 L60,12 L80,4 L100,2" fill="none" stroke="#c8421a" stroke-width="2"/></svg>
+      </div>
+
+      <div class="top-metric-card">
+        <div>
+          <div class="tm-icon-title">
+            <div class="tm-icon">🚀</div>
+            <div class="tm-num">5+</div>
+          </div>
+          <div class="tm-title">National Hackathon Finalist</div>
+          <div class="tm-sub">Across Multiple Domains</div>
+        </div>
+        <svg class="tm-sparkline" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,15 L20,12 L40,14 L60,8 L80,6 L100,2" fill="none" stroke="#10b981" stroke-width="2"/></svg>
       </div>
     </div>
 
@@ -2035,54 +2413,6 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
             <div class="ghs-lbl">Profile Views</div>
             <div class="ghs-sub">All Time</div>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- BOTTOM JOURNEY OF GROWTH TIMELINE -->
-    <div class="journey-panel fu">
-      <div class="journey-hdr">📅 JOURNEY OF GROWTH •</div>
-      <div class="journey-timeline-track">
-        <div class="j-node">
-          <div class="j-dot"></div>
-          <div class="j-year">2023</div>
-          <div class="j-title">Started Competitive Programming</div>
-          <div class="j-desc">Built strong foundation in DSA &amp; Algorithms.</div>
-        </div>
-
-        <div class="j-node">
-          <div class="j-dot"></div>
-          <div class="j-year">2024</div>
-          <div class="j-title">Cybersecurity Focus</div>
-          <div class="j-desc">Deep dive into security, Linux, and web security fundamentals.</div>
-        </div>
-
-        <div class="j-node">
-          <div class="j-dot"></div>
-          <div class="j-year">2024 Mid</div>
-          <div class="j-title">Full-Stack &amp; AI</div>
-          <div class="j-desc">Built full-stack projects, explored AI/ML and real-time systems.</div>
-        </div>
-
-        <div class="j-node">
-          <div class="j-dot"></div>
-          <div class="j-year">2025</div>
-          <div class="j-title">Hackathons &amp; Building</div>
-          <div class="j-desc">Participated in multiple hackathons and shipped impactful solutions.</div>
-        </div>
-
-        <div class="j-node">
-          <div class="j-dot"></div>
-          <div class="j-year">2026</div>
-          <div class="j-title">Aerothon 2026</div>
-          <div class="j-desc">Top 8 Finalist among 500+ teams nationwide with SubAERO.</div>
-        </div>
-
-        <div class="j-node now">
-          <div class="j-dot"></div>
-          <div class="j-year">NOW</div>
-          <div class="j-title">Building Next-Gen Systems</div>
-          <div class="j-desc">Working on secure, scalable, and intelligent systems that solve real-world problems.</div>
         </div>
       </div>
     </div>
