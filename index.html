@@ -40,14 +40,13 @@
             flex-wrap: wrap;
             gap: 8px;
             margin-top: 10px;
-        }
-        .tech-badge {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+              .tech-badge {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             color: #38bdf8;
-            padding: 4px 12px;
+            padding: 6px 16px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.95rem;
             font-weight: 600;
         }
         .achievement-highlight {
@@ -63,12 +62,30 @@
         }
         #about .s-about__block-title {
             color: #ffffff !important;
+            font-size: 1.4rem !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px !important;
+            padding-bottom: 10px !important;
+            border-bottom: 2px solid #d64923 !important;
         }
         #about .s-about__list {
-            color: rgba(255, 255, 255, 0.85) !important;
+            color: #ffffff !important;
+            font-size: 1.15rem !important;
+            line-height: 1.6 !important;
+        }
+        #about .s-about__list li {
+            margin-bottom: 16px !important;
+            font-size: 1.15rem !important;
+            color: #ffffff !important;
+            font-weight: 600;
         }
         #about .s-about__list span {
-            color: rgba(255, 255, 255, 0.5) !important;
+            color: rgba(255, 255, 255, 0.75) !important;
+            font-size: 1.0rem !important;
+            font-weight: 400 !important;
+            display: block;
+            margin-top: 4px;
         }
 
         /* Skills Section Light Theme & Full-Width Marquee Styling */
@@ -99,7 +116,7 @@
         }
         .marquee-track {
             display: flex;
-            gap: 16px;
+            gap: 18px;
             width: max-content;
         }
         .marquee-track--left {
@@ -114,16 +131,16 @@
         .marquee-pill {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            padding: 11px 22px;
+            gap: 12px;
+            padding: 12px 24px;
             background: #ffffff;
             border: 1px solid #cbd5e1;
             border-radius: 9999px;
             color: #0f172a;
-            font-size: 0.9rem;
+            font-size: 1.05rem;
             font-weight: 600;
             white-space: nowrap;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
         }
         .marquee-pill:hover {
@@ -131,7 +148,7 @@
             border-color: #d64923;
             color: #d64923;
             transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(214, 73, 35, 0.18);
+            box-shadow: 0 6px 22px rgba(214, 73, 35, 0.2);
         }
         .skills-full-width-wrapper {
             width: 100%;
@@ -141,26 +158,26 @@
         }
         .skill-category-box {
             background: #ffffff;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #cbd5e1;
             border-radius: 18px;
-            padding: 28px 24px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            padding: 30px 26px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
         }
         .skill-category-box:hover {
             border-color: #d64923;
             transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(214, 73, 35, 0.12);
+            box-shadow: 0 16px 36px rgba(214, 73, 35, 0.15);
         }
         .skill-item {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 16px 10px;
+            padding: 18px 12px;
             background: #f8fafc;
             border: 1px solid #e2e8f0;
-            border-radius: 12px;
+            border-radius: 14px;
             text-align: center;
             transition: all 0.3s ease;
         }
@@ -168,19 +185,19 @@
             background: #ffffff;
             border-color: #d64923;
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(214, 73, 35, 0.18);
+            box-shadow: 0 10px 28px rgba(214, 73, 35, 0.2);
         }
         .skill-item svg {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             transition: transform 0.3s ease;
         }
         .skill-item:hover svg {
             transform: scale(1.15);
         }
         .skill-item span {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #1e293b;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #0f172a;
         }
 
         /* Works Section Vertical One-by-One Layout */
@@ -193,14 +210,14 @@
         .projects-grid {
             display: flex;
             flex-direction: column;
-            gap: 44px;
-            max-width: 1100px;
+            gap: 48px;
+            max-width: 1200px;
             margin: var(--vspace-1_5) auto 0;
         }
         .project-card {
             background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
             overflow: hidden;
             display: grid;
             grid-template-columns: 1.15fr 1fr;
@@ -213,13 +230,13 @@
         }
         .project-card:hover {
             transform: translateY(-4px);
-            border-color: rgba(255, 255, 255, 0.25);
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+            border-color: rgba(214, 73, 35, 0.6);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
         }
         .project-card__thumb {
             width: 100%;
             height: 100%;
-            min-height: 280px;
+            min-height: 320px;
             overflow: hidden;
             position: relative;
             background: #111;
@@ -235,68 +252,70 @@
         }
         .project-card__badge-overlay {
             position: absolute;
-            top: 14px;
-            left: 14px;
-            background: rgba(0, 0, 0, 0.8);
+            top: 16px;
+            left: 16px;
+            background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.25);
             color: #fff;
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 5px 12px;
-            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 6px;
             z-index: 2;
         }
         .project-card__body {
-            padding: 32px 36px;
+            padding: 36px 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
         .project-card__title {
             font-family: var(--font-1) !important;
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             font-weight: 700;
             color: #ffffff !important;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             line-height: 1.25;
         }
         .project-card__subtitle {
             color: #d64923 !important; /* Hudson signature terracotta accent */
             font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 14px;
+            font-size: 1.15rem;
+            margin-bottom: 16px;
             line-height: 1.4;
         }
         .project-card__desc {
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: var(--color-gray-12) !important;
-            margin-bottom: 22px;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.92) !important;
+            margin-bottom: 24px;
         }
         .project-card__tech {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 26px;
+            gap: 10px;
+            margin-bottom: 28px;
         }
         .project-card__badge {
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            color: var(--color-gray-13) !important;
-            padding: 4px 12px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #f1f5f9 !important;
+            padding: 6px 16px;
             border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
+            font-size: 0.95rem;
+            font-weight: 600;
         }
         .project-card__actions {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 14px;
         }
         .project-card__actions .btn {
             margin: 0;
-        }
+            font-size: 0.95rem;
+            padding: 14px 28px;
+        }   }
     </style>
 
 </head>
