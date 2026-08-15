@@ -4342,6 +4342,19 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   line-height: 1.45;
 }
 
+
+.ref-portrait-img {
+  position: relative;
+  z-index: 2;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+  border: 3px solid var(--accent);
+  box-shadow: 0 8px 24px rgba(200,66,26,0.2);
+}
+
 ` }} />
       <div dangerouslySetInnerHTML={{ __html: `
 <a id="skip-link" href="#intro">Skip to content</a>
@@ -4419,7 +4432,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
           <div class="ref-dots-grid"></div>
           <div class="ref-orbit-arcs"></div>
           <div class="ref-peach-circle"></div>
-          <img src="images/nithish-photo.jpg" alt="Nithish Bharathwaj N Portrait" class="ref-portrait-img">
+          <img src="images/nithish-about.jpg" alt="Nithish Bharathwaj N Portrait" class="ref-portrait-img">
         </div>
       </div>
 
