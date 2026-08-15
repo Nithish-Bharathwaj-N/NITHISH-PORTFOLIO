@@ -269,6 +269,111 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 .footer-tags{font-size:0.73rem;color:rgba(255,255,255,0.28)}
 .footer-copy{font-size:0.72rem;color:rgba(255,255,255,0.22)}
 @media(max-width:680px){.footer-bar{flex-direction:column;gap:10px;padding:22px 24px;text-align:center}}
+
+/* FEATURED SUBAERO CARD STYLING */
+.subaero-featured {
+  background: #ffffff;
+  border: 1.5px solid rgba(200,66,26,0.3);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  transition: all var(--t) var(--ease);
+}
+.subaero-featured:hover {
+  border-color: var(--accent);
+  box-shadow: 0 18px 42px rgba(200,66,26,0.12);
+  transform: translateY(-4px);
+}
+.subaero-thumb {
+  position: relative;
+  min-height: 300px;
+  background: #090d16;
+  overflow: hidden;
+}
+.subaero-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+.subaero-featured:hover .subaero-thumb img {
+  transform: scale(1.04);
+}
+.subaero-body {
+  padding: 30px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.subaero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--accent);
+  padding: 4px 11px;
+  border-radius: 4px;
+  width: max-content;
+  margin-bottom: 12px;
+}
+.subaero-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+.subaero-sub {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.subaero-desc {
+  font-size: 0.84rem;
+  line-height: 1.65;
+  color: var(--text-dark-3);
+  margin-bottom: 16px;
+}
+.subaero-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.subaero-tech span {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #334155;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 4px 9px;
+  border-radius: 4px;
+}
+.subaero-actions {
+  display: flex;
+  gap: 10px;
+}
+.secondary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+@media(max-width:960px) {
+  .subaero-featured { grid-template-columns: 1fr; }
+  .subaero-thumb { min-height: 230px; }
+  .subaero-body { padding: 22px; }
+  .secondary-grid { grid-template-columns: 1fr; }
+}
+
 </style>
 </head>
 <body>
@@ -408,27 +513,87 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
     <div class="sec-label dark-lbl">03</div>
     <h2 id="works-title" class="sec-title" style="color:var(--text-dark)">Selected Works.</h2>
     <p class="works-subdesc">Engineering solutions at the intersection of AI, cybersecurity, and real-time systems.</p>
+    
     <div class="filter-tabs" role="group" aria-label="Filter projects">
       <button type="button" class="ftab on" data-f="all">All Systems</button>
       <button type="button" class="ftab" data-f="3d-webgl">3D WebGL &amp; Twins</button>
       <button type="button" class="ftab" data-f="ai-ml">AI &amp; Full-Stack</button>
-      <button type="button" class="ftab" data-f="cybersecurity">Cybersecurity</button>
     </div>
-    <div class="proj-grid" id="proj-grid">
-      <article class="proj-card fu" data-cat="3d-webgl ai-ml">
-        <div class="proj-thumb"><span class="proj-badge">3D Full-Stack</span><span class="proj-featured">Flagship</span><img src="images/subaero-preview.jpg" alt="SubAERO Aerospace Digital Twin Platform" loading="lazy"></div>
-        <div class="proj-body"><div class="proj-name">SubAERO</div><div class="proj-sub">Aerospace Digital Twin Platform</div><p class="proj-desc">Real-time aero engine health monitoring platform for HAL using 3D digital twins and predictive analytics.</p><div class="proj-tech"><span>React 19</span><span>Three.js</span><span>FastAPI</span><span>WebSockets</span></div><div class="proj-actions"><a href="https://github.com/Nithish-Bharathwaj-N/SubAERO" target="_blank" rel="noopener" class="proj-btn proj-btn-case">Case Study →</a><a href="https://null-pointers-aerothon-2026.vercel.app/" target="_blank" rel="noopener" class="proj-btn proj-btn-live">Live Demo ↗</a></div></div>
-      </article>
+
+    <!-- TOP FEATURED PREFERRED PROJECT: SubAERO -->
+    <article class="subaero-featured fu" data-cat="3d-webgl ai-ml">
+      <div class="subaero-thumb">
+        <span class="proj-badge" style="top:14px;left:14px;">3D Full-Stack</span>
+        <img src="images/subaero-preview.jpg" alt="SubAERO Aerospace Digital Twin Platform" loading="lazy">
+      </div>
+      <div class="subaero-body">
+        <span class="subaero-badge">⭐ FEATURED FLAGSHIP PROJECT</span>
+        <h3 class="subaero-title">SubAERO</h3>
+        <div class="subaero-sub">Aerospace Digital Twin &amp; Real-Time Telemetry Platform</div>
+        <p class="subaero-desc">Real-time aero engine health monitoring platform built for <strong>HAL (Hindustan Aeronautics Limited)</strong> and <strong>IIT Indore Aerothon 2026</strong> using interactive 3D WebGL digital twins and predictive telemetry analytics.</p>
+        <div class="subaero-tech">
+          <span>React 19</span>
+          <span>Three.js (WebGL)</span>
+          <span>FastAPI</span>
+          <span>WebSockets</span>
+          <span>Python</span>
+        </div>
+        <div class="subaero-actions">
+          <a href="https://github.com/Nithish-Bharathwaj-N/SubAERO" target="_blank" rel="noopener" class="proj-btn proj-btn-case" style="padding:10px 18px;font-size:0.78rem;">Case Study →</a>
+          <a href="https://null-pointers-aerothon-2026.vercel.app/" target="_blank" rel="noopener" class="proj-btn proj-btn-live" style="padding:10px 18px;font-size:0.78rem;">Live Demo ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- BOTTOM SECONDARY PROJECTS (2 COLUMNS) -->
+    <div class="secondary-grid" id="proj-grid">
       <article class="proj-card fu" data-cat="ai-ml">
-        <div class="proj-thumb"><span class="proj-badge">AI Full-Stack</span><img src="images/voyage-preview.jpg" alt="VoyageAI Smart Travel Planning Platform" loading="lazy"></div>
-        <div class="proj-body"><div class="proj-name">VoyageAI</div><div class="proj-sub">Smart Travel Planning Platform</div><p class="proj-desc">AI-powered travel itinerary generator with budget optimization, real-time maps and smart recommendations.</p><div class="proj-tech"><span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Gemini API</span></div><div class="proj-actions"><a href="https://github.com/Nithish-Bharathwaj-N/Voyage-AI" target="_blank" rel="noopener" class="proj-btn proj-btn-case">Case Study →</a><a href="https://voyage-ai-nithish.vercel.app" target="_blank" rel="noopener" class="proj-btn proj-btn-live">Live Demo ↗</a></div></div>
+        <div class="proj-thumb">
+          <span class="proj-badge">AI Full-Stack</span>
+          <img src="images/voyage-preview.jpg" alt="VoyageAI Smart Travel Planning Platform" loading="lazy">
+        </div>
+        <div class="proj-body">
+          <div class="proj-name">VoyageAI</div>
+          <div class="proj-sub">Smart Travel Planning Platform</div>
+          <p class="proj-desc">AI-powered travel itinerary generator with budget optimization, real-time maps and smart recommendations.</p>
+          <div class="proj-tech">
+            <span>Next.js</span>
+            <span>TypeScript</span>
+            <span>PostgreSQL</span>
+            <span>Gemini API</span>
+          </div>
+          <div class="proj-actions">
+            <a href="https://github.com/Nithish-Bharathwaj-N/Voyage-AI" target="_blank" rel="noopener" class="proj-btn proj-btn-case">Case Study →</a>
+            <a href="https://voyage-ai-nithish.vercel.app" target="_blank" rel="noopener" class="proj-btn proj-btn-live">Live Demo ↗</a>
+          </div>
+        </div>
       </article>
+
       <article class="proj-card fu" data-cat="ai-ml">
-        <div class="proj-thumb"><span class="proj-badge">AI &amp; Healthcare</span><img src="images/queuecure-preview.jpg" alt="Queue Cure AI Healthcare Queue Optimization" loading="lazy"></div>
-        <div class="proj-body"><div class="proj-name">Queue Cure AI</div><div class="proj-sub">Smart Queue Optimization System</div><p class="proj-desc">Healthcare queue management with AI-driven wait-time prediction and OPD workflow automation.</p><div class="proj-tech"><span>Python</span><span>Flask</span><span>Scikit-Learn</span><span>MySQL</span></div><div class="proj-actions"><a href="https://github.com/Nithish-Bharathwaj-N/QUEUE-CURE---AI" target="_blank" rel="noopener" class="proj-btn proj-btn-case">Case Study →</a></div></div>
+        <div class="proj-thumb">
+          <span class="proj-badge">AI &amp; Healthcare</span>
+          <img src="images/queuecure-preview.jpg" alt="Queue Cure AI Healthcare Queue Optimization" loading="lazy">
+        </div>
+        <div class="proj-body">
+          <div class="proj-name">Queue Cure AI</div>
+          <div class="proj-sub">Smart Queue Optimization System</div>
+          <p class="proj-desc">Healthcare queue management with AI-driven wait-time prediction and OPD workflow automation.</p>
+          <div class="proj-tech">
+            <span>Python</span>
+            <span>Flask</span>
+            <span>Scikit-Learn</span>
+            <span>MySQL</span>
+          </div>
+          <div class="proj-actions">
+            <a href="https://github.com/Nithish-Bharathwaj-N/QUEUE-CURE---AI" target="_blank" rel="noopener" class="proj-btn proj-btn-case" style="width:100%;">Case Study →</a>
+          </div>
+        </div>
       </article>
     </div>
-    <div class="works-more"><a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener">View More Projects on GitHub ↗</a></div>
+
+    <div class="works-more">
+      <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener">View More Projects on GitHub ↗</a>
+    </div>
   </div>
 </section>
 
