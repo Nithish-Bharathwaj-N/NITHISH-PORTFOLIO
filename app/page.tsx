@@ -5365,6 +5365,335 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   box-shadow: 0 12px 30px rgba(200,66,26,0.45);
 }
 
+
+/* EXACT MATCH TO REFERENCE IMAGE media_1786814493394.png FOR HOBBIES */
+#hobbies {
+  background: #ffffff;
+  padding: 90px 48px 70px;
+  border-top: 1px solid #f1f5f9;
+}
+@media(max-width:860px) { #hobbies { padding: 60px 20px 40px; } }
+
+.hobbies-ref-container {
+  max-width: 1680px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* HEADER ROW WITH RIGHT QUOTE BOX & DOT MATRIX */
+.hr-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  gap: 32px;
+}
+@media(max-width:960px) { .hr-top-row { flex-direction: column; } }
+
+.hr-title-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.hr-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  margin-bottom: 8px;
+}
+.hr-label::after {
+  content: ' ——';
+  color: #cbd5e1;
+}
+
+.hr-main-title {
+  font-family: var(--font-display);
+  font-size: 3.4rem;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  margin-bottom: 12px;
+}
+.hr-main-title span {
+  color: var(--accent);
+}
+
+.hr-subdesc {
+  font-size: 0.9rem;
+  color: #64748b;
+  max-width: 480px;
+  line-height: 1.65;
+}
+
+.hr-quote-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-right: 40px;
+}
+.hr-quote-line {
+  width: 3px;
+  height: 48px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+.hr-quote-text {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: #475569;
+  line-height: 1.5;
+}
+.hr-quote-text strong {
+  display: block;
+  font-style: normal;
+  color: var(--accent);
+  font-size: 1.3rem;
+  margin-bottom: -4px;
+}
+.hr-dots-grid {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  width: 60px;
+  height: 60px;
+  background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
+  background-size: 10px 10px;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* 4 LARGE HOBBY CARDS GRID */
+.hobbies-4grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 40px;
+}
+@media(max-width:1280px) { .hobbies-4grid { grid-template-columns: repeat(2, 1fr); } }
+@media(max-width:640px) { .hobbies-4grid { grid-template-columns: 1fr; } }
+
+.hk-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  transition: all var(--t) var(--ease);
+}
+.hk-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.09);
+  border-color: rgba(200,66,26,0.3);
+}
+
+/* HERO THUMBNAIL WITH FLOATING CIRCLE BADGE */
+.hk-thumb-stage {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+.hk-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+.hk-card:hover .hk-hero-img {
+  transform: scale(1.06);
+}
+
+.hk-badge-circle {
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  color: var(--accent);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  z-index: 10;
+}
+
+/* CARD BODY */
+.hk-body {
+  padding: 30px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.hk-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #0f172a;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+}
+
+.hk-desc {
+  font-size: 0.78rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  min-height: 68px;
+}
+
+/* 3 MINI THUMBNAILS GALLERY STRIP */
+.hk-gallery-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.hk-gthumb {
+  height: 62px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+}
+.hk-gthumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s var(--ease);
+}
+.hk-gthumb:hover img {
+  transform: scale(1.1);
+}
+
+/* CAROUSEL CONTROLS */
+.hk-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 4px;
+  margin-bottom: 14px;
+}
+.hk-arrow-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #64748b;
+  cursor: pointer;
+  transition: all var(--t) var(--ease);
+}
+.hk-arrow-btn:hover {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+.hk-dots {
+  display: flex;
+  gap: 6px;
+}
+.hk-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #cbd5e1;
+}
+.hk-dot.active {
+  background: var(--accent);
+  width: 14px;
+  border-radius: 99px;
+}
+
+/* BOTTOM STATS FOOTER IN CARD */
+.hk-stats-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+}
+.hk-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+.hk-stat-name {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin-bottom: 2px;
+}
+.hk-stat-val {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+/* BOTTOM BANNER CARD */
+.hobbies-ref-banner {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 18px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  position: relative;
+  overflow: hidden;
+}
+.hrb-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.hrb-heart-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #fff7ed;
+  border: 1px solid rgba(200,66,26,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.hrb-divider {
+  width: 2px;
+  height: 28px;
+  background: var(--accent);
+}
+.hrb-text {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: #475569;
+}
+.hrb-dots {
+  width: 100px;
+  height: 40px;
+  background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
+  background-size: 10px 10px;
+  opacity: 0.6;
+}
+
 ` }} />
       <div dangerouslySetInnerHTML={{ __html: `
 <a id="skip-link" href="#intro">Skip to content</a>
@@ -6191,114 +6520,184 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 
 
 <section id="hobbies" aria-labelledby="hobbies-title">
-  <div class="hobbies-wrap">
-    <div class="hobbies-hdr-row fu">
-      <div>
-        <div class="sec-label" style="color:var(--accent);">07 —— BEYOND THE CODE</div>
-        <h2 id="hobbies-title" class="sec-title" style="color:#0f172a;">HOBBIES &amp; PASSIONS.</h2>
-      </div>
-      <p class="hobbies-subdesc">What keeps me curious, disciplined, and energized outside of engineering and software architecture.</p>
-    </div>
-
-    <!-- HOBBIES GRID -->
-    <div class="hobbies-grid">
-      <!-- CARD 1: READING -->
-      <div class="hobby-card fu">
-        <div class="hc-top">
-          <div class="hc-icon-box">📚</div>
-          <span class="hc-badge">Mind Growth</span>
-        </div>
-        <h3 class="hc-title">Technical &amp; Personal Growth Books</h3>
-        <p class="hc-desc">Reading books on software architecture, psychology, cybersecurity principles, and self-improvement to expand problem-solving perspectives.</p>
-        <div class="hc-tags">
-          <span class="hc-tag">System Architecture</span>
-          <span class="hc-tag">Psychology &amp; Habits</span>
-          <span class="hc-tag">Cybersecurity Mindset</span>
-        </div>
+  <div class="hobbies-ref-container">
+    <!-- TOP HEADER ROW -->
+    <div class="hr-top-row fu">
+      <div class="hr-title-block">
+        <div class="hr-label">08</div>
+        <h2 id="hobbies-title" class="hr-main-title">HOBBIES<span>.</span></h2>
+        <p class="hr-subdesc">Beyond the code, these are the things that keep me inspired, active and creative.</p>
       </div>
 
-      <!-- CARD 2: FITNESS -->
-      <div class="hobby-card fu">
-        <div class="hc-top">
-          <div class="hc-icon-box">🏋️</div>
-          <span class="hc-badge">Discipline &amp; Energy</span>
+      <div class="hr-quote-box">
+        <div class="hr-quote-line"></div>
+        <div class="hr-quote-text">
+          <strong>“</strong>
+          Do what you love,<br>love what you do.
         </div>
-        <h3 class="hc-title">Strength Training &amp; Fitness</h3>
-        <p class="hc-desc">Maintaining physical strength, high energy levels, and mental stamina through consistent weekly workout routines and active physical training.</p>
-        <div class="hc-tags">
-          <span class="hc-tag">5 Days / Week</span>
-          <span class="hc-tag">Stamina</span>
-          <span class="hc-tag">Mental Focus</span>
-        </div>
-      </div>
-
-      <!-- CARD 3: TRAVEL -->
-      <div class="hobby-card fu">
-        <div class="hc-top">
-          <div class="hc-icon-box">✈️</div>
-          <span class="hc-badge">Perspective &amp; Culture</span>
-        </div>
-        <h3 class="hc-title">Travel &amp; Exploration</h3>
-        <p class="hc-desc">Exploring new cities, natural landscapes, and diverse environments to refresh creative thinking and experience regional cultures.</p>
-        <div class="hc-tags">
-          <span class="hc-tag">Nature Trails</span>
-          <span class="hc-tag">Tech Hubs</span>
-          <span class="hc-tag">Cultural Spots</span>
-        </div>
-      </div>
-
-      <!-- CARD 4: MUSIC -->
-      <div class="hobby-card fu">
-        <div class="hc-top">
-          <div class="hc-icon-box">🎧</div>
-          <span class="hc-badge">Flow State</span>
-        </div>
-        <h3 class="hc-title">Deep Focus &amp; Ambient Soundscapes</h3>
-        <p class="hc-desc">Listening to curated lo-fi beats, synthwave, and instrumental audio track playlists that help trigger intense focus states during late-night coding sessions.</p>
-        <div class="hc-tags">
-          <span class="hc-tag">Lo-Fi Beats</span>
-          <span class="hc-tag">Synthwave</span>
-          <span class="hc-tag">Deep Work</span>
-        </div>
-      </div>
-
-      <!-- CARD 5: CHESS & STRATEGY -->
-      <div class="hobby-card fu">
-        <div class="hc-top">
-          <div class="hc-icon-box">♟️</div>
-          <span class="hc-badge">Tactical Thinking</span>
-        </div>
-        <h3 class="hc-title">Chess &amp; Strategic Puzzles</h3>
-        <p class="hc-desc">Solving tactical chess puzzles and strategy games to sharpen pattern recognition, tactical foresight, and decision-making under pressure.</p>
-        <div class="hc-tags">
-          <span class="hc-tag">Pattern Recognition</span>
-          <span class="hc-tag">Tactics</span>
-          <span class="hc-tag">Foresight</span>
-        </div>
-      </div>
-
-      <!-- CARD 6: INNOVATION & HACKING -->
-      <div class="hobby-card fu">
-        <div class="hc-top">
-          <div class="hc-icon-box">🚀</div>
-          <span class="hc-badge">Constant Curiosity</span>
-        </div>
-        <h3 class="hc-title">Exploring Emerging Tech &amp; AI Tools</h3>
-        <p class="hc-desc">Experimenting with new open-source AI frameworks, developer tools, and security exploits to stay ahead of the technology curve.</p>
-        <div class="hc-tags">
-          <span class="hc-tag">AI Tools</span>
-          <span class="hc-tag">Open Source</span>
-          <span class="hc-tag">Security Experiments</span>
-        </div>
+        <div class="hr-dots-grid"></div>
       </div>
     </div>
 
-    <!-- HOBBIES LIFESTYLE BANNER -->
-    <div class="hobbies-banner fu">
-      <div class="hb-quote">
-        "Engineering builds the <span>systems</span>, but curiosity and passion build the <span>engineer</span>."
+    <!-- 4 LARGE HOBBY CARDS GRID -->
+    <div class="hobbies-4grid fu">
+      <!-- CARD 1: CRICKET -->
+      <div class="hk-card">
+        <div class="hk-thumb-stage">
+          <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=600&q=80" alt="Cricket Batting & Ball" class="hk-hero-img">
+          <div class="hk-badge-circle">🏏</div>
+        </div>
+
+        <div class="hk-body">
+          <h3 class="hk-title">CRICKET</h3>
+          <p class="hk-desc">Cricket teaches me focus, patience, and strategy. I enjoy the thrill of the game and the lessons it brings both on and off the field.</p>
+
+          <!-- 3 MINI THUMBNAILS -->
+          <div class="hk-gallery-strip">
+            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=200&q=80" alt="Cricket Action"></div>
+            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?auto=format&fit=crop&w=200&q=80" alt="Cricket Ball"></div>
+            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1593341646782-e0b495cffd6d?auto=format&fit=crop&w=200&q=80" alt="Cricket Pitch"></div>
+          </div>
+
+          <!-- CAROUSEL CONTROLS -->
+          <div class="hk-controls">
+            <button type="button" class="hk-arrow-btn" aria-label="Previous">‹</button>
+            <div class="hk-dots">
+              <span class="hk-dot active"></span>
+              <span class="hk-dot"></span>
+              <span class="hk-dot"></span>
+            </div>
+            <button type="button" class="hk-arrow-btn" aria-label="Next">›</button>
+          </div>
+
+          <!-- STATS FOOTER -->
+          <div class="hk-stats-footer">
+            <div class="hk-stat-item">
+              <div class="hk-stat-name">DISTRICT LEVEL</div>
+              <div class="hk-stat-val">Throwball Player</div>
+            </div>
+            <div class="hk-stat-item">
+              <div class="hk-stat-name">ZONAL LEVEL</div>
+              <div class="hk-stat-val">Carrom Player</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="hb-author">Nithish Bharathwaj N</div>
+
+      <!-- CARD 2: PHOTOGRAPHY -->
+      <div class="hk-card">
+        <div class="hk-thumb-stage">
+          <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=600&q=80" alt="Photography Sunset Landscape" class="hk-hero-img">
+          <div class="hk-badge-circle">📷</div>
+        </div>
+
+        <div class="hk-body">
+          <h3 class="hk-title">PHOTOGRAPHY</h3>
+          <p class="hk-desc">Capturing moments, telling stories, and freezing memories. Photography helps me see the world from a different perspective.</p>
+
+          <!-- 3 MINI THUMBNAILS -->
+          <div class="hk-gallery-strip">
+            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=200&q=80" alt="Mountain View"></div>
+            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=200&q=80" alt="Sunset Palms"></div>
+            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1512790182412-b19e6d62bc39?auto=format&fit=crop&w=200&q=80" alt="Camera Lens"></div>
+          </div>
+
+          <!-- CAROUSEL CONTROLS -->
+          <div class="hk-controls">
+            <button type="button" class="hk-arrow-btn" aria-label="Previous">‹</button>
+            <div class="hk-dots">
+              <span class="hk-dot active"></span>
+              <span class="hk-dot"></span>
+              <span class="hk-dot"></span>
+            </div>
+            <button type="button" class="hk-arrow-btn" aria-label="Next">›</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: RUNNING -->
+      <div class="hk-card">
+        <div class="hk-thumb-stage">
+          <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=80" alt="Runner on Track" class="hk-hero-img">
+          <div class="hk-badge-circle">🏃</div>
+        </div>
+
+        <div class="hk-body">
+          <h3 class="hk-title">RUNNING</h3>
+          <p class="hk-desc">Running clears my mind and builds discipline. It's my way to stay healthy, challenge myself, and keep moving forward.</p>
+
+          <!-- 3 MINI THUMBNAILS -->
+          <div class="hk-gallery-strip">
+            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=200&q=80" alt="Runner Silhouette"></div>
+            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=200&q=80" alt="Running Shoes"></div>
+            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1510017803434-a899398421b3?auto=format&fit=crop&w=200&q=80" alt="Smartwatch Fitness"></div>
+          </div>
+
+          <!-- CAROUSEL CONTROLS -->
+          <div class="hk-controls">
+            <button type="button" class="hk-arrow-btn" aria-label="Previous">‹</button>
+            <div class="hk-dots">
+              <span class="hk-dot"></span>
+              <span class="hk-dot active"></span>
+              <span class="hk-dot"></span>
+            </div>
+            <button type="button" class="hk-arrow-btn" aria-label="Next">›</button>
+          </div>
+
+          <!-- STATS FOOTER -->
+          <div class="hk-stats-footer">
+            <div class="hk-stat-item">
+              <div class="hk-stat-name">5K PERSONAL BEST</div>
+              <div class="hk-stat-val">23:15</div>
+            </div>
+            <div class="hk-stat-item">
+              <div class="hk-stat-name">10K PERSONAL BEST</div>
+              <div class="hk-stat-val">49:48</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4: TRAVEL -->
+      <div class="hk-card">
+        <div class="hk-thumb-stage">
+          <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" alt="Hiker overlooking Mountain Lake" class="hk-hero-img">
+          <div class="hk-badge-circle">✈️</div>
+        </div>
+
+        <div class="hk-body">
+          <h3 class="hk-title">TRAVEL</h3>
+          <p class="hk-desc">Exploring new places, experiencing different cultures, and collecting memories that last a lifetime.</p>
+
+          <!-- 3 MINI THUMBNAILS -->
+          <div class="hk-gallery-strip">
+            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=200&q=80" alt="Mountain Lake"></div>
+            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=200&q=80" alt="Heritage Temple"></div>
+            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=200&q=80" alt="Winding Highway"></div>
+          </div>
+
+          <!-- CAROUSEL CONTROLS -->
+          <div class="hk-controls">
+            <button type="button" class="hk-arrow-btn" aria-label="Previous">‹</button>
+            <div class="hk-dots">
+              <span class="hk-dot active"></span>
+              <span class="hk-dot"></span>
+              <span class="hk-dot"></span>
+            </div>
+            <button type="button" class="hk-arrow-btn" aria-label="Next">›</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM REF BANNER -->
+    <div class="hobbies-ref-banner fu">
+      <div class="hrb-left">
+        <div class="hrb-heart-icon">♡</div>
+        <div class="hrb-divider"></div>
+        <div class="hrb-text">Hobbies are not a break from life, they are a part of life.</div>
+      </div>
+      <div class="hrb-dots"></div>
     </div>
   </div>
 </section>
