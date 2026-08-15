@@ -3,6 +3,48 @@
 import React from 'react';
 
 export function Achievements() {
+  const topMetrics = [
+    {
+      icon: '</>',
+      num: '500+',
+      title: 'LeetCode Solved',
+      sub: 'Across All Difficulty Levels',
+      badge: '▲ 202%',
+      stroke: '#c8421a',
+      path: 'M0,15 L20,10 L40,14 L60,6 L80,12 L100,2',
+      link: 'https://leetcode.com/u/nithish_cit/'
+    },
+    {
+      icon: '📈',
+      num: '1771',
+      title: 'Peak Contest Rating',
+      sub: '118-day Coding Streak',
+      badge: 'Top 11%',
+      stroke: '#a855f7',
+      path: 'M0,16 L20,12 L40,8 L60,11 L80,5 L100,2',
+      link: 'https://leetcode.com/u/nithish_cit/'
+    },
+    {
+      icon: '🐙',
+      num: '24 Repos',
+      title: 'GitHub Contributions',
+      sub: '10 Public Repos & 15+ Stars',
+      badge: '250+ Commits',
+      stroke: '#10b981',
+      path: 'M0,18 L20,14 L40,10 L60,12 L80,4 L100,2',
+      link: 'https://github.com/Nithish-Bharathwaj-N'
+    },
+    {
+      icon: '🏆',
+      num: 'Aerothon',
+      title: '2026 Finalist',
+      sub: 'HAL × IIT Indore',
+      badge: 'Top 8',
+      stroke: '#c8421a',
+      path: 'M0,18 L20,14 L40,10 L60,12 L80,4 L100,2'
+    }
+  ];
+
   const badgeCards = [
     {
       sub: 'AEROTHON 2026',
@@ -94,14 +136,44 @@ export function Achievements() {
         {/* HEADER BLOCK */}
         <div className="mb-8">
           <div className="flex items-center gap-2.5 text-xs font-extrabold uppercase tracking-widest text-slate-400 mb-3">
-            05 <span className="w-7 h-[1px] bg-slate-400 inline-block" />
+            04 <span className="w-7 h-[1px] bg-slate-400 inline-block" />
           </div>
           <h2 id="ach-title" className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight mb-2">
             KEY <span className="text-[#c8421a]">ACHIEVEMENTS.</span>
           </h2>
           <p className="text-sm text-slate-400 max-w-xl leading-relaxed">
-            Milestones that reflect hard work, consistency, and the drive to solve real-world problems.
+            Milestones that reflect hard work, consistency, problem solving, and real-world engineering results.
           </p>
+        </div>
+
+        {/* TOP METRIC CARDS ROW (LEETCODE SOLVED, CONTEST RATING, GITHUB CONTRIBUTIONS, AEROTHON) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 mb-8">
+          {topMetrics.map((m) => {
+            const Content = (
+              <div className="bg-[#111111] border border-white/10 rounded-2xl p-5 flex flex-col justify-between hover:border-[#c8421a]/40 transition-all hover:-translate-y-1 h-full">
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-sm font-bold text-[#c8421a]">{m.icon}</div>
+                    <span className="text-[0.65rem] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">{m.badge}</span>
+                  </div>
+                  <div className="font-display text-2xl font-extrabold text-white mb-1">{m.num}</div>
+                  <div className="text-xs font-bold text-white/80 leading-tight mb-0.5">{m.title}</div>
+                  <div className="text-[0.62rem] text-white/40">{m.sub}</div>
+                </div>
+                <svg className="w-full h-4 mt-3" viewBox="0 0 100 20" preserveAspectRatio="none">
+                  <path d={m.path} fill="none" stroke={m.stroke} strokeWidth="2" />
+                </svg>
+              </div>
+            );
+
+            return m.link ? (
+              <a key={m.title} href={m.link} target="_blank" rel="noopener noreferrer" className="no-underline">
+                {Content}
+              </a>
+            ) : (
+              <div key={m.title}>{Content}</div>
+            );
+          })}
         </div>
 
         {/* 5 BADGE CARDS ROW */}
