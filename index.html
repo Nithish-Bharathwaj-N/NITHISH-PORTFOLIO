@@ -50,6 +50,119 @@
             color: #38bdf8;
             font-weight: 700;
         }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+        }
+        .project-card__thumb {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            position: relative;
+            background: #0f172a;
+        }
+        .project-card__thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .project-card:hover .project-card__thumb img {
+            transform: scale(1.05);
+        }
+        .project-card__body {
+            padding: 24px 28px 28px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .project-card__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 6px;
+            line-height: 1.25;
+        }
+        .project-card__subtitle {
+            color: #38bdf8;
+            font-weight: 600;
+            font-size: 0.925rem;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .project-card__desc {
+            font-size: 0.925rem;
+            line-height: 1.65;
+            color: rgba(255, 255, 255, 0.78);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+        .project-card__tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 22px;
+        }
+        .project-card__badge {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            color: #38bdf8;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .project-card__actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .project-card__btn {
+            padding: 8px 18px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+        .project-card__btn--primary {
+            background: #38bdf8;
+            color: #0f172a;
+            border: 1px solid #38bdf8;
+        }
+        .project-card__btn--primary:hover {
+            background: #0284c7;
+            border-color: #0284c7;
+            color: #ffffff;
+        }
+        .project-card__btn--outline {
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+        .project-card__btn--outline:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+        }
     </style>
 
 </head>
@@ -139,7 +252,7 @@
                 </li>
                 <li>
                     <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noreferrer" title="LeetCode">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 0.8);"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.17 5.79a1.374 1.374 0 0 0 0 1.941l5.352 5.352a1.374 1.374 0 0 0 1.941 0l5.352-5.352a1.374 1.374 0 0 0 0-1.941L14.444.438A1.374 1.374 0 0 0 13.483 0zm-6.17 11.238a1.374 1.374 0 0 0-.961.438L1.001 17.027a1.374 1.374 0 0 0 0 1.941l5.352 5.352a1.374 1.374 0 0 0 1.941 0l5.352-5.352a1.374 1.374 0 0 0 0-1.941l-5.352-5.352a1.374 1.374 0 0 0-.962-.438z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 0.8);"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.17 5.79a1.375 1.375 0 0 0-.005 1.941l.005.005 5.353 5.353a1.375 1.375 0 0 0 1.942 0l.005-.005 5.353-5.353a1.375 1.375 0 0 0 0-1.941l-.005-.005L14.445.438A1.374 1.374 0 0 0 13.483 0zm0 2.75l3.535 3.535-3.535 3.536-3.536-3.536 3.536-3.535zM5.353 7.604a1.375 1.375 0 0 0-1.942 0l-.005.005-3.181 3.182a1.375 1.375 0 0 0 0 1.941l.005.005 3.181 3.182a1.375 1.375 0 0 0 1.942 0l.005-.005 3.181-3.182a1.375 1.375 0 0 0 0-1.941l-.005-.005-3.181-3.182zm0 2.75l1.364 1.364-1.364 1.364-1.364-1.364 1.364-1.364zm15.294 0a1.375 1.375 0 0 0-1.942 0l-.005.005-3.181 3.182a1.375 1.375 0 0 0 0 1.941l.005.005 3.181 3.182a1.375 1.375 0 0 0 1.942 0l.005-.005 3.181-3.182a1.375 1.375 0 0 0 0-1.941l-.005-.005-3.181-3.182zm0 2.75l1.364 1.364-1.364 1.364-1.364-1.364 1.364-1.364z"/></svg>
                         <span class="u-screen-reader-text">LeetCode</span>
                     </a>
                 </li>
@@ -201,18 +314,38 @@
 
                         <div class="grid-list-items__item s-about__block">
                             <h4 class="s-about__block-title">Experience</h4>
+
                             <ul class="s-about__list">
                                 <li>
                                     Generative AI Virtual Intern
-                                    <span>AWS Academy × AICTE × EduSkills (10/2025 – 12/2025)</span>
+                                    <span>AWS Academy × AICTE × EduSkills</span>
                                 </li>
                                 <li>
-                                    3D Digital Twin Platform Lead
-                                    <span>SubAERO – HAL Tejas Jet Engine PHM (2026)</span>
+                                    SubAERO Digital Twin Lead
+                                    <span>HAL & IIT Indore Aerothon 2026</span>
                                 </li>
                                 <li>
                                     Full-Stack AI Developer
-                                    <span>Voyage AI & FinSight (2026)</span>
+                                    <span>Open Source & Personal Projects</span>
+                                </li>
+                            </ul>
+                        </div> <!--end s-about__block -->
+
+                        <div class="grid-list-items__item s-about__block">
+                            <h4 class="s-about__block-title">Education</h4>
+
+                            <ul class="s-about__list">
+                                <li>
+                                    B.E. Computer Science (Cyber Security)
+                                    <span>Chennai Institute of Technology (2025–Present)</span>
+                                </li>
+                                <li>
+                                    Higher Secondary (Class XII)
+                                    <span>Vidya Mandir Sr Sec School (88.4%)</span>
+                                </li>
+                                <li>
+                                    Secondary School (Class X)
+                                    <span>Vidya Mandir Sr Sec School (92.6%)</span>
                                 </li>
                             </ul>
                         </div> <!--end s-about__block -->
@@ -224,19 +357,13 @@
                                 <li>
                                     <a href="#0">
                                         Top 8 Finalist – Aerothon 2026
-                                        <span>HAL & IIT Indore National Hackathon</span>
-                                    </a>                                        
-                                </li>
-                                <li>
-                                    <a href="#0">
-                                        5+ National Hackathon Finalist
-                                        <span>AI & Full-Stack Applications</span>
+                                        <span>HAL (Hindustan Aeronautics Ltd) & IIT Indore</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#0">
-                                        500+ LeetCode Solved
-                                        <span>Rating: 1771 | 118-Day Streak</span>
+                                        5+ National Hackathon Finalist
+                                        <span>National Level AI & 3D Competitions</span>
                                     </a>
                                 </li>
                                 <li>
@@ -251,7 +378,7 @@
                                         <span>CM Trophy Athletics & Cricket</span>
                                     </a>                                        
                                 </li>
-                            </ul>
+                             </ul>
                         </div> <!--end s-about__block -->
                         
                         <div class="grid-list-items__item s-about__block">
@@ -299,45 +426,91 @@
                 </div>
             </div>
 
-            <div class="row folio-entries">
+            <div class="row" style="max-width: 1400px; padding: 0 20px;">
+                <div class="projects-grid">
 
-                <div class="column entry">
-                    <a href="https://null-pointers-aerothon-2026.vercel.app/" target="_blank" class="entry__link">
-                        <div class="entry__thumb">
+                    <!-- Project 1: SubAERO -->
+                    <div class="project-card">
+                        <div class="project-card__thumb">
                             <img src="images/subaero-preview.jpg" alt="SubAERO Digital Twin">
                         </div>
-                        <div class="entry__info">
-                            <h4 class="entry__title">SubAERO</h4>
-                            <div class="entry__cat">Aerospace 3D Digital Twin & PHM Platform (HAL Tejas)</div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">SubAERO</h3>
+                            <div class="project-card__subtitle">
+                                Aerospace 3D Digital Twin & PHM Platform • Top 8 Aerothon 2026 Finalist
+                            </div>
+                            <p class="project-card__desc">
+                                Built for HAL (Hindustan Aeronautics Limited) Tejas turbojet engines. Features real-time 3D telemetry visualization, interactive Blender engine explosion viewer, failure risk heatmaps, and Scikit-Learn Multi-Target Regression models delivering 98.7%–99.9% R² predictive maintenance accuracy.
+                            </p>
+                            <div class="project-card__tech">
+                                <span class="project-card__badge">React 19</span>
+                                <span class="project-card__badge">Three.js (WebGL)</span>
+                                <span class="project-card__badge">Blender 3D</span>
+                                <span class="project-card__badge">FastAPI</span>
+                                <span class="project-card__badge">Scikit-Learn (99.9% R²)</span>
+                                <span class="project-card__badge">Python</span>
+                            </div>
+                            <div class="project-card__actions">
+                                <a href="https://null-pointers-aerothon-2026.vercel.app/" target="_blank" class="project-card__btn project-card__btn--primary">Live Demo ↗</a>
+                                <a href="https://github.com/Nithish-Bharathwaj-N/SubAERO" target="_blank" class="project-card__btn project-card__btn--outline">GitHub Repository ↗</a>
+                            </div>
                         </div>
-                    </a>
-                </div> <!-- entry -->
+                    </div>
 
-                <div class="column entry">
-                    <a href="https://github.com/Nithish-Bharathwaj-N/Voyage-AI" target="_blank" class="entry__link">
-                        <div class="entry__thumb">
+                    <!-- Project 2: Voyage AI -->
+                    <div class="project-card">
+                        <div class="project-card__thumb">
                             <img src="images/voyage-preview.jpg" alt="Voyage AI">
                         </div>
-                        <div class="entry__info">
-                            <h4 class="entry__title">Voyage AI</h4>
-                            <div class="entry__cat">AI-Powered Travel Planning Platform</div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Voyage AI</h3>
+                            <div class="project-card__subtitle">
+                                AI-Powered Smart Travel Planning Platform
+                            </div>
+                            <p class="project-card__desc">
+                                Intelligent travel itinerary generator powered by Gemini AI API. Automatically generates day-by-day travel schedules, real-time budget estimates, destination discovery maps, and interactive route timelines for global travelers.
+                            </p>
+                            <div class="project-card__tech">
+                                <span class="project-card__badge">Next.js</span>
+                                <span class="project-card__badge">TypeScript</span>
+                                <span class="project-card__badge">Gemini AI API</span>
+                                <span class="project-card__badge">TailwindCSS</span>
+                                <span class="project-card__badge">Node.js</span>
+                            </div>
+                            <div class="project-card__actions">
+                                <a href="https://github.com/Nithish-Bharathwaj-N/Voyage-AI" target="_blank" class="project-card__btn project-card__btn--primary">GitHub Repository ↗</a>
+                            </div>
                         </div>
-                    </a>
-                </div> <!-- entry -->
+                    </div>
 
-                <div class="column entry">
-                    <a href="https://github.com/Nithish-Bharathwaj-N/QUEUE-CURE---AI" target="_blank" class="entry__link">
-                        <div class="entry__thumb">
+                    <!-- Project 3: Queue Cure AI -->
+                    <div class="project-card">
+                        <div class="project-card__thumb">
                             <img src="images/queuecure-preview.jpg" alt="Queue Cure AI">
                         </div>
-                        <div class="entry__info">
-                            <h4 class="entry__title">Queue Cure AI</h4>
-                            <div class="entry__cat">Smart Healthcare Queue Optimization System</div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Queue Cure AI</h3>
+                            <div class="project-card__subtitle">
+                                Smart Healthcare & Hospital Queue Optimization System
+                            </div>
+                            <p class="project-card__desc">
+                                Machine learning patient wait-time forecasting engine and real-time OPD token tracker. Features live patient queue status, automated appointment scheduling, emergency triage prioritization, and hospital staff dashboard.
+                            </p>
+                            <div class="project-card__tech">
+                                <span class="project-card__badge">React</span>
+                                <span class="project-card__badge">Python</span>
+                                <span class="project-card__badge">Flask</span>
+                                <span class="project-card__badge">Scikit-Learn</span>
+                                <span class="project-card__badge">Socket.IO</span>
+                            </div>
+                            <div class="project-card__actions">
+                                <a href="https://github.com/Nithish-Bharathwaj-N/QUEUE-CURE---AI" target="_blank" class="project-card__btn project-card__btn--primary">GitHub Repository ↗</a>
+                            </div>
                         </div>
-                    </a>
-                </div> <!-- entry -->
+                    </div>
 
-            </div> <!-- folio entries -->
+                </div> <!-- end projects-grid -->
+            </div>
 
         </section> <!-- end s-works --> 
 
