@@ -54,6 +54,23 @@
             color: #38bdf8;
             font-weight: 700;
         }
+        /* About Section Matching Get In Touch Dark Theme */
+        #about {
+            background-color: var(--color-3) !important; /* Exact dark charcoal as Get In Touch */
+            padding-top: var(--vspace-5);
+            padding-bottom: var(--vspace-5);
+            color: var(--color-gray-15);
+        }
+        #about .s-about__block-title {
+            color: #ffffff !important;
+        }
+        #about .s-about__list {
+            color: rgba(255, 255, 255, 0.85) !important;
+        }
+        #about .s-about__list span {
+            color: rgba(255, 255, 255, 0.5) !important;
+        }
+
         /* Works Section Vertical One-by-One Layout */
         #works {
             background-color: var(--color-3) !important; /* Exact same dark charcoal background as Get In Touch */
@@ -207,6 +224,7 @@
                     <ul class="s-header__menu-links">
                         <li class="current"><a class="smoothscroll" href="#intro">Intro</a></li>
                         <li><a class="smoothscroll" href="#about">About</a></li>
+                        <li><a class="smoothscroll" href="#skills">Skills</a></li>
                         <li><a class="smoothscroll" href="#works">Works</a></li>
                         <li><a class="smoothscroll" href="#footer">Contact</a></li>
                     </ul> <!-- s-header__menu-links -->    
@@ -296,21 +314,21 @@
             <div class="row s-about__content">
                 <div class="column xl-12">    
                     
-                    <div class="section-header" data-num="01">
+                    <div class="section-header light-on-dark" data-num="01">
                         <h2 class="text-display-title">About Me.</h2>
                     </div> <!-- end section-header -->
 
                     <div class="s-about__photo-container" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; margin-bottom: 40px;">
                         <div style="flex: 0 0 260px; max-width: 260px;">
-                            <img src="images/nithish-photo.jpg" alt="Nithish Bharathwaj N" style="width: 100%; border-radius: 16px; border: 2px solid rgba(56, 189, 248, 0.3); box-shadow: 0 12px 35px rgba(0,0,0,0.6); object-fit: cover; aspect-ratio: 4/5;">
+                            <img src="images/nithish-photo.jpg" alt="Nithish Bharathwaj N" style="width: 100%; border-radius: 16px; border: 2px solid rgba(214, 73, 35, 0.4); box-shadow: 0 12px 35px rgba(0,0,0,0.6); object-fit: cover; aspect-ratio: 4/5;">
                         </div>
                         <div style="flex: 1 1 500px;">
-                            <p class="attention-getter" style="margin-top: 0;">
+                            <p class="attention-getter" style="margin-top: 0; color: rgba(255,255,255,0.85);">
                             I'm a <b>Computer Science and Engineering (Cyber Security)</b> student at <b>Chennai Institute of Technology</b>. I specialize in building AI-powered applications, 3D WebGL Digital Twin platforms, and secure full-stack software systems.
                             </p>
 
-                            <p class="attention-getter">
-                            Recognized as a <span class="achievement-highlight">Top 8 Finalist nationwide in Aerothon 2026</span> conducted by <b>HAL (Hindustan Aeronautics Limited)</b> and <b>IIT Indore</b>. Solved <b>500+ LeetCode problems</b> with a <b>1771 Contest Rating</b> and a <b>118-day continuous coding streak</b>.
+                            <p class="attention-getter" style="color: rgba(255,255,255,0.85);">
+                            Recognized as a <span style="color: #d64923; font-weight: 700;">Top 8 Finalist nationwide in Aerothon 2026</span> conducted by <b>HAL (Hindustan Aeronautics Limited)</b> and <b>IIT Indore</b>. Solved <b>500+ LeetCode problems</b> with a <b>1771 Contest Rating</b> and a <b>118-day continuous coding streak</b>.
                             </p>
                         </div>
                     </div>
@@ -318,78 +336,73 @@
                     <div class="grid-list-items s-about__blocks">
 
                         <div class="grid-list-items__item s-about__block">
-                            <h4 class="s-about__block-title">Experience</h4>
+                            <h4 class="s-about__block-title" style="color: #fff; border-bottom: 1px solid rgba(255,255,255,0.15);">Experience</h4>
 
-                            <ul class="s-about__list">
+                            <ul class="s-about__list" style="color: rgba(255,255,255,0.85);">
                                 <li>
                                     Generative AI Virtual Intern
-                                    <span>AWS Academy × AICTE × EduSkills</span>
+                                    <span style="color: rgba(255,255,255,0.5);">AWS Academy × AICTE × EduSkills</span>
                                 </li>
                                 <li>
                                     SubAERO Digital Twin Lead
-                                    <span>HAL & IIT Indore Aerothon 2026</span>
+                                    <span style="color: rgba(255,255,255,0.5);">HAL & IIT Indore Aerothon 2026</span>
                                 </li>
                                 <li>
                                     Full-Stack AI Developer
-                                    <span>Open Source & Personal Projects</span>
+                                    <span style="color: rgba(255,255,255,0.5);">Open Source & Personal Projects</span>
                                 </li>
                             </ul>
                         </div> <!--end s-about__block -->
 
                         <div class="grid-list-items__item s-about__block">
-                            <h4 class="s-about__block-title">Education</h4>
+                            <h4 class="s-about__block-title" style="color: #fff; border-bottom: 1px solid rgba(255,255,255,0.15);">Education</h4>
 
-                            <ul class="s-about__list">
+                            <ul class="s-about__list" style="color: rgba(255,255,255,0.85);">
                                 <li>
                                     B.E. Computer Science (Cyber Security)
-                                    <span>Chennai Institute of Technology (2025–Present)</span>
+                                    <span style="color: rgba(255,255,255,0.5);">Chennai Institute of Technology (2025–Present)</span>
                                 </li>
                                 <li>
                                     Higher Secondary (Class XII)
-                                    <span>Vidya Mandir Sr Sec School (88.4%)</span>
+                                    <span style="color: rgba(255,255,255,0.5);">Vidya Mandir Sr Sec School (88.4%)</span>
                                 </li>
                                 <li>
                                     Secondary School (Class X)
-                                    <span>Vidya Mandir Sr Sec School (92.6%)</span>
+                                    <span style="color: rgba(255,255,255,0.5);">Vidya Mandir Sr Sec School (92.6%)</span>
                                 </li>
                             </ul>
                         </div> <!--end s-about__block -->
 
                         <div class="grid-list-items__item s-about__block">
-                            <h4 class="s-about__block-title">Honors & Awards</h4>
+                            <h4 class="s-about__block-title" style="color: #fff; border-bottom: 1px solid rgba(255,255,255,0.15);">Honors & Awards</h4>
 
-                            <ul class="s-about__list">
+                            <ul class="s-about__list" style="color: rgba(255,255,255,0.85);">
                                 <li>
-                                    <a href="#0">
+                                    <a href="#0" style="color: #fff;">
                                         Top 8 Finalist – Aerothon 2026
-                                        <span>HAL (Hindustan Aeronautics Ltd) & IIT Indore</span>
+                                        <span style="color: rgba(255,255,255,0.5);">HAL (Hindustan Aeronautics Ltd) & IIT Indore</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#0">
+                                    <a href="#0" style="color: #fff;">
                                         5+ National Hackathon Finalist
-                                        <span>National Level AI & 3D Competitions</span>
+                                        <span style="color: rgba(255,255,255,0.5);">National Level AI & 3D Competitions</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#0">
+                                    <a href="#0" style="color: #fff;">
                                         International Abacus Qualifier
-                                        <span>State Selection Cleared</span>
+                                        <span style="color: rgba(255,255,255,0.5);">State Selection Cleared</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#0">
+                                    <a href="#0" style="color: #fff;">
                                         District Throwball & Zonal Carrom
-                                        <span>CM Trophy Athletics & Cricket</span>
+                                        <span style="color: rgba(255,255,255,0.5);">CM Trophy Athletics & Cricket</span>
                                     </a>                                        
                                 </li>
                              </ul>
                         </div> <!--end s-about__block -->
-                        
-                        <div class="grid-list-items__item s-about__block">
-                            <h4 class="s-about__block-title">Skills</h4>
-
-                            <ul class="s-about__list">
                                 <li>
                                     Python • C++ • JavaScript • TypeScript • SQL • Java
                                 </li>
@@ -419,13 +432,166 @@
         </section> <!-- end s-about -->   
 
 
+        <!-- # skills
+        ================================================== -->
+        <section id="skills" class="s-skills target-section" style="padding-top: var(--vspace-5); padding-bottom: var(--vspace-5); background: #f3f4f6;">
+
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="section-header" data-num="02">
+                        <h2 class="text-display-title">Skills & Tech Stack.</h2>
+                    </div> <!-- end section-header -->
+                </div>
+            </div>
+
+            <div class="row" style="max-width: 1240px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; width: 100%;">
+
+                    <!-- Category 1: Languages -->
+                    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: transform 0.3s ease;">
+                        <h3 style="font-family: var(--font-1); font-size: 1.25rem; font-weight: 700; color: #0f172a; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #d64923; display: flex; align-items: center; gap: 8px;">
+                            💻 Programming Languages
+                        </h3>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/python/python-original.svg" alt="Python" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">Python</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">C++</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">JavaScript</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">TypeScript</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/postgresql/postgresql-original.svg" alt="SQL" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">SQL</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/java/java-original.svg" alt="Java" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">Java</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Frontend & 3D -->
+                    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: transform 0.3s ease;">
+                        <h3 style="font-family: var(--font-1); font-size: 1.25rem; font-weight: 700; color: #0f172a; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #d64923; display: flex; align-items: center; gap: 8px;">
+                            ⚛️ Frontend & 3D WebGL
+                        </h3>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/react/react-original.svg" alt="React 19" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">React 19</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">Next.js</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/threejs/threejs-original.svg" alt="Three.js" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">Three.js</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/blender/blender-original.svg" alt="Blender" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">Blender</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">Tailwind</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/html5/html5-original.svg" alt="HTML5" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">HTML5/CSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Backend & Systems -->
+                    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: transform 0.3s ease;">
+                        <h3 style="font-family: var(--font-1); font-size: 1.25rem; font-weight: 700; color: #0f172a; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #d64923; display: flex; align-items: center; gap: 8px;">
+                            ⚙️ Backend & Systems
+                        </h3>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">Node.js</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/express/express-original.svg" alt="Express" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">Express</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">FastAPI</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">PostgreSQL</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/mysql/mysql-original.svg" alt="MySQL" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">MySQL</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/flask/flask-original.svg" alt="Flask" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">Flask</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 4: DevOps & Cloud -->
+                    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: transform 0.3s ease;">
+                        <h3 style="font-family: var(--font-1); font-size: 1.25rem; font-weight: 700; color: #0f172a; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #d64923; display: flex; align-items: center; gap: 8px;">
+                            ☁️ DevOps, AI & Security
+                        </h3>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/docker/docker-original.svg" alt="Docker" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">Docker</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">AWS Cloud</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/linux/linux-original.svg" alt="Linux" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">Linux Sec</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/git/git-original.svg" alt="Git" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">Git</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="Scikit-Learn" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">Scikit-Learn</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 12px 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicon/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" style="width: 34px; height: 34px; margin-bottom: 6px;">
+                                <span style="font-size: 0.78rem; font-weight: 600; color: #334155;">AI & LLMs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section> <!-- end s-skills -->
+
+
         <!-- # works
         ================================================== -->
         <section id="works" class="s-works target-section">
 
             <div class="row">
                 <div class="column xl-12">
-                    <div class="section-header light-on-dark" data-num="02">
+                    <div class="section-header light-on-dark" data-num="03">
                         <h2 class="text-display-title">Selected Works.</h2>
                     </div> <!-- end section-header -->
                 </div>
