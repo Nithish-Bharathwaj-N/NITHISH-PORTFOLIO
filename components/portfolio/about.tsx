@@ -78,7 +78,7 @@ export function About() {
               <div className="absolute right-[-10px] top-[40px] w-[50px] h-[90px] opacity-70 bg-[radial-gradient(#cbd5e1_1.5px,transparent_1.5px)] [background-size:10px_10px]" />
               <div className="absolute right-0 top-[120px] w-2.5 h-2.5 rounded-full bg-[#c8421a] z-30" />
               <div className="absolute bottom-0 w-[250px] h-[250px] rounded-[120px_120px_40px_40px] bg-gradient-to-br from-orange-100 to-amber-200 z-10" />
-              <img src="images/nithish-photo.jpg" alt="Nithish Bharathwaj N Portrait" className="relative z-20 w-[280px] h-[310px] object-cover object-top" />
+              <img src="images/nithish-about.jpg" alt="Nithish Bharathwaj N Portrait" className="relative z-20 w-[280px] h-[310px] object-cover object-top" />
             </div>
 
             {/* 4 SPECS LIST */}
