@@ -123,31 +123,6 @@ export default function Home() {
     }
     const timer = setTimeout(typeLoop, 1000);
 
-    const ftabs = document.querySelectorAll('.ftab');
-    const pcards = document.querySelectorAll('#proj-grid .proj-card, .subaero-featured');
-    ftabs.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        ftabs.forEach((b) => b.classList.remove('on'));
-        btn.classList.add('on');
-        const f = (btn as HTMLElement).dataset.f;
-        pcards.forEach((card) => {
-          const cEl = card as HTMLElement;
-          const cats = (cEl.dataset.cat || '').split(' ');
-          const show = f === 'all' || cats.includes(f || '');
-          cEl.style.display = show ? '' : 'none';
-          if (show) {
-            cEl.style.opacity = '0';
-            cEl.style.transform = 'translateY(14px)';
-            requestAnimationFrame(() => {
-              cEl.style.transition = 'opacity 0.32s ease, transform 0.32s ease';
-              cEl.style.opacity = '1';
-              cEl.style.transform = 'none';
-            });
-          }
-        });
-      });
-    });
-
     const inquiryPills = document.querySelectorAll('.inquiry-pill');
     inquiryPills.forEach((pill) => {
       pill.addEventListener('click', () => {
@@ -2880,6 +2855,304 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   line-height: 1.45;
 }
 
+
+/* LIGHT THEME PROJECTS SECTION STYLING */
+#works {
+  background: var(--light);
+  padding: 100px 80px 70px;
+}
+@media(max-width:860px) { #works { padding: 80px 24px 40px; } }
+
+.projects-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.projects-hdr-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+@media(max-width:960px) { .projects-hdr-row { flex-direction: column; align-items: flex-start; } }
+
+.p-hdr-stats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.p-stat-box {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+}
+.p-stat-icon {
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+.p-stat-title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.1;
+}
+.p-stat-sub {
+  font-size: 0.65rem;
+  color: var(--text-dark-3);
+}
+
+/* HERO FEATURED PROJECT CARD (SUBAERO) */
+.subaero-hero-card {
+  background: #ffffff;
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: 0 12px 36px rgba(200,66,26,0.12);
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 0.8fr;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+@media(max-width:1100px) { .subaero-hero-card { grid-template-columns: 1fr; } }
+
+.sh-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background: rgba(200,66,26,0.1);
+  border: 1px solid rgba(200,66,26,0.3);
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.sh-title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin-bottom: 4px;
+}
+.sh-subtitle {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.sh-desc {
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--text-dark-3);
+  margin-bottom: 16px;
+}
+.sh-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.sh-pill {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #334155;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.sh-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.sh-center-preview {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+.sh-center-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sh-right-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius);
+  padding: 18px;
+}
+.sh-spec-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.sh-spec-icon {
+  font-size: 1rem;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.sh-spec-lbl {
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dark-3);
+}
+.sh-spec-val {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.35;
+}
+
+/* SECONDARY PROJECTS GRID (VOYAGEAI & QUEUECURE AI) */
+.secondary-projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+@media(max-width:960px) { .secondary-projects-grid { grid-template-columns: 1fr; } }
+
+.sec-proj-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 16px;
+  align-items: center;
+  transition: all var(--t) var(--ease);
+}
+.sec-proj-card:hover {
+  border-color: rgba(200,66,26,0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+@media(max-width:600px) { .sec-proj-card { grid-template-columns: 1fr; } }
+
+.sp-preview {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+.sp-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sp-body {
+  display: flex;
+  flex-direction: column;
+}
+.sp-hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.sp-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+.sp-badge {
+  font-size: 0.6rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 9999px;
+}
+.sp-subtitle {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.sp-desc {
+  font-size: 0.74rem;
+  line-height: 1.55;
+  color: var(--text-dark-3);
+  margin-bottom: 12px;
+}
+.sp-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+.sp-actions {
+  display: flex;
+  gap: 8px;
+}
+.sp-btn {
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 7px 12px;
+  border-radius: 6px;
+  transition: all var(--t);
+}
+
+/* BOTTOM BANNER */
+.projects-bottom-bar {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+}
+.p-quote {
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--text-dark-2);
+}
+.p-gh-link {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+}
+.p-gh-link:hover { text-decoration: underline; }
+
 ` }} />
       <div dangerouslySetInnerHTML={{ __html: `
 <a id="skip-link" href="#intro">Skip to content</a>
@@ -3408,90 +3681,179 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 </section>
 
 <section id="works" aria-labelledby="works-title">
-  <div class="works-wrap">
-    <div class="sec-label dark-lbl">03</div>
-    <h2 id="works-title" class="sec-title" style="color:var(--text-dark)">Selected Works.</h2>
-    <p class="works-subdesc">Engineering solutions at the intersection of AI, cybersecurity, and real-time systems.</p>
-    
-    <div class="filter-tabs" role="group" aria-label="Filter projects">
-      <button type="button" class="ftab on" data-f="all">All Systems</button>
-      <button type="button" class="ftab" data-f="3d-webgl">3D WebGL &amp; Twins</button>
-      <button type="button" class="ftab" data-f="ai-ml">AI &amp; Full-Stack</button>
+  <div class="projects-wrap">
+    <!-- HEADER ROW -->
+    <div class="projects-hdr-row fu">
+      <div>
+        <div class="sec-label dark-lbl">03</div>
+        <h2 id="works-title" class="sec-title" style="color:var(--text-dark)">MY <span style="color:var(--accent)">PROJECTS.</span></h2>
+        <p style="font-size:0.88rem;color:var(--text-dark-3);margin-top:4px;">Real-world solutions built with purpose, impact, and cutting-edge technology.</p>
+      </div>
+
+      <!-- TOP 4 STAT PILLS -->
+      <div class="p-hdr-stats">
+        <div class="p-stat-box">
+          <div class="p-stat-icon">&lt;/&gt;</div>
+          <div>
+            <div class="p-stat-title">3+</div>
+            <div class="p-stat-sub">Major Projects</div>
+          </div>
+        </div>
+
+        <div class="p-stat-box">
+          <div class="p-stat-icon">🚀</div>
+          <div>
+            <div class="p-stat-title">Built for Impact</div>
+            <div class="p-stat-sub">Solving real problems</div>
+          </div>
+        </div>
+
+        <div class="p-stat-box">
+          <div class="p-stat-icon">⚙️</div>
+          <div>
+            <div class="p-stat-title">Modern Tech</div>
+            <div class="p-stat-sub">Scalable &amp; Efficient</div>
+          </div>
+        </div>
+
+        <div class="p-stat-box">
+          <div class="p-stat-icon">👥</div>
+          <div>
+            <div class="p-stat-title">User-Centric</div>
+            <div class="p-stat-sub">Designed with clarity</div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- TOP FEATURED PREFERRED PROJECT: SubAERO -->
-    <article class="subaero-featured fu" data-cat="3d-webgl ai-ml">
-      <div class="subaero-thumb">
-        <span class="proj-badge" style="top:14px;left:14px;">3D Full-Stack</span>
-        <img src="images/subaero-preview.jpg" alt="SubAERO Aerospace Digital Twin Platform" loading="lazy">
+    <!-- HERO FEATURED PROJECT CARD: SUBAERO -->
+    <div class="subaero-hero-card fu">
+      <!-- LEFT COPY & ACTIONS -->
+      <div>
+        <div class="sh-badge">★ FEATURED PROJECT</div>
+        <h3 class="sh-title">SubAERO</h3>
+        <div class="sh-subtitle">AI-Powered Submarine Development &amp; Analysis Platform</div>
+        <p class="sh-desc">An advanced AI-driven platform for submarine design, analysis, and optimization. SubAERO integrates simulation, analytics, and intelligent recommendations to accelerate R&amp;D and decision-making.</p>
+        <div class="sh-pills">
+          <span class="sh-pill">React</span>
+          <span class="sh-pill">TypeScript</span>
+          <span class="sh-pill">Python</span>
+          <span class="sh-pill">TensorFlow</span>
+          <span class="sh-pill">FastAPI</span>
+          <span class="sh-pill">PostgreSQL</span>
+          <span class="sh-pill">Three.js</span>
+          <span class="sh-pill">Docker</span>
+        </div>
+        <div class="sh-actions">
+          <a href="https://subaero-app-3d.vercel.app/" target="_blank" rel="noopener" class="btn-fill" style="padding:10px 18px;font-size:0.75rem;">View Case Study →</a>
+          <a href="https://github.com/Nithish-Bharathwaj-N/SubAERO" target="_blank" rel="noopener" class="btn-ghost" style="padding:10px 18px;font-size:0.75rem;color:var(--text-dark);border-color:rgba(0,0,0,0.2);">GitHub Repo 🐙</a>
+        </div>
       </div>
-      <div class="subaero-body">
-        <span class="subaero-badge">⭐ FEATURED FLAGSHIP PROJECT</span>
-        <h3 class="subaero-title">SubAERO</h3>
-        <div class="subaero-sub">Aerospace Digital Twin &amp; Real-Time Telemetry Platform</div>
-        <p class="subaero-desc">Real-time aero engine health monitoring platform built for <strong>HAL (Hindustan Aeronautics Limited)</strong> and <strong>IIT Indore Aerothon 2026</strong> using interactive 3D WebGL digital twins and predictive telemetry analytics.</p>
-        <div class="subaero-tech">
-          <span>React 19</span>
-          <span>Three.js (WebGL)</span>
-          <span>FastAPI</span>
-          <span>WebSockets</span>
-          <span>Python</span>
+
+      <!-- CENTER SUBMARINE DIGITAL TWIN PREVIEW IMAGE -->
+      <div class="sh-center-preview">
+        <img src="images/subaero-preview.jpg" alt="SubAERO Submarine Digital Twin Dashboard UI">
+      </div>
+
+      <!-- RIGHT SPECS PANEL -->
+      <div class="sh-right-specs">
+        <div class="sh-spec-item">
+          <div class="sh-spec-icon">🛡️</div>
+          <div>
+            <div class="sh-spec-lbl">DOMAIN</div>
+            <div class="sh-spec-val">Defense • AI • Simulation</div>
+          </div>
         </div>
-        <div class="subaero-actions">
-          <a href="https://github.com/Nithish-Bharathwaj-N/SubAERO" target="_blank" rel="noopener" class="proj-btn proj-btn-case" style="padding:10px 18px;font-size:0.78rem;">Case Study →</a>
-          <a href="https://null-pointers-aerothon-2026.vercel.app/" target="_blank" rel="noopener" class="proj-btn proj-btn-live" style="padding:10px 18px;font-size:0.78rem;">Live Demo ↗</a>
+
+        <div class="sh-spec-item">
+          <div class="sh-spec-icon">💼</div>
+          <div>
+            <div class="sh-spec-lbl">ROLE</div>
+            <div class="sh-spec-val">Full-Stack Developer</div>
+          </div>
+        </div>
+
+        <div class="sh-spec-item">
+          <div class="sh-spec-icon">📅</div>
+          <div>
+            <div class="sh-spec-lbl">DURATION</div>
+            <div class="sh-spec-val">Jan 2026 – Present</div>
+          </div>
+        </div>
+
+        <div class="sh-spec-item">
+          <div class="sh-spec-icon">⚡</div>
+          <div>
+            <div class="sh-spec-lbl">IMPACT</div>
+            <div class="sh-spec-val">Streamlines submarine design workflows and improves simulation accuracy by 35%.</div>
+          </div>
         </div>
       </div>
-    </article>
-
-    <!-- BOTTOM SECONDARY PROJECTS (2 COLUMNS) -->
-    <div class="secondary-grid" id="proj-grid">
-      <article class="proj-card fu" data-cat="ai-ml">
-        <div class="proj-thumb">
-          <span class="proj-badge">AI Full-Stack</span>
-          <img src="images/voyage-preview.jpg" alt="VoyageAI Smart Travel Planning Platform" loading="lazy">
-        </div>
-        <div class="proj-body">
-          <div class="proj-name">VoyageAI</div>
-          <div class="proj-sub">Smart Travel Planning Platform</div>
-          <p class="proj-desc">AI-powered travel itinerary generator with budget optimization, real-time maps and smart recommendations.</p>
-          <div class="proj-tech">
-            <span>Next.js</span>
-            <span>TypeScript</span>
-            <span>PostgreSQL</span>
-            <span>Gemini API</span>
-          </div>
-          <div class="proj-actions">
-            <a href="https://github.com/Nithish-Bharathwaj-N/Voyage-AI" target="_blank" rel="noopener" class="proj-btn proj-btn-case">Case Study →</a>
-            <a href="https://voyage-ai-nithish.vercel.app" target="_blank" rel="noopener" class="proj-btn proj-btn-live">Live Demo ↗</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="proj-card fu" data-cat="ai-ml">
-        <div class="proj-thumb">
-          <span class="proj-badge">AI &amp; Healthcare</span>
-          <img src="images/queuecure-preview.jpg" alt="Queue Cure AI Healthcare Queue Optimization" loading="lazy">
-        </div>
-        <div class="proj-body">
-          <div class="proj-name">Queue Cure AI</div>
-          <div class="proj-sub">Smart Queue Optimization System</div>
-          <p class="proj-desc">Healthcare queue management with AI-driven wait-time prediction and OPD workflow automation.</p>
-          <div class="proj-tech">
-            <span>Python</span>
-            <span>Flask</span>
-            <span>Scikit-Learn</span>
-            <span>MySQL</span>
-          </div>
-          <div class="proj-actions">
-            <a href="https://github.com/Nithish-Bharathwaj-N/QUEUE-CURE---AI" target="_blank" rel="noopener" class="proj-btn proj-btn-case" style="width:100%;">Case Study →</a>
-          </div>
-        </div>
-      </article>
     </div>
 
-    <div class="works-more">
-      <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener">View More Projects on GitHub ↗</a>
+    <!-- SECONDARY PROJECTS GRID (VOYAGEAI & QUEUECURE AI) -->
+    <div class="secondary-projects-grid fu">
+      <!-- LEFT CARD: VOYAGEAI -->
+      <div class="sec-proj-card">
+        <div class="sp-preview">
+          <img src="images/voyage-preview.jpg" alt="VoyageAI Travel Planner Preview">
+        </div>
+        <div class="sp-body">
+          <div class="sp-hdr">
+            <h4 class="sp-title">VoyageAI</h4>
+            <span class="sp-badge" style="color:#a855f7;background:rgba(168,85,247,0.12);">● Live</span>
+          </div>
+          <div class="sp-subtitle">AI Travel Planner</div>
+          <p class="sp-desc">An intelligent travel planning platform that creates personalized itineraries, estimates budgets, and provides real-time travel recommendations using AI.</p>
+          <div class="sp-pills">
+            <span class="sh-pill">Next.js</span>
+            <span class="sh-pill">TypeScript</span>
+            <span class="sh-pill">Tailwind CSS</span>
+            <span class="sh-pill">Node.js</span>
+            <span class="sh-pill">PostgreSQL</span>
+            <span class="sh-pill">AI API</span>
+          </div>
+          <div class="sp-actions">
+            <a href="https://nithishportfolio-eight.vercel.app" target="_blank" rel="noopener" class="sp-btn" style="background:var(--accent);color:#fff;">View Project →</a>
+            <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener" class="sp-btn" style="border:1px solid #cbd5e1;color:#334155;">GitHub Repo 🐙</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT CARD: QUEUECURE AI -->
+      <div class="sec-proj-card">
+        <div class="sp-preview">
+          <img src="images/queuecure-preview.jpg" alt="QueueCure AI Clinic Dashboard Preview">
+        </div>
+        <div class="sp-body">
+          <div class="sp-hdr">
+            <h4 class="sp-title">QueueCure AI</h4>
+            <span class="sp-badge" style="color:#10b981;background:rgba(16,185,129,0.12);">● Live</span>
+          </div>
+          <div class="sp-subtitle">AI-Powered Queue Management System</div>
+          <p class="sp-desc">A smart queue management solution for clinics and hospitals with AI-based token allocation, real-time updates, and SMS notifications.</p>
+          <div class="sp-pills">
+            <span class="sh-pill">MERN Stack</span>
+            <span class="sh-pill">Socket.IO</span>
+            <span class="sh-pill">MongoDB</span>
+            <span class="sh-pill">OpenAI API</span>
+            <span class="sh-pill">Twilio</span>
+            <span class="sh-pill">Chart.js</span>
+          </div>
+          <div class="sp-actions">
+            <a href="https://queue-cure-ai-web.vercel.app/" target="_blank" rel="noopener" class="sp-btn" style="background:var(--accent);color:#fff;">View Project →</a>
+            <a href="https://github.com/Nithish-Bharathwaj-N/QUEUE-CURE---AI" target="_blank" rel="noopener" class="sp-btn" style="border:1px solid #cbd5e1;color:#334155;">GitHub Repo 🐙</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM QUOTE & GITHUB BAR -->
+    <div class="projects-bottom-bar fu">
+      <div class="p-quote">“ Building solutions that solve <span style="color:var(--accent);font-weight:800;">real problems</span> and create <span style="color:var(--accent);font-weight:800;">meaningful impact</span>. ”</div>
+      <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener" class="p-gh-link">
+        🐙 Explore more on GitHub →
+      </a>
     </div>
   </div>
 </section>
