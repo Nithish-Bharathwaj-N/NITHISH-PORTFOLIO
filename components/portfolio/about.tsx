@@ -72,7 +72,7 @@ export function About() {
           <div className="bg-white border border-black/10 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
             <div>
               <div className="w-full aspect-square rounded-xl overflow-hidden mb-4 border-2 border-[#c8421a] shadow-[0_0_20px_rgba(200,66,26,0.25)]">
-                <img src="images/nithish-photo.jpg" alt="Nithish Bharathwaj N Portrait" className="w-full h-full object-cover object-top" />
+                <img src="images/nithish-about.jpg" alt="Nithish Bharathwaj N Portrait" className="w-full h-full object-cover object-top" />
               </div>
               <div className="space-y-2.5 text-xs">
                 {specItems.map((item) => (

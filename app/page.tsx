@@ -2953,7 +2953,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
       <!-- LEFT COLUMN: PHOTO HUD & SPEC LIST -->
       <div class="about-spec-card">
         <div class="hud-photo-wrap">
-          <img src="images/nithish-photo.jpg" alt="Nithish Bharathwaj N Portrait">
+          <img src="images/nithish-about.jpg" alt="Nithish Bharathwaj N Portrait">
         </div>
         <div class="spec-list">
           <div class="spec-item">
