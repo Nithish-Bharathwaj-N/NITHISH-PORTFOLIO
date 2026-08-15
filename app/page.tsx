@@ -3371,6 +3371,345 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 }
 .p-gh-link:hover { text-decoration: underline; }
 
+
+/* EXACT ABOUT ME LIGHT LAYOUT MATCHING REFERENCE IMAGE */
+#about {
+  background: #ffffff;
+  padding: 100px 80px 70px;
+}
+@media(max-width:860px) { #about { padding: 80px 24px 40px; } }
+
+.about-exact-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.about-exact-grid {
+  display: grid;
+  grid-template-columns: 310px 1fr 310px;
+  gap: 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  align-items: stretch;
+}
+@media(max-width:1200px) { .about-exact-grid { grid-template-columns: 1fr; } }
+
+/* LEFT COLUMN: TITLE, QUOTE, ARCH PHOTO & SPECS */
+.about-left-col {
+  display: flex;
+  flex-direction: column;
+}
+.about-quote-box {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.arch-photo-wrapper {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.arch-bg {
+  position: absolute;
+  bottom: 0;
+  width: 180px;
+  height: 180px;
+  border-radius: 90px 90px 40px 40px;
+  background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%);
+  z-index: 1;
+}
+.arch-dotted-ring {
+  position: absolute;
+  inset: -10px;
+  border: 2px dashed rgba(200,66,26,0.3);
+  border-radius: 50%;
+  z-index: 0;
+}
+.arch-photo-img {
+  position: relative;
+  z-index: 2;
+  width: 170px;
+  height: 210px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 80px 80px 20px 20px;
+}
+
+.spec-list-exact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+.sle-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.sle-icon {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-top: 1px;
+}
+.sle-lbl {
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+}
+.sle-val {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.3;
+}
+
+/* CENTER COLUMN: WHO AM I & MY APPROACH */
+.about-center-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.exact-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.ec-hdr {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.who-text-exact {
+  font-size: 0.84rem;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 20px;
+}
+.who-text-exact strong {
+  color: var(--accent);
+}
+
+.who-4stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+@media(max-width:600px) { .who-4stats { grid-template-columns: repeat(2, 1fr); } }
+
+.w4s-box {
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 12px;
+  padding: 16px 10px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+.w4s-icon {
+  font-size: 1.25rem;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.w4s-num {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.1;
+}
+.w4s-lbl {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.approach-steps-exact {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  position: relative;
+}
+@media(max-width:600px) { .approach-steps-exact { grid-template-columns: repeat(2, 1fr); } }
+
+.ase-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.ase-icon-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #fff7ed;
+  border: 1px solid #ffedd5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.ase-title {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #0f172a;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.ase-desc {
+  font-size: 0.66rem;
+  color: #64748b;
+  line-height: 1.35;
+}
+
+/* RIGHT COLUMN: SKILLS OVERVIEW & BEYOND CODE */
+.about-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skills-bars-exact {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.sbe-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.sbe-hdr {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.73rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+.sbe-[#c8421a] { color: var(--accent); }
+.sbe-bg {
+  height: 6px;
+  background: #f1f5f9;
+  border-radius: 99px;
+  overflow: hidden;
+}
+.sbe-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #f97316);
+  border-radius: 99px;
+}
+
+.beyond-8grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+@media(max-width:600px) { .beyond-8grid { grid-template-columns: repeat(2, 1fr); } }
+
+.b8-item {
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 10px;
+  padding: 12px 6px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  transition: all var(--t);
+}
+.b8-item:hover {
+  border-color: rgba(200,66,26,0.3);
+  transform: translateY(-2px);
+}
+.b8-icon { font-size: 1.15rem; margin-bottom: 4px; }
+.b8-title { font-size: 0.65rem; font-weight: 700; color: #334155; line-height: 1.25; }
+
+/* BOTTOM FULL-WIDTH: MY JOURNEY SO FAR */
+.journey-card-exact {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+.je-track {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  position: relative;
+}
+@media(max-width:1024px) { .je-track { grid-template-columns: repeat(3, 1fr); } }
+@media(max-width:600px) { .je-track { grid-template-columns: 1fr; } }
+
+.je-step {
+  display: flex;
+  flex-direction: column;
+}
+.je-time {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.je-icon-node {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #fff7ed;
+  border: 1.5px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.je-icon-node.now-node {
+  background: #10b981;
+  border-color: #fff;
+  color: #fff;
+  box-shadow: 0 0 12px #10b981;
+}
+.je-title {
+  font-family: var(--font-display);
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+.je-desc {
+  font-size: 0.68rem;
+  color: #64748b;
+  line-height: 1.45;
+}
+
 ` }} />
       <div dangerouslySetInnerHTML={{ __html: `
 <a id="skip-link" href="#intro">Skip to content</a>
@@ -3434,207 +3773,241 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 </section>
 
 <section id="about" aria-labelledby="about-title">
-  <div class="about-wrap">
-    <div class="sec-label dark-lbl">01</div>
-    <h2 id="about-title" class="sec-title" style="color:var(--text-dark)">ABOUT <span style="color:var(--accent)">ME.</span></h2>
-    <p style="font-size:0.9rem;color:var(--text-dark-3);margin-top:6px;margin-bottom:24px;font-style:italic;">"I enjoy solving complex problems, building real-world solutions, and constantly learning."</p>
+  <div class="about-exact-container">
+    <!-- MAIN 3-COLUMN LAYOUT -->
+    <div class="about-exact-grid fu">
+      <!-- LEFT COLUMN: TITLE, QUOTE, ARCH PHOTO & SPECS -->
+      <div class="about-left-col">
+        <div class="sec-label dark-lbl">02 ------</div>
+        <h2 id="about-title" class="sec-title" style="color:#0f172a;font-size:2.8rem;margin-bottom:10px;">ABOUT<br><span style="color:var(--accent)">ME.</span></h2>
+        
+        <p class="about-quote-box">“ I enjoy solving complex problems, building real-world solutions, and constantly learning. ”</p>
 
-    <!-- MAIN 3-COLUMN DASHBOARD GRID -->
-    <div class="about-dashboard-grid fu">
-      <!-- LEFT COLUMN: PHOTO HUD & SPEC LIST -->
-      <div class="about-spec-card">
-        <div class="hud-photo-wrap">
-          <img src="images/nithish-about.jpg" alt="Nithish Bharathwaj N Portrait">
+        <!-- ARCH PHOTO FRAME -->
+        <div class="arch-photo-wrapper">
+          <div class="arch-dotted-ring"></div>
+          <div class="arch-bg"></div>
+          <img src="images/nithish-about.jpg" alt="Nithish Bharathwaj N Portrait" class="arch-photo-img">
         </div>
-        <div class="spec-list">
-          <div class="spec-item">
-            <span class="spec-lbl">👤 NAME</span>
-            <span class="spec-val">Nithish Bharathwaj N</span>
+
+        <!-- SPEC LIST -->
+        <div class="spec-list-exact">
+          <div class="sle-item">
+            <div class="sle-icon">👤</div>
+            <div>
+              <div class="sle-lbl">NAME</div>
+              <div class="sle-val">Nithish Bharathwaj N</div>
+            </div>
           </div>
-          <div class="spec-item">
-            <span class="spec-lbl">💼 ROLE</span>
-            <span class="spec-val">Cybersecurity • AI/ML • Full-Stack Engineer</span>
+
+          <div class="sle-item">
+            <div class="sle-icon">💼</div>
+            <div>
+              <div class="sle-lbl">ROLE</div>
+              <div class="sle-val">Cybersecurity • AI/ML • Full-Stack Engineer</div>
+            </div>
           </div>
-          <div class="spec-item">
-            <span class="spec-lbl">🎓 EDUCATION</span>
-            <span class="spec-val">BE Cybersecurity | Chennai Institute of Technology</span>
+
+          <div class="sle-item">
+            <div class="sle-icon">🎓</div>
+            <div>
+              <div class="sle-lbl">EDUCATION</div>
+              <div class="sle-val">BE Cybersecurity<br>Chennai Institute of Technology</div>
+            </div>
           </div>
-          <div class="spec-item">
-            <span class="spec-lbl">📍 LOCATION</span>
-            <span class="spec-val">Chennai, Tamil Nadu, India</span>
+
+          <div class="sle-item">
+            <div class="sle-icon">📍</div>
+            <div>
+              <div class="sle-lbl">LOCATION</div>
+              <div class="sle-val">Chennai, Tamil Nadu, India</div>
+            </div>
           </div>
-          <div class="spec-item">
-            <span class="spec-lbl">✉️ EMAIL</span>
-            <span class="spec-val">nithishbharathwajn@gmail.com</span>
+
+          <div class="sle-item">
+            <div class="sle-icon">✉️</div>
+            <div>
+              <div class="sle-lbl">EMAIL</div>
+              <div class="sle-val">nithishbharathwajn@gmail.com</div>
+            </div>
           </div>
-          <div class="spec-item">
-            <span class="spec-lbl">🗣️ LANGUAGES</span>
-            <span class="spec-val">Tamil (Native) • English (Fluent)</span>
+
+          <div class="sle-item">
+            <div class="sle-icon">🗣️</div>
+            <div>
+              <div class="sle-lbl">LANGUAGES</div>
+              <div class="sle-val">Tamil (Native) • English (Fluent)</div>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- CENTER COLUMN: WHO AM I & MY APPROACH -->
-      <div class="about-center-stack">
+      <div class="about-center-col">
         <!-- WHO AM I CARD -->
-        <div class="who-card">
-          <div class="who-hdr">👤 WHO AM I?</div>
-          <p class="who-text">
+        <div class="exact-card">
+          <div class="ec-hdr"><span style="color:var(--accent);">👤</span> WHO AM I?</div>
+          <p class="who-text-exact">
             I'm a second-year BE Cybersecurity student at <strong>Chennai Institute of Technology</strong> with a strong passion for problem solving, building impactful projects, and exploring the intersection of security, AI, and full-stack development.<br><br>
             I love learning by doing. From competitive programming to cybersecurity, from full-stack development to AI/ML, I enjoy turning ideas into real solutions. Hackathons, projects, and challenges keep me motivated to grow every day.
           </p>
 
-          <div class="who-stats-row">
-            <div class="ws-box">
-              <div class="ws-icon">&lt;/&gt;</div>
-              <div class="ws-num">500+</div>
-              <div class="ws-lbl">LeetCode Problems</div>
+          <div class="who-4stats">
+            <div class="w4s-box">
+              <div class="w4s-icon">&lt;/&gt;</div>
+              <div class="w4s-num">500+</div>
+              <div class="w4s-lbl">LeetCode Problems</div>
             </div>
 
-            <div class="ws-box">
-              <div class="ws-icon">🏆</div>
-              <div class="ws-num">5+</div>
-              <div class="ws-lbl">Hackathon Finalist</div>
+            <div class="w4s-box">
+              <div class="w4s-icon">🏆</div>
+              <div class="w4s-num">5+</div>
+              <div class="w4s-lbl">Hackathon Finalist</div>
             </div>
 
-            <div class="ws-box">
-              <div class="ws-icon">🚀</div>
-              <div class="ws-num">3+</div>
-              <div class="ws-lbl">Projects Shipped</div>
+            <div class="w4s-box">
+              <div class="w4s-icon">🚀</div>
+              <div class="w4s-num">3+</div>
+              <div class="w4s-lbl">Major Projects</div>
             </div>
 
-            <div class="ws-box">
-              <div class="ws-icon">⏱️</div>
-              <div class="ws-num">5-6 Hrs</div>
-              <div class="ws-lbl">Daily Learning</div>
+            <div class="w4s-box">
+              <div class="w4s-icon">⏱️</div>
+              <div class="w4s-num">5-6 Hrs</div>
+              <div class="w4s-lbl">Daily Learning</div>
             </div>
           </div>
         </div>
 
         <!-- MY APPROACH CARD -->
-        <div class="approach-card">
-          <div class="who-hdr">💡 MY APPROACH</div>
-          <div class="approach-steps">
-            <div class="app-step">
-              <div class="app-icon-circle">💡</div>
-              <div class="app-name">Learn</div>
-              <div class="app-desc">Understand deeply and explore possibilities.</div>
+        <div class="exact-card">
+          <div class="ec-hdr"><span style="color:var(--accent);">💡</span> MY APPROACH</div>
+          <div class="approach-steps-exact">
+            <div class="ase-step">
+              <div class="ase-icon-circle">💡</div>
+              <div class="ase-title">LEARN</div>
+              <div class="ase-desc">Understand deeply and explore possibilities.</div>
             </div>
 
-            <div class="app-step">
-              <div class="app-icon-circle">&lt;/&gt;</div>
-              <div class="app-name">Build</div>
-              <div class="app-desc">Build, break, debug and make it better.</div>
+            <div class="ase-step">
+              <div class="ase-icon-circle">&lt;/&gt;</div>
+              <div class="ase-title">BUILD</div>
+              <div class="ase-desc">Build, break, debug and make it better.</div>
             </div>
 
-            <div class="app-step">
-              <div class="app-icon-circle">🎯</div>
-              <div class="app-name">Solve</div>
-              <div class="app-desc">Solve real-world problems with impact.</div>
+            <div class="ase-step">
+              <div class="ase-icon-circle">🎯</div>
+              <div class="ase-title">SOLVE</div>
+              <div class="ase-desc">Solve real-world problems with impact.</div>
             </div>
 
-            <div class="app-step">
-              <div class="app-icon-circle">📈</div>
-              <div class="app-name">Improve</div>
-              <div class="app-desc">Iterate, optimize and keep leveling up.</div>
+            <div class="ase-step">
+              <div class="ase-icon-circle">📈</div>
+              <div class="ase-title">IMPROVE</div>
+              <div class="ase-desc">Iterate, optimize and keep leveling up.</div>
             </div>
           </div>
         </div>
       </div>
 
       <!-- RIGHT COLUMN: SKILLS OVERVIEW & BEYOND CODE -->
-      <div class="about-right-stack">
+      <div class="about-right-col">
         <!-- SKILLS OVERVIEW -->
-        <div class="skills-ov-card">
-          <div class="who-hdr">📊 SKILLS OVERVIEW</div>
-          <div class="skill-bar-item">
-            <div class="sb-info"><span>Cybersecurity</span><span>85%</span></div>
-            <div class="sb-bg"><div class="sb-fill" style="width:85%;"></div></div>
-          </div>
+        <div class="exact-card">
+          <div class="ec-hdr"><span style="color:var(--accent);">📊</span> SKILLS OVERVIEW</div>
+          <div class="skills-bars-exact">
+            <div class="sbe-item">
+              <div class="sbe-hdr"><span>Cybersecurity</span><span style="color:var(--accent);">85%</span></div>
+              <div class="sbe-bg"><div class="sbe-fill" style="width:85%;"></div></div>
+            </div>
 
-          <div class="skill-bar-item">
-            <div class="sb-info"><span>Web Development</span><span>80%</span></div>
-            <div class="sb-bg"><div class="sb-fill" style="width:80%;"></div></div>
-          </div>
+            <div class="sbe-item">
+              <div class="sbe-hdr"><span>Web Development</span><span style="color:var(--accent);">80%</span></div>
+              <div class="sbe-bg"><div class="sbe-fill" style="width:80%;"></div></div>
+            </div>
 
-          <div class="skill-bar-item">
-            <div class="sb-info"><span>AI / Machine Learning</span><span>70%</span></div>
-            <div class="sb-bg"><div class="sb-fill" style="width:70%;"></div></div>
-          </div>
+            <div class="sbe-item">
+              <div class="sbe-hdr"><span>AI / Machine Learning</span><span style="color:var(--accent);">70%</span></div>
+              <div class="sbe-bg"><div class="sbe-fill" style="width:70%;"></div></div>
+            </div>
 
-          <div class="skill-bar-item">
-            <div class="sb-info"><span>Data Structures &amp; Algorithms</span><span>90%</span></div>
-            <div class="sb-bg"><div class="sb-fill" style="width:90%;"></div></div>
-          </div>
+            <div class="sbe-item">
+              <div class="sbe-hdr"><span>Data Structures &amp; Algorithms</span><span style="color:var(--accent);">90%</span></div>
+              <div class="sbe-bg"><div class="sbe-fill" style="width:90%;"></div></div>
+            </div>
 
-          <div class="skill-bar-item">
-            <div class="sb-info"><span>Problem Solving</span><span>90%</span></div>
-            <div class="sb-bg"><div class="sb-fill" style="width:90%;"></div></div>
-          </div>
+            <div class="sbe-item">
+              <div class="sbe-hdr"><span>Problem Solving</span><span style="color:var(--accent);">90%</span></div>
+              <div class="sbe-bg"><div class="sbe-fill" style="width:90%;"></div></div>
+            </div>
 
-          <div class="skill-bar-item">
-            <div class="sb-info"><span>Databases</span><span>75%</span></div>
-            <div class="sb-bg"><div class="sb-fill" style="width:75%;"></div></div>
-          </div>
+            <div class="sbe-item">
+              <div class="sbe-hdr"><span>Databases</span><span style="color:var(--accent);">75%</span></div>
+              <div class="sbe-bg"><div class="sbe-fill" style="width:75%;"></div></div>
+            </div>
 
-          <div class="skill-bar-item">
-            <div class="sb-info"><span>DevOps &amp; Tools</span><span>65%</span></div>
-            <div class="sb-bg"><div class="sb-fill" style="width:65%;"></div></div>
+            <div class="sbe-item">
+              <div class="sbe-hdr"><span>DevOps &amp; Tools</span><span style="color:var(--accent);">65%</span></div>
+              <div class="sbe-bg"><div class="sbe-fill" style="width:65%;"></div></div>
+            </div>
           </div>
         </div>
 
-        <!-- BEYOND CODE -->
-        <div class="beyond-code-card">
-          <div class="who-hdr">🎲 BEYOND CODE</div>
-          <div class="bc-grid">
-            <div class="bc-box"><div class="bc-icon">📖</div><div class="bc-title">Reading Books</div></div>
-            <div class="bc-box"><div class="bc-icon">🏋️</div><div class="bc-title">Workout &amp; Fitness</div></div>
-            <div class="bc-box"><div class="bc-icon">🎬</div><div class="bc-title">Tamil Movies</div></div>
-            <div class="bc-box"><div class="bc-icon">✈️</div><div class="bc-title">Travel &amp; Exploration</div></div>
-            <div class="bc-box"><div class="bc-icon">📈</div><div class="bc-title">Personal Growth</div></div>
-            <div class="bc-box"><div class="bc-icon">🎧</div><div class="bc-title">Music &amp; Focus</div></div>
+        <!-- BEYOND CODE (8 ITEMS) -->
+        <div class="exact-card">
+          <div class="ec-hdr"><span style="color:var(--accent);">🤍</span> BEYOND CODE</div>
+          <div class="beyond-8grid">
+            <div class="b8-item"><div class="b8-icon">📖</div><div class="b8-title">Reading Books</div></div>
+            <div class="b8-item"><div class="b8-icon">🏋️</div><div class="b8-title">Workout &amp; Fitness</div></div>
+            <div class="b8-item"><div class="b8-icon">🎬</div><div class="b8-title">Tamil Movies</div></div>
+            <div class="b8-item"><div class="b8-icon">✈️</div><div class="b8-title">Travel &amp; Exploration</div></div>
+
+            <div class="b8-item"><div class="b8-icon">📈</div><div class="b8-title">Personal Growth</div></div>
+            <div class="b8-item"><div class="b8-icon">🎧</div><div class="b8-title">Music &amp; Focus</div></div>
+            <div class="b8-item"><div class="b8-icon">🏏</div><div class="b8-title">Cricket Player</div></div>
+            <div class="b8-item"><div class="b8-icon">🎓</div><div class="b8-title">Always Learning</div></div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- BOTTOM FULL-WIDTH: MY JOURNEY SO FAR -->
-    <div class="about-journey-card fu">
-      <div class="who-hdr">📅 MY JOURNEY SO FAR</div>
-      <div class="aj-track">
-        <div class="aj-step">
-          <div class="aj-time">Till 2025 Mid</div>
-          <div class="aj-icon-node">&lt;/&gt;</div>
-          <div class="aj-title">Competitive Programming</div>
-          <div class="aj-desc">Started my coding journey solving problems and building strong DSA foundation.</div>
+    <!-- BOTTOM FULL-WIDTH CARD: MY JOURNEY SO FAR -->
+    <div class="journey-card-exact fu">
+      <div class="ec-hdr"><span style="color:var(--accent);">📅</span> MY JOURNEY SO FAR</div>
+      <div class="je-track">
+        <div class="je-step">
+          <div class="je-time">Till 2025 Mid</div>
+          <div class="je-icon-node">&lt;/&gt;</div>
+          <div class="je-title">Competitive Programming</div>
+          <div class="je-desc">Started my coding journey solving problems and building strong DSA foundation.</div>
         </div>
 
-        <div class="aj-step">
-          <div class="aj-time">End 2025</div>
-          <div class="aj-icon-node">🛡️</div>
-          <div class="aj-title">Cybersecurity</div>
-          <div class="aj-desc">Explored security fundamentals, networking, ethical hacking and tools.</div>
+        <div class="je-step">
+          <div class="je-time">End 2025</div>
+          <div class="je-icon-node">🛡️</div>
+          <div class="je-title">Cybersecurity</div>
+          <div class="je-desc">Explored security fundamentals, networking, ethical hacking and tools.</div>
         </div>
 
-        <div class="aj-step">
-          <div class="aj-time">Early 2026</div>
-          <div class="aj-icon-node">💻</div>
-          <div class="aj-title">Full-Stack Development</div>
-          <div class="aj-desc">Building end-to-end web applications and real-world projects.</div>
+        <div class="je-step">
+          <div class="je-time">Early 2026</div>
+          <div class="je-icon-node">💻</div>
+          <div class="je-title">Full-Stack Development</div>
+          <div class="je-desc">Building end-to-end web applications and real-world projects.</div>
         </div>
 
-        <div class="aj-step">
-          <div class="aj-time">Mid 2026</div>
-          <div class="aj-icon-node">🧠</div>
-          <div class="aj-title">AI / Machine Learning</div>
-          <div class="aj-desc">Diving into ML models, data and intelligent systems.</div>
+        <div class="je-step">
+          <div class="je-time">Mid 2026</div>
+          <div class="je-icon-node">🧠</div>
+          <div class="je-title">AI / Machine Learning</div>
+          <div class="je-desc">Diving into ML models, data and intelligent systems.</div>
         </div>
 
-        <div class="aj-step">
-          <div class="aj-time" style="color:#10b981;">Now</div>
-          <div class="aj-icon-node now-node">🚀</div>
-          <div class="aj-title">Projects &amp; Hackathons</div>
-          <div class="aj-desc">Building solutions, participating in hackathons and creating impact.</div>
+        <div class="je-step">
+          <div class="je-time" style="color:#10b981;">Now</div>
+          <div class="je-icon-node now-node">🚀</div>
+          <div class="je-title">Projects &amp; Hackathons</div>
+          <div class="je-desc">Building solutions, participating in hackathons and creating impact.</div>
         </div>
       </div>
     </div>
