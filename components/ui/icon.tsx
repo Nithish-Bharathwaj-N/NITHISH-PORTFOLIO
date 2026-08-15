@@ -39,6 +39,7 @@ import {
   Cpu,
   Network,
   Lock,
+  Brain,
 } from 'lucide-react';
 
 const leetcodeIcon = React.forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
@@ -102,6 +103,7 @@ const iconMap = {
   download: Download,
   send: Send,
   map: MapPinned,
+  brain: Brain,
 } as const;
 
 export type IconName = keyof typeof iconMap;
@@ -113,6 +115,6 @@ export function Icon({
   className,
   ...props
 }: { name: IconName; className?: string } & React.SVGProps<SVGSVGElement>) {
-  const Cmp = iconMap[name] as unknown as IconComponent;
+  const Cmp = (iconMap[name] || iconMap.code) as unknown as IconComponent;
   return <Cmp className={className} {...props} />;
 }

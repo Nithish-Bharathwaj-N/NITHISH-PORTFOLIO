@@ -4,12 +4,10 @@ import * as React from 'react';
 import { motion, useReducedMotion, type Variants } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import {
-  heroBadge,
-  heroHeadline,
-  heroSupporting,
   profile,
+  socials,
 } from '@/lib/portfolio-data';
-import { Icon } from '@/components/ui/icon';
+import { Icon, type IconName } from '@/components/ui/icon';
 import { HeroVisual, FloatingCards } from './hero-visual';
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -19,13 +17,13 @@ const container: Variants = {
   show: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
 };
 
-const badgeV: Variants = {
-  hidden: { opacity: 0, y: 14 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease } },
+const pretitleV: Variants = {
+  hidden: { opacity: 0, y: 12 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease } },
 };
 
-const lineV: Variants = {
-  hidden: { opacity: 0, y: 28 },
+const titleV: Variants = {
+  hidden: { opacity: 0, y: 24 },
   show: { opacity: 1, y: 0, transition: { duration: 0.7, ease } },
 };
 
@@ -39,52 +37,74 @@ const btnV: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease } },
 };
 
-function splitHeadline(text: string) {
-  const words = text.split(' ');
-  const mid = Math.ceil(words.length / 2);
-  return [words.slice(0, mid).join(' '), words.slice(mid).join(' ')];
-}
-
 export function Hero() {
   const reduce = useReducedMotion();
-  const [lineA, lineB] = React.useMemo(() => splitHeadline(heroHeadline), []);
 
   return (
     <section
       id="home"
-      className="relative flex min-h-[100svh] items-center overflow-hidden pt-24 pb-16 sm:pt-28"
+      className="relative flex min-h-[100svh] items-center overflow-hidden pt-28 pb-16 sm:pt-32"
     >
-      {/* Background layers */}
+      {/* Hudson-style Background Glows */}
       <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden>
-        <div className="absolute inset-0 bg-grid [mask-image:radial-gradient(ellipse_70%_60%_at_50%_30%,#000_30%,transparent_75%)] opacity-60" />
-        <div className="absolute left-1/2 top-0 h-[480px] w-[820px] -translate-x-1/2 rounded-full bg-brand-500/10 blur-[120px]" />
+        <div className="absolute inset-0 bg-grid [mask-image:radial-gradient(ellipse_75%_65%_at_50%_35%,#000_30%,transparent_80%)] opacity-50" />
+        <div className="absolute -left-20 top-1/4 h-[500px] w-[500px] rounded-full bg-brand-500/10 blur-[140px]" />
+        <div className="absolute right-0 top-1/3 h-[450px] w-[450px] rounded-full bg-cyan-500/10 blur-[130px]" />
       </div>
 
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:px-8">
+      {/* Social list sidebar (Hudson theme style) */}
+      <div className="hidden lg:fixed lg:bottom-12 lg:left-8 lg:z-30 lg:flex lg:flex-col lg:items-center lg:gap-5">
+        <div className="flex flex-col items-center gap-4 text-muted-foreground">
+          {socials.map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={s.label}
+              className="transition-transform hover:-translate-y-1 hover:text-brand-500"
+            >
+              <Icon name={s.icon as IconName} className="h-5 w-5" />
+            </a>
+          ))}
+        </div>
+        <div className="h-16 w-px bg-border" />
+      </div>
+
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8 lg:px-8">
         <motion.div
           variants={container}
           initial={reduce ? false : 'hidden'}
           animate="show"
           className="flex flex-col items-start gap-6"
         >
-          <motion.div variants={badgeV}>
-            <span className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/60 px-3.5 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
+          {/* Hudson Pretitle & Status Badge */}
+          <motion.div variants={pretitleV} className="flex flex-wrap items-center gap-3">
+            <span className="text-sm font-semibold uppercase tracking-[0.3em] text-brand-500">
+              Hello
+            </span>
+            <span className="h-1 w-1 rounded-full bg-border" />
+            <span className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-500/60" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-500" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500/60" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
               </span>
-              {heroBadge}
+              Top 8 Aerothon 2026 Finalist (HAL & IIT Indore)
             </span>
           </motion.div>
 
-          <h1 className="text-balance text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-[clamp(2.75rem,5.2vw,4.6rem)]">
-            <motion.span variants={lineV} className="block">
-              {lineA}
+          {/* Hudson Big Bold Typography Headline */}
+          <h1 className="text-balance text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-[clamp(2.8rem,5vw,4.5rem)]">
+            <motion.span variants={titleV} className="block text-foreground">
+              I'm {profile.name}
             </motion.span>
-            <motion.span variants={lineV} className="block">
-              {lineB}{' '}
-              <span className="relative whitespace-nowrap text-brand-500">
-                solutions
+            <motion.span variants={titleV} className="block text-muted-foreground">
+              Full-Stack & AI Engineer
+            </motion.span>
+            <motion.span variants={titleV} className="block text-foreground">
+              based in{' '}
+              <span className="relative inline-block text-brand-500">
+                Chennai, India.
                 <svg
                   className="absolute -bottom-2 left-0 h-2.5 w-full text-brand-500/40"
                   viewBox="0 0 200 10"
@@ -95,7 +115,7 @@ export function Hero() {
                   <path
                     d="M2 7 Q 50 1 100 5 T 198 6"
                     stroke="currentColor"
-                    strokeWidth="2"
+                    strokeWidth="2.5"
                     strokeLinecap="round"
                   />
                 </svg>
@@ -103,50 +123,48 @@ export function Hero() {
             </motion.span>
           </h1>
 
+          {/* Supporting Bio Paragraph */}
           <motion.p
             variants={paraV}
             className="max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg"
           >
-            {heroSupporting}
+            Designing & engineering high-precision software combining **AI**, **3D WebGL Digital Twins** (*SubAERO*), and **Cybersecurity**. Solved **500+ LeetCode problems** (Rating: **1771**).
           </motion.p>
 
+          {/* Hudson Action Buttons */}
           <motion.div
             variants={btnV}
-            className="flex flex-wrap items-center gap-3"
+            className="flex flex-wrap items-center gap-4 pt-2"
           >
             <a
-              href="#projects"
-              className="group inline-flex items-center gap-2 rounded-lg bg-foreground px-5 py-3 text-sm font-medium text-background transition-all hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              href="#about"
+              className="group inline-flex items-center gap-2 rounded-md bg-foreground px-6 py-3.5 text-sm font-semibold text-background transition-all hover:bg-brand-500 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
             >
-              View Projects
+              More About Me
               <Icon
                 name="arrowRight"
-                className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+                className="h-4 w-4 transition-transform group-hover:translate-x-1"
               />
+            </a>
+            <a
+              href="#contact"
+              className="group inline-flex items-center gap-2 rounded-md border border-border bg-background/60 px-6 py-3.5 text-sm font-semibold backdrop-blur transition-all hover:border-brand-500 hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
+            >
+              Get In Touch
+              <Icon name="send" className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </a>
             <a
               href={profile.resumeUrl}
               download
-              className="group inline-flex items-center gap-2 rounded-lg border border-border bg-background/60 px-5 py-3 text-sm font-medium backdrop-blur transition-all hover:border-foreground/30 hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="group inline-flex items-center gap-2 rounded-md border border-border/70 bg-secondary/40 px-5 py-3.5 text-sm font-medium transition-all hover:border-foreground/30 hover:bg-secondary"
             >
               <Icon name="download" className="h-4 w-4" />
-              Download Resume
+              Resume
             </a>
-          </motion.div>
-
-          <motion.div
-            variants={btnV}
-            className="flex items-center gap-6 pt-2 text-sm text-muted-foreground"
-          >
-            <div className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              Available for internships
-            </div>
-            <div className="hidden h-4 w-px bg-border sm:block" />
-            <span className="hidden sm:inline">Based in Chennai, India</span>
           </motion.div>
         </motion.div>
 
+        {/* 3D Visual & Floating Highlights */}
         <motion.div
           initial={reduce ? false : { opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -160,16 +178,16 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll cue */}
+      {/* Hudson Scroll Indicator */}
       <motion.a
         href="#about"
         aria-label="Scroll to about"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.6 }}
-        className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-1.5 text-muted-foreground transition-colors hover:text-foreground sm:flex"
+        className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-1.5 text-muted-foreground transition-colors hover:text-brand-500 sm:flex"
       >
-        <span className="text-[11px] uppercase tracking-[0.2em]">Scroll</span>
+        <span className="text-[11px] font-semibold uppercase tracking-[0.25em]">Scroll</span>
         <motion.span
           animate={reduce ? undefined : { y: [0, 6, 0] }}
           transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}

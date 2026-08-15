@@ -67,7 +67,7 @@ export function About() {
               <div className="absolute -inset-2 rounded-full border border-dashed border-border/70" aria-hidden />
               <div className="relative aspect-square w-full overflow-hidden rounded-full border-2 border-border bg-secondary shadow-lg">
                 <Image
-                  src="/images/nithis_profile.jpeg"
+                  src="/images/nithish-photo.jpg"
                   alt={`${profile.name} — portrait`}
                   fill
                   sizes="(max-width: 1024px) 80vw, 340px"

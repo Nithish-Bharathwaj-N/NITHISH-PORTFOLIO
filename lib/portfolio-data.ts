@@ -60,11 +60,11 @@ export type SocialLink = {
 
 export const profile = {
   name: 'Nithish Bharathwaj N',
-  role: 'AI • Cybersecurity • Full-Stack Developer',
+  role: 'Full-Stack Developer • 3D Digital Twins • Cybersecurity & AI',
   email: 'nithishbharathwajn@gmail.com',
   phone: '+91 9363958388',
   location: 'Chennai, Tamil Nadu, India',
-  resumeUrl: '/NITHISH_BHARATHWAJ_N_FlowCV_Resume.pdf',
+  resumeUrl: '/NITHISH_BHARATHWAJ_N_Resume_2026-08-15.pdf',
   tagline: 'Designed & Developed by Nithish Bharathwaj N.',
 } as const;
 
@@ -78,96 +78,129 @@ export const navItems: NavItem[] = [
   { label: 'Contact', href: '#contact' },
 ];
 
-export const heroBadge = 'Open to Internships • AI • Cybersecurity • Full-Stack';
+export const heroBadge = 'Top 8 Aerothon 2026 Finalist (HAL & IIT Indore) • AI • Cybersecurity • Full-Stack';
 
 export const heroHeadline =
-  'Building AI-powered software that transforms complex ideas into practical, real-world solutions.';
+  'Building AI-powered applications, 3D Digital Twins, and secure full-stack software architectures.';
 
 export const heroSupporting =
-  'I design and develop intelligent full-stack applications that combine artificial intelligence, cybersecurity, and modern web technologies. My goal is to build secure, scalable software that solves meaningful real-world problems.';
+  'I design and develop high-performance software combining artificial intelligence, 3D WebGL simulations, cybersecurity, and modern full-stack architectures. Top 8 Finalist in Aerothon 2026 (HAL & IIT Indore).';
 
 export const aboutParagraph =
-  "I'm a Computer Science (Cyber Security) student who enjoys turning ideas into software that people can actually use. My journey into development began with curiosity about how technology works, but quickly evolved into a passion for building intelligent systems that combine AI, secure engineering, and modern web development. I enjoy solving challenging problems through hackathons, competitive programming, and personal projects. I'm currently focused on strengthening my expertise in AI, cybersecurity, cloud technologies, and scalable full-stack application development.";
+  "I'm a Computer Science (Cyber Security) student at Chennai Institute of Technology who enjoys building software that solves complex real-world problems. My expertise spans AI application engineering, 3D WebGL simulation platforms (SubAERO), cybersecurity threat monitoring, and full-stack software development. Top 8 Finalist in Aerothon 2026 (HAL & IIT Indore), finalist in 5+ national hackathons, and active competitive programmer with 500+ LeetCode problems solved (Rating: 1771).";
 
 export const aboutStats: Stat[] = [
-  { value: '513+', label: 'LeetCode Problems' },
+  { value: '500+', label: 'LeetCode Problems' },
+  { value: '1771', label: 'Contest Rating' },
+  { value: '118 Days', label: 'Coding Streak' },
   { value: '5+', label: 'Hackathon Finalist' },
-  { value: '1731', label: 'Contest Rating' },
-  { value: '34', label: 'Contests' },
 ];
 
 export const skillGroups: SkillGroup[] = [
   {
     category: 'Programming Languages',
     icon: 'code',
-    skills: ['Python', 'C++', 'JavaScript', 'SQL', 'C', 'Java'],
+    skills: ['Python', 'C++', 'C', 'JavaScript', 'TypeScript', 'SQL', 'Java'],
   },
   {
-    category: 'Frontend',
+    category: 'Frontend & 3D',
     icon: 'layout',
-    skills: ['React.js', 'HTML', 'CSS', 'Tailwind CSS'],
+    skills: ['React 19', 'Next.js', 'Three.js (WebGL)', 'Blender', 'HTML5', 'CSS3', 'Tailwind CSS'],
   },
   {
-    category: 'Backend',
+    category: 'Backend & API',
     icon: 'server',
-    skills: ['Node.js', 'Express.js', 'REST APIs'],
+    skills: ['Node.js', 'Express.js', 'FastAPI', 'REST APIs', 'Socket.IO'],
   },
   {
-    category: 'Database',
+    category: 'Database & Cloud',
     icon: 'database',
-    skills: ['MySQL'],
+    skills: ['PostgreSQL', 'MySQL', 'Docker', 'AWS Cloud', 'Vercel', 'Vite'],
+  },
+  {
+    category: 'Machine Learning & AI',
+    icon: 'brain',
+    skills: ['Scikit-Learn', 'Multi-Target Regression', 'Foundation Models', 'LLMs', 'Prompt Engineering'],
   },
   {
     category: 'Cybersecurity',
     icon: 'shield',
-    skills: ['Linux', 'Networking', 'CTF'],
+    skills: ['Networking', 'Linux Administration', 'CTF', 'Threat Modeling'],
   },
   {
-    category: 'Tools',
+    category: 'Tools & Concepts',
     icon: 'wrench',
-    skills: ['Git', 'GitHub', 'CI/CD'],
-  },
-  {
-    category: 'Learning',
-    icon: 'graduation',
-    skills: ['AI', 'Cloud Computing', 'System Design'],
+    skills: ['Git', 'GitHub', 'CI/CD', 'Data Structures & Algorithms', 'Aero-Thermal Physics'],
   },
 ];
 
 export const projects: Project[] = [
   {
+    slug: 'subaero',
+    title: 'SubAERO',
+    tagline: 'Aerospace Digital Twin & PHM Platform for HAL Tejas turbojet engines.',
+    description:
+      'High-precision digital twin featuring 3D engine component modeling in Blender, real-time WebGL (Three.js) visualizations, aero-thermal physics calculations, and multi-target ML regression (98.7%–99.9% R² accuracy) for health and RUL prediction.',
+    tech: ['React 19', 'TypeScript', 'Three.js', 'Blender', 'Python', 'FastAPI', 'Scikit-Learn', 'Tailwind CSS', 'Vercel'],
+    github: 'https://github.com/Nithish-Bharathwaj-N/SubAERO',
+    liveDemo: 'https://null-pointers-aerothon-2026.vercel.app/',
+    featured: true,
+    image: '/images/subaero-preview.jpg',
+  },
+  {
     slug: 'voyage-ai',
     title: 'Voyage AI',
     tagline: 'AI-powered intelligent travel planning platform.',
     description:
-      'Create personalized itineraries using AI, optimize travel budgets, recommend destinations, and manage complete travel plans.',
-    tech: ['React', 'Node', 'Express', 'Tailwind', 'REST APIs'],
+      'Create personalized trip itineraries using LLMs and Prompt Engineering, budget optimization, destination recommendations, and interactive travel management dashboards.',
+    tech: ['React', 'Node.js', 'Express', 'Tailwind CSS', 'REST APIs', 'PostgreSQL'],
     github: 'https://github.com/Nithish-Bharathwaj-N/Voyage-AI',
     featured: true,
     image: '/images/canva-traveler-MAED8krQkFQ.jpg',
   },
   {
+    slug: 'finsight',
+    title: 'FinSight',
+    tagline: 'AI-driven financial analytics and banking platform.',
+    description:
+      'Real-time financial insights, transaction analytics, and modern banking dashboards.',
+    tech: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Vercel'],
+    github: 'https://github.com/Nithish-Bharathwaj-N/FinSight',
+    liveDemo: 'https://fin-sight-banking.vercel.app',
+    featured: true,
+  },
+  {
+    slug: 'sentinelx',
+    title: 'SentinelX',
+    tagline: 'Autonomous cyber risk intelligence & threat monitoring.',
+    description:
+      'Real-time attack surface monitoring and threat intelligence assessment platform.',
+    tech: ['TypeScript', 'React', 'Node.js', 'Cybersecurity'],
+    github: 'https://github.com/Nithish-Bharathwaj-N/SentinelX',
+    featured: false,
+  },
+  {
     slug: 'queue-cure',
     title: 'Queue Cure',
-    tagline: 'AI-powered smart healthcare queue management platform.',
+    tagline: 'AI-powered smart healthcare queue management system.',
     description:
-      'Modernizes hospital queues using AI wait-time prediction, QR check-in, live synchronization, and role-based dashboards.',
-    tech: ['React', 'Node', 'Express', 'Socket.IO', 'MySQL', 'Tailwind'],
+      'Digitizes hospital queues with AI wait-time estimation, QR check-in, live token tracking via Socket.IO.',
+    tech: ['React', 'Node.js', 'Express', 'Socket.IO', 'MySQL', 'Tailwind'],
     github: 'https://github.com/Nithish-Bharathwaj-N/QUEUE-CURE---AI',
-    featured: true,
+    featured: false,
     image: '/images/istockphoto-1193029537-612x612.jpg',
   },
 ];
 
 export const experiences: Experience[] = [
   {
-    role: 'AI Virtual Intern',
-    org: 'AICTE × EduSkills × AWS Academy',
+    role: 'Generative AI Virtual Intern',
+    org: 'AWS Academy × AICTE × EduSkills',
     period: 'October 2025 – December 2025',
     bullets: [
-      'Completed a 10-week Generative AI Virtual Internship under the AICTE National Internship Program.',
-      'Learned AI concepts through AWS Academy.',
-      'Strengthened AI, cloud, and software engineering skills.',
+      'Completed an intensive 10-week virtual internship on Generative AI architectures and AWS Cloud infrastructure.',
+      'Developed hands-on expertise with Foundation Models, LLMs, Prompt Engineering, and AWS AI services.',
+      'Built foundational expertise in designing secure, scalable AI-powered cloud applications.',
     ],
   },
 ];
@@ -182,27 +215,19 @@ export const education: Education[] = [
 ];
 
 export const certifications: Certification[] = [
-  { title: 'Python Essentials 1', issuer: 'Cisco', date: '2024' },
-  { title: 'Python Essentials 2', issuer: 'Cisco', date: '2024' },
-  { title: 'Introduction to Cybersecurity', issuer: 'Cisco', date: '2024' },
-  { title: 'Introduction to Modern AI', issuer: 'Cisco', date: '2024' },
-  { title: 'Operating Systems Basics', issuer: 'Cisco', date: '2024' },
-  { title: 'GEN-AI Virtual Internship', issuer: 'AICTE × AWS Academy', date: 'Dec 2025' },
+  { title: 'AWS Academy Gen-AI Virtual Internship', issuer: 'AICTE × EduSkills', date: 'Dec 2025' },
+  { title: 'Cisco Python Essentials 1 & 2', issuer: 'Cisco Networking Academy', date: '2024' },
+  { title: 'Cisco Introduction to Cybersecurity', issuer: 'Cisco Networking Academy', date: '2024' },
+  { title: 'Cisco Introduction to Modern AI', issuer: 'Cisco Networking Academy', date: '2024' },
+  { title: 'Cisco Operating Systems', issuer: 'Cisco Networking Academy', date: '2024' },
 ];
 
 export const achievements: Achievement[] = [
-  { title: 'Finalist in 5+ National-Level Hackathons', icon: 'trophy' },
-  { title: '513+ LeetCode Problems', icon: 'code' },
-  { title: 'Contest Rating 1731', detail: 'LeetCode competitive', icon: 'gauge' },
-  { title: 'Top 11.62%', detail: 'LeetCode contest percentile', icon: 'trending' },
-  { title: '34 Contests', detail: 'LeetCode rated contests', icon: 'hash' },
-  { title: "Queue Cure '26 Participant", icon: 'stethoscope' },
-  { title: 'RootAccess CTF 2026 Participant', icon: 'flag' },
-  { title: 'Notion Workshop & Unbound Creativity with Trae', icon: 'lightbulb' },
-  { title: 'International Abacus Competition Qualifier', icon: 'calculator' },
-  { title: 'District-Level Throwball Player', icon: 'dumbbell' },
-  { title: 'Zonal-Level Carrom Player', icon: 'circle' },
-  { title: "Chief Minister's Trophy Participant", icon: 'medal' },
+  { title: 'Top 8 Finalist – Aerothon 2026', detail: 'HAL (Hindustan Aeronautics Limited) & IIT Indore National Hackathon', icon: 'trophy' },
+  { title: 'Finalist in 5+ National-Level Hackathons', detail: 'AI, 3D Digital Twins, and Full-Stack Apps', icon: 'medal' },
+  { title: '500+ LeetCode Problems Solved', detail: 'Rating: 1771 | 118-Day Coding Streak', icon: 'code' },
+  { title: 'International Abacus Competition Qualifier', detail: 'Cleared State-Level Selection Round', icon: 'calculator' },
+  { title: 'District-Level Throwball & Zonal Carrom Player', detail: 'CM Trophy participant in Athletics & Cricket', icon: 'dumbbell' },
 ];
 
 export const socials: SocialLink[] = [
