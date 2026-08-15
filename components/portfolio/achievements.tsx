@@ -1,57 +1,56 @@
 'use client';
 
-import { motion, useReducedMotion } from 'framer-motion';
-import { achievements } from '@/lib/portfolio-data';
-import { Icon, type IconName } from '@/components/ui/icon';
-import {
-  SectionShell,
-  SectionHeading,
-  StaggerGroup,
-  StaggerItem,
-} from '@/components/motion/primitives';
+import React from 'react';
 
 export function Achievements() {
-  const reduce = useReducedMotion();
-  return (
-    <SectionShell id="achievements" className="pt-0">
-      <SectionHeading
-        eyebrow="Achievements"
-        title="Milestones & recognition"
-        description="Competitive programming, hackathons, CTFs, and beyond-the-screen pursuits."
-      />
+  const items = [
+    { icon: '💻', num: '500+', title: 'LeetCode Problems Solved', desc: 'Strong foundation in DSA, algorithms and problem solving.' },
+    { icon: '📊', num: '1771', title: 'Peak Contest Rating', desc: 'Achieved a peak rating of 1771 with 118-day coding streak.' },
+    { icon: '🏆', num: 'Top 8', title: 'Aerothon 2026 Finalist', desc: 'Ranked Top 8 nationwide in HAL & IIT Indore Aerothon 2026.' },
+    { icon: '🚀', num: '5+', title: 'National Hackathon Finalist', desc: 'Finalist in 5+ national-level hackathons across domains.' },
+  ];
 
-      <StaggerGroup
-        fast
-        className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3"
-      >
-        {achievements.map((a) => (
-          <StaggerItem key={a.title}>
-            <motion.article
-              whileHover={reduce ? undefined : { y: -4 }}
-              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative flex h-full items-center gap-3.5 overflow-hidden rounded-xl border border-border/70 bg-card/40 p-4 transition-colors hover:border-brand-500/40"
+  return (
+    <section id="achievements" className="bg-[#0d0d0d] py-20 lg:py-28 px-6 lg:px-20 text-white">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex items-center gap-2.5 text-xs font-extrabold uppercase tracking-widest text-white/40 mb-4">
+          04 <span className="w-7 h-[1px] bg-white/40 inline-block" />
+        </div>
+        <h2 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight mb-12">
+          Key Achievements.
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+          {items.map((item) => (
+            <div
+              key={item.title}
+              className="bg-[#111111] border border-white/10 rounded-2xl p-7 transition-all hover:border-[#c8421a]/35 hover:-translate-y-1"
             >
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-border/60 bg-background text-brand-500 transition-colors group-hover:bg-brand-500/10">
-                <Icon
-                  name={a.icon as IconName}
-                  className="h-[18px] w-[18px] transition-transform duration-300 group-hover:scale-110"
-                />
-              </span>
-              <div className="min-w-0 flex-1">
-                <p className="truncate text-sm font-medium tracking-tight">
-                  {a.title}
-                </p>
-                {a.detail && (
-                  <p className="mt-0.5 text-xs text-muted-foreground">
-                    {a.detail}
-                  </p>
-                )}
+              <span className="text-3xl mb-4 block">{item.icon}</span>
+              <div className="font-display text-4xl font-extrabold text-white tracking-tight mb-2">
+                {item.num}
               </div>
-              <span className="h-1.5 w-1.5 rounded-full bg-border transition-colors group-hover:bg-brand-500" />
-            </motion.article>
-          </StaggerItem>
-        ))}
-      </StaggerGroup>
-    </SectionShell>
+              <div className="text-xs font-bold text-white/65 mb-2">
+                {item.title}
+              </div>
+              <p className="text-xs text-white/35 leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <a
+            href="https://www.linkedin.com/in/nithish-bharathwaj-n-847a00379"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-3 text-xs font-bold uppercase tracking-wider border border-white/20 rounded-md text-white/75 hover:border-white/60 hover:text-white transition-all"
+          >
+            View All Achievements ↗
+          </a>
+        </div>
+      </div>
+    </section>
   );
 }

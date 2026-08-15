@@ -1,147 +1,181 @@
 'use client';
 
-import Image from 'next/image';
-import { motion, useReducedMotion } from 'framer-motion';
-import { projects, type Project } from '@/lib/portfolio-data';
-import { Icon } from '@/components/ui/icon';
-import {
-  SectionShell,
-  SectionHeading,
-  Reveal,
-} from '@/components/motion/primitives';
-
-function ProjectCard({ project, index }: { project: Project; index: number }) {
-  const reduce = useReducedMotion();
-  return (
-    <motion.article
-      initial={reduce ? false : { opacity: 0, y: 28 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-80px' }}
-      transition={{ duration: 0.6, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={reduce ? undefined : { y: -6 }}
-      className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/70 bg-card/40 transition-colors hover:border-brand-500/40"
-    >
-      {/* Screenshot */}
-      <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-border/60 bg-secondary">
-        {project.image ? (
-          <Image
-            src={project.image}
-            alt={`${project.title} screenshot`}
-            fill
-            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-            className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-          />
-        ) : (
-          <>
-            <div className="absolute inset-0 bg-grid opacity-50" aria-hidden />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="flex flex-col items-center gap-3 text-center">
-                <span className="grid h-12 w-12 place-items-center rounded-xl border border-border/60 bg-background/70 text-brand-500">
-                  <Icon name="layout" className="h-5 w-5" />
-                </span>
-                <p className="text-xs font-medium text-muted-foreground">
-                  Screenshot Placeholder
-                </p>
-              </div>
-            </div>
-          </>
-        )}
-        {/* Browser chrome */}
-        <div className="absolute inset-x-0 top-0 flex items-center gap-1.5 border-b border-border/60 bg-background/60 px-3 py-2 backdrop-blur">
-          <span className="h-2 w-2 rounded-full bg-red-400/70" />
-          <span className="h-2 w-2 rounded-full bg-yellow-400/70" />
-          <span className="h-2 w-2 rounded-full bg-green-400/70" />
-          <span className="ml-2 hidden flex-1 truncate rounded-md bg-secondary px-2 py-0.5 text-[10px] text-muted-foreground sm:block">
-            {project.slug}.app
-          </span>
-        </div>
-        {project.featured && (
-          <span className="absolute right-3 top-12 rounded-full border border-brand-500/30 bg-background/80 px-2.5 py-1 text-[10px] font-medium text-brand-500 backdrop-blur">
-            Featured
-          </span>
-        )}
-        {/* Hover overlay */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-      </div>
-
-      {/* Body */}
-      <div className="flex flex-1 flex-col gap-4 p-6">
-        <div className="flex-1">
-          <h3 className="text-xl font-semibold tracking-tight">{project.title}</h3>
-          <p className="mt-1 text-sm font-medium text-brand-500">
-            {project.tagline}
-          </p>
-          <p className="mt-3 text-pretty text-sm leading-relaxed text-muted-foreground">
-            {project.description}
-          </p>
-        </div>
-
-        <ul className="flex flex-wrap gap-2">
-          {project.tech.map((t) => (
-            <li
-              key={t}
-              className="rounded-md border border-border/60 bg-background/60 px-2 py-0.5 text-[11px] font-medium text-muted-foreground"
-            >
-              {t}
-            </li>
-          ))}
-        </ul>
-
-        <div className="flex items-center gap-3 pt-1">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex flex-1 items-center justify-center gap-2 rounded-lg border border-border bg-background/60 px-3.5 py-2 text-sm font-medium transition-colors hover:border-foreground/30 hover:bg-secondary"
-          >
-            <Icon name="github" className="h-4 w-4" />
-            GitHub
-          </a>
-          <a
-            href="#projects"
-            aria-disabled="true"
-            className="inline-flex flex-1 cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-dashed border-border bg-secondary/40 px-3.5 py-2 text-sm font-medium text-muted-foreground"
-            title="Live demo coming soon"
-          >
-            <Icon name="external" className="h-4 w-4" />
-            Live Demo
-          </a>
-        </div>
-      </div>
-    </motion.article>
-  );
-}
+import React, { useState } from 'react';
 
 export function Projects() {
+  const [filter, setFilter] = useState('all');
+
+  const projects = [
+    {
+      name: 'SubAERO',
+      sub: 'Aerospace Digital Twin Platform',
+      desc: 'Real-time aero engine health monitoring platform for HAL using 3D digital twins and predictive analytics.',
+      cat: ['3d-webgl', 'ai-ml'],
+      badge: '3D Full-Stack',
+      featured: true,
+      image: '/images/subaero-preview.jpg',
+      tech: ['React 19', 'Three.js', 'FastAPI', 'WebSockets'],
+      caseStudy: 'https://github.com/Nithish-Bharathwaj-N/SubAERO',
+      liveDemo: 'https://null-pointers-aerothon-2026.vercel.app/',
+    },
+    {
+      name: 'VoyageAI',
+      sub: 'Smart Travel Planning Platform',
+      desc: 'AI-powered travel itinerary generator with budget optimization, real-time maps and smart recommendations.',
+      cat: ['ai-ml'],
+      badge: 'AI Full-Stack',
+      image: '/images/voyage-preview.jpg',
+      tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Gemini API'],
+      caseStudy: 'https://github.com/Nithish-Bharathwaj-N/Voyage-AI',
+      liveDemo: 'https://voyage-ai-nithish.vercel.app',
+    },
+    {
+      name: 'Queue Cure AI',
+      sub: 'Smart Queue Optimization System',
+      desc: 'Healthcare queue management with AI-driven wait-time prediction and OPD workflow automation.',
+      cat: ['ai-ml'],
+      badge: 'AI & Healthcare',
+      image: '/images/queuecure-preview.jpg',
+      tech: ['Python', 'Flask', 'Scikit-Learn', 'MySQL'],
+      caseStudy: 'https://github.com/Nithish-Bharathwaj-N/QUEUE-CURE---AI',
+    },
+    {
+      name: 'SentinelX',
+      sub: 'Threat Intelligence & Log Analyzer',
+      desc: 'Security telemetry platform for real-time threat detection, log parsing and incident visualization.',
+      cat: ['cybersecurity', 'ai-ml'],
+      badge: 'Cybersecurity',
+      image: '',
+      tech: ['Python', 'FastAPI', 'SQLite', 'DKIM 2.0'],
+      caseStudy: 'https://github.com/Nithish-Bharathwaj-N',
+      liveDemo: 'https://github.com/Nithish-Bharathwaj-N',
+    },
+  ];
+
+  const filteredProjects = projects.filter(
+    (p) => filter === 'all' || p.cat.includes(filter)
+  );
+
   return (
-    <SectionShell id="projects">
-      <SectionHeading
-        eyebrow="Projects"
-        title="Selected work"
-        description="AI-driven applications, full-stack systems, and tools I've designed and built."
-      />
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, i) => (
-          <ProjectCard key={project.slug} project={project} index={i} />
-        ))}
-      </div>
-      <Reveal delay={0.1}>
-        <div className="mt-10 flex items-center justify-center">
+    <section id="works" className="bg-[#f5f5f3] py-20 lg:py-28 px-6 lg:px-20 text-[#0f172a]">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex items-center gap-2.5 text-xs font-extrabold uppercase tracking-widest text-slate-400 mb-4">
+          03 <span className="w-7 h-[1px] bg-slate-400 inline-block" />
+        </div>
+        <h2 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight mb-3">
+          Selected Works.
+        </h2>
+        <p className="text-sm text-slate-500 max-w-md mb-8">
+          Engineering solutions at the intersection of AI, cybersecurity, and real-time systems.
+        </p>
+
+        <div className="flex flex-wrap gap-2 mb-10">
+          {[
+            { id: 'all', label: 'All Systems' },
+            { id: '3d-webgl', label: '3D WebGL & Twins' },
+            { id: 'ai-ml', label: 'AI & Full-Stack' },
+            { id: 'cybersecurity', label: 'Cybersecurity' },
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              type="button"
+              onClick={() => setFilter(tab.id)}
+              className={`px-4 py-2 rounded-md border text-xs font-bold transition-all ${
+                filter === tab.id
+                  ? 'bg-[#0d0d0d] text-white border-[#0d0d0d]'
+                  : 'bg-white text-slate-600 border-black/10 hover:bg-[#0d0d0d] hover:text-white'
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {filteredProjects.map((proj) => (
+            <article
+              key={proj.name}
+              className="bg-white border border-black/10 rounded-2xl overflow-hidden flex flex-col transition-all hover:-translate-y-1.5 hover:shadow-xl hover:border-[#c8421a]/20"
+            >
+              <div className="relative h-44 overflow-hidden bg-slate-100 flex items-center justify-center">
+                {proj.image ? (
+                  <img
+                    src={proj.image}
+                    alt={proj.name}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-[#0a0f1e] to-[#1a2744] flex items-center justify-center">
+                    <svg className="w-16 h-16 opacity-40 text-[#c8421a]" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
+                    </svg>
+                  </div>
+                )}
+                <span className="absolute top-3 left-3 bg-[#0d0d0d]/85 text-white/80 text-[0.65rem] font-bold px-2.5 py-1 rounded uppercase tracking-wider">
+                  {proj.badge}
+                </span>
+                {proj.featured && (
+                  <span className="absolute top-3 right-3 bg-[#c8421a] text-white text-[0.62rem] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+                    Flagship
+                  </span>
+                )}
+              </div>
+
+              <div className="p-5 flex-1 flex flex-col">
+                <div className="font-display text-base font-bold text-slate-900 mb-1">
+                  {proj.name}
+                </div>
+                <div className="text-[0.76rem] font-bold text-[#c8421a] mb-2">
+                  {proj.sub}
+                </div>
+                <p className="text-xs text-slate-500 leading-relaxed flex-1 mb-3">
+                  {proj.desc}
+                </p>
+
+                <div className="flex flex-wrap gap-1.5 mb-4">
+                  {proj.tech.map((t) => (
+                    <span key={t} className="text-[0.68rem] font-bold text-slate-600 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex gap-2">
+                  <a
+                    href={proj.caseStudy}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center py-2 px-2.5 rounded-md text-[0.72rem] font-bold border border-black/15 text-slate-700 hover:bg-[#0d0d0d] hover:text-white transition-colors"
+                  >
+                    Case Study →
+                  </a>
+                  {proj.liveDemo && (
+                    <a
+                      href={proj.liveDemo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 text-center py-2 px-2.5 rounded-md text-[0.72rem] font-bold border border-[#c8421a] text-[#c8421a] hover:bg-[#c8421a] hover:text-white transition-colors"
+                    >
+                      Live Demo ↗
+                    </a>
+                  )}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="text-center mt-10">
           <a
             href="https://github.com/Nithish-Bharathwaj-N"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 rounded-lg border border-border bg-background/60 px-5 py-3 text-sm font-medium transition-colors hover:border-foreground/30 hover:bg-secondary"
+            className="text-xs font-bold text-[#c8421a] hover:opacity-75"
           >
-            <Icon name="github" className="h-4 w-4" />
-            See all repositories
-            <Icon
-              name="arrowUpRight"
-              className="h-4 w-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-            />
+            View More Projects on GitHub ↗
           </a>
         </div>
-      </Reveal>
-    </SectionShell>
+      </div>
+    </section>
   );
 }

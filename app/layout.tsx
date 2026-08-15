@@ -8,28 +8,27 @@ const inter = Inter({
   display: 'swap',
 });
 
-const siteUrl = 'https://nithishbharathwajn-portfolio.vercel.app';
-const ogImage = `${siteUrl}/og.png`;
+const siteUrl = 'https://nithish-bharathwaj.dev';
+const ogImage = `${siteUrl}/images/nithish-photo.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: {
-    default: 'Nithish Bharathwaj N | AI • Cybersecurity • Full-Stack Developer',
-    template: '%s | Nithish Bharathwaj N',
-  },
+  title: 'Nithish Bharathwaj N — Cybersecurity × AI × Full-Stack Engineer',
   description:
-    'Portfolio of Nithish Bharathwaj N, a Computer Science (Cyber Security) student specializing in Artificial Intelligence, Cybersecurity, and Full-Stack Development. Explore projects, certifications, hackathons, and technical achievements.',
+    'Portfolio of Nithish Bharathwaj N — Cybersecurity-focused engineer building AI-powered, full-stack, real-time and 3D Digital Twin systems at Chennai Institute of Technology.',
   keywords: [
     'Nithish Bharathwaj N',
-    'AI developer',
-    'Cybersecurity',
-    'Full-Stack Developer',
-    'Computer Science',
-    'Portfolio',
+    'Cybersecurity Engineer',
+    'AI Developer',
+    'Full-Stack Engineer',
+    'Three.js',
+    'Digital Twin',
+    'Chennai Institute of Technology',
     'React',
-    'Node.js',
+    'Python',
+    'FastAPI',
     'LeetCode',
-    'Hackathon',
+    'Aerothon 2026',
   ],
   authors: [{ name: 'Nithish Bharathwaj N' }],
   creator: 'Nithish Bharathwaj N',
@@ -40,42 +39,29 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: siteUrl,
-    title: 'Nithish Bharathwaj N | AI • Cybersecurity • Full-Stack Developer',
-    description:
-      'Portfolio of Nithish Bharathwaj N, a Computer Science (Cyber Security) student specializing in Artificial Intelligence, Cybersecurity, and Full-Stack Development.',
+    title: 'Nithish Bharathwaj N — Cybersecurity × AI × Full-Stack',
+    description: 'Building intelligent, secure, real-time software systems.',
     siteName: 'Nithish Bharathwaj N',
     images: [
       {
         url: ogImage,
         width: 1200,
         height: 630,
-        alt: 'Nithish Bharathwaj N — Portfolio',
+        alt: 'Nithish Bharathwaj N — Engineer',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nithish Bharathwaj N | AI • Cybersecurity • Full-Stack Developer',
-    description:
-      'Computer Science (Cyber Security) student focused on AI, Cybersecurity, and Full-Stack Development.',
+    title: 'Nithish Bharathwaj N — Engineer',
+    description: 'Cybersecurity × AI × Full-Stack Engineer',
     images: [ogImage],
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-image-preview': 'large',
-    },
-  },
-  icons: {
-    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
-    apple: '/favicon.svg',
   },
 };
-
-export const themeColor = '#2563eb';
 
 export default function RootLayout({
   children,
@@ -83,8 +69,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`light ${inter.variable}`} style={{ colorScheme: 'light' }}>
-      <body className="font-sans antialiased bg-slate-50 text-slate-900 selection:bg-blue-500/20 selection:text-blue-900">
+    <html lang="en" className={inter.variable}>
+      <body className="font-sans antialiased bg-[#0d0d0d] text-white">
         {children}
       </body>
     </html>
