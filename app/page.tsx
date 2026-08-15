@@ -1752,6 +1752,121 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   text-transform: uppercase;
 }
 
+
+/* PERFECT ALIGNMENT FOR KEY ACHIEVEMENTS & CARDS */
+#achievements {
+  background: var(--dark);
+  padding: 90px 60px 50px;
+}
+.ach-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.ach-top-grid {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 24px;
+  margin-top: 20px;
+  margin-bottom: 28px;
+  align-items: center;
+}
+@media(max-width:1100px) {
+  .ach-top-grid { grid-template-columns: 1fr; }
+}
+
+.ach-badge-cards {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+}
+@media(max-width:960px) { .ach-badge-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media(max-width:600px) { .ach-badge-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.badge-card {
+  background: var(--dark-2);
+  border: 1px solid var(--border-d);
+  border-radius: 14px;
+  padding: 16px 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 170px;
+  transition: all var(--t) var(--ease);
+  box-sizing: border-box;
+}
+.badge-card.featured {
+  background: radial-gradient(circle at center, rgba(200,66,26,0.18) 0%, var(--dark-2) 100%);
+  border: 1.5px solid var(--accent);
+  box-shadow: 0 0 20px rgba(200,66,26,0.25);
+}
+.badge-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.hex-icon-wrap {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(200,66,26,0.12);
+  border: 1px solid rgba(200,66,26,0.3);
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  font-size: 1.05rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.badge-card.featured .hex-icon-wrap {
+  background: var(--accent);
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 12px var(--accent);
+}
+
+.bc-sub {
+  font-size: 0.58rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 2px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.bc-title {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 3px 0 6px;
+  line-height: 1.25;
+}
+.badge-card.featured .bc-title {
+  color: var(--accent);
+}
+.bc-tag {
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.4);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 6px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 ` }} />
       <div dangerouslySetInnerHTML={{ __html: `
 <a id="skip-link" href="#intro">Skip to content</a>
