@@ -4720,6 +4720,169 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   line-height: 1.3;
 }
 
+
+/* SECTION 07 - HOBBIES & PASSIONS */
+#hobbies {
+  background: var(--dark-2);
+  padding: 100px 48px;
+  border-top: 1px solid var(--border-d);
+}
+@media(max-width:860px) { #hobbies { padding: 60px 20px 40px; } }
+
+.hobbies-wrap {
+  max-width: 1680px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.hobbies-hdr-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+}
+@media(max-width:860px) { .hobbies-hdr-row { flex-direction: column; align-items: flex-start; gap: 12px; } }
+
+.hobbies-subdesc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+@media(max-width:1100px) { .hobbies-grid { grid-template-columns: repeat(2, 1fr); } }
+@media(max-width:680px) { .hobbies-grid { grid-template-columns: 1fr; } }
+
+.hobby-card {
+  background: var(--dark-3);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius-lg);
+  padding: 32px 26px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--t) var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+.hobby-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), #f97316);
+  opacity: 0;
+  transition: opacity var(--t) var(--ease);
+}
+.hobby-card:hover {
+  border-color: rgba(200,66,26,0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+  background: rgba(255,255,255,0.02);
+}
+.hobby-card:hover::before {
+  opacity: 1;
+}
+
+.hc-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.hc-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(200,66,26,0.12);
+  border: 1px solid rgba(200,66,26,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+.hc-badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  background: rgba(200,66,26,0.1);
+  padding: 4px 10px;
+  border-radius: 99px;
+  border: 1px solid rgba(200,66,26,0.2);
+}
+
+.hc-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+.hc-desc {
+  font-size: 0.84rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.65;
+  margin-bottom: 22px;
+  flex: 1;
+}
+
+.hc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.hc-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 4px 11px;
+  border-radius: 6px;
+}
+
+.hobbies-banner {
+  background: linear-gradient(135deg, var(--dark-3) 0%, rgba(200,66,26,0.15) 100%);
+  border: 1px solid var(--border-d);
+  border-radius: var(--radius-lg);
+  padding: 36px 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+@media(max-width:860px) { .hobbies-banner { flex-direction: column; text-align: center; padding: 28px 20px; } }
+
+.hb-quote {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.45;
+}
+.hb-quote span {
+  color: var(--accent);
+}
+.hb-author {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
 </style>
 </head>
 <body>
@@ -4752,7 +4915,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 </nav>
 <div id="mobile-nav" role="dialog" aria-label="Mobile navigation">
   <a href="#intro">Intro</a><a href="#about">About</a><a href="#skills">Expertise</a>
-  <a href="#works">Work</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
+  <a href="#works">Work</a><a href="#achievements">Achievements</a><a href="#hobbies">Hobbies</a><a href="#contact">Contact</a>
 </div>
 
 <section id="intro" aria-label="Introduction">
@@ -5544,6 +5707,120 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 </section>
 
 
+
+
+<section id="hobbies" aria-labelledby="hobbies-title">
+  <div class="hobbies-wrap">
+    <div class="hobbies-hdr-row fu">
+      <div>
+        <div class="sec-label dark-lbl">07 —— BEYOND THE CODE</div>
+        <h2 id="hobbies-title" class="sec-title" style="color:#fff;">HOBBIES &amp; PASSIONS.</h2>
+      </div>
+      <p class="hobbies-subdesc">What keeps me curious, disciplined, and energized outside of engineering and software architecture.</p>
+    </div>
+
+    <!-- HOBBIES GRID -->
+    <div class="hobbies-grid">
+      <!-- CARD 1: READING -->
+      <div class="hobby-card fu">
+        <div class="hc-top">
+          <div class="hc-icon-box">📚</div>
+          <span class="hc-badge">Mind Growth</span>
+        </div>
+        <h3 class="hc-title">Technical &amp; Personal Growth Books</h3>
+        <p class="hc-desc">Reading books on software architecture, psychology, cybersecurity principles, and self-improvement to expand problem-solving perspectives.</p>
+        <div class="hc-tags">
+          <span class="hc-tag">System Architecture</span>
+          <span class="hc-tag">Psychology &amp; Habits</span>
+          <span class="hc-tag">Cybersecurity Mindset</span>
+        </div>
+      </div>
+
+      <!-- CARD 2: FITNESS -->
+      <div class="hobby-card fu">
+        <div class="hc-top">
+          <div class="hc-icon-box">🏋️</div>
+          <span class="hc-badge">Discipline &amp; Energy</span>
+        </div>
+        <h3 class="hc-title">Strength Training &amp; Fitness</h3>
+        <p class="hc-desc">Maintaining physical strength, high energy levels, and mental stamina through consistent weekly workout routines and active physical training.</p>
+        <div class="hc-tags">
+          <span class="hc-tag">5 Days / Week</span>
+          <span class="hc-tag">Stamina</span>
+          <span class="hc-tag">Mental Focus</span>
+        </div>
+      </div>
+
+      <!-- CARD 3: TRAVEL -->
+      <div class="hobby-card fu">
+        <div class="hc-top">
+          <div class="hc-icon-box">✈️</div>
+          <span class="hc-badge">Perspective &amp; Culture</span>
+        </div>
+        <h3 class="hc-title">Travel &amp; Exploration</h3>
+        <p class="hc-desc">Exploring new cities, natural landscapes, and diverse environments to refresh creative thinking and experience regional cultures.</p>
+        <div class="hc-tags">
+          <span class="hc-tag">Nature Trails</span>
+          <span class="hc-tag">Tech Hubs</span>
+          <span class="hc-tag">Cultural Spots</span>
+        </div>
+      </div>
+
+      <!-- CARD 4: MUSIC -->
+      <div class="hobby-card fu">
+        <div class="hc-top">
+          <div class="hc-icon-box">🎧</div>
+          <span class="hc-badge">Flow State</span>
+        </div>
+        <h3 class="hc-title">Deep Focus &amp; Ambient Soundscapes</h3>
+        <p class="hc-desc">Listening to curated lo-fi beats, synthwave, and instrumental audio track playlists that help trigger intense focus states during late-night coding sessions.</p>
+        <div class="hc-tags">
+          <span class="hc-tag">Lo-Fi Beats</span>
+          <span class="hc-tag">Synthwave</span>
+          <span class="hc-tag">Deep Work</span>
+        </div>
+      </div>
+
+      <!-- CARD 5: CHESS & STRATEGY -->
+      <div class="hobby-card fu">
+        <div class="hc-top">
+          <div class="hc-icon-box">♟️</div>
+          <span class="hc-badge">Tactical Thinking</span>
+        </div>
+        <h3 class="hc-title">Chess &amp; Strategic Puzzles</h3>
+        <p class="hc-desc">Solving tactical chess puzzles and strategy games to sharpen pattern recognition, tactical foresight, and decision-making under pressure.</p>
+        <div class="hc-tags">
+          <span class="hc-tag">Pattern Recognition</span>
+          <span class="hc-tag">Tactics</span>
+          <span class="hc-tag">Foresight</span>
+        </div>
+      </div>
+
+      <!-- CARD 6: INNOVATION & HACKING -->
+      <div class="hobby-card fu">
+        <div class="hc-top">
+          <div class="hc-icon-box">🚀</div>
+          <span class="hc-badge">Constant Curiosity</span>
+        </div>
+        <h3 class="hc-title">Exploring Emerging Tech &amp; AI Tools</h3>
+        <p class="hc-desc">Experimenting with new open-source AI frameworks, developer tools, and security exploits to stay ahead of the technology curve.</p>
+        <div class="hc-tags">
+          <span class="hc-tag">AI Tools</span>
+          <span class="hc-tag">Open Source</span>
+          <span class="hc-tag">Security Experiments</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOBBIES LIFESTYLE BANNER -->
+    <div class="hobbies-banner fu">
+      <div class="hb-quote">
+        "Engineering builds the <span>systems</span>, but curiosity and passion build the <span>engineer</span>."
+      </div>
+      <div class="hb-author">Nithish Bharathwaj N</div>
+    </div>
+  </div>
+</section>
 
 <section id="contact" aria-labelledby="contact-title">
   <div class="contact-wrap">
