@@ -3710,6 +3710,311 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   line-height: 1.45;
 }
 
+
+/* FULL-WIDTH RESPONSIVE CONTAINER SYSTEM FOR ALL SECTIONS */
+.about-exact-container,
+.skills-wrap,
+.projects-wrap,
+.ach-wrap,
+.contact-wrap,
+.about-wrap {
+  max-width: 1680px !important;
+  width: 95% !important;
+  margin: 0 auto !important;
+}
+
+/* SECTION 02 ABOUT ME - SPACIOUS & PERFECT CIRCULAR PHOTO */
+#about {
+  background: #ffffff;
+  padding: 90px 48px 70px;
+}
+@media(max-width:860px) { #about { padding: 70px 20px 40px; } }
+
+.about-exact-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr 360px;
+  gap: 32px;
+  margin-top: 24px;
+  margin-bottom: 28px;
+  align-items: stretch;
+}
+@media(max-width:1300px) { .about-exact-grid { grid-template-columns: 320px 1fr; } .about-right-col { grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; } }
+@media(max-width:960px) { .about-exact-grid { grid-template-columns: 1fr; } .about-right-col { grid-column: span 1; grid-template-columns: 1fr; } }
+
+/* LEFT COLUMN - CIRCULAR PHOTO & SPECS */
+.about-left-col {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 20px;
+  padding: 30px 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.about-quote-box {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+/* PERFECT CIRCLE PHOTO FRAME */
+.circle-photo-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle-photo-glow {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,66,26,0.18) 0%, transparent 70%);
+  border: 2px dashed rgba(200,66,26,0.3);
+  animation: spinSlow 35s linear infinite;
+}
+@keyframes spinSlow { to { transform: rotate(360deg); } }
+
+.circle-photo-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+  border: 3px solid var(--accent);
+  box-shadow: 0 8px 24px rgba(200,66,26,0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.spec-list-exact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+}
+.sle-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.sle-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #fff7ed;
+  border: 1px solid #ffedd5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.sle-lbl {
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+}
+.sle-val {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.35;
+}
+
+/* CENTER COLUMN - SPACIOUS CARDS */
+.about-center-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.exact-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.ec-hdr {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.who-text-exact {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: #475569;
+  margin-bottom: 24px;
+}
+
+.who-4stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+@media(max-width:640px) { .who-4stats { grid-template-columns: repeat(2, 1fr); } }
+
+.w4s-box {
+  background: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 14px;
+  padding: 18px 12px;
+  text-align: center;
+  transition: all var(--t);
+}
+.w4s-box:hover {
+  border-color: rgba(200,66,26,0.3);
+  transform: translateY(-2px);
+}
+.w4s-icon {
+  font-size: 1.3rem;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.w4s-num {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.1;
+}
+.w4s-lbl {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.approach-steps-exact {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+@media(max-width:640px) { .approach-steps-exact { grid-template-columns: repeat(2, 1fr); } }
+
+.ase-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.ase-icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff7ed;
+  border: 1.5px solid #ffedd5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.ase-title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #0f172a;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.ase-desc {
+  font-size: 0.68rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* RIGHT COLUMN - SKILLS & BEYOND CODE */
+.about-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.skills-bars-exact {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.sbe-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.sbe-hdr {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.beyond-8grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.b8-item {
+  background: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 12px;
+  padding: 14px 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--t);
+}
+.b8-item:hover {
+  border-color: rgba(200,66,26,0.3);
+  transform: translateY(-2px);
+  background: #ffffff;
+}
+.b8-icon { font-size: 1.2rem; margin-bottom: 4px; }
+.b8-title { font-size: 0.66rem; font-weight: 700; color: #334155; line-height: 1.25; }
+
+/* BOTTOM FULL-WIDTH JOURNEY CARD */
+.journey-card-exact {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+.je-track {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+@media(max-width:1024px) { .je-track { grid-template-columns: repeat(3, 1fr); } }
+@media(max-width:600px) { .je-track { grid-template-columns: 1fr; } }
+
 ` }} />
       <div dangerouslySetInnerHTML={{ __html: `
 <a id="skip-link" href="#intro">Skip to content</a>
@@ -3776,18 +4081,17 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   <div class="about-exact-container">
     <!-- MAIN 3-COLUMN LAYOUT -->
     <div class="about-exact-grid fu">
-      <!-- LEFT COLUMN: TITLE, QUOTE, ARCH PHOTO & SPECS -->
+      <!-- LEFT COLUMN: TITLE, QUOTE, CIRCULAR PHOTO & SPECS -->
       <div class="about-left-col">
-        <div class="sec-label dark-lbl">02 ------</div>
-        <h2 id="about-title" class="sec-title" style="color:#0f172a;font-size:2.8rem;margin-bottom:10px;">ABOUT<br><span style="color:var(--accent)">ME.</span></h2>
+        <div class="sec-label dark-lbl" style="width:100%;">02 ------</div>
+        <h2 id="about-title" class="sec-title" style="color:#0f172a;font-size:2.8rem;margin-bottom:12px;width:100%;">ABOUT<br><span style="color:var(--accent)">ME.</span></h2>
         
         <p class="about-quote-box">“ I enjoy solving complex problems, building real-world solutions, and constantly learning. ”</p>
 
-        <!-- ARCH PHOTO FRAME -->
-        <div class="arch-photo-wrapper">
-          <div class="arch-dotted-ring"></div>
-          <div class="arch-bg"></div>
-          <img src="images/nithish-about.jpg" alt="Nithish Bharathwaj N Portrait" class="arch-photo-img">
+        <!-- PERFECT CIRCULAR PHOTO FRAME -->
+        <div class="circle-photo-wrapper">
+          <div class="circle-photo-glow"></div>
+          <img src="images/nithish-about.jpg" alt="Nithish Bharathwaj N Portrait" class="circle-photo-img">
         </div>
 
         <!-- SPEC LIST -->
@@ -3848,7 +4152,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         <div class="exact-card">
           <div class="ec-hdr"><span style="color:var(--accent);">👤</span> WHO AM I?</div>
           <p class="who-text-exact">
-            I'm a second-year BE Cybersecurity student at <strong>Chennai Institute of Technology</strong> with a strong passion for problem solving, building impactful projects, and exploring the intersection of security, AI, and full-stack development.<br><br>
+            I'm a second-year BE Cybersecurity student at <strong style="color:var(--accent);">Chennai Institute of Technology</strong> with a strong passion for problem solving, building impactful projects, and exploring the intersection of security, AI, and full-stack development.<br><br>
             I love learning by doing. From competitive programming to cybersecurity, from full-stack development to AI/ML, I enjoy turning ideas into real solutions. Hackathons, projects, and challenges keep me motivated to grow every day.
           </p>
 

@@ -56,34 +56,39 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="bg-white py-20 lg:py-24 px-6 lg:px-16 text-[#0f172a]">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-[310px_1fr_310px] gap-6 mb-6">
-          {/* LEFT COLUMN: TITLE, QUOTE, ARCH PHOTO & SPECS */}
-          <div className="flex flex-col">
-            <div className="flex items-center gap-2.5 text-xs font-extrabold uppercase tracking-widest text-slate-400 mb-2">
+    <section id="about" className="bg-white py-20 lg:py-24 px-6 lg:px-12 text-[#0f172a]">
+      <div className="max-w-[1680px] w-[95%] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-[360px_1fr_360px] gap-8 mb-8 items-stretch">
+          {/* LEFT COLUMN: TITLE, QUOTE, CIRCULAR PHOTO & SPECS */}
+          <div className="bg-white border border-black/10 rounded-2xl p-7 shadow-sm flex flex-col items-center">
+            <div className="w-full flex items-center gap-2.5 text-xs font-extrabold uppercase tracking-widest text-slate-400 mb-2">
               02 ------ <span className="w-7 h-[1px] bg-slate-400 inline-block" />
             </div>
-            <h2 id="about-title" className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-[#0f172a] mb-2 leading-none">
+            <h2 id="about-title" className="w-full font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-[#0f172a] mb-2 leading-none">
               ABOUT<br /><span className="text-[#c8421a]">ME.</span>
             </h2>
 
-            <p className="text-xs sm:text-sm text-slate-500 italic mb-6 leading-relaxed">
+            <p className="w-full text-xs sm:text-sm text-slate-500 italic mb-6 leading-relaxed">
               “ I enjoy solving complex problems, building real-world solutions, and constantly learning. ”
             </p>
 
-            {/* ARCH PHOTO FRAME */}
-            <div className="relative w-52 h-52 mx-auto mb-6 flex items-end justify-center">
-              <div className="absolute inset-[-10px] border-2 border-dashed border-[#c8421a]/30 rounded-full z-0" />
-              <div className="absolute bottom-0 w-44 h-44 rounded-[90px_90px_40px_40px] bg-gradient-to-br from-orange-100 to-amber-200 z-10" />
-              <img src="images/nithish-about.jpg" alt="Nithish Bharathwaj N Portrait" className="relative z-20 w-40 h-52 object-cover object-top rounded-[80px_80px_20px_20px]" />
+            {/* PERFECT CIRCULAR PHOTO FRAME */}
+            <div className="relative w-52 h-52 mx-auto mb-7 flex items-center justify-center">
+              <div className="absolute inset-[-8px] rounded-full border-2 border-dashed border-[#c8421a]/30 animate-[spin_35s_linear_infinite]" />
+              <img
+                src="images/nithish-about.jpg"
+                alt="Nithish Bharathwaj N Portrait"
+                className="w-full h-full rounded-full object-cover object-[center_15%] border-4 border-[#c8421a] shadow-[0_8px_24px_rgba(200,66,26,0.2)] relative z-10"
+              />
             </div>
 
             {/* SPEC LIST */}
-            <div className="space-y-3 mt-2">
+            <div className="w-full space-y-3 pt-5 border-t border-slate-100">
               {specItems.map((item) => (
-                <div key={item.lbl} className="flex items-start gap-2.5">
-                  <div className="text-sm text-[#c8421a] mt-0.5">{item.icon}</div>
+                <div key={item.lbl} className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-orange-50 border border-orange-100 flex items-center justify-center text-sm text-[#c8421a] shrink-0">
+                    {item.icon}
+                  </div>
                   <div>
                     <div className="text-[0.6rem] font-extrabold uppercase tracking-wider text-slate-400">{item.lbl}</div>
                     <div className="text-xs font-bold text-[#0f172a] leading-tight">{item.val}</div>
@@ -94,42 +99,42 @@ export function About() {
           </div>
 
           {/* CENTER COLUMN: WHO AM I & MY APPROACH */}
-          <div className="space-y-5">
+          <div className="space-y-6">
             {/* WHO AM I */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 shadow-sm">
-              <div className="font-display text-xs font-extrabold uppercase tracking-wider text-[#0f172a] mb-3 flex items-center gap-2">
+            <div className="bg-white border border-black/10 rounded-2xl p-7 shadow-sm">
+              <div className="font-display text-sm font-extrabold uppercase tracking-wider text-[#0f172a] mb-4 flex items-center gap-2">
                 <span className="text-[#c8421a]">👤</span> WHO AM I?
               </div>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-5">
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
                 I'm a second-year BE Cybersecurity student at <strong className="text-[#c8421a]">Chennai Institute of Technology</strong> with a strong passion for problem solving, building impactful projects, and exploring the intersection of security, AI, and full-stack development.
                 <br /><br />
                 I love learning by doing. From competitive programming to cybersecurity, from full-stack development to AI/ML, I enjoy turning ideas into real solutions. Hackathons, projects, and challenges keep me motivated to grow every day.
               </p>
 
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
                 {whoStats.map((stat) => (
-                  <div key={stat.lbl} className="bg-white border border-slate-100 rounded-xl p-3 text-center shadow-sm">
-                    <div className="text-base text-[#c8421a] mb-1">{stat.icon}</div>
-                    <div className="font-display text-lg font-black text-[#0f172a]">{stat.num}</div>
-                    <div className="text-[0.62rem] font-bold text-slate-500 mt-0.5">{stat.lbl}</div>
+                  <div key={stat.lbl} className="bg-slate-50 border border-slate-100 rounded-xl p-4 text-center hover:border-[#c8421a]/30 transition-all hover:-translate-y-0.5">
+                    <div className="text-lg text-[#c8421a] mb-1">{stat.icon}</div>
+                    <div className="font-display text-xl font-black text-[#0f172a]">{stat.num}</div>
+                    <div className="text-[0.68rem] font-bold text-slate-500 mt-0.5">{stat.lbl}</div>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* MY APPROACH */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 shadow-sm">
-              <div className="font-display text-xs font-extrabold uppercase tracking-wider text-[#0f172a] mb-4 flex items-center gap-2">
+            <div className="bg-white border border-black/10 rounded-2xl p-7 shadow-sm">
+              <div className="font-display text-sm font-extrabold uppercase tracking-wider text-[#0f172a] mb-5 flex items-center gap-2">
                 <span className="text-[#c8421a]">💡</span> MY APPROACH
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {approachSteps.map((step) => (
                   <div key={step.title} className="flex flex-col items-center text-center">
-                    <div className="w-11 h-11 rounded-full bg-orange-50 border border-orange-100 flex items-center justify-center text-base text-[#c8421a] mb-2">
+                    <div className="w-12 h-12 rounded-full bg-orange-50 border border-orange-100 flex items-center justify-center text-lg text-[#c8421a] mb-2.5">
                       {step.icon}
                     </div>
                     <div className="font-display text-xs font-extrabold text-[#0f172a] uppercase mb-1">{step.title}</div>
-                    <div className="text-[0.65rem] text-slate-500 leading-snug">{step.desc}</div>
+                    <div className="text-[0.68rem] text-slate-500 leading-snug">{step.desc}</div>
                   </div>
                 ))}
               </div>
@@ -137,13 +142,13 @@ export function About() {
           </div>
 
           {/* RIGHT COLUMN: SKILLS OVERVIEW & BEYOND CODE */}
-          <div className="space-y-5">
+          <div className="space-y-6">
             {/* SKILLS OVERVIEW */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 shadow-sm">
-              <div className="font-display text-xs font-extrabold uppercase tracking-wider text-[#0f172a] mb-4 flex items-center gap-2">
+            <div className="bg-white border border-black/10 rounded-2xl p-7 shadow-sm">
+              <div className="font-display text-sm font-extrabold uppercase tracking-wider text-[#0f172a] mb-4 flex items-center gap-2">
                 <span className="text-[#c8421a]">📊</span> SKILLS OVERVIEW
               </div>
-              <div className="space-y-2.5">
+              <div className="space-y-3">
                 {skillsOverview.map((item) => (
                   <div key={item.name} className="space-y-1">
                     <div className="flex justify-between text-xs font-bold text-slate-700">
@@ -159,15 +164,15 @@ export function About() {
             </div>
 
             {/* BEYOND CODE (8 ITEMS) */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 shadow-sm">
-              <div className="font-display text-xs font-extrabold uppercase tracking-wider text-[#0f172a] mb-3 flex items-center gap-2">
+            <div className="bg-white border border-black/10 rounded-2xl p-7 shadow-sm">
+              <div className="font-display text-sm font-extrabold uppercase tracking-wider text-[#0f172a] mb-3.5 flex items-center gap-2">
                 <span className="text-[#c8421a]">🤍</span> BEYOND CODE
               </div>
-              <div className="grid grid-cols-4 gap-2">
+              <div className="grid grid-cols-4 gap-2.5">
                 {beyondCode.map((bc) => (
-                  <div key={bc.title} className="bg-white border border-slate-100 rounded-xl p-2.5 text-center flex flex-col items-center justify-center shadow-sm hover:border-[#c8421a]/40 transition-all hover:-translate-y-0.5">
-                    <div className="text-base mb-1">{bc.icon}</div>
-                    <div className="text-[0.62rem] font-extrabold text-slate-700 leading-tight">{bc.title}</div>
+                  <div key={bc.title} className="bg-slate-50 border border-slate-100 rounded-xl p-3 text-center flex flex-col items-center justify-center shadow-sm hover:border-[#c8421a]/40 transition-all hover:-translate-y-0.5">
+                    <div className="text-lg mb-1">{bc.icon}</div>
+                    <div className="text-[0.66rem] font-extrabold text-slate-700 leading-tight">{bc.title}</div>
                   </div>
                 ))}
               </div>
@@ -176,16 +181,16 @@ export function About() {
         </div>
 
         {/* BOTTOM FULL-WIDTH: MY JOURNEY SO FAR */}
-        <div className="bg-white border border-black/10 rounded-2xl p-6 lg:p-7 shadow-sm">
-          <div className="font-display text-xs font-extrabold uppercase tracking-wider text-[#0f172a] mb-5 flex items-center gap-2">
+        <div className="bg-white border border-black/10 rounded-2xl p-7 lg:p-8 shadow-sm">
+          <div className="font-display text-sm font-extrabold uppercase tracking-wider text-[#0f172a] mb-6 flex items-center gap-2">
             <span className="text-[#c8421a]">📅</span> MY JOURNEY SO FAR
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-5">
             {journeySteps.map((s) => (
               <div key={s.time} className="flex flex-col">
-                <div className="text-[0.62rem] font-extrabold uppercase tracking-widest text-[#c8421a] mb-2">{s.time}</div>
+                <div className="text-[0.65rem] font-extrabold uppercase tracking-widest text-[#c8421a] mb-2">{s.time}</div>
                 <div
-                  className={`w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold mb-2.5 ${
+                  className={`w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold mb-3 ${
                     s.isNow ? 'bg-emerald-500 text-white shadow-[0_0_12px_#10b981]' : 'bg-orange-50 border border-orange-200 text-[#c8421a]'
                   }`}
                 >
