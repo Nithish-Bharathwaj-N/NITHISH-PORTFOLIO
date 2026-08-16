@@ -1,120 +1,147 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 export function About() {
-  const stats = [
-    { icon: '</>', num: '500+', lbl1: 'LeetCode', lbl2: 'Problems' },
-    { icon: '🏆', num: '5+', lbl1: 'Hackathon', lbl2: 'Finalist' },
-    { icon: '🚀', num: '3+', lbl1: 'Major', lbl2: 'Projects' },
-    { icon: '⏱️', num: '5-6 Hrs', lbl1: 'Daily', lbl2: 'Learning' }
-  ];
-
-  const specs = [
-    { icon: '👤', text: 'Nithish Bharathwaj N' },
-    { icon: '🎓', text: 'Cybersecurity • AI/ML • Full-Stack Engineer' },
-    { icon: '📍', text: 'Chennai, Tamil Nadu, India' },
-    { icon: '✉️', text: 'nithishbharathwajn@gmail.com' }
-  ];
-
-  const beyondCode = [
-    { icon: '📖', lbl1: 'Reading', lbl2: 'Books' },
-    { icon: '🏋️', lbl1: 'Workout &', lbl2: 'Fitness' },
-    { icon: '✈️', lbl1: 'Travel &', lbl2: 'Exploration' },
-    { icon: '🎧', lbl1: 'Music &', lbl2: 'Focus' },
-    { icon: '📈', lbl1: 'Personal', lbl2: 'Growth' }
-  ];
-
   return (
-    <section id="about" className="bg-white py-20 lg:py-24 px-6 lg:px-12 text-[#0f172a]">
-      <div className="max-w-[1680px] w-[95%] mx-auto">
-        {/* TOP SPLIT GRID */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12 mb-10 items-start">
-          {/* LEFT COLUMN: TITLE, BIO PARAGRAPHS & 4 STATS */}
-          <div className="flex flex-col">
-            <div className="text-xs font-extrabold uppercase tracking-widest text-[#c8421a] mb-2">
-              02 <span className="text-slate-300">——</span>
-            </div>
-            <h2 id="about-title" className="font-display text-5xl sm:text-6xl font-black text-[#0f172a] leading-none mb-3 tracking-tight">
-              ABOUT<br /><span className="text-[#c8421a]">ME.</span>
-            </h2>
-
-            <div className="mb-8">
-              <div className="text-xs sm:text-sm text-slate-500 italic">Learner. Builder. Problem Solver.</div>
-              <div className="text-xs sm:text-sm text-slate-500 italic">Always curious, always improving.</div>
-              <div className="w-10 h-[2px] bg-[#c8421a] mt-2.5" />
+    <>
+      <section id="about" className="bg-[#f7f6f2] py-20 px-6 lg:px-16 border-t border-black/5 relative">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-16 items-start">
+          {/* LEFT COLUMN - PROFILE PHOTO & CARDS */}
+          <div className="flex flex-col gap-5">
+            <div className="relative rounded-2xl overflow-hidden shadow-md bg-white before:content-[''] before:absolute before:top-6 before:left-0 before:w-1.5 before:bottom-6 before:bg-[#d9471f] before:rounded-r before:z-10">
+              <Image
+                src="/images/nithish-about.jpg"
+                alt="Nithish Bharathwaj N Formal Suit Portrait"
+                width={360}
+                height={360}
+                className="w-full aspect-square object-cover block"
+                priority
+              />
             </div>
 
-            <p className="text-sm sm:text-base text-slate-700 leading-relaxed mb-4">
-              I'm a second-year BE Cybersecurity student at <strong className="text-[#0f172a] font-extrabold">Chennai Institute of Technology</strong>.
-            </p>
-
-            <p className="text-sm sm:text-base text-slate-700 leading-relaxed mb-4">
-              I'm passionate about solving complex problems, building impactful projects, and exploring the intersection of security, AI, and full-stack development.
-            </p>
-
-            <p className="text-sm sm:text-base text-slate-700 leading-relaxed mb-4">
-              I love learning by doing. From competitive programming to real-world applications, I enjoy turning ideas into solutions that make a difference.
-            </p>
-
-            {/* 4 STAT COLUMNS */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-8 border-t border-slate-100 text-center">
-              {stats.map((s) => (
-                <div key={s.num} className="flex flex-col items-center">
-                  <div className="text-2xl text-[#c8421a] mb-2">{s.icon}</div>
-                  <div className="font-display text-2xl font-black text-[#0f172a] mb-1">{s.num}</div>
-                  <div className="text-xs font-bold text-slate-500 leading-tight">
-                    {s.lbl1}<br />{s.lbl2}
-                  </div>
+            <div className="flex flex-col gap-3.5 py-2 px-1">
+              <div className="flex items-start gap-3">
+                <span className="text-lg text-[#d9471f] shrink-0 mt-0.5">👤</span>
+                <div>
+                  <strong className="block text-sm font-extrabold text-slate-800 leading-snug">Nithish Bharathwaj N</strong>
+                  <span className="text-xs text-slate-500 block mt-0.5">Cybersecurity • AI/ML • Full-Stack Engineer</span>
                 </div>
-              ))}
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="text-lg text-[#d9471f] shrink-0 mt-0.5">🎓</span>
+                <div>
+                  <strong className="block text-sm font-extrabold text-slate-800 leading-snug">BE Cybersecurity – Second Year</strong>
+                  <span className="text-xs text-slate-500 block mt-0.5">Chennai Institute of Technology</span>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="text-lg text-[#d9471f] shrink-0 mt-0.5">📍</span>
+                <div>
+                  <strong className="block text-sm font-extrabold text-slate-800 leading-snug">Chennai, Tamil Nadu, India</strong>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="text-lg text-[#d9471f] shrink-0 mt-0.5">✉️</span>
+                <div>
+                  <strong className="block text-sm font-extrabold text-slate-800 leading-snug">nithishbharathwajn@gmail.com</strong>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-black/[0.03] border border-black/[0.06] rounded-xl p-5 flex items-start gap-3.5 mt-2">
+              <span className="font-display text-4xl font-black text-[#d9471f] leading-none shrink-0">“</span>
+              <div className="text-xs font-semibold text-slate-700 leading-relaxed">
+                Curious by nature.<br />
+                Driven by purpose.<br />
+                Focused on impact.
+              </div>
             </div>
           </div>
 
-          {/* RIGHT COLUMN: PORTRAIT PHOTO & SPECS */}
-          <div className="lg:border-l lg:border-slate-100 lg:pl-12 flex flex-col items-center">
-            {/* PORTRAIT STAGE */}
-            <div className="relative w-[300px] h-[320px] mb-6 flex items-end justify-center">
-              <div className="absolute right-[-10px] top-[40px] w-[50px] h-[90px] opacity-70 bg-[radial-gradient(#cbd5e1_1.5px,transparent_1.5px)] [background-size:10px_10px]" />
-              <div className="absolute right-0 top-[120px] w-2.5 h-2.5 rounded-full bg-[#c8421a] z-30" />
-              <div className="absolute bottom-0 w-[250px] h-[250px] rounded-[120px_120px_40px_40px] bg-gradient-to-br from-orange-100 to-amber-200 z-10" />
-              <img src="images/nithish-about.jpg" alt="Nithish Bharathwaj N Portrait" className="relative z-20 w-[280px] h-[310px] object-cover object-top" />
+          {/* RIGHT COLUMN - CONTENT & STATS */}
+          <div className="flex flex-col">
+            <div className="flex items-center gap-2.5 text-sm font-extrabold text-[#d9471f] mb-2 after:content-[''] after:inline-block after:w-8 after:h-0.5 after:bg-[#d9471f]">
+              02
+            </div>
+            <h2 id="about-title" className="font-display text-5xl lg:text-7xl font-black text-slate-800 leading-none tracking-tight mb-6">
+              About<br /><span className="text-[#d9471f]">Me.</span>
+            </h2>
+            <div className="flex items-center gap-3.5 text-xs font-extrabold tracking-widest text-slate-500 uppercase mb-8 before:content-[''] before:inline-block before:w-9 before:h-0.5 before:bg-[#d9471f]">
+              LEARNER. BUILDER. PROBLEM SOLVER.
             </div>
 
-            {/* 4 SPECS LIST */}
-            <div className="w-full max-w-xs space-y-3">
-              {specs.map((item) => (
-                <div key={item.text} className="flex items-center gap-3 pb-2.5 border-b border-slate-100 last:border-none">
-                  <div className="text-base text-[#c8421a] shrink-0">{item.icon}</div>
-                  <div className="text-xs font-bold text-slate-800">{item.text}</div>
-                </div>
-              ))}
+            <div className="space-y-5 text-base leading-relaxed text-slate-700 mb-8">
+              <p>
+                I&apos;m a second-year BE Cybersecurity student at <strong className="text-slate-900 font-extrabold">Chennai Institute of Technology</strong>, driven by curiosity and a passion for solving real-world problems through technology.
+              </p>
+              <p>
+                I enjoy building secure, intelligent and real-time systems at the intersection of cybersecurity, AI and full-stack development.
+              </p>
+              <p>
+                I learn by doing — from competitive programming and security research to AI experiments and engineering impactful applications.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 pt-6 border-t border-black/10 mb-7">
+              <div className="flex flex-col pr-4 border-r border-black/10">
+                <span className="text-xl text-[#d9471f] mb-2">&lt;/&gt;</span>
+                <div className="font-display text-3xl font-black text-slate-900 leading-none mb-1">500+</div>
+                <div className="text-[0.75rem] font-bold text-slate-500 uppercase leading-snug">LeetCode<br />Problems Solved</div>
+              </div>
+
+              <div className="flex flex-col pr-4 border-r border-black/10">
+                <span className="text-xl text-[#d9471f] mb-2">🏆</span>
+                <div className="font-display text-3xl font-black text-slate-900 leading-none mb-1">5+</div>
+                <div className="text-[0.75rem] font-bold text-slate-500 uppercase leading-snug">Hackathon<br />Finalist</div>
+              </div>
+
+              <div className="flex flex-col pr-4 border-r border-black/10">
+                <span className="text-xl text-[#d9471f] mb-2">🚀</span>
+                <div className="font-display text-3xl font-black text-slate-900 leading-none mb-1">3+</div>
+                <div className="text-[0.75rem] font-bold text-slate-500 uppercase leading-snug">Major<br />Projects</div>
+              </div>
+
+              <div className="flex flex-col">
+                <span className="text-xl text-[#d9471f] mb-2">🕒</span>
+                <div className="font-display text-3xl font-black text-slate-900 leading-none mb-1">5–6 Hrs</div>
+                <div className="text-[0.75rem] font-bold text-slate-500 uppercase leading-snug">Daily<br />Learning</div>
+              </div>
+            </div>
+
+            <div>
+              <a href="#journey" className="inline-flex items-center gap-2 text-sm font-extrabold text-[#d9471f] hover:translate-x-1 transition-transform">
+                More about my journey &rarr;
+              </a>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* BOTTOM FULL-WIDTH CARD: BEYOND CODE */}
-        <div className="bg-white border border-black/10 rounded-2xl p-7 lg:p-8 shadow-sm grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8 items-center">
-          <div>
-            <div className="font-display text-sm font-extrabold uppercase tracking-wider text-[#0f172a] mb-1 flex items-center gap-2">
-              <span className="text-[#c8421a]">♡</span> BEYOND CODE
+      {/* TRANSITION STRIP BELOW ABOUT */}
+      <div className="bg-[#0f0f11] py-11 px-6 lg:px-16 border-t border-white/10 text-white">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-8 items-center">
+          <div className="flex flex-col">
+            <div className="flex items-center gap-2.5 text-xs font-extrabold text-[#d9471f] mb-1.5 after:content-[''] after:inline-block after:w-7 after:h-0.5 after:bg-[#d9471f]">
+              03
             </div>
-            <div className="text-xs text-slate-500 mb-2">Things that fuel my mind and keep me balanced.</div>
-            <div className="w-7 h-[2px] bg-[#c8421a]" />
+            <h3 className="font-display text-3xl font-black text-white">
+              What Drives <span className="text-[#d9471f]">Me.</span>
+            </h3>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-            {beyondCode.map((bc) => (
-              <div key={bc.lbl1} className="flex flex-col items-center text-center lg:border-l lg:border-slate-100 lg:first:border-none lg:pl-3">
-                <div className="text-2xl text-[#c8421a] mb-2">{bc.icon}</div>
-                <div className="text-xs font-bold text-slate-700 leading-tight">
-                  {bc.lbl1}<br />{bc.lbl2}
-                </div>
-              </div>
-            ))}
+          <div className="flex items-start gap-3.5">
+            <span className="font-display text-4xl font-black text-[#d9471f] leading-none shrink-0">“</span>
+            <p className="text-sm lg:text-base text-slate-300 leading-relaxed">
+              I believe in continuous learning, building with purpose, and creating solutions that make a difference.
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 }

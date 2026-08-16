@@ -6063,6 +6063,297 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   transform: scale(1.06);
   border-color: var(--accent);
 }
+
+/* SECTION 02 - ABOUT ME SCREENSHOT EXACT MATCH */
+#about {
+  background: #f7f6f2;
+  padding: 90px 64px 70px;
+  position: relative;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+@media(max-width:860px) { #about { padding: 60px 20px 40px; } }
+
+.about-exact-wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 72px;
+  align-items: start;
+}
+@media(max-width:1024px) { .about-exact-wrap { grid-template-columns: 1fr; gap: 44px; } }
+
+.about-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-photo-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  background: #fff;
+}
+.about-photo-card::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 5px;
+  bottom: 24px;
+  background: #d9471f;
+  border-radius: 0 4px 4px 0;
+  z-index: 2;
+}
+.about-photo-card img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+}
+
+.about-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 10px 4px;
+}
+
+.about-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.about-info-icon {
+  font-size: 1.1rem;
+  color: #d9471f;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.about-info-text strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #1e293b;
+  line-height: 1.3;
+}
+.about-info-text span {
+  font-size: 0.78rem;
+  color: #64748b;
+  display: block;
+  margin-top: 2px;
+}
+
+.about-quote-box {
+  background: rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 10px;
+}
+.about-quote-mark {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #d9471f;
+  line-height: 0.8;
+  flex-shrink: 0;
+}
+.about-quote-text {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #334155;
+  line-height: 1.55;
+}
+
+.about-right-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-tag-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #d9471f;
+  margin-bottom: 8px;
+}
+.about-tag-header::after {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: #d9471f;
+}
+
+.about-main-h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(3.2rem, 5.5vw, 4.8rem);
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  color: #1e293b;
+  margin-bottom: 24px;
+}
+.about-main-h2 span {
+  color: #d9471f;
+}
+
+.about-subtag-line {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 32px;
+}
+.about-subtag-line::before {
+  content: '';
+  display: inline-block;
+  width: 36px;
+  height: 2px;
+  background: #d9471f;
+}
+
+.about-prose p {
+  font-size: 0.98rem;
+  line-height: 1.82;
+  color: #334155;
+  margin-bottom: 22px;
+}
+.about-prose p strong {
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+  margin-bottom: 28px;
+  padding-top: 24px;
+}
+@media(max-width:768px) { .about-stats-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.about-stat-col {
+  display: flex;
+  flex-direction: column;
+  padding-right: 16px;
+  border-right: 1px solid rgba(0,0,0,0.08);
+}
+.about-stat-col:last-child {
+  border-right: none;
+}
+.about-stat-icon {
+  font-size: 1.4rem;
+  color: #d9471f;
+  margin-bottom: 8px;
+}
+.about-stat-val {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 4px;
+}
+.about-stat-lbl {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  line-height: 1.35;
+}
+
+.about-journey-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #d9471f;
+  transition: transform 0.28s ease;
+}
+.about-journey-link:hover {
+  transform: translateX(4px);
+}
+
+/* TRANSITION STRIP BELOW ABOUT */
+.about-drives-strip {
+  background: #0f0f11;
+  padding: 44px 64px;
+  border-t: 1px solid rgba(255,255,255,0.08);
+  color: #ffffff;
+}
+@media(max-width:860px) { .about-drives-strip { padding: 32px 24px; } }
+
+.about-drives-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 72px;
+  align-items: center;
+}
+@media(max-width:1024px) { .about-drives-inner { grid-template-columns: 1fr; gap: 20px; } }
+
+.drives-left-hdr {
+  display: flex;
+  flex-direction: column;
+}
+.drives-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #d9471f;
+  margin-bottom: 6px;
+}
+.drives-tag::after {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  background: #d9471f;
+}
+.drives-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+.drives-title span { color: #d9471f; }
+
+.drives-right-quote {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.drives-quote-mark {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #d9471f;
+  line-height: 0.8;
+  flex-shrink: 0;
+}
+.drives-quote-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.72);
+}
 </style>
 </head>
 <body>
@@ -6126,135 +6417,123 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   </div>
 </section>
 
+<!-- SECTION 02 - ABOUT ME EXACT SCREENSHOT MATCH -->
 <section id="about" aria-labelledby="about-title">
-  <div class="about-minimal-container">
-    <!-- TOP SPLIT GRID -->
-    <div class="about-minimal-top-grid fu">
-      <!-- LEFT COLUMN: TITLE, BIO PARAGRAPHS & 4 STATS -->
-      <div class="am-left-col">
-        <div class="am-sec-label">02</div>
-        <h2 id="about-title" class="am-title">ABOUT<br><span>ME.</span></h2>
-        
-        <div class="am-subtitle-box">
-          <div class="am-sub1">Learner. Builder. Problem Solver.</div>
-          <div class="am-sub2">Always curious, always improving.</div>
-          <div class="am-sub-line"></div>
+  <div class="about-exact-wrap fu">
+    <!-- LEFT SIDE - PROFILE PHOTO & CARDS -->
+    <div class="about-left-col">
+      <div class="about-photo-card">
+        <img src="images/nithish-about.jpg" alt="Nithish Bharathwaj N Formal Suit Portrait">
+      </div>
+
+      <div class="about-info-list">
+        <div class="about-info-row">
+          <span class="about-info-icon">👤</span>
+          <div class="about-info-text">
+            <strong>Nithish Bharathwaj N</strong>
+            <span>Cybersecurity • AI/ML • Full-Stack Engineer</span>
+          </div>
         </div>
 
-        <p class="am-bio-text">
-          I'm a second-year BE Cybersecurity student at <strong>Chennai Institute of Technology</strong>.
-        </p>
-
-        <p class="am-bio-text">
-          I'm passionate about solving complex problems, building impactful projects, and exploring the intersection of security, AI, and full-stack development.
-        </p>
-
-        <p class="am-bio-text">
-          I love learning by doing. From competitive programming to real-world applications, I enjoy turning ideas into solutions that make a difference.
-        </p>
-
-        <!-- 4 STAT COLUMNS -->
-        <div class="am-4stats-row">
-          <div class="am-stat-col">
-            <div class="am-stat-icon">&lt;/&gt;</div>
-            <div class="am-stat-num">500+</div>
-            <div class="am-stat-lbl">LeetCode<br>Problems</div>
+        <div class="about-info-row">
+          <span class="about-info-icon">🎓</span>
+          <div class="about-info-text">
+            <strong>BE Cybersecurity – Second Year</strong>
+            <span>Chennai Institute of Technology</span>
           </div>
+        </div>
 
-          <div class="am-stat-col">
-            <div class="am-stat-icon">🏆</div>
-            <div class="am-stat-num">5+</div>
-            <div class="am-stat-lbl">Hackathon<br>Finalist</div>
+        <div class="about-info-row">
+          <span class="about-info-icon">📍</span>
+          <div class="about-info-text">
+            <strong>Chennai, Tamil Nadu, India</strong>
           </div>
+        </div>
 
-          <div class="am-stat-col">
-            <div class="am-stat-icon">🚀</div>
-            <div class="am-stat-num">3+</div>
-            <div class="am-stat-lbl">Major<br>Projects</div>
-          </div>
-
-          <div class="am-stat-col">
-            <div class="am-stat-icon">⏱️</div>
-            <div class="am-stat-num">5-6 Hrs</div>
-            <div class="am-stat-lbl">Daily<br>Learning</div>
+        <div class="about-info-row">
+          <span class="about-info-icon">✉️</span>
+          <div class="about-info-text">
+            <strong>nithishbharathwajn@gmail.com</strong>
           </div>
         </div>
       </div>
 
-      <!-- RIGHT COLUMN: PORTRAIT PHOTO & 4 SPECS -->
-      <div class="am-right-col">
-        <!-- PORTRAIT STAGE -->
-        <div class="am-photo-stage">
-          <div class="am-dots-grid"></div>
-          <div class="am-orange-dot"></div>
-          <div class="am-peach-arch"></div>
-          <img src="images/nithish-about.jpg" alt="Nithish Bharathwaj N Portrait" class="am-portrait-img">
-        </div>
-
-        <!-- 4 SPECS LIST BELOW PHOTO -->
-        <div class="am-specs-list">
-          <div class="am-spec-item">
-            <div class="am-spec-icon">👤</div>
-            <div class="am-spec-text">Nithish Bharathwaj N</div>
-          </div>
-
-          <div class="am-spec-item">
-            <div class="am-spec-icon">🎓</div>
-            <div class="am-spec-text">Cybersecurity • AI/ML • Full-Stack Engineer</div>
-          </div>
-
-          <div class="am-spec-item">
-            <div class="am-spec-icon">📍</div>
-            <div class="am-spec-text">Chennai, Tamil Nadu, India</div>
-          </div>
-
-          <div class="am-spec-item">
-            <div class="am-spec-icon">✉️</div>
-            <div class="am-spec-text">nithishbharathwajn@gmail.com</div>
-          </div>
+      <div class="about-quote-box">
+        <span class="about-quote-mark">“</span>
+        <div class="about-quote-text">
+          Curious by nature.<br>
+          Driven by purpose.<br>
+          Focused on impact.
         </div>
       </div>
     </div>
 
-    <!-- BOTTOM FULL-WIDTH CARD: BEYOND CODE -->
-    <div class="am-beyond-card fu">
-      <div class="amb-hdr">
-        <div class="amb-icon-title">
-          <span style="color:var(--accent);">♡</span> BEYOND CODE
-        </div>
-        <div class="amb-sub">Things that fuel my mind and keep me balanced.</div>
-        <div class="amb-line"></div>
+    <!-- RIGHT SIDE - CONTENT & STATS -->
+    <div class="about-right-col">
+      <div class="about-tag-header">02</div>
+      <h2 id="about-title" class="about-main-h2">About<br><span>Me.</span></h2>
+      <div class="about-subtag-line">LEARNER. BUILDER. PROBLEM SOLVER.</div>
+
+      <div class="about-prose">
+        <p>
+          I'm a second-year BE Cybersecurity student at <strong>Chennai Institute of Technology</strong>, driven by curiosity and a passion for solving real-world problems through technology.
+        </p>
+        <p>
+          I enjoy building secure, intelligent and real-time systems at the intersection of cybersecurity, AI and full-stack development.
+        </p>
+        <p>
+          I learn by doing — from competitive programming and security research to AI experiments and engineering impactful applications.
+        </p>
       </div>
 
-      <div class="amb-5cols">
-        <div class="amb-item">
-          <div class="amb-icon">📖</div>
-          <div class="amb-lbl">Reading<br>Books</div>
+      <div class="about-stats-grid">
+        <div class="about-stat-col">
+          <div class="about-stat-icon">&lt;/&gt;</div>
+          <div class="about-stat-val" data-target="500" data-suffix="+">500+</div>
+          <div class="about-stat-lbl">LeetCode<br>Problems Solved</div>
         </div>
 
-        <div class="amb-item">
-          <div class="amb-icon">🏋️</div>
-          <div class="amb-lbl">Workout &amp;<br>Fitness</div>
+        <div class="about-stat-col">
+          <div class="about-stat-icon">🏆</div>
+          <div class="about-stat-val" data-target="5" data-suffix="+">5+</div>
+          <div class="about-stat-lbl">Hackathon<br>Finalist</div>
         </div>
 
-        <div class="amb-item">
-          <div class="amb-icon">✈️</div>
-          <div class="amb-lbl">Travel &amp;<br>Exploration</div>
+        <div class="about-stat-col">
+          <div class="about-stat-icon">🚀</div>
+          <div class="about-stat-val" data-target="3" data-suffix="+">3+</div>
+          <div class="about-stat-lbl">Major<br>Projects</div>
         </div>
 
-        <div class="amb-item">
-          <div class="amb-icon">🎧</div>
-          <div class="amb-lbl">Music &amp;<br>Focus</div>
+        <div class="about-stat-col">
+          <div class="about-stat-icon">🕒</div>
+          <div class="about-stat-val">5–6 Hrs</div>
+          <div class="about-stat-lbl">Daily<br>Learning</div>
         </div>
+      </div>
 
-        <div class="amb-item">
-          <div class="amb-icon">📈</div>
-          <div class="amb-lbl">Personal<br>Growth</div>
-        </div>
+      <div>
+        <a href="#journey" class="about-journey-link">More about my journey →</a>
       </div>
     </div>
   </div>
 </section>
+
+<!-- TRANSITION STRIP BELOW ABOUT -->
+<div class="about-drives-strip fu">
+  <div class="about-drives-inner">
+    <div class="drives-left-hdr">
+      <div class="drives-tag">03</div>
+      <h3 class="drives-title">What Drives <span>Me.</span></h3>
+    </div>
+    <div class="drives-right-quote">
+      <span class="drives-quote-mark">“</span>
+      <p class="drives-quote-text">
+        I believe in continuous learning, building with purpose, and creating solutions that make a difference.
+      </p>
+    </div>
+  </div>
+</div>
 
 <section id="skills" aria-labelledby="skills-title">
   <div class="skills-wrap">
