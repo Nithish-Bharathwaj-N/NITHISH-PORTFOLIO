@@ -6394,6 +6394,42 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 .drives-tag {
   display: none !important;
 }
+
+/* ALIGN ABOUT SECTION FLUSH LEFT WITH NAVBAR */
+#about {
+  background: #f7f6f2;
+  padding: 90px 48px 70px;
+  position: relative;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+@media(max-width:860px) { #about { padding: 60px 20px 40px; } }
+
+.about-exact-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+@media(max-width:1024px) { .about-exact-wrap { grid-template-columns: 1fr; gap: 36px; } }
+
+.about-drives-strip {
+  background: #0f0f11;
+  padding: 48px 48px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: #ffffff;
+}
+
+.about-drives-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 56px;
+  align-items: center;
+}
+@media(max-width:960px) { .about-drives-inner { grid-template-columns: 1fr; gap: 16px; } }
 </style>
 </head>
 <body>
