@@ -1,253 +1,249 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 export function Achievements() {
-  const topMetrics = [
-    {
-      icon: '</>',
-      num: '500+',
-      title: 'LeetCode Solved',
-      sub: 'Across All Difficulty Levels',
-      badge: '▲ 202%',
-      stroke: '#c8421a',
-      path: 'M0,15 L20,10 L40,14 L60,6 L80,12 L100,2',
-      link: 'https://leetcode.com/u/nithish_cit/'
-    },
-    {
-      icon: '📈',
-      num: '1771',
-      title: 'Peak Contest Rating',
-      sub: '118-day Coding Streak',
-      badge: 'Top 11%',
-      stroke: '#a855f7',
-      path: 'M0,16 L20,12 L40,8 L60,11 L80,5 L100,2',
-      link: 'https://leetcode.com/u/nithish_cit/'
-    },
-    {
-      icon: '🐙',
-      num: '24 Repos',
-      title: 'GitHub Contributions',
-      sub: '10 Public Repos & 15+ Stars',
-      badge: '250+ Commits',
-      stroke: '#10b981',
-      path: 'M0,18 L20,14 L40,10 L60,12 L80,4 L100,2',
-      link: 'https://github.com/Nithish-Bharathwaj-N'
-    },
-    {
-      icon: '🏆',
-      num: 'Aerothon',
-      title: '2026 Finalist',
-      sub: 'HAL × IIT Indore',
-      badge: 'Top 8',
-      stroke: '#c8421a',
-      path: 'M0,18 L20,14 L40,10 L60,12 L80,4 L100,2'
-    }
-  ];
-
-  const badgeCards = [
-    {
-      sub: 'AEROTHON 2026',
-      title: 'TOP 8 FINALIST',
-      tag: 'HAL × IIT INDORE',
-      featured: true,
-      icon: '🏆'
-    },
-    {
-      sub: 'SMART HORIZON 2026',
-      title: 'FINALIST',
-      tag: 'National Level Hackathon',
-      featured: false,
-      icon: '🎖️'
-    },
-    {
-      sub: 'CODEATHON 2025',
-      title: 'FINALIST',
-      tag: 'National Level Hackathon',
-      featured: false,
-      icon: '</>'
-    },
-    {
-      sub: 'CIT SDG HACKATHON 2025',
-      title: 'FINALIST',
-      tag: 'National Level Hackathon',
-      featured: false,
-      icon: '🌿'
-    },
-    {
-      sub: 'ABACUS COMPETITION',
-      title: 'QUALIFIER',
-      tag: 'International Level Qualified',
-      featured: false,
-      icon: '🧮'
-    }
-  ];
-
-  const journeySteps = [
-    {
-      time: 'MID 2025',
-      icon: '</>',
-      title: 'Started Competitive Programming',
-      desc: 'Building problem solving skills and algorithms foundation.',
-      color: 'border-[#c8421a] text-[#c8421a]'
-    },
-    {
-      time: 'END 2025',
-      icon: '🛡️',
-      title: 'Cybersecurity',
-      desc: 'Explored security fundamentals, networking, and ethical hacking concepts.',
-      color: 'border-[#c8421a] text-[#c8421a]'
-    },
-    {
-      time: 'EARLY 2026',
-      icon: '💻',
-      title: 'Full-Stack Development',
-      desc: 'Started building end-to-end web applications and dynamic user experiences.',
-      color: 'border-blue-500 text-blue-400'
-    },
-    {
-      time: 'MID 2026',
-      icon: '🧠',
-      title: 'AI / Machine Learning',
-      desc: 'Diving into ML models, data, and intelligent system building.',
-      color: 'border-purple-500 text-purple-400'
-    },
-    {
-      time: 'NOW',
-      icon: '🚀',
-      title: 'Working on Projects & Hackathons',
-      desc: 'Building impactful solutions and participating in real-world hackathons.',
-      isNow: true,
-      color: 'border-emerald-500 text-emerald-400'
-    }
-  ];
-
-  const beyondTech = [
-    { icon: '🏐', label: 'District Level Throwball' },
-    { icon: '🎲', label: 'Zonal Level Carrom Player' },
-    { icon: '🏃', label: 'Athlete' },
-    { icon: '🏏', label: 'Cricket Player' },
-    { icon: '🧮', label: 'Abacus International Level Qualifier' }
-  ];
-
   return (
-    <section id="achievements" className="bg-[#0d0d0d] py-20 lg:py-24 px-6 lg:px-16 text-white">
-      <div className="max-w-7xl mx-auto">
-        {/* HEADER BLOCK */}
-        <div className="mb-8">
-          <div className="flex items-center gap-2.5 text-xs font-extrabold uppercase tracking-widest text-slate-400 mb-3">
-            04 <span className="w-7 h-[1px] bg-slate-400 inline-block" />
-          </div>
-          <h2 id="ach-title" className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight mb-2">
-            KEY <span className="text-[#c8421a]">ACHIEVEMENTS.</span>
-          </h2>
-          <p className="text-sm text-slate-400 max-w-xl leading-relaxed">
-            Milestones that reflect hard work, consistency, problem solving, and real-world engineering results.
-          </p>
-        </div>
-
-        {/* TOP METRIC CARDS ROW (LEETCODE SOLVED, CONTEST RATING, GITHUB CONTRIBUTIONS, AEROTHON) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 mb-8">
-          {topMetrics.map((m) => {
-            const Content = (
-              <div className="bg-[#111111] border border-white/10 rounded-2xl p-5 flex flex-col justify-between hover:border-[#c8421a]/40 transition-all hover:-translate-y-1 h-full">
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-sm font-bold text-[#c8421a]">{m.icon}</div>
-                    <span className="text-[0.65rem] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">{m.badge}</span>
-                  </div>
-                  <div className="font-display text-2xl font-extrabold text-white mb-1">{m.num}</div>
-                  <div className="text-xs font-bold text-white/80 leading-tight mb-0.5">{m.title}</div>
-                  <div className="text-[0.62rem] text-white/40">{m.sub}</div>
-                </div>
-                <svg className="w-full h-4 mt-3" viewBox="0 0 100 20" preserveAspectRatio="none">
-                  <path d={m.path} fill="none" stroke={m.stroke} strokeWidth="2" />
-                </svg>
-              </div>
-            );
-
-            return m.link ? (
-              <a key={m.title} href={m.link} target="_blank" rel="noopener noreferrer" className="no-underline">
-                {Content}
-              </a>
-            ) : (
-              <div key={m.title}>{Content}</div>
-            );
-          })}
-        </div>
-
-        {/* 5 BADGE CARDS ROW */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 mb-8">
-          {badgeCards.map((b) => (
-            <div
-              key={b.sub}
-              className={`rounded-2xl p-4 text-center flex flex-col items-center justify-between min-h-[180px] transition-all hover:-translate-y-1 ${
-                b.featured
-                  ? 'bg-gradient-to-b from-[#c8421a]/20 to-[#111111] border-2 border-[#c8421a] shadow-[0_0_24px_rgba(200,66,26,0.25)]'
-                  : 'bg-[#111111] border border-white/10 hover:border-[#c8421a]'
-              }`}
-            >
-              <div
-                className={`w-11 h-11 mb-2.5 flex items-center justify-center text-base font-bold ${
-                  b.featured
-                    ? 'bg-[#c8421a] text-white rounded-xl shadow-[0_0_12px_#c8421a]'
-                    : 'bg-[#c8421a]/15 text-[#c8421a] rounded-xl border border-[#c8421a]/30'
-                }`}
-              >
-                {b.icon}
-              </div>
-              <div className="text-[0.6rem] font-extrabold uppercase tracking-wider text-white/50 mb-0.5 truncate w-full">{b.sub}</div>
-              <div className={`font-display text-xs font-black uppercase tracking-wider my-1 leading-tight ${b.featured ? 'text-[#c8421a]' : 'text-white'}`}>
-                {b.title}
-              </div>
-              <div className="text-[0.6rem] font-bold text-white/40 pt-1.5 border-t border-white/10 w-full truncate">{b.tag}</div>
+    <section id="achievements" className="bg-[#0d0d0d] py-24 px-6 lg:px-12 border-t border-white/10 text-white relative">
+      <div className="max-w-[1440px] mx-auto flex flex-col gap-9">
+        {/* TOP ROW: LEFT HEADER, MIDDLE FEATURED CARD, RIGHT SIDEBAR */}
+        <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr_280px] gap-6 items-stretch">
+          {/* LEFT HEADER */}
+          <div className="flex flex-col justify-center">
+            <div className="flex items-center gap-2.5 text-xs font-extrabold uppercase tracking-widest text-[#d9471f] mb-3.5 before:content-[''] before:inline-block before:w-6 before:h-0.5 before:bg-[#d9471f]">
+              ACHIEVEMENTS
             </div>
-          ))}
+            <h2 id="ach-title" className="font-display text-4xl lg:text-5xl font-black text-white leading-none tracking-tight mb-4">
+              PROOF OF WORK.<br /><span className="text-[#d9471f]">MILESTONES</span> THAT MATTER.
+            </h2>
+            <p className="text-xs lg:text-sm text-slate-400 leading-relaxed mb-6">
+              From hackathons to code, every milestone represents learning, consistency, and impact.
+            </p>
+            <a href="#works" className="inline-flex items-center gap-2 px-4.5 py-2.5 rounded-lg bg-white/[0.03] border border-[#d9471f]/40 text-xs font-black text-white hover:bg-[#d9471f] hover:border-[#d9471f] transition-all w-fit">
+              🏆 View All Achievements &rarr;
+            </a>
+          </div>
+
+          {/* MIDDLE FEATURED CARD */}
+          <div className="bg-[#131317] border border-[#d9471f]/30 rounded-2xl p-6 lg:p-7 grid grid-cols-1 md:grid-cols-[1fr_220px] gap-6 items-center shadow-lg">
+            <div className="flex flex-col">
+              <div className="flex items-center gap-1.5 text-[0.7rem] font-black tracking-widest text-[#d9471f] uppercase mb-2">
+                🏆 FEATURED ACHIEVEMENT
+              </div>
+              <h3 className="font-display text-2xl lg:text-3xl font-black text-white mb-1">
+                Aerothon 2026
+              </h3>
+              <div className="text-xs font-black text-[#d9471f] tracking-wider uppercase mb-3">
+                TOP 8 FINALIST <span className="text-slate-400 font-normal">HAL × IIT Indore</span>
+              </div>
+              <p className="text-xs text-slate-300 leading-relaxed mb-4">
+                Built an enterprise-grade aerospace mission control and digital twin platform for real-time engine health monitoring and predictive maintenance.
+              </p>
+
+              <div className="flex flex-wrap gap-1.5 mb-5">
+                {['Aerospace', 'Digital Twin', 'Real-Time', 'AI/ML', 'Systems'].map((t) => (
+                  <span key={t} className="text-[0.68rem] font-bold text-slate-300 bg-white/[0.05] border border-white/10 px-2.5 py-1 rounded-md">
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              <a href="#works" className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#d9471f]/15 border border-[#d9471f]/40 text-xs font-black text-white hover:bg-[#d9471f] transition-colors w-fit">
+                View Project Case Study &rarr;
+              </a>
+            </div>
+
+            <div className="relative rounded-xl overflow-hidden border border-white/10">
+              <Image
+                src="/images/subaero-preview.jpg"
+                alt="Aerothon 2026 Digital Twin"
+                width={220}
+                height={165}
+                className="w-full aspect-[4/3] object-cover block"
+              />
+            </div>
+          </div>
+
+          {/* RIGHT SIDEBAR STATS */}
+          <div className="bg-[#131317] border border-white/10 rounded-2xl p-5 flex flex-col justify-between gap-4">
+            <div className="flex items-start gap-3.5">
+              <span className="text-xl text-[#d9471f] shrink-0 mt-0.5">&lt;/&gt;</span>
+              <div>
+                <div className="font-display text-2xl font-black text-white leading-none">500+</div>
+                <div className="text-xs font-bold text-slate-300 mt-0.5">LeetCode Problems Solved</div>
+                <div className="text-[0.68rem] text-slate-400">Across All Difficulty Levels</div>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3.5">
+              <span className="text-xl text-[#d9471f] shrink-0 mt-0.5">📊</span>
+              <div>
+                <div className="font-display text-2xl font-black text-white leading-none">1771</div>
+                <div className="text-xs font-bold text-slate-300 mt-0.5">Peak Contest Rating</div>
+                <div className="text-[0.68rem] text-slate-400">118-Day Coding Streak</div>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3.5">
+              <span className="text-xl text-[#d9471f] shrink-0 mt-0.5">🐙</span>
+              <div>
+                <div className="font-display text-2xl font-black text-white leading-none">24+</div>
+                <div className="text-xs font-bold text-slate-300 mt-0.5">GitHub Repositories</div>
+                <div className="text-[0.68rem] text-slate-400">250+ Commits</div>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3.5">
+              <span className="text-xl text-[#d9471f] shrink-0 mt-0.5">🏆</span>
+              <div>
+                <div className="font-display text-2xl font-black text-white leading-none">5+</div>
+                <div className="text-xs font-bold text-slate-300 mt-0.5">Hackathon Finalist</div>
+                <div className="text-[0.68rem] text-slate-400">National Level Competitions</div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* MIDDLE PANEL: MY JOURNEY */}
-        <div className="bg-[#111111] border border-white/10 rounded-2xl p-6 lg:p-7 mb-8">
-          <div className="font-display text-sm font-extrabold uppercase tracking-wider text-white mb-1 flex items-center gap-2">
-            🚀 MY JOURNEY
+        {/* MIDDLE CARD: HACKATHON & COMPETITIONS HORIZONTAL TIMELINE */}
+        <div className="bg-[#131317] border border-white/10 rounded-2xl p-7 lg:p-9 flex flex-col gap-6">
+          <div className="font-display text-base font-black text-white tracking-wider uppercase">
+            HACKATHON &amp; COMPETITIONS <span className="text-[#d9471f">•</span>
           </div>
-          <div className="text-xs text-white/45 mb-7">A continuous path of learning, exploring, and building.</div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 relative">
-            {journeySteps.map((s) => (
-              <div key={s.time} className="relative z-10">
-                <div className="flex flex-col items-start mb-3">
-                  <span className="text-[0.62rem] font-extrabold uppercase tracking-widest text-[#c8421a] mb-2">{s.time}</span>
-                  <div
-                    className={`w-9 h-9 rounded-xl border-2 flex items-center justify-center text-xs font-bold ${
-                      s.isNow ? 'bg-emerald-500 border-white text-white shadow-[0_0_16px_#10b981] rounded-full' : `bg-[#161616] ${s.color}`
-                    }`}
-                  >
-                    {s.icon}
-                  </div>
-                </div>
-                <div className="font-display text-xs font-extrabold text-white mb-1">{s.title}</div>
-                <div className="text-[0.68rem] text-white/45 leading-relaxed">{s.desc}</div>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-3.5">
+            {/* NODE 1: AEROTHON 2026 */}
+            <div className="bg-white/[0.02] border border-[#d9471f]/50 rounded-xl p-4.5 flex flex-col items-center text-center hover:border-[#d9471f] hover:-translate-y-1 transition-all bg-[#d9471f]/5">
+              <div className="w-9 h-9 rounded-lg bg-[#d9471f]/10 flex items-center justify-center text-base text-[#d9471f] mb-2.5">🏆</div>
+              <div className="font-display text-xs font-black text-white mb-0.5">Aerothon 2026</div>
+              <div className="text-[0.65rem] font-black text-[#d9471f] tracking-wider uppercase mb-1">TOP 8 FINALIST</div>
+              <div className="text-[0.68rem] text-slate-400 mb-3">HAL × IIT Indore</div>
+              <div className="font-display text-xs font-black text-[#d9471f] pt-2 border-t border-white/10 w-full">2026</div>
+            </div>
+
+            {/* NODE 2: HACKDRIVEN 2026 (USER REQUESTED!) */}
+            <div className="bg-white/[0.02] border border-[#d9471f]/50 rounded-xl p-4.5 flex flex-col items-center text-center hover:border-[#d9471f] hover:-translate-y-1 transition-all bg-[#d9471f]/5">
+              <div className="w-9 h-9 rounded-lg bg-[#d9471f]/10 flex items-center justify-center text-base text-[#d9471f] mb-2.5">⚡</div>
+              <div className="font-display text-xs font-black text-white mb-0.5">HackDriven 2026</div>
+              <div className="text-[0.65rem] font-black text-[#d9471f] tracking-wider uppercase mb-1">FINALIST</div>
+              <div className="text-[0.68rem] text-slate-400 mb-3">National Hackathon</div>
+              <div className="font-display text-xs font-black text-[#d9471f] pt-2 border-t border-white/10 w-full">2026</div>
+            </div>
+
+            {/* NODE 3: SMART HORIZON 2026 */}
+            <div className="bg-white/[0.02] border border-white/10 rounded-xl p-4.5 flex flex-col items-center text-center hover:border-[#d9471f] hover:-translate-y-1 transition-all">
+              <div className="w-9 h-9 rounded-lg bg-[#d9471f]/10 flex items-center justify-center text-base text-[#d9471f] mb-2.5">🏅</div>
+              <div className="font-display text-xs font-black text-white mb-0.5">Smart Horizon</div>
+              <div className="text-[0.65rem] font-black text-[#d9471f] tracking-wider uppercase mb-1">FINALIST</div>
+              <div className="text-[0.68rem] text-slate-400 mb-3">National Hackathon</div>
+              <div className="font-display text-xs font-black text-[#d9471f] pt-2 border-t border-white/10 w-full">2026</div>
+            </div>
+
+            {/* NODE 4: CODEATHON 2025 */}
+            <div className="bg-white/[0.02] border border-white/10 rounded-xl p-4.5 flex flex-col items-center text-center hover:border-[#d9471f] hover:-translate-y-1 transition-all">
+              <div className="w-9 h-9 rounded-lg bg-[#d9471f]/10 flex items-center justify-center text-base text-[#d9471f] mb-2.5">&lt;/&gt;</div>
+              <div className="font-display text-xs font-black text-white mb-0.5">Codeathon 2025</div>
+              <div className="text-[0.65rem] font-black text-[#d9471f] tracking-wider uppercase mb-1">FINALIST</div>
+              <div className="text-[0.68rem] text-slate-400 mb-3">National Hackathon</div>
+              <div className="font-display text-xs font-black text-[#d9471f] pt-2 border-t border-white/10 w-full">2025</div>
+            </div>
+
+            {/* NODE 5: CIT SDG HACKATHON */}
+            <div className="bg-white/[0.02] border border-white/10 rounded-xl p-4.5 flex flex-col items-center text-center hover:border-[#d9471f] hover:-translate-y-1 transition-all">
+              <div className="w-9 h-9 rounded-lg bg-[#d9471f]/10 flex items-center justify-center text-base text-[#d9471f] mb-2.5">🌱</div>
+              <div className="font-display text-xs font-black text-white mb-0.5">CIT SDG Hackathon</div>
+              <div className="text-[0.65rem] font-black text-[#d9471f] tracking-wider uppercase mb-1">FINALIST</div>
+              <div className="text-[0.68rem] text-slate-400 mb-3">National Hackathon</div>
+              <div className="font-display text-xs font-black text-[#d9471f] pt-2 border-t border-white/10 w-full">2025</div>
+            </div>
+
+            {/* NODE 6: ABACUS COMPETITION */}
+            <div className="bg-white/[0.02] border border-white/10 rounded-xl p-4.5 flex flex-col items-center text-center hover:border-[#d9471f] hover:-translate-y-1 transition-all">
+              <div className="w-9 h-9 rounded-lg bg-[#d9471f]/10 flex items-center justify-center text-base text-[#d9471f] mb-2.5">🌐</div>
+              <div className="font-display text-xs font-black text-white mb-0.5">Abacus Competition</div>
+              <div className="text-[0.65rem] font-black text-[#d9471f] tracking-wider uppercase mb-1">QUALIFIER</div>
+              <div className="text-[0.68rem] text-slate-400 mb-3">International Qualified</div>
+              <div className="font-display text-xs font-black text-[#d9471f] pt-2 border-t border-white/10 w-full">2025</div>
+            </div>
           </div>
         </div>
 
-        {/* BOTTOM PANEL: BEYOND TECHNOLOGY */}
-        <div className="bg-[#111111] border border-white/10 rounded-2xl p-6 lg:p-7">
-          <div className="font-display text-sm font-extrabold uppercase tracking-wider text-white mb-1 flex items-center gap-2">
-            ⭐ BEYOND TECHNOLOGY
+        {/* LOWER CARD: JOURNEY TIMELINE */}
+        <div className="bg-[#131317] border border-white/10 rounded-2xl p-7 lg:p-9 flex flex-col gap-6">
+          <div className="font-display text-base font-black text-white tracking-wider uppercase">
+            JOURNEY TIMELINE <span className="text-[#d9471f">•</span>
           </div>
-          <div className="text-xs text-white/45 mb-5">Sports, competitions, and activities that keep me balanced and driven.</div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-3.5">
-            {beyondTech.map((item) => (
-              <div key={item.label} className="bg-[#0d0d0d]/60 border border-white/5 rounded-xl p-3 flex items-center gap-3 hover:border-[#c8421a]/40 transition-all hover:-translate-y-0.5">
-                <div className="w-9 h-9 rounded-full bg-[#c8421a]/15 border border-[#c8421a]/30 flex items-center justify-center text-sm text-[#c8421a] shrink-0">
-                  {item.icon}
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8.5 h-8.5 rounded-full bg-[#d9471f]/10 border border-[#d9471f]/30 flex items-center justify-center text-xs text-[#d9471f] shrink-0">
+                  &lt;/&gt;
                 </div>
-                <div className="font-display text-[0.7rem] font-extrabold text-white uppercase leading-tight">{item.label}</div>
+                <div className="font-display text-xs font-black text-slate-400 uppercase">Mid 2025</div>
               </div>
-            ))}
+              <div className="font-display text-xs font-black text-white">Competitive Programming</div>
+              <div className="text-[0.74rem] text-slate-400 leading-snug">Building problem solving skills and algorithm foundations.</div>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8.5 h-8.5 rounded-full bg-[#d9471f]/10 border border-[#d9471f]/30 flex items-center justify-center text-xs text-[#d9471f] shrink-0">
+                  🛡️
+                </div>
+                <div className="font-display text-xs font-black text-slate-400 uppercase">End 2025</div>
+              </div>
+              <div className="font-display text-xs font-black text-white">Cybersecurity</div>
+              <div className="text-[0.74rem] text-slate-400 leading-snug">Explored security fundamentals, networking and ethical hacking.</div>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8.5 h-8.5 rounded-full bg-[#d9471f]/10 border border-[#d9471f]/30 flex items-center justify-center text-xs text-[#d9471f] shrink-0">
+                  &lt;/&gt;
+                </div>
+                <div className="font-display text-xs font-black text-slate-400 uppercase">Early 2026</div>
+              </div>
+              <div className="font-display text-xs font-black text-white">Full-Stack Development</div>
+              <div className="text-[0.74rem] text-slate-400 leading-snug">Started building end-to-end web applications and real-time systems.</div>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8.5 h-8.5 rounded-full bg-[#d9471f]/10 border border-[#d9471f]/30 flex items-center justify-center text-xs text-[#d9471f] shrink-0">
+                  🧠
+                </div>
+                <div className="font-display text-xs font-black text-slate-400 uppercase">Mid 2026</div>
+              </div>
+              <div className="font-display text-xs font-black text-white">AI / Machine Learning</div>
+              <div className="text-[0.74rem] text-slate-400 leading-snug">Dived into ML models, LLMs, agents and intelligent systems.</div>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8.5 h-8.5 rounded-full bg-[#d9471f]/10 border border-[#d9471f]/30 flex items-center justify-center text-xs text-[#d9471f] shrink-0">
+                  🚀
+                </div>
+                <div className="font-display text-xs font-black text-slate-400 uppercase">Now</div>
+              </div>
+              <div className="font-display text-xs font-black text-white">Building Impact</div>
+              <div className="text-[0.74rem] text-slate-400 leading-snug">Working on ambitious projects and participating in real-world hackathons.</div>
+            </div>
+          </div>
+        </div>
+
+        {/* BOTTOM QUOTE BANNER */}
+        <div className="bg-[#131317] border border-white/10 rounded-2xl p-6 lg:p-8 flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div className="flex items-start gap-3.5">
+            <span className="font-display text-3xl font-black text-[#d9471f] leading-none shrink-0">“</span>
+            <div className="text-sm lg:text-base text-slate-300 leading-relaxed">
+              Achievements are not just wins, they are the <strong className="text-[#d9471f] font-extrabold">lessons</strong> that shape what&apos;s next.
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center lg:items-end gap-0.5 shrink-0">
+            <div className="font-serif italic font-bold text-2xl text-[#d9471f]">Nithish</div>
+            <div className="text-[0.62rem] font-black tracking-widest text-slate-400 uppercase">KEEP LEARNING. KEEP BUILDING. KEEP IMPACTING.</div>
           </div>
         </div>
       </div>

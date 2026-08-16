@@ -6430,6 +6430,1126 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   align-items: center;
 }
 @media(max-width:960px) { .about-drives-inner { grid-template-columns: 1fr; gap: 16px; } }
+
+/* SECTION 02 - ABOUT ME MOCKUP 100% EXACT MATCH */
+#about {
+  background: #fbfaf7;
+  padding: 90px 48px 60px;
+  position: relative;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+@media(max-width:860px) { #about { padding: 60px 20px 40px; } }
+
+.about-exact-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-top-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 56px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+@media(max-width:1024px) { .about-top-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+/* LEFT CARD */
+.about-left-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.about-img-frame {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+}
+.about-img-frame::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 4px;
+  bottom: 16px;
+  background: #d9471f;
+  border-radius: 0 3px 3px 0;
+  z-index: 2;
+}
+.about-img-frame img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+}
+
+.about-info-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 4px;
+}
+.about-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.about-info-icon {
+  font-size: 1.05rem;
+  color: #d9471f;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.about-info-text strong {
+  display: block;
+  font-size: 0.86rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.3;
+}
+.about-info-text span {
+  font-size: 0.76rem;
+  color: #64748b;
+  display: block;
+  margin-top: 2px;
+}
+
+.about-quote-card {
+  background: #fdf8f6;
+  border: 1px solid rgba(217,71,31,0.12);
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.about-quote-mark {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #d9471f;
+  line-height: 0.8;
+  flex-shrink: 0;
+}
+.about-quote-lines {
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-style: italic;
+  color: #334155;
+  line-height: 1.55;
+}
+
+/* RIGHT CONTENT */
+.about-right-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-tag-lbl {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #d9471f;
+  margin-bottom: 12px;
+}
+.about-tag-lbl::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: #d9471f;
+}
+
+.about-headline {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.8rem, 4.8vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+  margin-bottom: 24px;
+}
+.about-headline span {
+  color: #d9471f;
+}
+
+.about-divider-line {
+  width: 36px;
+  height: 2px;
+  background: #d9471f;
+  margin-bottom: 24px;
+}
+
+.about-text-prose p {
+  font-size: 0.96rem;
+  line-height: 1.82;
+  color: #334155;
+  margin-bottom: 20px;
+}
+.about-text-prose strong {
+  color: #0f172a;
+  font-weight: 800;
+}
+
+/* 3 CARDS BELOW PARAGRAPHS */
+.about-three-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 36px;
+}
+@media(max-width:860px) { .about-three-cards { grid-template-columns: 1fr; } }
+
+.a-card-box {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+  transition: all 0.28s ease;
+}
+.a-card-box:hover {
+  border-color: rgba(217,71,31,0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.07);
+}
+
+.a-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.a-card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(217,71,31,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  color: #d9471f;
+  flex-shrink: 0;
+}
+.a-card-meta {
+  display: flex;
+  flex-direction: column;
+}
+.a-card-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: #d9471f;
+  letter-spacing: 0.1em;
+}
+.a-card-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.a-card-line {
+  width: 24px;
+  height: 2px;
+  background: #d9471f;
+  margin-bottom: 14px;
+}
+
+.a-card-ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.a-card-ul li {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.a-card-ul li::before {
+  content: '•';
+  color: #d9471f;
+  font-weight: 900;
+}
+
+/* BOTTOM WIDE QUOTE BANNER */
+.about-bottom-banner {
+  background: #fdfbf7;
+  border: 1px solid rgba(217,71,31,0.18);
+  border-radius: 18px;
+  padding: 28px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 8px 28px rgba(217,71,31,0.05);
+}
+@media(max-width:860px) { .about-bottom-banner { flex-direction: column; gap: 20px; text-align: center; padding: 24px; } }
+
+.b-banner-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.b-banner-quote-mark {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #d9471f;
+  line-height: 0.8;
+  flex-shrink: 0;
+}
+.b-banner-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #334155;
+  font-weight: 500;
+}
+.b-banner-text strong {
+  color: #d9471f;
+  font-weight: 800;
+}
+
+.b-banner-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+@media(max-width:860px) { .b-banner-right { align-items: center; } }
+
+.b-signature {
+  font-family: 'Georgia', cursive, serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 700;
+  color: #d9471f;
+  line-height: 1;
+}
+.b-signature-sub {
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+/* SECTION 03 - EXPERTISE & TECHNOLOGY SCREENSHOT EXACT MATCH */
+#skills {
+  background: #0d0d0d;
+  padding: 90px 48px 70px;
+  position: relative;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: #ffffff;
+}
+@media(max-width:860px) { #skills { padding: 60px 20px 40px; } }
+
+.skills-mockup-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* TOP LAYOUT: LEFT SIDE & RIGHT 4 CARDS GRID */
+.skills-top-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 36px;
+  align-items: start;
+}
+@media(max-width:1100px) { .skills-top-layout { grid-template-columns: 1fr; gap: 32px; } }
+
+.skills-left-header {
+  display: flex;
+  flex-direction: column;
+}
+.skills-tag-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #d9471f;
+  margin-bottom: 16px;
+}
+.skills-tag-line::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: #d9471f;
+}
+
+.skills-main-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.6rem, 4.2vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.skills-main-title span {
+  color: #d9471f;
+}
+
+.skills-narrative {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.58);
+  margin-bottom: 32px;
+}
+
+.skills-left-bottom-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+@media(max-width:640px) { .skills-left-bottom-row { flex-direction: column; align-items: flex-start; } }
+
+.view-tech-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(217,71,31,0.4);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #ffffff;
+  transition: all 0.25s ease;
+}
+.view-tech-btn:hover {
+  background: #d9471f;
+  border-color: #d9471f;
+}
+
+.skills-mini-stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.mini-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+.mini-stat-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+}
+.mini-stat-lbl {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.42);
+  margin-top: 3px;
+}
+
+/* RIGHT 4 CARDS GRID */
+.skills-4cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+@media(max-width:1280px) { .skills-4cards-grid { grid-template-columns: repeat(2, 1fr); } }
+@media(max-width:640px) { .skills-4cards-grid { grid-template-columns: 1fr; } }
+
+.domain-column-card {
+  background: #131317;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.28s ease;
+}
+.domain-column-card:hover {
+  border-color: rgba(217,71,31,0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.4);
+}
+
+.d-circle-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(217,71,31,0.1);
+  border: 1px solid rgba(217,71,31,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: #d9471f;
+  margin-bottom: 16px;
+}
+
+.d-num-tag {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 900;
+  color: #d9471f;
+  letter-spacing: 0.1em;
+  margin-bottom: 2px;
+}
+.d-card-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.d-card-sub {
+  font-size: 0.74rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.45;
+  margin-bottom: 14px;
+}
+.d-card-divider {
+  width: 24px;
+  height: 2px;
+  background: #d9471f;
+  margin-bottom: 14px;
+}
+
+.d-card-ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.d-card-ul li {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.65);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.d-card-ul li::before {
+  content: '•';
+  color: #d9471f;
+  font-weight: 900;
+}
+
+/* MIDDLE CARD: TECH STACK GRID */
+.tech-stack-card {
+  background: #131317;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media(max-width:680px) { .tech-stack-card { padding: 24px; } }
+
+.tech-stack-hdr {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.tech-stack-hdr span {
+  color: #d9471f;
+}
+
+.tech-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+@media(max-width:1100px) { .tech-categories-grid { grid-template-columns: repeat(2, 1fr); } }
+@media(max-width:640px) { .tech-categories-grid { grid-template-columns: 1fr; } }
+
+.t-cat-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.t-cat-lbl {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.t-cat-lbl span { color: #d9471f; }
+
+.t-chips-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.t-chip {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 5px 11px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+.t-chip:hover {
+  border-color: #d9471f;
+  color: #ffffff;
+  background: rgba(217,71,31,0.12);
+}
+
+/* BOTTOM CARD: ENGINEERING PRINCIPLES */
+.principles-card {
+  background: #131317;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 28px 36px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 36px;
+  align-items: center;
+}
+@media(max-width:1100px) { .principles-card { grid-template-columns: 1fr; gap: 20px; } }
+
+.p-left-hdr {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+.p-left-hdr::before {
+  content: '';
+  width: 4px;
+  height: 38px;
+  background: #d9471f;
+  border-radius: 2px;
+}
+.p-left-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+
+.p-items-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+@media(max-width:1100px) { .p-items-grid { grid-template-columns: repeat(3, 1fr); } }
+@media(max-width:640px) { .p-items-grid { grid-template-columns: 1fr; } }
+
+.p-col-item {
+  display: flex;
+  flex-direction: column;
+}
+.p-col-icon {
+  font-size: 1.15rem;
+  color: #d9471f;
+  margin-bottom: 6px;
+}
+.p-col-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.p-col-desc {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.48);
+  line-height: 1.45;
+}
+
+/* SECTION 05 - ACHIEVEMENTS SCREENSHOT EXACT MATCH */
+#achievements {
+  background: #0d0d0d;
+  padding: 90px 48px 70px;
+  position: relative;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: #ffffff;
+}
+@media(max-width:860px) { #achievements { padding: 60px 20px 40px; } }
+
+.ach-mockup-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* TOP ROW: LEFT HEADER, MIDDLE FEATURED CARD, RIGHT SIDEBAR */
+.ach-top-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr 280px;
+  gap: 24px;
+  align-items: stretch;
+}
+@media(max-width:1280px) { .ach-top-grid { grid-template-columns: 1fr; } }
+
+/* LEFT HEADER */
+.ach-left-hdr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ach-tag-lbl {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #d9471f;
+  margin-bottom: 14px;
+}
+.ach-tag-lbl::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: #d9471f;
+}
+
+.ach-main-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.4rem, 3.8vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+.ach-main-title span {
+  color: #d9471f;
+}
+
+.ach-narrative {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 28px;
+}
+
+.ach-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(217,71,31,0.4);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #ffffff;
+  transition: all 0.25s ease;
+  width: fit-content;
+}
+.ach-view-btn:hover {
+  background: #d9471f;
+  border-color: #d9471f;
+}
+
+/* MIDDLE FEATURED CARD */
+.ach-feat-card {
+  background: #131317;
+  border: 1px solid rgba(217,71,31,0.28);
+  border-radius: 18px;
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 24px;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+@media(max-width:768px) { .ach-feat-card { grid-template-columns: 1fr; } }
+
+.ach-feat-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #d9471f;
+  margin-bottom: 8px;
+}
+.ach-feat-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+.ach-feat-sub {
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: #d9471f;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.ach-feat-sub span { color: rgba(255,255,255,0.6); }
+
+.ach-feat-desc {
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 16px;
+}
+
+.ach-feat-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.ach-feat-tech span {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
+  padding: 3px 9px;
+  border-radius: 5px;
+}
+
+.ach-feat-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: rgba(217,71,31,0.12);
+  border: 1px solid rgba(217,71,31,0.4);
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #ffffff;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+.ach-feat-btn:hover {
+  background: #d9471f;
+  border-color: #d9471f;
+}
+
+.ach-feat-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* RIGHT SIDEBAR STATS */
+.ach-side-stats {
+  background: #131317;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+.ach-stat-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.ach-stat-icon {
+  font-size: 1.4rem;
+  color: #d9471f;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.ach-stat-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+}
+.ach-stat-lbl {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  margin-top: 2px;
+}
+.ach-stat-sub {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.4);
+}
+
+/* MIDDLE CARD: HACKATHON & COMPETITIONS HORIZONTAL TIMELINE */
+.hackathons-card {
+  background: #131317;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.hackathons-hdr {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.hackathons-hdr span {
+  color: #d9471f;
+}
+
+.hackathons-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  position: relative;
+}
+@media(max-width:1280px) { .hackathons-grid { grid-template-columns: repeat(3, 1fr); } }
+@media(max-width:640px) { .hackathons-grid { grid-template-columns: 1fr; } }
+
+.h-card-node {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.25s ease;
+  position: relative;
+}
+.h-card-node.highlight-node {
+  border-color: rgba(217,71,31,0.5);
+  background: rgba(217,71,31,0.05);
+}
+.h-card-node:hover {
+  border-color: #d9471f;
+  transform: translateY(-3px);
+  background: rgba(217,71,31,0.08);
+}
+
+.h-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(217,71,31,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #d9471f;
+  margin-bottom: 10px;
+}
+.h-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+.h-badge {
+  font-size: 0.65rem;
+  font-weight: 900;
+  color: #d9471f;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.h-org {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 12px;
+}
+.h-year-tag {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 900;
+  color: #d9471f;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  width: 100%;
+}
+
+/* LOWER CARD: JOURNEY TIMELINE */
+.j-timeline-card {
+  background: #131317;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.j-timeline-hdr {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.j-timeline-hdr span {
+  color: #d9471f;
+}
+
+.j-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  position: relative;
+}
+@media(max-width:1100px) { .j-steps-grid { grid-template-columns: repeat(3, 1fr); } }
+@media(max-width:640px) { .j-steps-grid { grid-template-columns: 1fr; } }
+
+.j-step-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.j-step-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.j-step-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(217,71,31,0.1);
+  border: 1px solid rgba(217,71,31,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: #d9471f;
+  flex-shrink: 0;
+}
+.j-step-year {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+}
+.j-step-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+.j-step-desc {
+  font-size: 0.74rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.55;
+}
+
+/* BOTTOM QUOTE BANNER */
+.ach-quote-banner {
+  background: #131317;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media(max-width:860px) { .ach-quote-banner { flex-direction: column; gap: 16px; text-align: center; } }
+
+.ach-q-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.ach-q-mark {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #d9471f;
+  line-height: 0.8;
+  flex-shrink: 0;
+}
+.ach-q-text {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+}
+.ach-q-text strong {
+  color: #d9471f;
+  font-weight: 900;
+}
+
+.ach-q-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+@media(max-width:860px) { .ach-q-right { align-items: center; } }
+
+.ach-sig {
+  font-family: 'Georgia', cursive, serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 700;
+  color: #d9471f;
+  line-height: 1;
+}
+.ach-sig-sub {
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
 </style>
 </head>
 <body>
@@ -6494,102 +7614,158 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 </section>
 
 <!-- SECTION 02 - ABOUT ME EXACT SCREENSHOT MATCH -->
+<!-- SECTION 02 - ABOUT ME 100% EXACT MOCKUP MATCH -->
 <section id="about" aria-labelledby="about-title">
-  <div class="about-exact-wrap fu">
-    <!-- LEFT SIDE - PROFILE PHOTO & CARDS -->
-    <div class="about-left-col">
-      <div class="about-photo-card">
-        <img src="images/nithish-about.jpg" alt="Nithish Bharathwaj N Formal Suit Portrait">
+  <div class="about-exact-container fu">
+    <!-- TOP GRID: LEFT CARD & RIGHT CONTENT -->
+    <div class="about-top-grid">
+      <!-- LEFT SIDE CARD -->
+      <div class="about-left-card">
+        <div class="about-img-frame">
+          <img src="images/nithish-about.jpg" alt="Nithish Bharathwaj N Portrait">
+        </div>
+
+        <div class="about-info-rows">
+          <div class="about-info-item">
+            <span class="about-info-icon">👤</span>
+            <div class="about-info-text">
+              <strong>Nithish Bharathwaj N</strong>
+              <span>Cybersecurity • AI • Full-Stack Engineer</span>
+            </div>
+          </div>
+
+          <div class="about-info-item">
+            <span class="about-info-icon">🎓</span>
+            <div class="about-info-text">
+              <strong>BE Cybersecurity – Second Year</strong>
+              <span>Chennai Institute of Technology</span>
+            </div>
+          </div>
+
+          <div class="about-info-item">
+            <span class="about-info-icon">📍</span>
+            <div class="about-info-text">
+              <strong>Chennai, Tamil Nadu, India</strong>
+            </div>
+          </div>
+
+          <div class="about-info-item">
+            <span class="about-info-icon">✉️</span>
+            <div class="about-info-text">
+              <strong>nithishbharathwajn@gmail.com</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-quote-card">
+          <span class="about-quote-mark">“</span>
+          <div class="about-quote-lines">
+            Curious by nature.<br>
+            Driven by purpose.<br>
+            Focused on impact.
+          </div>
+        </div>
       </div>
 
-      <div class="about-info-list">
-        <div class="about-info-row">
-          <span class="about-info-icon">👤</span>
-          <div class="about-info-text">
-            <strong>Nithish Bharathwaj N</strong>
-            <span>Cybersecurity • AI/ML • Full-Stack Engineer</span>
-          </div>
+      <!-- RIGHT SIDE CONTENT -->
+      <div class="about-right-content">
+        <div class="about-tag-lbl">ABOUT ME</div>
+        <h2 id="about-title" class="about-headline">
+          THE PERSON BEHIND<br>
+          THE <span>SYSTEMS.</span>
+        </h2>
+        <div class="about-divider-line"></div>
+
+        <div class="about-text-prose">
+          <p>
+            I'm a second-year BE Cybersecurity student at <strong>Chennai Institute of Technology</strong>, driven by curiosity and a passion for solving real-world problems through technology.
+          </p>
+          <p>
+            I enjoy building <strong>secure, intelligent</strong> and <strong>real-time systems</strong> at the intersection of cybersecurity, AI and full-stack development.
+          </p>
+          <p>
+            <strong>I learn by doing</strong> — from competitive programming and security research to AI experiments and engineering impactful applications.
+          </p>
         </div>
 
-        <div class="about-info-row">
-          <span class="about-info-icon">🎓</span>
-          <div class="about-info-text">
-            <strong>BE Cybersecurity – Second Year</strong>
-            <span>Chennai Institute of Technology</span>
+        <!-- 3 CARDS BELOW PARAGRAPHS -->
+        <div class="about-three-cards">
+          <!-- CARD 01 -->
+          <div class="a-card-box">
+            <div class="a-card-header">
+              <div class="a-card-icon">🧠</div>
+              <div class="a-card-meta">
+                <span class="a-card-num">01</span>
+                <span class="a-card-title">HOW I THINK</span>
+              </div>
+            </div>
+            <div class="a-card-line"></div>
+            <ul class="a-card-ul">
+              <li>Curiosity</li>
+              <li>Explore</li>
+              <li>Build</li>
+              <li>Break</li>
+              <li>Learn</li>
+              <li>Improve</li>
+            </ul>
           </div>
-        </div>
 
-        <div class="about-info-row">
-          <span class="about-info-icon">📍</span>
-          <div class="about-info-text">
-            <strong>Chennai, Tamil Nadu, India</strong>
+          <!-- CARD 02 -->
+          <div class="a-card-box">
+            <div class="a-card-header">
+              <div class="a-card-icon">&lt;/&gt;</div>
+              <div class="a-card-meta">
+                <span class="a-card-num">02</span>
+                <span class="a-card-title">WHAT I BUILD</span>
+              </div>
+            </div>
+            <div class="a-card-line"></div>
+            <ul class="a-card-ul">
+              <li>Secure Systems</li>
+              <li>AI-Powered Apps</li>
+              <li>Real-time Platforms</li>
+              <li>Engineering Interfaces</li>
+              <li>Automation Tools</li>
+              <li>Impactful Solutions</li>
+            </ul>
           </div>
-        </div>
 
-        <div class="about-info-row">
-          <span class="about-info-icon">✉️</span>
-          <div class="about-info-text">
-            <strong>nithishbharathwajn@gmail.com</strong>
+          <!-- CARD 03 -->
+          <div class="a-card-box">
+            <div class="a-card-header">
+              <div class="a-card-icon">🎯</div>
+              <div class="a-card-meta">
+                <span class="a-card-num">03</span>
+                <span class="a-card-title">WHAT DRIVES ME</span>
+              </div>
+            </div>
+            <div class="a-card-line"></div>
+            <ul class="a-card-ul">
+              <li>Difficult Problems</li>
+              <li>Continuous Learning</li>
+              <li>Building in Public</li>
+              <li>Research & Curiosity</li>
+              <li>Discipline & Consistency</li>
+              <li>Creating Real Impact</li>
+            </ul>
           </div>
-        </div>
-      </div>
-
-      <div class="about-quote-box">
-        <span class="about-quote-mark">“</span>
-        <div class="about-quote-text">
-          Curious by nature.<br>
-          Driven by purpose.<br>
-          Focused on impact.
         </div>
       </div>
     </div>
 
-    <!-- RIGHT SIDE - CONTENT & STATS -->
-    <div class="about-right-col">
-      
-      <h2 id="about-title" class="about-main-h2">About<br><span>Me.</span></h2>
-      <div class="about-subtag-line">LEARNER. BUILDER. PROBLEM SOLVER.</div>
-
-      <div class="about-prose">
-        <p>
-          I'm a second-year BE Cybersecurity student at <strong>Chennai Institute of Technology</strong>, driven by curiosity and a passion for solving real-world problems through technology.
-        </p>
-        <p>
-          I enjoy building secure, intelligent and real-time systems at the intersection of cybersecurity, AI and full-stack development.
-        </p>
-        <p>
-          I learn by doing — from competitive programming and security research to AI experiments and engineering impactful applications.
-        </p>
-      </div>
-
-      <div class="about-stats-grid">
-        <div class="about-stat-col">
-          <div class="about-stat-icon">&lt;/&gt;</div>
-          <div class="about-stat-val" data-target="500" data-suffix="+">500+</div>
-          <div class="about-stat-lbl">LeetCode<br>Problems Solved</div>
-        </div>
-
-        <div class="about-stat-col">
-          <div class="about-stat-icon">🏆</div>
-          <div class="about-stat-val" data-target="5" data-suffix="+">5+</div>
-          <div class="about-stat-lbl">Hackathon<br>Finalist</div>
-        </div>
-
-        <div class="about-stat-col">
-          <div class="about-stat-icon">🚀</div>
-          <div class="about-stat-val" data-target="3" data-suffix="+">3+</div>
-          <div class="about-stat-lbl">Major<br>Projects</div>
-        </div>
-
-        <div class="about-stat-col">
-          <div class="about-stat-icon">🕒</div>
-          <div class="about-stat-val">5–6 Hrs</div>
-          <div class="about-stat-lbl">Daily<br>Learning</div>
+    <!-- BOTTOM WIDE QUOTE BANNER -->
+    <div class="about-bottom-banner">
+      <div class="b-banner-left">
+        <span class="b-banner-quote-mark">“</span>
+        <div class="b-banner-text">
+          I believe in learning deeply, building consistently,<br>
+          and creating solutions that make a <strong>real difference.</strong>
         </div>
       </div>
 
-      <div>
-        <a href="#journey" class="about-journey-link">More about my journey →</a>
+      <div class="b-banner-right">
+        <div class="b-signature">Nithish</div>
+        <div class="b-signature-sub">KEEP LEARNING. KEEP BUILDING.</div>
       </div>
     </div>
   </div>
@@ -6611,257 +7787,238 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   </div>
 </div>
 
+<!-- SECTION 03 - EXPERTISE & TECHNOLOGY 100% EXACT MOCKUP MATCH -->
 <section id="skills" aria-labelledby="skills-title">
-  <div class="skills-wrap">
-    <div class="sec-label">02</div>
-    <h2 id="skills-title" class="sec-title" style="color:#fff">Expertise &amp; <span style="color:var(--accent)">Technology.</span></h2>
-    <p style="font-size:0.9rem;color:var(--text-muted);max-width:540px;margin-top:10px;line-height:1.65;">Technologies and domains I work with to build secure, intelligent, and real-time systems that solve complex engineering problems.</p>
+  <div class="skills-mockup-wrap fu">
+    <!-- TOP LAYOUT: LEFT HEADER & RIGHT 4 CARDS -->
+    <div class="skills-top-layout">
+      <!-- LEFT HEADER -->
+      <div class="skills-left-header">
+        <div class="skills-tag-line">EXPERTISE & TECHNOLOGY</div>
+        <h2 id="skills-title" class="skills-main-title">
+          WHAT I KNOW.<br>
+          WHAT I <span>BUILD</span> WITH.
+        </h2>
+        <p class="skills-narrative">
+          I work across cybersecurity, intelligent systems and modern software engineering to build secure, scalable and real-time solutions.
+        </p>
 
-    <!-- TOP DASHBOARD ROW (3 COLUMNS) -->
-    <div class="exp-grid-top">
-      <!-- LEFT COLUMN -->
-      <div class="exp-left-col fu">
-        <div class="exp-stat-row">
-          <div class="exp-mini-card">
-            <div class="exp-mini-icon">💻</div>
-            <div class="exp-mini-num">30+</div>
-            <div class="exp-mini-lbl">Technologies</div>
-          </div>
-          <div class="exp-mini-card">
-            <div class="exp-mini-icon">⭐</div>
-            <div class="exp-mini-num">5</div>
-            <div class="exp-mini-lbl">Core Domains</div>
-          </div>
-        </div>
-
-        <!-- TERMINAL BLOCK -->
-        <div class="exp-terminal">
-          <div class="term-head">
-            <span class="term-dot r"></span>
-            <span class="term-dot y"></span>
-            <span class="term-dot g"></span>
-            <span class="term-title">engineer@portfolio:~</span>
-          </div>
-          <div class="term-body">
-            <span class="term-cmd">&gt; engineer@portfolio:~$ cat philosophy.txt</span>
-            <span class="term-text">I combine security-first thinking with modern engineering practices to build systems that are scalable, reliable, and impactful.<span class="term-cursor"></span></span>
+        <div class="skills-left-bottom-row">
+          <a href="#works" class="view-tech-btn">📦 View Full Tech Stack →</a>
+          <div class="skills-mini-stats">
+            <div class="mini-stat-item">
+              <div class="mini-stat-num">30+</div>
+              <div class="mini-stat-lbl">TECHNOLOGIES</div>
+            </div>
+            <div class="mini-stat-item">
+              <div class="mini-stat-num">5</div>
+              <div class="mini-stat-lbl">CORE DOMAINS</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- CENTER RADIAL HUB DIAGRAM -->
-      <div class="exp-hub-wrap fu">
-        <div class="exp-hub-container">
-          <svg class="hub-svg" viewBox="0 0 440 380">
-            <circle cx="220" cy="190" r="130" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1.5" stroke-dasharray="4 4" />
-            <circle cx="220" cy="190" r="70" fill="none" stroke="rgba(200,66,26,0.18)" stroke-width="1.5" />
-            <!-- CONNECTING LINES TO NODES -->
-            <line x1="220" y1="190" x2="220" y2="45" stroke="#c8421a" stroke-width="1.5" opacity="0.6" />
-            <line x1="220" y1="190" x2="360" y2="115" stroke="#10b981" stroke-width="1.5" opacity="0.6" />
-            <line x1="220" y1="190" x2="335" y2="305" stroke="#f59e0b" stroke-width="1.5" opacity="0.6" />
-            <line x1="220" y1="190" x2="105" y2="305" stroke="#06b6d4" stroke-width="1.5" opacity="0.6" />
-            <line x1="220" y1="190" x2="80" y2="115" stroke="#a855f7" stroke-width="1.5" opacity="0.6" />
-          </svg>
+      <!-- RIGHT 4 DOMAIN CARDS GRID -->
+      <div class="skills-4cards-grid">
+        <!-- CARD 01 -->
+        <div class="domain-column-card">
+          <div class="d-circle-icon">🛡️</div>
+          <span class="d-num-tag">01</span>
+          <h3 class="d-card-title">CYBERSECURITY</h3>
+          <p class="d-card-sub">Secure systems. Protect what matters.</p>
+          <div class="d-card-divider"></div>
+          <ul class="d-card-ul">
+            <li>Linux & System Security</li>
+            <li>Web Security</li>
+            <li>Networking</li>
+            <li>Authentication & Authorization</li>
+            <li>Security Research</li>
+            <li>Secure Architecture</li>
+          </ul>
+        </div>
 
-          <!-- CENTRAL CORE -->
-          <div class="hub-center">
-            <span class="hub-center-mono">NB</span>
-            <span class="hub-center-lbl">Core Engineering</span>
-          </div>
+        <!-- CARD 02 -->
+        <div class="domain-column-card">
+          <div class="d-circle-icon">🧠</div>
+          <span class="d-num-tag">02</span>
+          <h3 class="d-card-title">AI & INTELLIGENT SYSTEMS</h3>
+          <p class="d-card-sub">Intelligence that learns. Systems that adapt.</p>
+          <div class="d-card-divider"></div>
+          <ul class="d-card-ul">
+            <li>LLM Applications</li>
+            <li>AI Agents</li>
+            <li>RAG Systems</li>
+            <li>Machine Learning</li>
+            <li>Computer Vision</li>
+            <li>AI-assisted Engineering</li>
+          </ul>
+        </div>
 
-          <!-- 5 DOMAIN NODES -->
-          <div class="hub-node node-cyber">
-            <div class="hub-node-icon">🛡️</div>
-            <div class="hub-node-title">Cybersecurity</div>
-            <div class="hub-node-sub">Security First</div>
-          </div>
+        <!-- CARD 03 -->
+        <div class="domain-column-card">
+          <div class="d-circle-icon">&lt;/&gt;</div>
+          <span class="d-num-tag">03</span>
+          <h3 class="d-card-title">FULL-STACK ENGINEERING</h3>
+          <p class="d-card-sub">Build robust. Ship fast. Scale endlessly.</p>
+          <div class="d-card-divider"></div>
+          <ul class="d-card-ul">
+            <li>React / Next.js</li>
+            <li>TypeScript / JavaScript</li>
+            <li>Node.js / Express</li>
+            <li>Python / FastAPI</li>
+            <li>REST APIs / GraphQL</li>
+            <li>Real-time Applications</li>
+          </ul>
+        </div>
 
-          <div class="hub-node node-ai">
-            <div class="hub-node-icon">🧠</div>
-            <div class="hub-node-title">AI &amp; ML</div>
-            <div class="hub-node-sub">Intelligence Layer</div>
-          </div>
-
-          <div class="hub-node node-realtime">
-            <div class="hub-node-icon">🧊</div>
-            <div class="hub-node-title">Real-Time 3D</div>
-            <div class="hub-node-sub">Simulate &amp; Visualize</div>
-          </div>
-
-          <div class="hub-node node-cloud">
-            <div class="hub-node-icon">☁️</div>
-            <div class="hub-node-title">Cloud &amp; DevOps</div>
-            <div class="hub-node-sub">Deploy &amp; Automate</div>
-          </div>
-
-          <div class="hub-node node-fullstack">
-            <div class="hub-node-icon">&lt;/&gt;</div>
-            <div class="hub-node-title">Full-Stack</div>
-            <div class="hub-node-sub">Build &amp; Scale</div>
-          </div>
+        <!-- CARD 04 -->
+        <div class="domain-column-card">
+          <div class="d-circle-icon">☁️</div>
+          <span class="d-num-tag">04</span>
+          <h3 class="d-card-title">SYSTEMS & INFRASTRUCTURE</h3>
+          <p class="d-card-sub">Infrastructure that scales. Systems that perform.</p>
+          <div class="d-card-divider"></div>
+          <ul class="d-card-ul">
+            <li>Docker / Containers</li>
+            <li>AWS Cloud Services</li>
+            <li>Linux Administration</li>
+            <li>Git / GitHub</li>
+            <li>CI / CD Pipelines</li>
+            <li>3D / WebGL / Simulation</li>
+          </ul>
         </div>
       </div>
+    </div>
 
-      <!-- RIGHT COLUMN (TECH ARSENAL PROGRESS METERS) -->
-      <div class="exp-right-col fu">
-        <div class="arsenal-hdr">
-          <span>ALL SKILLS &amp; ARSENAL</span>
-          <span style="color:rgba(255,255,255,0.4);font-size:0.6rem;">PROFICIENCY</span>
+    <!-- MIDDLE CARD: TECH STACK CATEGORIES -->
+    <div class="tech-stack-card">
+      <div class="tech-stack-hdr">TECH STACK <span>•</span></div>
+
+      <div class="tech-categories-grid">
+        <!-- ROW 1 -->
+        <div class="t-cat-group">
+          <div class="t-cat-lbl"><span>&lt;/&gt;</span> LANGUAGES</div>
+          <div class="t-chips-flex">
+            <span class="t-chip">Python</span>
+            <span class="t-chip">TypeScript</span>
+            <span class="t-chip">JavaScript</span>
+            <span class="t-chip">C++</span>
+            <span class="t-chip">SQL</span>
+          </div>
         </div>
-        <div class="arsenal-list arsenal-scroll">
-          <div class="arsenal-item">
-            <div class="arsenal-info"><span>Python</span><span class="arsenal-val">92%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:92%;"></div></div>
+
+        <div class="t-cat-group">
+          <div class="t-cat-lbl"><span>🧱</span> FRAMEWORKS</div>
+          <div class="t-chips-flex">
+            <span class="t-chip">React</span>
+            <span class="t-chip">Next.js</span>
+            <span class="t-chip">FastAPI</span>
+            <span class="t-chip">Node.js</span>
+            <span class="t-chip">Express</span>
           </div>
-          <div class="arsenal-item">
-            <div class="arsenal-info"><span>TypeScript / JavaScript</span><span class="arsenal-val">88%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:88%;"></div></div>
+        </div>
+
+        <div class="t-cat-group">
+          <div class="t-cat-lbl"><span>🗄️</span> DATA & DATABASES</div>
+          <div class="t-chips-flex">
+            <span class="t-chip">PostgreSQL</span>
+            <span class="t-chip">MongoDB</span>
+            <span class="t-chip">MySQL</span>
+            <span class="t-chip">Redis</span>
           </div>
-          <div class="arsenal-item">
-            <div class="arsenal-info"><span>React 19 / Next.js</span><span class="arsenal-val">90%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:90%;"></div></div>
+        </div>
+
+        <div class="t-cat-group">
+          <div class="t-cat-lbl"><span>🧠</span> AI & ML</div>
+          <div class="t-chips-flex">
+            <span class="t-chip">OpenAI</span>
+            <span class="t-chip">Gemini</span>
+            <span class="t-chip">RAG</span>
+            <span class="t-chip">AI Agents</span>
+            <span class="t-chip">ML</span>
           </div>
-          <div class="arsenal-item">
-            <div class="arsenal-info"><span>FastAPI / Flask</span><span class="arsenal-val">86%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:86%;"></div></div>
+        </div>
+
+        <!-- ROW 2 -->
+        <div class="t-cat-group">
+          <div class="t-cat-lbl"><span>☁️</span> DEVOPS & CLOUD</div>
+          <div class="t-chips-flex">
+            <span class="t-chip">Docker</span>
+            <span class="t-chip">AWS</span>
+            <span class="t-chip">Linux</span>
+            <span class="t-chip">Nginx</span>
+            <span class="t-chip">GitHub Actions</span>
           </div>
-          <div class="arsenal-item">
-            <div class="arsenal-info"><span>Linux &amp; Web Security</span><span class="arsenal-val">88%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:88%;"></div></div>
+        </div>
+
+        <div class="t-cat-group">
+          <div class="t-cat-lbl"><span>🛠️</span> TOOLS & PLATFORMS</div>
+          <div class="t-chips-flex">
+            <span class="t-chip">VS Code</span>
+            <span class="t-chip">Postman</span>
+            <span class="t-chip">Figma</span>
+            <span class="t-chip">Jupyter</span>
+            <span class="t-chip">Unity</span>
           </div>
-          <div class="arsenal-item">
-            <div class="arsenal-info"><span>Three.js &amp; WebGL</span><span class="arsenal-val">80%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:80%;"></div></div>
+        </div>
+
+        <div class="t-cat-group">
+          <div class="t-cat-lbl"><span>⚡</span> REAL-TIME & SYSTEMS</div>
+          <div class="t-chips-flex">
+            <span class="t-chip">WebSockets</span>
+            <span class="t-chip">Socket.IO</span>
+            <span class="t-chip">Kafka</span>
+            <span class="t-chip">Redis Streams</span>
           </div>
-          <div class="arsenal-item">
-            <div class="arsenal-info"><span>WebSockets / Real-Time Streaming</span><span class="arsenal-val">88%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:88%;"></div></div>
-          </div>
-          <div class="arsenal-item">
-            <div class="arsenal-info"><span>AI Agents &amp; RAG (Gemini/OpenAI)</span><span class="arsenal-val">85%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:85%;"></div></div>
-          </div>
-          <div class="arsenal-item">
-            <div class="arsenal-info"><span>PostgreSQL / MySQL / MongoDB</span><span class="arsenal-val">82%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:82%;"></div></div>
-          </div>
-          <div class="arsenal-item">
-            <div class="arsenal-info"><span>AWS (EC2, S3, Lambda) &amp; Docker</span><span class="arsenal-val">80%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:80%;"></div></div>
-          </div>
-          <div class="arsenal-item">
-            <div class="arsenal-info"><span>OAuth 2.0 / JWT Auth</span><span class="arsenal-val">86%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:86%;"></div></div>
-          </div>
-          <div class="arsenal-item">
-            <div class="arsenal-info"><span>Threat Modeling &amp; OWASP Top 10</span><span class="arsenal-val">85%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:85%;"></div></div>
-          </div>
-          <div class="arsenal-item">
-            <div class="arsenal-info"><span>Scikit-Learn &amp; Predictive ML</span><span class="arsenal-val">80%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:80%;"></div></div>
-          </div>
-          <div class="arsenal-item">
-            <div class="arsenal-info"><span>Tailwind CSS &amp; Modern UI/UX</span><span class="arsenal-val">90%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:90%;"></div></div>
-          </div>
-          <div class="arsenal-item">
-            <div class="arsenal-info"><span>Git / GitHub Actions CI/CD</span><span class="arsenal-val">88%</span></div>
-            <div class="arsenal-bar-bg"><div class="arsenal-bar-fill" style="width:88%;"></div></div>
+        </div>
+
+        <div class="t-cat-group">
+          <div class="t-cat-lbl"><span>🎯</span> OTHER SKILLS</div>
+          <div class="t-chips-flex">
+            <span class="t-chip">System Design</span>
+            <span class="t-chip">OOP</span>
+            <span class="t-chip">DSA</span>
+            <span class="t-chip">Linux Scripting</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ALL SKILLS DETAILED BREAKDOWN BY DOMAIN --> TECHNOLOGY ECOSYSTEM MARQUEE -->
-    <div class="exp-marquee-wrap fu">
-      <div class="exp-sec-hdr">TECHNOLOGY ECOSYSTEM •</div>
-      <div class="marquee">
-        <div class="marquee-inner">
-          <span class="tech-pill">🐍 Python</span>
-          <span class="tech-pill">⚡ TypeScript</span>
-          <span class="tech-pill">⚛️ React 19</span>
-          <span class="tech-pill">▲ Next.js</span>
-          <span class="tech-pill">🟢 Node.js</span>
-          <span class="tech-pill">⚡ FastAPI</span>
-          <span class="tech-pill">🌶️ Flask</span>
-          <span class="tech-pill">🐘 PostgreSQL</span>
-          <span class="tech-pill">🐬 MySQL</span>
-          <span class="tech-pill">🍃 MongoDB</span>
-          <span class="tech-pill">🔴 Redis</span>
-          <span class="tech-pill">🛡️ Linux Security</span>
-          <span class="tech-pill">🔐 OAuth 2.0</span>
-          <span class="tech-pill">🤖 Gemini AI</span>
-          <span class="tech-pill">🧠 AI Agents &amp; RAG</span>
-          <span class="tech-pill">📊 Scikit-Learn</span>
-          <span class="tech-pill">🔌 WebSockets</span>
-          <span class="tech-pill">🎲 Three.js / WebGL</span>
-          <span class="tech-pill">🎨 Tailwind CSS</span>
-          <span class="tech-pill">☁️ AWS (EC2/S3)</span>
-          <span class="tech-pill">🐳 Docker</span>
-          <span class="tech-pill">🐙 GitHub Actions</span>
-          <span class="tech-pill">🐧 Linux</span>
-          <span class="tech-pill">🌐 REST APIs</span>
-          <span class="tech-pill">🎨 Blender 3D</span>
-
-          <!-- LOOP -->
-          <span class="tech-pill">🐍 Python</span>
-          <span class="tech-pill">⚡ TypeScript</span>
-          <span class="tech-pill">⚛️ React 19</span>
-          <span class="tech-pill">▲ Next.js</span>
-          <span class="tech-pill">🟢 Node.js</span>
-          <span class="tech-pill">⚡ FastAPI</span>
-          <span class="tech-pill">🌶️ Flask</span>
-          <span class="tech-pill">🐘 PostgreSQL</span>
-          <span class="tech-pill">🐬 MySQL</span>
-          <span class="tech-pill">🍃 MongoDB</span>
-          <span class="tech-pill">🔴 Redis</span>
-          <span class="tech-pill">🛡️ Linux Security</span>
-          <span class="tech-pill">🔐 OAuth 2.0</span>
-          <span class="tech-pill">🤖 Gemini AI</span>
-          <span class="tech-pill">🧠 AI Agents &amp; RAG</span>
-          <span class="tech-pill">📊 Scikit-Learn</span>
-          <span class="tech-pill">🔌 WebSockets</span>
-          <span class="tech-pill">🎲 Three.js / WebGL</span>
-          <span class="tech-pill">🎨 Tailwind CSS</span>
-          <span class="tech-pill">☁️ AWS (EC2/S3)</span>
-          <span class="tech-pill">🐳 Docker</span>
-          <span class="tech-pill">🐙 GitHub Actions</span>
-          <span class="tech-pill">🐧 Linux</span>
-          <span class="tech-pill">🌐 REST APIs</span>
-          <span class="tech-pill">🎨 Blender 3D</span>
-        </div>
+    <!-- BOTTOM CARD: ENGINEERING PRINCIPLES -->
+    <div class="principles-card">
+      <div class="p-left-hdr">
+        <div class="p-left-title">&gt;_ ENGINEERING PRINCIPLES I LIVE BY</div>
       </div>
-    </div>
 
-    <!-- BOTTOM ENGINEERING PRINCIPLES ROW -->
-    <div class="exp-principles-wrap fu">
-      <div class="exp-sec-hdr" style="color:var(--accent)">ENGINEERING PRINCIPLES •</div>
-      <div class="principles-grid">
-        <div class="principle-card">
-          <div class="p-num">01</div>
-          <div class="p-title">Security</div>
-          <div class="p-desc">Every system I build follows zero-trust principles and secure design patterns.</div>
+      <div class="p-items-grid">
+        <div class="p-col-item">
+          <span class="p-col-icon">🛡️</span>
+          <div class="p-col-title">SECURITY FIRST</div>
+          <div class="p-col-desc">Every system I build follows zero-trust principles.</div>
         </div>
-        <div class="principle-card">
-          <div class="p-num">02</div>
-          <div class="p-title">Clean Architecture</div>
-          <div class="p-desc">Scalable, maintainable, and modular architectures that stand the test of time.</div>
+
+        <div class="p-col-item">
+          <span class="p-col-icon">⚡</span>
+          <div class="p-col-title">PERFORMANCE DRIVEN</div>
+          <div class="p-col-desc">I design for speed, scalability and real-world usage.</div>
         </div>
-        <div class="principle-card">
-          <div class="p-num">03</div>
-          <div class="p-title">Real-Time Oriented</div>
-          <div class="p-desc">Building low-latency systems with real-time data pipelines and event-driven design.</div>
+
+        <div class="p-col-item">
+          <span class="p-col-icon">&lt;/&gt;</span>
+          <div class="p-col-title">CLEAN & MAINTAINABLE</div>
+          <div class="p-col-desc">Clean code, modular architecture and continuous improvement.</div>
         </div>
-        <div class="principle-card">
-          <div class="p-num">04</div>
-          <div class="p-title">Intelligent Systems</div>
-          <div class="p-desc">Leveraging AI/ML to create systems that learn, predict, and make real impact.</div>
+
+        <div class="p-col-item">
+          <span class="p-col-icon">👤</span>
+          <div class="p-col-title">USER FOCUSED</div>
+          <div class="p-col-desc">I build solutions that solve real problems for real users.</div>
         </div>
-        <div class="principle-card">
-          <div class="p-num">05</div>
-          <div class="p-title">Build for Impact</div>
-          <div class="p-desc">Solving meaningful engineering problems for aerospace, healthcare, and security.</div>
+
+        <div class="p-col-item">
+          <span class="p-col-icon">🎯</span>
+          <div class="p-col-title">IMPACT ORIENTED</div>
+          <div class="p-col-desc">I aim to build systems that create measurable impact.</div>
         </div>
       </div>
     </div>
@@ -7046,196 +8203,213 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   </div>
 </section>
 
+<!-- SECTION 05 - ACHIEVEMENTS 100% EXACT MOCKUP MATCH -->
 <section id="achievements" aria-labelledby="ach-title">
-  <div class="ach-wrap">
-    <!-- HEADER BLOCK -->
-    <div class="ach-header-content fu">
-      <div class="sec-label">04</div>
-      <h2 id="ach-title" class="sec-title" style="color:#fff">KEY <span style="color:var(--accent)">ACHIEVEMENTS.</span></h2>
-      <p style="font-size:0.86rem;color:var(--text-muted);margin-top:6px;line-height:1.65;max-width:600px;">Milestones that reflect hard work, consistency, problem solving, and real-world engineering results.</p>
-    </div>
+  <div class="ach-mockup-wrap fu">
+    <!-- TOP ROW: LEFT HEADER, MIDDLE FEATURED CARD, RIGHT SIDEBAR -->
+    <div class="ach-top-grid">
+      <!-- LEFT HEADER -->
+      <div class="ach-left-hdr">
+        <div class="ach-tag-lbl">ACHIEVEMENTS</div>
+        <h2 id="ach-title" class="ach-main-title">
+          PROOF OF WORK.<br>
+          <span>MILESTONES</span> THAT MATTER.
+        </h2>
+        <p class="ach-narrative">
+          From hackathons to code, every milestone represents learning, consistency, and impact.
+        </p>
+        <a href="#works" class="ach-view-btn">🏆 View All Achievements →</a>
+      </div>
 
-    <!-- TOP METRIC CARDS ROW (SOLVED, CONTEST RATING, GITHUB CONTRIBUTIONS, AEROTHON) -->
-    <div class="ach-top-metrics-row fu">
-      <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener" class="ach-metric-card" style="text-decoration:none;">
+      <!-- MIDDLE FEATURED CARD -->
+      <div class="ach-feat-card">
         <div>
-          <div class="amc-hdr">
-            <div class="amc-icon">&lt;/&gt;</div>
-            <span class="amc-badge">▲ 202%</span>
+          <div class="ach-feat-tag">🏆 FEATURED ACHIEVEMENT</div>
+          <h3 class="ach-feat-title">Aerothon 2026</h3>
+          <div class="ach-feat-sub">TOP 8 FINALIST <span>HAL × IIT Indore</span></div>
+          <p class="ach-feat-desc">
+            Built an enterprise-grade aerospace mission control and digital twin platform for real-time engine health monitoring and predictive maintenance.
+          </p>
+          <div class="ach-feat-tech">
+            <span>Aerospace</span>
+            <span>Digital Twin</span>
+            <span>Real-Time</span>
+            <span>AI/ML</span>
+            <span>Systems</span>
           </div>
-          <div class="amc-num">500+</div>
-          <div class="amc-title">LeetCode Solved</div>
-          <div class="amc-sub">Across All Difficulty Levels</div>
+          <a href="#works" class="ach-feat-btn">View Project Case Study →</a>
         </div>
-        <svg class="tm-sparkline" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,15 L20,10 L40,14 L60,6 L80,12 L100,2" fill="none" stroke="#c8421a" stroke-width="2"/></svg>
-      </a>
 
-      <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener" class="ach-metric-card" style="text-decoration:none;">
         <div>
-          <div class="amc-hdr">
-            <div class="amc-icon">📈</div>
-            <span class="amc-badge" style="color:#a855f7;background:rgba(168,85,247,0.12);">Top 11%</span>
-          </div>
-          <div class="amc-num">1771</div>
-          <div class="amc-title">Peak Contest Rating</div>
-          <div class="amc-sub">118-day Coding Streak</div>
+          <img src="images/subaero-preview.jpg" alt="Aerothon 2026 Digital Twin" class="ach-feat-img">
         </div>
-        <svg class="tm-sparkline" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,16 L20,12 L40,8 L60,11 L80,5 L100,2" fill="none" stroke="#a855f7" stroke-width="2"/></svg>
-      </a>
+      </div>
 
-      <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener" class="ach-metric-card" style="text-decoration:none;">
-        <div>
-          <div class="amc-hdr">
-            <div class="amc-icon">🐙</div>
-            <span class="amc-badge">250+ Commits</span>
+      <!-- RIGHT SIDEBAR STATS -->
+      <div class="ach-side-stats">
+        <div class="ach-stat-row">
+          <span class="ach-stat-icon">&lt;/&gt;</span>
+          <div>
+            <div class="ach-stat-num">500+</div>
+            <div class="ach-stat-lbl">LeetCode Problems Solved</div>
+            <div class="ach-stat-sub">Across All Difficulty Levels</div>
           </div>
-          <div class="amc-num">24 Repos</div>
-          <div class="amc-title">GitHub Contributions</div>
-          <div class="amc-sub">10 Public Repos &amp; 15+ Stars</div>
         </div>
-        <svg class="tm-sparkline" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,18 L20,14 L40,10 L60,12 L80,4 L100,2" fill="none" stroke="#10b981" stroke-width="2"/></svg>
-      </a>
 
-      <div class="ach-metric-card">
-        <div>
-          <div class="amc-hdr">
-            <div class="amc-icon">🏆</div>
-            <span class="amc-badge" style="color:var(--accent);background:rgba(200,66,26,0.15);">Top 8</span>
+        <div class="ach-stat-row">
+          <span class="ach-stat-icon">📊</span>
+          <div>
+            <div class="ach-stat-num">1771</div>
+            <div class="ach-stat-lbl">Peak Contest Rating</div>
+            <div class="ach-stat-sub">118-Day Coding Streak</div>
           </div>
-          <div class="amc-num">Aerothon</div>
-          <div class="amc-title">2026 Finalist</div>
-          <div class="amc-sub">HAL × IIT Indore</div>
         </div>
-        <svg class="tm-sparkline" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,18 L20,14 L40,10 L60,12 L80,4 L100,2" fill="none" stroke="#c8421a" stroke-width="2"/></svg>
-      </div>
-    </div>
 
-    <!-- 5 BADGE CARDS ROW -->
-    <div class="ach-badge-cards fu">
-      <!-- Aerothon 2026 -->
-      <div class="badge-card featured">
-        <div class="hex-icon-wrap">🏆</div>
-        <div class="bc-sub">AEROTHON 2026</div>
-        <div class="bc-title">TOP 8 FINALIST</div>
-        <div class="bc-tag">HAL × IIT INDORE</div>
-      </div>
+        <div class="ach-stat-row">
+          <span class="ach-stat-icon">🐙</span>
+          <div>
+            <div class="ach-stat-num">24+</div>
+            <div class="ach-stat-lbl">GitHub Repositories</div>
+            <div class="ach-stat-sub">250+ Commits</div>
+          </div>
+        </div>
 
-      <!-- Smart Horizon 2026 -->
-      <div class="badge-card">
-        <div class="hex-icon-wrap">🎖️</div>
-        <div class="bc-sub">SMART HORIZON 2026</div>
-        <div class="bc-title">FINALIST</div>
-        <div class="bc-tag">National Level Hackathon</div>
-      </div>
-
-      <!-- Codeathon 2025 -->
-      <div class="badge-card">
-        <div class="hex-icon-wrap">&lt;/&gt;</div>
-        <div class="bc-sub">CODEATHON 2025</div>
-        <div class="bc-title">FINALIST</div>
-        <div class="bc-tag">National Level Hackathon</div>
-      </div>
-
-      <!-- CIT SDG Hackathon 2025 -->
-      <div class="badge-card">
-        <div class="hex-icon-wrap">🌿</div>
-        <div class="bc-sub">CIT SDG HACKATHON 2025</div>
-        <div class="bc-title">FINALIST</div>
-        <div class="bc-tag">National Level Hackathon</div>
-      </div>
-
-      <!-- Abacus Competition -->
-      <div class="badge-card">
-        <div class="hex-icon-wrap">🧮</div>
-        <div class="bc-sub">ABACUS COMPETITION</div>
-        <div class="bc-title">QUALIFIER</div>
-        <div class="bc-tag">International Level Qualified</div>
+        <div class="ach-stat-row">
+          <span class="ach-stat-icon">🏆</span>
+          <div>
+            <div class="ach-stat-num">5+</div>
+            <div class="ach-stat-lbl">Hackathon Finalist</div>
+            <div class="ach-stat-sub">National Level Competitions</div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- MIDDLE PANEL: MY JOURNEY TIMELINE -->
-    <div class="journey-box fu">
-      <div class="j-hdr-title">🚀 MY JOURNEY</div>
-      <div class="j-hdr-sub">A continuous path of learning, exploring, and building.</div>
+    <!-- MIDDLE CARD: HACKATHON & COMPETITIONS HORIZONTAL TIMELINE -->
+    <div class="hackathons-card">
+      <div class="hackathons-hdr">HACKATHON &amp; COMPETITIONS <span>•</span></div>
 
-      <div class="journey-track-nodes">
+      <div class="hackathons-grid">
+        <!-- NODE 1: AEROTHON 2026 -->
+        <div class="h-card-node highlight-node">
+          <div class="h-icon-box">🏆</div>
+          <div class="h-name">Aerothon 2026</div>
+          <div class="h-badge">TOP 8 FINALIST</div>
+          <div class="h-org">HAL × IIT Indore</div>
+          <div class="h-year-tag">2026</div>
+        </div>
+
+        <!-- NODE 2: HACKDRIVEN 2026 (USER REQUESTED!) -->
+        <div class="h-card-node highlight-node">
+          <div class="h-icon-box">⚡</div>
+          <div class="h-name">HackDriven 2026</div>
+          <div class="h-badge">FINALIST</div>
+          <div class="h-org">National Level Hackathon</div>
+          <div class="h-year-tag">2026</div>
+        </div>
+
+        <!-- NODE 3: SMART HORIZON 2026 -->
+        <div class="h-card-node">
+          <div class="h-icon-box">🏅</div>
+          <div class="h-name">Smart Horizon 2026</div>
+          <div class="h-badge">FINALIST</div>
+          <div class="h-org">National Level Hackathon</div>
+          <div class="h-year-tag">2026</div>
+        </div>
+
+        <!-- NODE 4: CODEATHON 2025 -->
+        <div class="h-card-node">
+          <div class="h-icon-box">&lt;/&gt;</div>
+          <div class="h-name">Codeathon 2025</div>
+          <div class="h-badge">FINALIST</div>
+          <div class="h-org">National Level Hackathon</div>
+          <div class="h-year-tag">2025</div>
+        </div>
+
+        <!-- NODE 5: CIT SDG HACKATHON 2025 -->
+        <div class="h-card-node">
+          <div class="h-icon-box">🌱</div>
+          <div class="h-name">CIT SDG Hackathon</div>
+          <div class="h-badge">FINALIST</div>
+          <div class="h-org">National Level Hackathon</div>
+          <div class="h-year-tag">2025</div>
+        </div>
+
+        <!-- NODE 6: ABACUS COMPETITION -->
+        <div class="h-card-node">
+          <div class="h-icon-box">🌐</div>
+          <div class="h-name">Abacus Competition</div>
+          <div class="h-badge">QUALIFIER</div>
+          <div class="h-org">International Qualified</div>
+          <div class="h-year-tag">2025</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOWER CARD: JOURNEY TIMELINE -->
+    <div class="j-timeline-card">
+      <div class="j-timeline-hdr">JOURNEY TIMELINE <span>•</span></div>
+
+      <div class="j-steps-grid">
         <div class="j-step-item">
-          <div class="j-step-hdr">
-            <span class="j-time-lbl">MID 2025</span>
-            <div class="j-node-hex">&lt;/&gt;</div>
+          <div class="j-step-top">
+            <div class="j-step-icon">&lt;/&gt;</div>
+            <div class="j-step-year">Mid 2025</div>
           </div>
-          <div class="j-step-title">Started Competitive Programming</div>
-          <div class="j-step-desc">Building problem solving skills and algorithms foundation.</div>
+          <div class="j-step-title">Competitive Programming</div>
+          <div class="j-step-desc">Building problem solving skills and algorithm foundations.</div>
         </div>
 
         <div class="j-step-item">
-          <div class="j-step-hdr">
-            <span class="j-time-lbl">END 2025</span>
-            <div class="j-node-hex">🛡️</div>
+          <div class="j-step-top">
+            <div class="j-step-icon">🛡️</div>
+            <div class="j-step-year">End 2025</div>
           </div>
           <div class="j-step-title">Cybersecurity</div>
-          <div class="j-step-desc">Explored security fundamentals, networking, and ethical hacking concepts.</div>
+          <div class="j-step-desc">Explored security fundamentals, networking and ethical hacking.</div>
         </div>
 
         <div class="j-step-item">
-          <div class="j-step-hdr">
-            <span class="j-time-lbl" style="color:#3b82f6;">EARLY 2026</span>
-            <div class="j-node-hex" style="border-color:#3b82f6;color:#3b82f6;">💻</div>
+          <div class="j-step-top">
+            <div class="j-step-icon">&lt;/&gt;</div>
+            <div class="j-step-year">Early 2026</div>
           </div>
           <div class="j-step-title">Full-Stack Development</div>
-          <div class="j-step-desc">Started building end-to-end web applications and dynamic user experiences.</div>
+          <div class="j-step-desc">Started building end-to-end web applications and real-time systems.</div>
         </div>
 
         <div class="j-step-item">
-          <div class="j-step-hdr">
-            <span class="j-time-lbl" style="color:#a855f7;">MID 2026</span>
-            <div class="j-node-hex" style="border-color:#a855f7;color:#a855f7;">🧠</div>
+          <div class="j-step-top">
+            <div class="j-step-icon">🧠</div>
+            <div class="j-step-year">Mid 2026</div>
           </div>
           <div class="j-step-title">AI / Machine Learning</div>
-          <div class="j-step-desc">Diving into ML models, data, and intelligent system building.</div>
+          <div class="j-step-desc">Dived into ML models, LLMs, agents and intelligent systems.</div>
         </div>
 
         <div class="j-step-item">
-          <div class="j-step-hdr">
-            <span class="j-time-lbl" style="color:#10b981;">NOW</span>
-            <div class="j-node-hex now-node">🚀</div>
+          <div class="j-step-top">
+            <div class="j-step-icon">🚀</div>
+            <div class="j-step-year">Now</div>
           </div>
-          <div class="j-step-title">Working on Projects &amp; Hackathons</div>
-          <div class="j-step-desc">Building impactful solutions and participating in real-world hackathons.</div>
+          <div class="j-step-title">Building Impact</div>
+          <div class="j-step-desc">Working on ambitious projects and participating in real-world hackathons.</div>
         </div>
       </div>
     </div>
 
-    <!-- BOTTOM PANEL: BEYOND TECHNOLOGY -->
-    <div class="beyond-tech-panel fu">
-      <div class="bt-hdr-title">⭐ BEYOND TECHNOLOGY</div>
-      <div class="bt-hdr-sub">Sports, competitions, and activities that keep me balanced and driven.</div>
-
-      <div class="bt-items-grid">
-        <div class="bt-item">
-          <div class="bt-circle-icon">🏐</div>
-          <div class="bt-lbl">District Level<br>Throwball</div>
+    <!-- BOTTOM QUOTE BANNER -->
+    <div class="ach-quote-banner">
+      <div class="ach-q-left">
+        <span class="ach-q-mark">“</span>
+        <div class="ach-q-text">
+          Achievements are not just wins, they are the <strong>lessons</strong> that shape what's next.
         </div>
+      </div>
 
-        <div class="bt-item">
-          <div class="bt-circle-icon">🎲</div>
-          <div class="bt-lbl">Zonal Level<br>Carrom Player</div>
-        </div>
-
-        <div class="bt-item">
-          <div class="bt-circle-icon">🏃</div>
-          <div class="bt-lbl">Athlete</div>
-        </div>
-
-        <div class="bt-item">
-          <div class="bt-circle-icon">🏏</div>
-          <div class="bt-lbl">Cricket<br>Player</div>
-        </div>
-
-        <div class="bt-item">
-          <div class="bt-circle-icon">🧮</div>
-          <div class="bt-lbl">Abacus International<br>Level Qualifier</div>
-        </div>
+      <div class="ach-q-right">
+        <div class="ach-sig">Nithish</div>
+        <div class="ach-sig-sub">KEEP LEARNING. KEEP BUILDING. KEEP IMPACTING.</div>
       </div>
     </div>
   </div>
