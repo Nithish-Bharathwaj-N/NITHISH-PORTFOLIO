@@ -7,15 +7,15 @@ export function About() {
   return (
     <>
       <section id="about" className="bg-[#f7f6f2] py-20 px-6 lg:px-16 border-t border-black/5 relative">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-16 items-start">
+        <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-14 items-start">
           {/* LEFT COLUMN - PROFILE PHOTO & CARDS */}
           <div className="flex flex-col gap-5">
             <div className="relative rounded-2xl overflow-hidden shadow-md bg-white before:content-[''] before:absolute before:top-6 before:left-0 before:w-1.5 before:bottom-6 before:bg-[#d9471f] before:rounded-r before:z-10">
               <Image
                 src="/images/nithish-about.jpg"
                 alt="Nithish Bharathwaj N Formal Suit Portrait"
-                width={360}
-                height={360}
+                width={340}
+                height={340}
                 className="w-full aspect-square object-cover block"
                 priority
               />
@@ -65,10 +65,7 @@ export function About() {
 
           {/* RIGHT COLUMN - CONTENT & STATS */}
           <div className="flex flex-col">
-            <div className="flex items-center gap-2.5 text-sm font-extrabold text-[#d9471f] mb-2 after:content-[''] after:inline-block after:w-8 after:h-0.5 after:bg-[#d9471f]">
-              02
-            </div>
-            <h2 id="about-title" className="font-display text-5xl lg:text-7xl font-black text-slate-800 leading-none tracking-tight mb-6">
+            <h2 id="about-title" className="font-display text-5xl lg:text-7xl font-black text-slate-800 leading-none tracking-tight mb-4">
               About<br /><span className="text-[#d9471f]">Me.</span>
             </h2>
             <div className="flex items-center gap-3.5 text-xs font-extrabold tracking-widest text-slate-500 uppercase mb-8 before:content-[''] before:inline-block before:w-9 before:h-0.5 before:bg-[#d9471f]">
@@ -124,11 +121,8 @@ export function About() {
 
       {/* TRANSITION STRIP BELOW ABOUT */}
       <div className="bg-[#0f0f11] py-11 px-6 lg:px-16 border-t border-white/10 text-white">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-8 items-center">
+        <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8 items-center">
           <div className="flex flex-col">
-            <div className="flex items-center gap-2.5 text-xs font-extrabold text-[#d9471f] mb-1.5 after:content-[''] after:inline-block after:w-7 after:h-0.5 after:bg-[#d9471f]">
-              03
-            </div>
             <h3 className="font-display text-3xl font-black text-white">
               What Drives <span className="text-[#d9471f]">Me.</span>
             </h3>

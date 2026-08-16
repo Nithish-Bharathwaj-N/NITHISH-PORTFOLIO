@@ -6444,6 +6444,46 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   line-height: 1.7;
   color: rgba(255,255,255,0.72);
 }
+
+/* REMOVE ALL SECTION NUMBERS & ENSURE PERFECT ALIGNMENT */
+.about-exact-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+@media(max-width:1024px) { .about-exact-wrap { grid-template-columns: 1fr; gap: 40px; } }
+
+.about-tag-header {
+  display: none !important;
+}
+
+.about-subtag-line {
+  margin-top: 12px;
+}
+
+.about-drives-strip {
+  background: #0f0f11;
+  padding: 48px 48px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: #ffffff;
+}
+
+.about-drives-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  align-items: center;
+}
+@media(max-width:960px) { .about-drives-inner { grid-template-columns: 1fr; gap: 16px; } }
+
+.drives-tag {
+  display: none !important;
+}
 ` }} />
       <div dangerouslySetInnerHTML={{ __html: `
 <a id="skip-link" href="#intro">Skip to content</a>
@@ -6559,7 +6599,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 
     <!-- RIGHT SIDE - CONTENT & STATS -->
     <div class="about-right-col">
-      <div class="about-tag-header">02</div>
+      
       <h2 id="about-title" class="about-main-h2">About<br><span>Me.</span></h2>
       <div class="about-subtag-line">LEARNER. BUILDER. PROBLEM SOLVER.</div>
 
@@ -6612,7 +6652,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 <div class="about-drives-strip fu">
   <div class="about-drives-inner">
     <div class="drives-left-hdr">
-      <div class="drives-tag">03</div>
+      
       <h3 class="drives-title">What Drives <span>Me.</span></h3>
     </div>
     <div class="drives-right-quote">
