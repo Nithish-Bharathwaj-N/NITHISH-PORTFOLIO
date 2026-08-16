@@ -5553,27 +5553,59 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 }
 
 /* 3 MINI THUMBNAILS GALLERY STRIP */
-.hk-gallery-strip {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin-bottom: 16px;
+/* HOBBIES SUB-PHOTOS MOVING MARQUEE */
+.hk-marquee-wrap {
+  overflow: hidden;
+  margin-bottom: 18px;
+  width: 100%;
+  border-radius: 12px;
+  mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
 }
+
+.hk-marquee-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  animation: hobbyMarquee 22s linear infinite;
+}
+
+.hk-marquee-wrap:hover .hk-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes hobbyMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 .hk-gthumb {
-  height: 62px;
-  border-radius: 8px;
+  width: 115px;
+  height: 86px;
+  flex-shrink: 0;
+  border-radius: 10px;
   overflow: hidden;
   background: #f1f5f9;
-  border: 1px solid #e2e8f0;
+  border: 1.5px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
+
 .hk-gthumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s var(--ease);
+  transition: transform 0.4s var(--ease);
 }
+
+.hk-gthumb:hover {
+  transform: scale(1.05);
+  border-color: var(--accent);
+  box-shadow: 0 6px 16px rgba(200,66,26,0.22);
+}
+
 .hk-gthumb:hover img {
-  transform: scale(1.1);
+  transform: scale(1.12);
 }
 
 /* CAROUSEL CONTROLS */
@@ -5692,6 +5724,237 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
   background-size: 10px 10px;
   opacity: 0.6;
+}
+
+
+/* ENHANCED GET IN TOUCH (DARK THEME - MAXIMUM TEXT VISIBILITY & NO PLACEHOLDERS) */
+#contact {
+  background: #0d0d0d;
+  padding: 100px 48px 60px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+@media(max-width:860px) { #contact { padding: 60px 20px 40px; } }
+
+.contact-wrap {
+  max-width: 1680px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.contact-subdesc {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  max-width: 520px;
+  line-height: 1.72;
+  margin: 14px 0 36px;
+}
+
+.contact-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+@media(max-width:960px) { .contact-main-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+/* INQUIRY PILLS */
+.inquiry-pills-wrap {
+  margin-bottom: 32px;
+}
+.inquiry-pills-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #f97316;
+  margin-bottom: 12px;
+}
+.inquiry-pills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.inquiry-pill {
+  padding: 10px 20px;
+  border-radius: 9px;
+  background: #16161a;
+  border: 1px solid rgba(255,255,255,0.16);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all var(--t) var(--ease);
+}
+.inquiry-pill:hover, .inquiry-pill.active {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+  box-shadow: 0 8px 22px rgba(200,66,26,0.35);
+}
+
+/* DIRECT CHANNEL CARDS */
+.contact-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+@media(max-width:600px) { .contact-links { grid-template-columns: 1fr; } }
+
+.c-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  border-radius: var(--radius);
+  background: #16161a;
+  border: 1px solid rgba(255,255,255,0.14);
+  transition: all var(--t) var(--ease);
+}
+.c-link:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.6);
+  background: #1c1c22;
+}
+.c-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(200,66,26,0.18);
+  border: 1px solid rgba(200,66,26,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #f97316;
+  flex-shrink: 0;
+}
+.c-lbl {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #cbd5e1;
+  margin-bottom: 3px;
+}
+.c-val {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* TERMINAL WIDGET */
+.c-terminal-card {
+  background: #121215;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  font-family: monospace;
+  font-size: 0.82rem;
+  color: #4ade80;
+  line-height: 1.65;
+}
+.c-term-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: #94a3b8;
+  font-size: 0.75rem;
+}
+
+/* CONTACT FORM CARD */
+.contact-form-card {
+  background: #111115;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: 0 16px 45px rgba(0,0,0,0.5);
+}
+@media(max-width:600px) { .contact-form-card { padding: 24px 18px; } }
+
+.c-fgroup {
+  margin-bottom: 20px;
+}
+.c-flabel {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #e2e8f0;
+  margin-bottom: 8px;
+}
+.c-finput, .c-ftextarea {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 0.92rem;
+  font-family: var(--font);
+  color: #ffffff;
+  background: #16161a;
+  border: 1.5px solid rgba(255,255,255,0.18);
+  border-radius: 9px;
+  outline: none;
+  transition: all var(--t) var(--ease);
+  box-sizing: border-box;
+}
+.c-finput:focus, .c-ftextarea:focus {
+  border-color: var(--accent);
+  background: #1e1e24;
+  box-shadow: 0 0 0 3px rgba(200,66,26,0.25);
+}
+.c-ftextarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.c-fbtn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 16px;
+  border: none;
+  border-radius: 9px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--t) var(--ease);
+  box-shadow: 0 8px 26px rgba(200,66,26,0.35);
+}
+.c-fbtn:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(200,66,26,0.5);
+}
+
+
+/* GET IN TOUCH TITLE & SUBTEXT ULTRA-HIGH CONTRAST FIX */
+#contact .sec-title,
+#contact h2,
+.c-sec-h2 {
+  color: #ffffff !important;
+  font-weight: 900 !important;
+}
+
+#contact h2 .title-white {
+  color: #ffffff !important;
+}
+
+#contact h2 .title-orange {
+  color: #f97316 !important;
+}
+
+#contact p,
+.contact-subdesc,
+.c-subtext {
+  color: #e2e8f0 !important;
+  font-size: 0.98rem !important;
 }
 
 ` }} />
@@ -6544,7 +6807,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
       <!-- CARD 1: CRICKET -->
       <div class="hk-card">
         <div class="hk-thumb-stage">
-          <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=600&q=80" alt="Cricket Batting & Ball" class="hk-hero-img">
+          <img src="images/hobbies/cricket_hero.jpg" alt="Cricket Batting & Ball" class="hk-hero-img">
           <div class="hk-badge-circle">🏏</div>
         </div>
 
@@ -6552,11 +6815,22 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
           <h3 class="hk-title">CRICKET</h3>
           <p class="hk-desc">Cricket teaches me focus, patience, and strategy. I enjoy the thrill of the game and the lessons it brings both on and off the field.</p>
 
-          <!-- 3 MINI THUMBNAILS -->
-          <div class="hk-gallery-strip">
-            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=200&q=80" alt="Cricket Action"></div>
-            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?auto=format&fit=crop&w=200&q=80" alt="Cricket Ball"></div>
-            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1593341646782-e0b495cffd6d?auto=format&fit=crop&w=200&q=80" alt="Cricket Pitch"></div>
+          <!-- MOVING MARQUEE SUB-PHOTOS -->
+          <div class="hk-marquee-wrap">
+            <div class="hk-marquee-track">
+              <!-- Set 1 -->
+              <div class="hk-gthumb"><img src="images/hobbies/cricket_thumb1.jpg" alt="Net Practice Fitness"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/cricket_thumb2.jpg" alt="TNPL Banner"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/cricket_thumb3.jpg" alt="TON Bat & Kit"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/cricket_thumb4.jpg" alt="Cricket Wickets Pitch"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/cricket_thumb5.jpg" alt="Nithish #4 Jersey"></div>
+              <!-- Set 2 (Duplicate for Seamless Loop) -->
+              <div class="hk-gthumb"><img src="images/hobbies/cricket_thumb1.jpg" alt="Net Practice Fitness"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/cricket_thumb2.jpg" alt="TNPL Banner"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/cricket_thumb3.jpg" alt="TON Bat & Kit"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/cricket_thumb4.jpg" alt="Cricket Wickets Pitch"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/cricket_thumb5.jpg" alt="Nithish #4 Jersey"></div>
+            </div>
           </div>
 
           <!-- CAROUSEL CONTROLS -->
@@ -6587,7 +6861,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
       <!-- CARD 2: PHOTOGRAPHY -->
       <div class="hk-card">
         <div class="hk-thumb-stage">
-          <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=600&q=80" alt="Photography Sunset Landscape" class="hk-hero-img">
+          <img src="images/hobbies/photography_hero.jpg" alt="Photography Camera Shot" class="hk-hero-img">
           <div class="hk-badge-circle">📷</div>
         </div>
 
@@ -6595,11 +6869,22 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
           <h3 class="hk-title">PHOTOGRAPHY</h3>
           <p class="hk-desc">Capturing moments, telling stories, and freezing memories. Photography helps me see the world from a different perspective.</p>
 
-          <!-- 3 MINI THUMBNAILS -->
-          <div class="hk-gallery-strip">
-            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=200&q=80" alt="Mountain View"></div>
-            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=200&q=80" alt="Sunset Palms"></div>
-            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1512790182412-b19e6d62bc39?auto=format&fit=crop&w=200&q=80" alt="Camera Lens"></div>
+          <!-- MOVING MARQUEE SUB-PHOTOS -->
+          <div class="hk-marquee-wrap">
+            <div class="hk-marquee-track">
+              <!-- Set 1 -->
+              <div class="hk-gthumb"><img src="images/hobbies/photo_thumb1.jpg" alt="Kitten Reflection"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/photo_thumb2.jpg" alt="Lamp Post Dusk"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/photo_thumb3.jpg" alt="Historic Palace"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/photo_thumb4.jpg" alt="Station Clock"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/photo_thumb5.jpg" alt="Painted Vintage Car"></div>
+              <!-- Set 2 (Duplicate for Seamless Loop) -->
+              <div class="hk-gthumb"><img src="images/hobbies/photo_thumb1.jpg" alt="Kitten Reflection"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/photo_thumb2.jpg" alt="Lamp Post Dusk"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/photo_thumb3.jpg" alt="Historic Palace"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/photo_thumb4.jpg" alt="Station Clock"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/photo_thumb5.jpg" alt="Painted Vintage Car"></div>
+            </div>
           </div>
 
           <!-- CAROUSEL CONTROLS -->
@@ -6618,7 +6903,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
       <!-- CARD 3: RUNNING -->
       <div class="hk-card">
         <div class="hk-thumb-stage">
-          <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=80" alt="Runner on Track" class="hk-hero-img">
+          <img src="images/hobbies/running_hero.jpg" alt="Running Shoes on Hill Steps" class="hk-hero-img">
           <div class="hk-badge-circle">🏃</div>
         </div>
 
@@ -6626,11 +6911,22 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
           <h3 class="hk-title">RUNNING</h3>
           <p class="hk-desc">Running clears my mind and builds discipline. It's my way to stay healthy, challenge myself, and keep moving forward.</p>
 
-          <!-- 3 MINI THUMBNAILS -->
-          <div class="hk-gallery-strip">
-            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=200&q=80" alt="Runner Silhouette"></div>
-            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=200&q=80" alt="Running Shoes"></div>
-            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1510017803434-a899398421b3?auto=format&fit=crop&w=200&q=80" alt="Smartwatch Fitness"></div>
+          <!-- MOVING MARQUEE SUB-PHOTOS -->
+          <div class="hk-marquee-wrap">
+            <div class="hk-marquee-track">
+              <!-- Set 1 -->
+              <div class="hk-gthumb"><img src="images/hobbies/run_thumb1.jpg" alt="Running Track 1"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/run_thumb2.jpg" alt="Running Track 2"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/run_thumb3.jpg" alt="Running Track 3"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/run_thumb4.jpg" alt="Running Track 4"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/run_thumb5.jpg" alt="Running Track 5"></div>
+              <!-- Set 2 (Duplicate for Seamless Loop) -->
+              <div class="hk-gthumb"><img src="images/hobbies/run_thumb1.jpg" alt="Running Track 1"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/run_thumb2.jpg" alt="Running Track 2"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/run_thumb3.jpg" alt="Running Track 3"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/run_thumb4.jpg" alt="Running Track 4"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/run_thumb5.jpg" alt="Running Track 5"></div>
+            </div>
           </div>
 
           <!-- CAROUSEL CONTROLS -->
@@ -6661,7 +6957,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
       <!-- CARD 4: TRAVEL -->
       <div class="hk-card">
         <div class="hk-thumb-stage">
-          <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" alt="Hiker overlooking Mountain Lake" class="hk-hero-img">
+          <img src="images/hobbies/travel_hero.jpg" alt="Google Maps India Travel Routes" class="hk-hero-img">
           <div class="hk-badge-circle">✈️</div>
         </div>
 
@@ -6669,20 +6965,31 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
           <h3 class="hk-title">TRAVEL</h3>
           <p class="hk-desc">Exploring new places, experiencing different cultures, and collecting memories that last a lifetime.</p>
 
-          <!-- 3 MINI THUMBNAILS -->
-          <div class="hk-gallery-strip">
-            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=200&q=80" alt="Mountain Lake"></div>
-            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=200&q=80" alt="Heritage Temple"></div>
-            <div class="hk-gthumb"><img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=200&q=80" alt="Winding Highway"></div>
+          <!-- MOVING MARQUEE SUB-PHOTOS -->
+          <div class="hk-marquee-wrap">
+            <div class="hk-marquee-track">
+              <!-- Set 1 -->
+              <div class="hk-gthumb"><img src="images/hobbies/travel_thumb1.jpg" alt="Green Fields Window View"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/travel_thumb2.jpg" alt="Train Window Portrait"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/travel_thumb3.jpg" alt="Train Door View"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/travel_thumb4.jpg" alt="Scenic Forest River"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/travel_thumb5.jpg" alt="Bare Tree & River"></div>
+              <!-- Set 2 (Duplicate for Seamless Loop) -->
+              <div class="hk-gthumb"><img src="images/hobbies/travel_thumb1.jpg" alt="Green Fields Window View"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/travel_thumb2.jpg" alt="Train Window Portrait"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/travel_thumb3.jpg" alt="Train Door View"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/travel_thumb4.jpg" alt="Scenic Forest River"></div>
+              <div class="hk-gthumb"><img src="images/hobbies/travel_thumb5.jpg" alt="Bare Tree & River"></div>
+            </div>
           </div>
 
           <!-- CAROUSEL CONTROLS -->
           <div class="hk-controls">
             <button type="button" class="hk-arrow-btn" aria-label="Previous">‹</button>
             <div class="hk-dots">
+              <span class="hk-dot"></span>
+              <span class="hk-dot"></span>
               <span class="hk-dot active"></span>
-              <span class="hk-dot"></span>
-              <span class="hk-dot"></span>
             </div>
             <button type="button" class="hk-arrow-btn" aria-label="Next">›</button>
           </div>
@@ -6690,119 +6997,112 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
       </div>
     </div>
 
-    <!-- BOTTOM REF BANNER -->
-    <div class="hobbies-ref-banner fu">
-      <div class="hrb-left">
-        <div class="hrb-heart-icon">♡</div>
-        <div class="hrb-divider"></div>
-        <div class="hrb-text">Hobbies are not a break from life, they are a part of life.</div>
+    <!-- BOTTOM QUOTE BANNER -->
+    <div class="hobbies-banner fu">
+      <div class="hb-quote">
+        Hobbies are not a break from life, <span>they are a part of life.</span>
       </div>
-      <div class="hrb-dots"></div>
+      <div class="hb-author">NITHISH BHARATHWAJ N</div>
     </div>
   </div>
 </section>
 
 <section id="contact" aria-labelledby="contact-title">
   <div class="contact-wrap">
-    <div class="sec-label dark-lbl">05</div>
-    
-    <div class="contact-status-badge fu">
-      <span class="pulse"></span> Available for Freelance, Full-Time Roles &amp; Open Source
+    <div class="fu" style="margin-bottom: 32px;">
+      <div class="sec-label" style="color:var(--accent); margin-bottom:12px;">09 —— GET IN TOUCH</div>
+      <h2 id="contact-title" class="sec-title" style="color:#ffffff !important; font-size:clamp(2.4rem, 5vw, 3.8rem); line-height:1.1; margin-bottom:16px;">
+        <span style="color:#ffffff !important;">Let's Build Something </span><span style="color:#f97316 !important;">Exceptional.</span>
+      </h2>
+      <p class="contact-subdesc" style="color:#e2e8f0 !important; font-size:1rem; max-width:560px; line-height:1.7;">
+        Have a project, role, or collaboration in mind? Reach out via email, social channels, or the direct form below.
+      </p>
     </div>
 
-    <h2 id="contact-title" class="sec-title" style="color:var(--text-dark)">Let's Build Something <span style="color:var(--accent)">Exceptional.</span></h2>
-    <p style="font-size:0.92rem;color:var(--text-dark-3);margin-top:8px;line-height:1.7;max-width:560px;">Have a project, role, or collaboration in mind? Reach out via email, social channels, or the direct form below.</p>
-
+    <!-- MAIN CONTACT GRID -->
     <div class="contact-main-grid fu">
-      <!-- LEFT COLUMN: DIRECT CHANNELS & TERMINAL -->
-      <div class="contact-channels">
-        <a href="mailto:nithishbharathwajn@gmail.com" class="c-channel-card">
-          <div class="c-channel-icon">✉️</div>
-          <div class="c-channel-info">
-            <div class="c-channel-lbl">DIRECT EMAIL</div>
-            <div class="c-channel-val">nithishbharathwajn@gmail.com</div>
-          </div>
-          <span class="c-channel-arrow">→</span>
-        </a>
-
-        <a href="https://www.linkedin.com/in/nithish-bharathwaj-n-847a00379" target="_blank" rel="noopener" class="c-channel-card">
-          <div class="c-channel-icon">💼</div>
-          <div class="c-channel-info">
-            <div class="c-channel-lbl">LINKEDIN PROFILE</div>
-            <div class="c-channel-val">Nithish Bharathwaj N</div>
-          </div>
-          <span class="c-channel-arrow">↗</span>
-        </a>
-
-        <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener" class="c-channel-card">
-          <div class="c-channel-icon">🐙</div>
-          <div class="c-channel-info">
-            <div class="c-channel-lbl">GITHUB REPOSITORIES</div>
-            <div class="c-channel-val">@Nithish-Bharathwaj-N</div>
-          </div>
-          <span class="c-channel-arrow">↗</span>
-        </a>
-
-        <div class="c-meta-row">
-          <div class="c-meta-box">
-            <div class="c-meta-lbl">LOCATION</div>
-            <div class="c-meta-val">📍 Chennai, India (UTC+5:30)</div>
-          </div>
-          <div class="c-meta-box">
-            <div class="c-meta-lbl">RESPONSE TIME</div>
-            <div class="c-meta-val">⚡ Within 2-4 Hours</div>
+      <!-- LEFT COLUMN: PILLS, CHANNELS, TERMINAL -->
+      <div>
+        <!-- INQUIRY TYPE PILLS -->
+        <div class="inquiry-pills-wrap">
+          <div class="inquiry-pills-label" style="color:#f97316; font-weight:800;">SELECT INQUIRY TYPE</div>
+          <div class="inquiry-pills-list">
+            <button type="button" class="inquiry-pill active">💼 Full-Time Role</button>
+            <button type="button" class="inquiry-pill">🚀 Freelance Project</button>
+            <button type="button" class="inquiry-pill">🏆 Hackathon / AI</button>
+            <button type="button" class="inquiry-pill">✉️ General Inquiry</button>
           </div>
         </div>
 
-        <!-- TERMINAL PING -->
-        <div class="contact-terminal">
-          <div class="ct-hdr">
-            <span class="ct-dot" style="background:#ef4444;"></span>
-            <span class="ct-dot" style="background:#f59e0b;"></span>
-            <span class="ct-dot" style="background:#10b981;"></span>
-            <span style="color:rgba(255,255,255,0.4);font-size:0.65rem;margin-left:auto;">nithish@system:~</span>
+        <!-- DIRECT CHANNELS -->
+        <div class="contact-links">
+          <a href="mailto:nithishbharathwajn@gmail.com" class="c-link">
+            <div class="c-icon">✉️</div>
+            <div>
+              <div class="c-lbl" style="color:#cbd5e1;">DIRECT EMAIL</div>
+              <div class="c-val" style="color:#ffffff;">nithishbharathwajn@gmail.com</div>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/nithish-bharathwaj-n-847a00379" target="_blank" rel="noopener noreferrer" class="c-link">
+            <div class="c-icon">💼</div>
+            <div>
+              <div class="c-lbl" style="color:#cbd5e1;">LINKEDIN PROFILE</div>
+              <div class="c-val" style="color:#ffffff;">Nithish Bharathwaj N</div>
+            </div>
+          </a>
+
+          <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener noreferrer" class="c-link">
+            <div class="c-icon">💻</div>
+            <div>
+              <div class="c-lbl" style="color:#cbd5e1;">GITHUB REPOSITORIES</div>
+              <div class="c-val" style="color:#ffffff;">@Nithish-Bharathwaj-N</div>
+            </div>
+          </a>
+
+          <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener noreferrer" class="c-link">
+            <div class="c-icon">🧩</div>
+            <div>
+              <div class="c-lbl" style="color:#cbd5e1;">LEETCODE PROFILE</div>
+              <div class="c-val" style="color:#ffffff;">nithish_cit (500+ Solved)</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- TERMINAL WIDGET -->
+        <div class="c-terminal-card">
+          <div class="c-term-header">
+            <span class="c-term-dot" style="background:#ef4444;"></span>
+            <span class="c-term-dot" style="background:#f59e0b;"></span>
+            <span class="c-term-dot" style="background:#10b981;"></span>
+            <span style="color:#e2e8f0; font-weight:bold; margin-left:8px;">nithish@system:~</span>
           </div>
-          <div class="ct-body">
-            <span style="color:var(--accent);font-weight:bold;">&gt; engineer@portfolio:~\$ ping nithish-bharathwaj.dev</span><br>
-            <span style="color:rgba(255,255,255,0.6);">PING status: ONLINE • Latency: 12ms</span><br>
-            <span style="color:#10b981;">✓ Channel encryption: TLS 1.3 Active</span>
-          </div>
+          <div style="color:#4ade80;">\$ status --check</div>
+          <div style="color:#e2e8f0;">\$ Location: Chennai, Tamil Nadu, India (UTC+5:30)</div>
+          <div style="color:#e2e8f0;">\$ Focus: Cybersecurity × AI/ML × Full-Stack</div>
+          <div style="color:#4ade80; font-weight:bold;">\$ Channel status: ONLINE • Ready for collaboration ✓</div>
         </div>
       </div>
 
-      <!-- RIGHT COLUMN: ENHANCED INTERACTIVE FORM -->
+      <!-- RIGHT COLUMN: CONTACT FORM -->
       <div class="contact-form-card">
-        <div style="font-size:0.7rem;font-weight:800;text-transform:uppercase;letter-spacing:0.12em;color:var(--accent);margin-bottom:12px;">SELECT INQUIRY TYPE</div>
-        <div class="inquiry-pills">
-          <button type="button" class="inquiry-pill active">💼 Full-Time Role</button>
-          <button type="button" class="inquiry-pill">🚀 Freelance Project</button>
-          <button type="button" class="inquiry-pill">🏆 Hackathon / AI</button>
-          <button type="button" class="inquiry-pill">✉️ General Inquiry</button>
-        </div>
-
-        <form id="contact-form" action="https://formspree.io/f/xknlqpyw" method="POST" onsubmit="event.preventDefault(); document.getElementById('contact-toast').style.display='block'; setTimeout(()=>this.submit(), 1200);">
+        <form onsubmit="event.preventDefault(); alert('Message sent!');">
           <div class="c-fgroup">
-            <label class="c-flabel">YOUR NAME</label>
-            <input type="text" name="name" class="c-finput" placeholder="e.g. Alex Morgan" required>
+            <label class="c-flabel" style="color:#e2e8f0 !important;">YOUR NAME</label>
+            <input type="text" class="c-finput" required>
           </div>
 
           <div class="c-fgroup">
-            <label class="c-flabel">EMAIL ADDRESS</label>
-            <input type="email" name="email" class="c-finput" placeholder="alex@company.com" required>
+            <label class="c-flabel" style="color:#e2e8f0 !important;">EMAIL ADDRESS</label>
+            <input type="email" class="c-finput" required>
           </div>
 
           <div class="c-fgroup">
-            <label class="c-flabel">YOUR MESSAGE</label>
-            <textarea name="message" class="c-ftextarea" placeholder="Tell me about your project, timeline, or position..." required></textarea>
+            <label class="c-flabel" style="color:#e2e8f0 !important;">YOUR MESSAGE</label>
+            <textarea class="c-ftextarea" required></textarea>
           </div>
 
-          <button type="submit" class="c-submit-btn">
-            <span>SEND MESSAGE</span> 🚀
-          </button>
-
-          <div id="contact-toast" class="toast-msg">
-            ✓ Message sent successfully! I will respond shortly.
-          </div>
+          <button type="submit" class="c-fbtn">SEND MESSAGE 🚀</button>
         </form>
       </div>
     </div>

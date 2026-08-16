@@ -8,11 +8,18 @@ export function Hobbies() {
       icon: '🏏',
       title: 'CRICKET',
       desc: 'Cricket teaches me focus, patience, and strategy. I enjoy the thrill of the game and the lessons it brings both on and off the field.',
-      heroImg: 'https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=600&q=80',
+      heroImg: 'images/hobbies/cricket_hero.jpg',
       thumbs: [
-        'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=200&q=80',
-        'https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?auto=format&fit=crop&w=200&q=80',
-        'https://images.unsplash.com/photo-1593341646782-e0b495cffd6d?auto=format&fit=crop&w=200&q=80'
+        'images/hobbies/cricket_thumb1.jpg',
+        'images/hobbies/cricket_thumb2.jpg',
+        'images/hobbies/cricket_thumb3.jpg',
+        'images/hobbies/cricket_thumb4.jpg',
+        'images/hobbies/cricket_thumb5.jpg',
+        'images/hobbies/cricket_thumb1.jpg',
+        'images/hobbies/cricket_thumb2.jpg',
+        'images/hobbies/cricket_thumb3.jpg',
+        'images/hobbies/cricket_thumb4.jpg',
+        'images/hobbies/cricket_thumb5.jpg'
       ],
       stats: [
         { label: 'DISTRICT LEVEL', val: 'Throwball Player' },
@@ -23,22 +30,36 @@ export function Hobbies() {
       icon: '📷',
       title: 'PHOTOGRAPHY',
       desc: 'Capturing moments, telling stories, and freezing memories. Photography helps me see the world from a different perspective.',
-      heroImg: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=600&q=80',
+      heroImg: 'images/hobbies/photography_hero.jpg',
       thumbs: [
-        'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=200&q=80',
-        'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=200&q=80',
-        'https://images.unsplash.com/photo-1512790182412-b19e6d62bc39?auto=format&fit=crop&w=200&q=80'
+        'images/hobbies/photo_thumb1.jpg',
+        'images/hobbies/photo_thumb2.jpg',
+        'images/hobbies/photo_thumb3.jpg',
+        'images/hobbies/photo_thumb4.jpg',
+        'images/hobbies/photo_thumb5.jpg',
+        'images/hobbies/photo_thumb1.jpg',
+        'images/hobbies/photo_thumb2.jpg',
+        'images/hobbies/photo_thumb3.jpg',
+        'images/hobbies/photo_thumb4.jpg',
+        'images/hobbies/photo_thumb5.jpg'
       ]
     },
     {
       icon: '🏃',
       title: 'RUNNING',
       desc: "Running clears my mind and builds discipline. It's my way to stay healthy, challenge myself, and keep moving forward.",
-      heroImg: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=80',
+      heroImg: 'images/hobbies/running_hero.jpg',
       thumbs: [
-        'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=200&q=80',
-        'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=200&q=80',
-        'https://images.unsplash.com/photo-1510017803434-a899398421b3?auto=format&fit=crop&w=200&q=80'
+        'images/hobbies/run_thumb1.jpg',
+        'images/hobbies/run_thumb2.jpg',
+        'images/hobbies/run_thumb3.jpg',
+        'images/hobbies/run_thumb4.jpg',
+        'images/hobbies/run_thumb5.jpg',
+        'images/hobbies/run_thumb1.jpg',
+        'images/hobbies/run_thumb2.jpg',
+        'images/hobbies/run_thumb3.jpg',
+        'images/hobbies/run_thumb4.jpg',
+        'images/hobbies/run_thumb5.jpg'
       ],
       stats: [
         { label: '5K PERSONAL BEST', val: '23:15' },
@@ -49,11 +70,18 @@ export function Hobbies() {
       icon: '✈️',
       title: 'TRAVEL',
       desc: 'Exploring new places, experiencing different cultures, and collecting memories that last a lifetime.',
-      heroImg: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80',
+      heroImg: 'images/hobbies/travel_hero.jpg',
       thumbs: [
-        'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=200&q=80',
-        'https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=200&q=80',
-        'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=200&q=80'
+        'images/hobbies/travel_thumb1.jpg',
+        'images/hobbies/travel_thumb2.jpg',
+        'images/hobbies/travel_thumb3.jpg',
+        'images/hobbies/travel_thumb4.jpg',
+        'images/hobbies/travel_thumb5.jpg',
+        'images/hobbies/travel_thumb1.jpg',
+        'images/hobbies/travel_thumb2.jpg',
+        'images/hobbies/travel_thumb3.jpg',
+        'images/hobbies/travel_thumb4.jpg',
+        'images/hobbies/travel_thumb5.jpg'
       ]
     }
   ];
@@ -109,13 +137,15 @@ export function Hobbies() {
                   {c.desc}
                 </p>
 
-                {/* 3 MINI THUMBNAILS */}
-                <div className="grid grid-cols-3 gap-2 mb-4">
-                  {c.thumbs.map((t, i) => (
-                    <div key={i} className="h-15 rounded-lg overflow-hidden bg-slate-100 border border-slate-200">
-                      <img src={t} alt="Thumbnail" className="w-full h-full object-cover hover:scale-110 transition-transform" />
-                    </div>
-                  ))}
+                {/* MOVING MARQUEE SUB-PHOTOS */}
+                <div className="overflow-hidden mb-4 rounded-xl w-full [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]">
+                  <div className="flex gap-2.5 w-max animate-[hobbyMarquee_22s_linear_infinite] hover:[animation-play-state:paused]">
+                    {c.thumbs.map((t, i) => (
+                      <div key={i} className="w-[115px] h-[86px] shrink-0 rounded-lg overflow-hidden bg-slate-100 border border-slate-200 shadow-sm hover:scale-105 hover:border-[#c8421a] transition-all">
+                        <img src={t} alt="Thumbnail" className="w-full h-full object-cover hover:scale-110 transition-transform" />
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
                 {/* CONTROLS */}

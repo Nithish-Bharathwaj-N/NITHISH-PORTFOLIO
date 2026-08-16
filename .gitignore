@@ -22,3 +22,6 @@ tsconfig.tsbuildinfo
 *.log
 .DS_Store
 *.pem
+
+# vercel
+.vercel/
