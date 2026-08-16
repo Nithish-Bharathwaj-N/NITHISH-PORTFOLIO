@@ -7640,6 +7640,235 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   text-transform: uppercase;
   color: rgba(255,255,255,0.4);
 }
+
+/* ================================================
+   MASTER UPGRADE — HERO SECTION
+   ================================================ */
+
+/* Ticker Strip */
+.hero-ticker-strip {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.hero-ticker-divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(255,255,255,0.14);
+  flex-shrink: 0;
+}
+.hero-availability {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #4ade80;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.hero-avail-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 8px #4ade80;
+  animation: pulse 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+.hero-location {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.38);
+  letter-spacing: 0.04em;
+}
+.hero-year-tag {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--accent);
+  background: rgba(200,66,26,0.12);
+  border: 1px solid rgba(200,66,26,0.25);
+  padding: 3px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* System Status Panel */
+.hero-system-panel {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  padding: 14px 0;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  margin-top: 26px;
+}
+.hsp-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  padding: 0 16px;
+}
+.hsp-item + .hsp-item {
+  border-left: 1px solid rgba(255,255,255,0.07);
+}
+.hsp-lbl {
+  font-size: 0.58rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.26);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.hsp-val {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.2;
+}
+.hsp-val.accent-val { color: var(--accent); }
+.hsp-val.green-val { color: #4ade80; }
+@media(max-width:860px) { .hero-system-panel { display: none; } }
+
+/* Grid overlay on photo panel */
+.hero-photo-panel .grid-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+  background-size: 54px 54px;
+  pointer-events: none;
+}
+
+/* Role identity strip at bottom of photo */
+.hero-role-strip {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  background: rgba(13,13,13,0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.hero-role-item {
+  flex: 1;
+  text-align: center;
+  font-size: 0.58rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(255,255,255,0.38);
+  padding: 11px 6px;
+  border-right: 1px solid rgba(255,255,255,0.07);
+  line-height: 1.5;
+}
+.hero-role-item:last-child { border-right: none; }
+.hero-role-item.active-role {
+  color: var(--accent);
+  background: rgba(200,66,26,0.06);
+}
+
+/* ================================================
+   MASTER UPGRADE — WORKS SECTION
+   ================================================ */
+
+.works-edition-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.09);
+  margin-bottom: 30px;
+}
+.works-edition-tag {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+.works-edition-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  color: #10b981;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.works-edition-status::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  flex-shrink: 0;
+}
+
+.p-gh-link {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.76rem !important;
+  font-weight: 800 !important;
+  color: var(--accent) !important;
+  padding: 10px 20px !important;
+  border: 1.5px solid rgba(200,66,26,0.3) !important;
+  border-radius: 8px !important;
+  transition: all var(--t) var(--ease);
+  white-space: nowrap;
+}
+.p-gh-link:hover {
+  background: var(--accent) !important;
+  color: #fff !important;
+  border-color: var(--accent) !important;
+}
+
+/* ================================================
+   MASTER UPGRADE — CONTACT TERMINAL
+   ================================================ */
+
+.c-terminal-card {
+  background: #060a12 !important;
+  border: 1px solid rgba(74,222,128,0.2) !important;
+  border-radius: var(--radius) !important;
+  padding: 20px 22px !important;
+  font-family: 'Space Grotesk', monospace !important;
+  font-size: 0.76rem;
+  line-height: 1.7;
+  margin-top: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.c-terminal-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #4ade80, rgba(74,222,128,0));
+}
+.c-term-cursor-blink {
+  display: inline-block;
+  width: 7px;
+  height: 13px;
+  background: #4ade80;
+  margin-left: 4px;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
 ` }} />
       <div dangerouslySetInnerHTML={{ __html: `
 <a id="skip-link" href="#intro">Skip to content</a>
@@ -7676,6 +7905,14 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 
 <section id="intro" aria-label="Introduction">
   <div class="hero-copy">
+    <!-- TICKER STRIP -->
+    <div class="hero-ticker-strip">
+      <div class="hero-availability"><span class="hero-avail-dot"></span>Available for Work</div>
+      <div class="hero-ticker-divider"></div>
+      <div class="hero-location">📍 Chennai, Tamil Nadu</div>
+      <div class="hero-ticker-divider"></div>
+      <div class="hero-year-tag">B.E. Cybersecurity</div>
+    </div>
     <p class="hero-pretitle">Hello, I'm Nithish</p>
     <h1 class="hero-h1">I build <span id="typed" class="typed-word">intelligent</span><br><span class="highlight">software</span> systems.</h1>
     <div class="hero-pills">
@@ -7695,10 +7932,38 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
       <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>LeetCode</a>
       <a href="mailto:nithishbharathwajn@gmail.com" aria-label="Email"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>Email</a>
     </nav>
+
+    <!-- SYSTEM STATUS PANEL -->
+    <div class="hero-system-panel">
+      <div class="hsp-item">
+        <span class="hsp-lbl">Status</span>
+        <span class="hsp-val green-val">● Active</span>
+      </div>
+      <div class="hsp-item">
+        <span class="hsp-lbl">Focus</span>
+        <span class="hsp-val">Cyber × AI</span>
+      </div>
+      <div class="hsp-item">
+        <span class="hsp-lbl">Location</span>
+        <span class="hsp-val">Chennai, IN</span>
+      </div>
+      <div class="hsp-item">
+        <span class="hsp-lbl">Year</span>
+        <span class="hsp-val accent-val">2nd Year</span>
+      </div>
+    </div>
   </div>
   <div class="hero-photo-panel" aria-hidden="true">
     <div class="overlay"></div>
+    <div class="grid-overlay"></div>
     <img src="images/nithish-photo.jpg" alt="Nithish Bharathwaj N" fetchpriority="high">
+    <!-- ROLE IDENTITY STRIP -->
+    <div class="hero-role-strip">
+      <div class="hero-role-item active-role">Cybersecurity</div>
+      <div class="hero-role-item">AI Engineer</div>
+      <div class="hero-role-item">Full-Stack</div>
+      <div class="hero-role-item">Real-Time</div>
+    </div>
   </div>
 </section>
 
@@ -8116,10 +8381,16 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 
 <section id="works" aria-labelledby="works-title">
   <div class="projects-wrap">
+    <!-- EDITORIAL EDITION ROW -->
+    <div class="works-edition-row">
+      <span class="works-edition-tag">Portfolio — Selected Works</span>
+      <span class="works-edition-status">All projects live &amp; deployed</span>
+    </div>
+
     <!-- HEADER ROW -->
     <div class="projects-hdr-row fu">
       <div>
-        <div class="sec-label dark-lbl">03</div>
+        <div class="sec-label dark-lbl">SELECTED WORK</div>
         <h2 id="works-title" class="sec-title" style="color:var(--text-dark)">MY <span style="color:var(--accent)">PROJECTS.</span></h2>
         <p style="font-size:0.88rem;color:var(--text-dark-3);margin-top:4px;">Real-world solutions built with purpose, impact, and cutting-edge technology.</p>
       </div>
@@ -8789,7 +9060,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 <section id="contact" aria-labelledby="contact-title">
   <div class="contact-wrap">
     <div class="fu" style="margin-bottom: 32px;">
-      <div class="sec-label" style="color:var(--accent); margin-bottom:12px;">09 —— GET IN TOUCH</div>
+      <div class="sec-label" style="color:var(--accent); margin-bottom:12px;">GET IN TOUCH</div>
       <h2 id="contact-title" class="sec-title" style="color:#ffffff !important; font-size:clamp(2.4rem, 5vw, 3.8rem); line-height:1.1; margin-bottom:16px;">
         <span style="color:#ffffff !important;">Let's Build Something </span><span style="color:#f97316 !important;">Exceptional.</span>
       </h2>
@@ -8848,18 +9119,21 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
           </a>
         </div>
 
-        <!-- TERMINAL WIDGET -->
+        <!-- TERMINAL WIDGET — SYSTEM CONSOLE -->
         <div class="c-terminal-card">
           <div class="c-term-header">
             <span class="c-term-dot" style="background:#ef4444;"></span>
             <span class="c-term-dot" style="background:#f59e0b;"></span>
             <span class="c-term-dot" style="background:#10b981;"></span>
-            <span style="color:#e2e8f0; font-weight:bold; margin-left:8px;">nithish@system:~</span>
+            <span style="color:rgba(255,255,255,0.3);font-size:0.63rem;margin-left:auto;letter-spacing:0.04em;">nithish@dev-system:~$</span>
           </div>
-          <div style="color:#4ade80;">\$ status --check</div>
-          <div style="color:#e2e8f0;">\$ Location: Chennai, Tamil Nadu, India (UTC+5:30)</div>
-          <div style="color:#e2e8f0;">\$ Focus: Cybersecurity × AI/ML × Full-Stack</div>
-          <div style="color:#4ade80; font-weight:bold;">\$ Channel status: ONLINE • Ready for collaboration ✓</div>
+          <div style="margin-bottom:2px;"><span style="color:#4ade80;font-weight:700;">$ whoami --full</span></div>
+          <div style="color:rgba(255,255,255,0.6);margin-bottom:10px;">→ Nithish Bharathwaj N | B.E. Cybersecurity, CIT</div>
+          <div style="margin-bottom:2px;"><span style="color:#4ade80;font-weight:700;">$ status --check</span></div>
+          <div><span style="color:#f59e0b;font-weight:700;">location:</span> <span style="color:rgba(255,255,255,0.82);">Chennai, Tamil Nadu (UTC+5:30)</span></div>
+          <div><span style="color:#f59e0b;font-weight:700;">focus:</span> <span style="color:rgba(255,255,255,0.82);">Cybersecurity × AI/ML × Full-Stack</span></div>
+          <div><span style="color:#f59e0b;font-weight:700;">availability:</span> <span style="color:#4ade80;font-weight:700;">OPEN</span></div>
+          <div style="margin-top:8px;"><span style="color:#4ade80;font-weight:700;">✓</span> <span style="color:rgba(255,255,255,0.65);">Channel status: ONLINE · Ready to collaborate</span><span class="c-term-cursor-blink"></span></div>
         </div>
       </div>
 
