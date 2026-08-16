@@ -34,7 +34,7 @@ export default function Home() {
       });
     });
 
-    const secs = [...document.querySelectorAll('section[id]')];
+    const secs = [...document.querySelectorAll('section[id] me')];
     const navAs = document.querySelectorAll('.nav-links a');
     function spy() {
       let cur = secs[0]?.id;
@@ -5957,6 +5957,210 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
   font-size: 0.98rem !important;
 }
 
+
+/* SECTION 09 - HACKATHON MEMORIES & COMPETITIONS VAULT */
+#memories {
+  background: var(--dark-3);
+  padding: 100px 48px;
+  border-top: 1px solid var(--border-d);
+  position: relative;
+  overflow: hidden;
+}
+@media(max-width:860px) { #memories { padding: 60px 20px 40px; } }
+
+.memories-wrap {
+  max-width: 1680px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.memories-hdr-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 44px;
+}
+@media(max-width:860px) { .memories-hdr-row { flex-direction: column; align-items: flex-start; gap: 14px; } }
+
+.mem-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(200,66,26,0.1);
+  border: 1px solid rgba(200,66,26,0.25);
+  padding: 6px 14px;
+  border-radius: 99px;
+  margin-bottom: 12px;
+}
+
+.mem-h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+.mem-h2 span { color: var(--accent); }
+
+.mem-subdesc {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.55);
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+/* INTERACTIVE POLAROID / EXPANDABLE FILMSTRIP GRID */
+.memories-filmstrip-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 44px;
+}
+@media(max-width:1200px) { .memories-filmstrip-grid { grid-template-columns: repeat(2, 1fr); } }
+@media(max-width:640px) { .memories-filmstrip-grid { grid-template-columns: 1fr; } }
+
+.mem-card {
+  background: #1e1e1e;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 14px 14px 18px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+.mem-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(200,66,26,0.45);
+  box-shadow: 0 22px 50px rgba(0,0,0,0.6);
+  background: #252525;
+}
+
+.mem-photo-frame {
+  position: relative;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #111;
+  margin-bottom: 14px;
+}
+.mem-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.92) contrast(1.04);
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+.mem-card:hover .mem-photo-frame img {
+  transform: scale(1.08);
+  filter: brightness(1) contrast(1.08);
+}
+
+.mem-photo-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(13,13,13,0.85);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.mem-card-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mem-card-title .mem-year {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.mem-card-desc {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+
+.mem-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.mem-pill {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.65);
+  background: rgba(255,255,255,0.05);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* 2ND MOVING MEMORIES MARQUEE BANNER AT BOTTOM */
+.mem-marquee-strip {
+  overflow: hidden;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 16px 0;
+  mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+}
+.mem-marquee-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  animation: memMarquee 26s linear infinite;
+}
+.mem-marquee-strip:hover .mem-marquee-track {
+  animation-play-state: paused;
+}
+@keyframes memMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.mem-mini-item {
+  width: 220px;
+  height: 145px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.mem-mini-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mem-mini-item:hover {
+  transform: scale(1.06);
+  border-color: var(--accent);
+}
 ` }} />
       <div dangerouslySetInnerHTML={{ __html: `
 <a id="skip-link" href="#intro">Skip to content</a>
@@ -7003,6 +7207,60 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         Hobbies are not a break from life, <span>they are a part of life.</span>
       </div>
       <div class="hb-author">NITHISH BHARATHWAJ N</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 09 - HACKATHON MEMORIES SCROLLING FILMSTRIP -->
+<section id="memories" aria-labelledby="memories-title">
+  <div class="memories-wrap">
+    <!-- HEADER -->
+    <div class="memories-hdr-row fu" style="margin-bottom: 28px;">
+      <div>
+        <div class="mem-badge-pill">🏆 HACKATHON & EVENT VAULT</div>
+        <h2 id="memories-title" class="mem-h2">HACKATHON <span>MEMORIES.</span></h2>
+      </div>
+      <p class="mem-subdesc">
+        A visual timeline of late-night coding sessions, intense build marathons, pitch stages, team victories, and memorable hardware hackathons.
+      </p>
+    </div>
+
+    <!-- INFINITE SCROLLING HACKATHON MEMORIES FILMSTRIP MARQUEE -->
+    <div class="mem-marquee-strip fu">
+      <div class="mem-marquee-track">
+        <!-- Set 1 -->
+        <div class="mem-mini-item"><img src="images/memories/memory_1.jpg" alt="Memory 1"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_2.jpg" alt="Memory 2"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_3.jpg" alt="Memory 3"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_4.jpg" alt="Memory 4"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_5.jpg" alt="Memory 5"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_6.jpg" alt="Memory 6"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_7.jpg" alt="Memory 7"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_8.jpg" alt="Memory 8"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_9.jpg" alt="Memory 9"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_10.jpg" alt="Memory 10"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_11.jpg" alt="Memory 11"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_12.jpg" alt="Memory 12"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_13.jpg" alt="Memory 13"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_14.jpg" alt="Memory 14"></div>
+
+        <!-- Set 2 (Duplicate for Seamless Infinite Loop) -->
+        <div class="mem-mini-item"><img src="images/memories/memory_1.jpg" alt="Memory 1"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_2.jpg" alt="Memory 2"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_3.jpg" alt="Memory 3"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_4.jpg" alt="Memory 4"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_5.jpg" alt="Memory 5"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_6.jpg" alt="Memory 6"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_7.jpg" alt="Memory 7"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_8.jpg" alt="Memory 8"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_9.jpg" alt="Memory 9"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_10.jpg" alt="Memory 10"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_11.jpg" alt="Memory 11"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_12.jpg" alt="Memory 12"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_13.jpg" alt="Memory 13"></div>
+        <div class="mem-mini-item"><img src="images/memories/memory_14.jpg" alt="Memory 14"></div>
+      </div>
     </div>
   </div>
 </section>
