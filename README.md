@@ -4,7 +4,7 @@
 
 <br/>
 
-[![Live Site](https://img.shields.io/badge/🌐_Live_Portfolio-nithishbharathwajn.vercel.app-C8421A?style=for-the-badge)](https://nithishbharathwajn.vercel.app)
+[![Live Site](https://img.shields.io/badge/Live_Portfolio-nithishbharathwajn.vercel.app-C8421A?style=for-the-badge&logo=vercel&logoColor=white)](https://nithishbharathwajn.vercel.app)
 &nbsp;
 [![GitHub](https://img.shields.io/badge/GitHub-Nithish--Bharathwaj--N-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Nithish-Bharathwaj-N)
 &nbsp;
@@ -18,21 +18,21 @@
 
 ---
 
-## 🖥️ Overview
+## Overview
 
 This is the source repository for my **personal engineering portfolio** — a dark-first, editorial-styled Next.js application built to showcase my work across **Cybersecurity**, **AI/ML**, **Full-Stack Engineering**, and **Real-Time Systems**.
 
-Designed with a premium, professional aesthetic:  dark backgrounds, warm orange accents (`#c8421a`), editorial typography, and smooth micro-animations — all without excessive glassmorphism or trendy fluff.
+Designed with a premium, professional aesthetic: deep black backgrounds, warm orange accents (`#c8421a`), editorial typography, and smooth micro-animations.
 
 ---
 
-## ✨ Sections
+## Sections
 
 | # | Section | Description |
 |---|---|---|
-| 01 | **Hero** | Animated role ticker, system status panel, identity role strip on photo |
+| 01 | **Hero** | Animated role ticker, system status panel, identity role strip |
 | 02 | **About** | Editorial card layout with photo, info rows, and key stats |
-| 03 | **Expertise & Tech Stack** | Domain matrix grid + engineering philosophy strip |
+| 03 | **Expertise & Tech Stack** | Domain matrix grid and engineering philosophy strip |
 | 04 | **Projects** | Case-study style project cards with filter tabs and live/repo links |
 | 05 | **Key Achievements** | Hackathon cards, competitive programming milestones, certifications |
 | 06 | **Hackathon Memories** | Infinite-scroll filmstrip marquee of hackathon photos |
@@ -41,44 +41,51 @@ Designed with a premium, professional aesthetic:  dark backgrounds, warm orange 
 
 ---
 
-## 🚀 Featured Projects
+## Featured Projects
 
 | Project | Stack | Links |
 |---|---|---|
-| ✈️ **Voyage AI** — Intelligent travel planning with personalized itineraries | React · Node · Express · REST APIs | [![Repo](https://img.shields.io/badge/Repo-181717?style=flat-square&logo=github)](https://github.com/Nithish-Bharathwaj-N/Voyage-AI) |
-| 🏥 **Queue Cure AI** — Real-time healthcare queue management with Socket.IO | React · Node · Express · Socket.IO · MySQL | [![Repo](https://img.shields.io/badge/Repo-181717?style=flat-square&logo=github)](https://github.com/Nithish-Bharathwaj-N/QUEUE-CURE---AI) |
-| 💼 **FinSight** — AI-driven financial analytics and banking platform | React · Node · PostgreSQL · Prisma | [![Repo](https://img.shields.io/badge/Repo-181717?style=flat-square&logo=github)](https://github.com/Nithish-Bharathwaj-N/FinSight) [![Live](https://img.shields.io/badge/Live-0070F3?style=flat-square&logo=vercel)](https://fin-sight-banking.vercel.app) |
-| 🛡️ **SentinelX** — Autonomous cyber risk intelligence & threat surface monitor | React · Node · Python · Security APIs | [![Repo](https://img.shields.io/badge/Repo-181717?style=flat-square&logo=github)](https://github.com/Nithish-Bharathwaj-N/SentinelX) |
-| 🏫 **Asset Chain** — Campus asset lifecycle tracking and administration | React · Node · Express · MySQL | [![Repo](https://img.shields.io/badge/Repo-181717?style=flat-square&logo=github)](https://github.com/Nithish-Bharathwaj-N/asset-chain) |
-| 🧠 **DayMind AI** — Intelligent daily workflow and cognitive task optimization | React · Node · AI APIs | [![Repo](https://img.shields.io/badge/Repo-181717?style=flat-square&logo=github)](https://github.com/Nithish-Bharathwaj-N/DayMind-AI) |
+| **Voyage AI** — Intelligent travel planning platform with personalized itineraries | React · Node · Express · REST APIs | [![GitHub](https://img.shields.io/badge/Repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Nithish-Bharathwaj-N/Voyage-AI) |
+| **Queue Cure AI** — Real-time healthcare queue management with live token tracking | React · Node · Express · Socket.IO · MySQL | [![GitHub](https://img.shields.io/badge/Repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Nithish-Bharathwaj-N/QUEUE-CURE---AI) |
+| **FinSight** — AI-driven financial analytics and banking platform | React · Node · PostgreSQL · Prisma | [![GitHub](https://img.shields.io/badge/Repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Nithish-Bharathwaj-N/FinSight) [![Live](https://img.shields.io/badge/Live-0070F3?style=flat-square&logo=vercel&logoColor=white)](https://fin-sight-banking.vercel.app) |
+| **SentinelX** — Autonomous cyber risk intelligence and threat surface monitor | React · Node · Python · Security APIs | [![GitHub](https://img.shields.io/badge/Repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Nithish-Bharathwaj-N/SentinelX) |
+| **Asset Chain** — Campus asset lifecycle tracking and administration system | React · Node · Express · MySQL | [![GitHub](https://img.shields.io/badge/Repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Nithish-Bharathwaj-N/asset-chain) |
+| **DayMind AI** — Intelligent daily workflow and cognitive task optimization | React · Node · AI APIs | [![GitHub](https://img.shields.io/badge/Repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Nithish-Bharathwaj-N/DayMind-AI) |
 
 ---
 
-## 🏆 Achievements & Recognition
+## Achievements & Recognition
 
 ```yaml
 Hackathons:
   - Smart India Hackathon (SIH) 2024     → Finalist
-  - Aerothon 6.0 (HAL × DRDO)           → Finalist  
+  - Aerothon 6.0  (HAL × DRDO)          → Finalist
   - HackBriven 2026                      → Finalist
-  - INNER ENGINEER (IIT Madras)          → Finalist
+  - INNER ENGINEER  (IIT Madras)         → Finalist
   - SOLUTION SPRINT (NIT Trichy)         → Finalist
 
 Competitive Programming:
-  LeetCode Problems Solved : 500+
-  Contest Peak Rating      : 1771
-  Active Streak            : 118 Days
-  Submissions (Past Year)  : 655+
+  Platform             : LeetCode  (nithish_cit)
+  Problems Solved      : 500+
+  Contest Peak Rating  : 1771
+  Active Streak        : 118 Days
+  Submissions (Year)   : 655+
+
+Certifications:
+  - Generative AI Virtual Internship — AWS Academy × AICTE × EduSkills
+  - Introduction to Cybersecurity    — Cisco Networking Academy
+  - Introduction to Modern AI        — Cisco Networking Academy
+  - Python Essentials 1 & 2          — Cisco / Python Institute
+  - Operating Systems Fundamentals   — Cisco Networking Academy
 
 Other:
   - International Abacus Competition Qualifier
-  - AWS Generative AI Virtual Intern (AWS × AICTE × EduSkills)
   - District-Level Throwball | Zonal-Level Carrom
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 <div align="left">
 
@@ -86,9 +93,10 @@ Other:
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
-![Vanilla CSS](https://img.shields.io/badge/Vanilla_CSS-1572B6?style=flat-square&logo=css3&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
+![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white)
 
 </div>
 
@@ -96,21 +104,19 @@ Other:
 |---|---|
 | **Framework** | Next.js (App Router) |
 | **Language** | TypeScript |
-| **Styling** | Tailwind CSS + Custom Vanilla CSS (inline `<style>` for precision) |
-| **Animation** | CSS keyframes, Intersection Observer, typed text loop |
-| **UI** | shadcn/ui (Radix UI primitives) + custom components |
+| **Styling** | Tailwind CSS + Custom CSS (inline `<style>` for precision control) |
+| **Animation** | CSS keyframes · Intersection Observer · Typed text loop |
+| **UI Components** | shadcn/ui (Radix UI primitives) + custom components |
 | **Icons** | Lucide React |
-| **Deployment** | Vercel + Netlify (`@netlify/plugin-nextjs`) |
+| **Deployment** | Vercel (primary) · Netlify (via `@netlify/plugin-nextjs`) |
 
 ---
 
-## ⚡ Getting Started
+## Getting Started
 
-### Prerequisites
-- Node.js 18+
-- npm
+**Prerequisites:** Node.js 18+ · npm
 
-### 📦 Installation
+### Installation
 
 ```bash
 git clone https://github.com/Nithish-Bharathwaj-N/NITHISH-PORTFOLIO.git
@@ -118,7 +124,7 @@ cd NITHISH-PORTFOLIO
 npm install
 ```
 
-### 🖥️ Development
+### Development
 
 ```bash
 npm run dev
@@ -126,14 +132,14 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### 🏗️ Build for Production
+### Production Build
 
 ```bash
 npm run build
 npm run start
 ```
 
-### ✅ Type Check & Lint
+### Type Check & Lint
 
 ```bash
 npm run typecheck
@@ -142,23 +148,23 @@ npm run lint
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 NITHISH-PORTFOLIO/
 ├── app/
-│   ├── page.tsx              # Main page — all HTML + CSS inlined (dangerouslySetInnerHTML)
-│   ├── layout.tsx            # Root layout with metadata
+│   ├── page.tsx              # Main page — all sections (HTML + CSS inlined)
+│   ├── layout.tsx            # Root layout with metadata and fonts
 │   └── globals.css           # Base global styles
 ├── components/
-│   └── portfolio/            # Section React components
+│   └── portfolio/            # Section-level React components
 ├── hooks/                    # Custom React hooks
 ├── lib/
 │   └── utils.ts
 ├── public/
-│   └── images/               # Profile photos, project screenshots, hackathon memories
+│   └── images/               # Profile photo, project screenshots
 │       └── memories/         # Hackathon memory photos (filmstrip marquee)
-├── index.html                # Standalone HTML reference build
+├── index.html                # Standalone HTML reference
 ├── netlify.toml              # Netlify deployment config
 ├── next.config.js
 ├── tailwind.config.ts
@@ -167,45 +173,43 @@ NITHISH-PORTFOLIO/
 
 ---
 
-## 🎨 Design System
+## Design System
 
 | Token | Value |
 |---|---|
-| **Background** | `#0d0d0d` (deep black) |
-| **Accent** | `#c8421a` (signature orange-red) |
-| **Text** | `rgba(255,255,255,0.82)` on dark / `#0f172a` on light |
-| **Font Display** | Space Grotesk |
-| **Font Body** | Inter |
+| **Background** | `#0d0d0d` |
+| **Accent** | `#c8421a` |
+| **Text (dark bg)** | `rgba(255,255,255,0.82)` |
+| **Text (light bg)** | `#0f172a` |
+| **Font — Display** | Space Grotesk |
+| **Font — Body** | Inter |
 | **Border** | `rgba(255,255,255,0.07)` |
-| **Radius** | `12px` (cards) / `8px` (elements) |
+| **Card Radius** | `12px` |
 
 ---
 
-## ☁️ Deployment
+## Deployment
 
-The project is deployed on **Vercel** and also configured for **Netlify** via `netlify.toml`.
-
-Every push to `main` triggers an automatic redeploy on Vercel.
+Connected to **Vercel** for automatic deployments on every push to `main`.
+Also configured for **Netlify** via `netlify.toml`.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Nithish-Bharathwaj-N/NITHISH-PORTFOLIO)
 
 ---
 
-## 📬 Contact
-
-<div align="left">
+## Contact
 
 [![Email](https://img.shields.io/badge/Email-nithishbharathwajn%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:nithishbharathwajn@gmail.com)
+&nbsp;
 [![GitHub](https://img.shields.io/badge/GitHub-Nithish--Bharathwaj--N-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Nithish-Bharathwaj-N)
+&nbsp;
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Nithish_Bharathwaj_N-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nithish-bharathwaj-n-847a00379)
+&nbsp;
 [![LeetCode](https://img.shields.io/badge/LeetCode-nithish__cit-FFA116?style=flat-square&logo=leetcode&logoColor=white)](https://leetcode.com/u/nithish_cit/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-nithishbharathwajn.vercel.app-C8421A?style=flat-square&logo=vercel&logoColor=white)](https://nithishbharathwajn.vercel.app)
-
-</div>
 
 ---
 
-## 📄 License
+## License
 
 Personal portfolio source code — open for reference and inspiration. Please do not reuse the content, identity, or design as your own.
 
@@ -213,7 +217,6 @@ Personal portfolio source code — open for reference and inspiration. Please do
 
 <div align="center">
 
-Built with precision by **Nithish Bharathwaj N**  
-*Cybersecurity • AI • Full-Stack • Real-Time Systems*
+Built by **Nithish Bharathwaj N** — Cybersecurity · AI · Full-Stack · Real-Time Systems
 
 </div>
