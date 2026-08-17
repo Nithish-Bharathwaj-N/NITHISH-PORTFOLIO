@@ -6,7 +6,7 @@
 
 Building AI-powered software that transforms complex ideas into practical, real-world solutions.
 
-[![Portfolio](https://img.shields.io/badge/🌐_Live_Site-Visit-6366f1?style=for-the-badge)](https://nithishbharathwajn-portfolio.vercel.app)
+[![Portfolio](https://img.shields.io/badge/🌐_Live_Site-Visit-6366f1?style=for-the-badge)](https://nithishbharathwajn.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nithish-bharathwaj-n-847a00379)
 [![LeetCode](https://img.shields.io/badge/LeetCode-Profile-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/nithish_cit/)
 
@@ -79,8 +79,8 @@ Campus asset management system for institutional inventory tracking and administ
 ### 📦 Installation
 
 ```bash
-git clone git@github.com:Nithish-Bharathwaj-N/portfolio.git
-cd portfolio
+git clone https://github.com/Nithish-Bharathwaj-N/NITHISH-PORTFOLIO.git
+cd NITHISH-PORTFOLIO
 npm install
 ```
 
