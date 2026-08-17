@@ -7909,7 +7909,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
     <div class="hero-ticker-strip">
       <div class="hero-availability"><span class="hero-avail-dot"></span>Available for Work</div>
       <div class="hero-ticker-divider"></div>
-      <div class="hero-location">📍 Chennai, Tamil Nadu</div>
+      <div class="hero-location">Chennai, Tamil Nadu</div>
       <div class="hero-ticker-divider"></div>
       <div class="hero-year-tag">B.E. Cybersecurity</div>
     </div>
@@ -7981,7 +7981,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 
         <div class="about-info-rows">
           <div class="about-info-item">
-            <span class="about-info-icon">👤</span>
+            <span class="about-info-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
             <div class="about-info-text">
               <strong>Nithish Bharathwaj N</strong>
               <span>Cybersecurity • AI • Full-Stack Engineer</span>
@@ -7989,7 +7989,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
           </div>
 
           <div class="about-info-item">
-            <span class="about-info-icon">🎓</span>
+            <span class="about-info-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
             <div class="about-info-text">
               <strong>BE Cybersecurity – Second Year</strong>
               <span>Chennai Institute of Technology</span>
@@ -7997,14 +7997,14 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
           </div>
 
           <div class="about-info-item">
-            <span class="about-info-icon">📍</span>
+            <span class="about-info-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
             <div class="about-info-text">
               <strong>Chennai, Tamil Nadu, India</strong>
             </div>
           </div>
 
           <div class="about-info-item">
-            <span class="about-info-icon">✉️</span>
+            <span class="about-info-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
             <div class="about-info-text">
               <strong>nithishbharathwajn@gmail.com</strong>
             </div>
@@ -8047,7 +8047,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
           <!-- CARD 01 -->
           <div class="a-card-box">
             <div class="a-card-header">
-              <div class="a-card-icon">🧠</div>
+              <div class="a-card-icon">AI</div>
               <div class="a-card-meta">
                 <span class="a-card-num">01</span>
                 <span class="a-card-title">HOW I THINK</span>
@@ -8087,7 +8087,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
           <!-- CARD 03 -->
           <div class="a-card-box">
             <div class="a-card-header">
-              <div class="a-card-icon">🎯</div>
+              <div class="a-card-icon">→</div>
               <div class="a-card-meta">
                 <span class="a-card-num">03</span>
                 <span class="a-card-title">WHAT DRIVES ME</span>
@@ -8158,7 +8158,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         </p>
 
         <div class="skills-left-bottom-row">
-          <a href="#works" class="view-tech-btn">📦 View Full Tech Stack →</a>
+          <a href="#works" class="view-tech-btn">View Full Tech Stack →</a>
           <div class="skills-mini-stats">
             <div class="mini-stat-item">
               <div class="mini-stat-num">30+</div>
@@ -8176,7 +8176,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
       <div class="skills-4cards-grid">
         <!-- CARD 01 -->
         <div class="domain-column-card">
-          <div class="d-circle-icon">🛡️</div>
+          <div class="d-circle-icon">SEC</div>
           <span class="d-num-tag">01</span>
           <h3 class="d-card-title">CYBERSECURITY</h3>
           <p class="d-card-sub">Secure systems. Protect what matters.</p>
@@ -8193,7 +8193,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 
         <!-- CARD 02 -->
         <div class="domain-column-card">
-          <div class="d-circle-icon">🧠</div>
+          <div class="d-circle-icon">AI</div>
           <span class="d-num-tag">02</span>
           <h3 class="d-card-title">AI & INTELLIGENT SYSTEMS</h3>
           <p class="d-card-sub">Intelligence that learns. Systems that adapt.</p>
@@ -8227,7 +8227,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 
         <!-- CARD 04 -->
         <div class="domain-column-card">
-          <div class="d-circle-icon">☁️</div>
+          <div class="d-circle-icon">OPS</div>
           <span class="d-num-tag">04</span>
           <h3 class="d-card-title">SYSTEMS & INFRASTRUCTURE</h3>
           <p class="d-card-sub">Infrastructure that scales. Systems that perform.</p>
@@ -8262,7 +8262,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         </div>
 
         <div class="t-cat-group">
-          <div class="t-cat-lbl"><span>🧱</span> FRAMEWORKS</div>
+          <div class="t-cat-lbl">FRAMEWORKS</div>
           <div class="t-chips-flex">
             <span class="t-chip">React</span>
             <span class="t-chip">Next.js</span>
@@ -8273,7 +8273,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         </div>
 
         <div class="t-cat-group">
-          <div class="t-cat-lbl"><span>🗄️</span> DATA & DATABASES</div>
+          <div class="t-cat-lbl">DATA & DATABASES</div>
           <div class="t-chips-flex">
             <span class="t-chip">PostgreSQL</span>
             <span class="t-chip">MongoDB</span>
@@ -8283,7 +8283,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         </div>
 
         <div class="t-cat-group">
-          <div class="t-cat-lbl"><span>🧠</span> AI & ML</div>
+          <div class="t-cat-lbl">AI & ML</div>
           <div class="t-chips-flex">
             <span class="t-chip">OpenAI</span>
             <span class="t-chip">Gemini</span>
@@ -8295,7 +8295,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 
         <!-- ROW 2 -->
         <div class="t-cat-group">
-          <div class="t-cat-lbl"><span>☁️</span> DEVOPS & CLOUD</div>
+          <div class="t-cat-lbl">DEVOPS & CLOUD</div>
           <div class="t-chips-flex">
             <span class="t-chip">Docker</span>
             <span class="t-chip">AWS</span>
@@ -8306,7 +8306,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         </div>
 
         <div class="t-cat-group">
-          <div class="t-cat-lbl"><span>🛠️</span> TOOLS & PLATFORMS</div>
+          <div class="t-cat-lbl">TOOLS & PLATFORMS</div>
           <div class="t-chips-flex">
             <span class="t-chip">VS Code</span>
             <span class="t-chip">Postman</span>
@@ -8317,7 +8317,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         </div>
 
         <div class="t-cat-group">
-          <div class="t-cat-lbl"><span>⚡</span> REAL-TIME & SYSTEMS</div>
+          <div class="t-cat-lbl">REAL-TIME & SYSTEMS</div>
           <div class="t-chips-flex">
             <span class="t-chip">WebSockets</span>
             <span class="t-chip">Socket.IO</span>
@@ -8327,7 +8327,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         </div>
 
         <div class="t-cat-group">
-          <div class="t-cat-lbl"><span>🎯</span> OTHER SKILLS</div>
+          <div class="t-cat-lbl">OTHER SKILLS</div>
           <div class="t-chips-flex">
             <span class="t-chip">System Design</span>
             <span class="t-chip">OOP</span>
@@ -8346,13 +8346,13 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 
       <div class="p-items-grid">
         <div class="p-col-item">
-          <span class="p-col-icon">🛡️</span>
+          <span class="p-col-icon">SEC</span>
           <div class="p-col-title">SECURITY FIRST</div>
           <div class="p-col-desc">Every system I build follows zero-trust principles.</div>
         </div>
 
         <div class="p-col-item">
-          <span class="p-col-icon">⚡</span>
+          <span class="p-col-icon">RT</span>
           <div class="p-col-title">PERFORMANCE DRIVEN</div>
           <div class="p-col-desc">I design for speed, scalability and real-world usage.</div>
         </div>
@@ -8364,13 +8364,13 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         </div>
 
         <div class="p-col-item">
-          <span class="p-col-icon">👤</span>
+          <span class="p-col-icon">AI</span>
           <div class="p-col-title">USER FOCUSED</div>
           <div class="p-col-desc">I build solutions that solve real problems for real users.</div>
         </div>
 
         <div class="p-col-item">
-          <span class="p-col-icon">🎯</span>
+          <span class="p-col-icon">FS</span>
           <div class="p-col-title">IMPACT ORIENTED</div>
           <div class="p-col-desc">I aim to build systems that create measurable impact.</div>
         </div>
@@ -8406,7 +8406,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         </div>
 
         <div class="p-stat-box">
-          <div class="p-stat-icon">🚀</div>
+          <div class="p-stat-icon">↑</div>
           <div>
             <div class="p-stat-title">Built for Impact</div>
             <div class="p-stat-sub">Solving real problems</div>
@@ -8414,7 +8414,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         </div>
 
         <div class="p-stat-box">
-          <div class="p-stat-icon">⚙️</div>
+          <div class="p-stat-icon">■</div>
           <div>
             <div class="p-stat-title">Modern Tech</div>
             <div class="p-stat-sub">Scalable &amp; Efficient</div>
@@ -8422,7 +8422,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         </div>
 
         <div class="p-stat-box">
-          <div class="p-stat-icon">👥</div>
+          <div class="p-stat-icon">~</div>
           <div>
             <div class="p-stat-title">User-Centric</div>
             <div class="p-stat-sub">Designed with clarity</div>
@@ -8435,7 +8435,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
     <div class="subaero-hero-card fu">
       <!-- LEFT COPY & ACTIONS -->
       <div>
-        <div class="sh-badge">★ FEATURED PROJECT</div>
+        <div class="sh-badge">FEATURED</div>
         <h3 class="sh-title">SubAERO</h3>
         <div class="sh-subtitle">AI-Powered Submarine Development &amp; Analysis Platform</div>
         <p class="sh-desc">An advanced AI-driven platform for submarine design, analysis, and optimization. SubAERO integrates simulation, analytics, and intelligent recommendations to accelerate R&amp;D and decision-making.</p>
@@ -8451,7 +8451,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         </div>
         <div class="sh-actions">
           <a href="https://subaero-app-3d.vercel.app/" target="_blank" rel="noopener" class="btn-fill" style="padding:10px 18px;font-size:0.75rem;">View Case Study →</a>
-          <a href="https://github.com/Nithish-Bharathwaj-N/SubAERO" target="_blank" rel="noopener" class="btn-ghost" style="padding:10px 18px;font-size:0.75rem;color:var(--text-dark);border-color:rgba(0,0,0,0.2);">GitHub Repo 🐙</a>
+          <a href="https://github.com/Nithish-Bharathwaj-N/SubAERO" target="_blank" rel="noopener" class="btn-ghost" style="padding:10px 18px;font-size:0.75rem;color:var(--text-dark);border-color:rgba(0,0,0,0.2);"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub Repo</a>
         </div>
       </div>
 
@@ -8463,7 +8463,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
       <!-- RIGHT SPECS PANEL -->
       <div class="sh-right-specs">
         <div class="sh-spec-item">
-          <div class="sh-spec-icon">🛡️</div>
+          <div class="sh-spec-icon">SEC</div>
           <div>
             <div class="sh-spec-lbl">DOMAIN</div>
             <div class="sh-spec-val">Defense • AI • Simulation</div>
@@ -8471,7 +8471,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         </div>
 
         <div class="sh-spec-item">
-          <div class="sh-spec-icon">💼</div>
+          <div class="sh-spec-icon">USE</div>
           <div>
             <div class="sh-spec-lbl">ROLE</div>
             <div class="sh-spec-val">Full-Stack Developer</div>
@@ -8479,7 +8479,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         </div>
 
         <div class="sh-spec-item">
-          <div class="sh-spec-icon">📅</div>
+          <div class="sh-spec-icon">YR</div>
           <div>
             <div class="sh-spec-lbl">DURATION</div>
             <div class="sh-spec-val">Jan 2026 – Present</div>
@@ -8487,7 +8487,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         </div>
 
         <div class="sh-spec-item">
-          <div class="sh-spec-icon">⚡</div>
+          <div class="sh-spec-icon">RT</div>
           <div>
             <div class="sh-spec-lbl">IMPACT</div>
             <div class="sh-spec-val">Streamlines submarine design workflows and improves simulation accuracy by 35%.</div>
@@ -8520,7 +8520,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
           </div>
           <div class="sp-actions">
             <a href="https://nithishportfolio-eight.vercel.app" target="_blank" rel="noopener" class="sp-btn" style="background:var(--accent);color:#fff;">View Project →</a>
-            <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener" class="sp-btn" style="border:1px solid #cbd5e1;color:#334155;">GitHub Repo 🐙</a>
+            <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener" class="sp-btn" style="border:1px solid #cbd5e1;color:#334155;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub Repo</a>
           </div>
         </div>
       </div>
@@ -8547,7 +8547,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
           </div>
           <div class="sp-actions">
             <a href="https://queue-cure-ai-web.vercel.app/" target="_blank" rel="noopener" class="sp-btn" style="background:var(--accent);color:#fff;">View Project →</a>
-            <a href="https://github.com/Nithish-Bharathwaj-N/QUEUE-CURE---AI" target="_blank" rel="noopener" class="sp-btn" style="border:1px solid #cbd5e1;color:#334155;">GitHub Repo 🐙</a>
+            <a href="https://github.com/Nithish-Bharathwaj-N/QUEUE-CURE---AI" target="_blank" rel="noopener" class="sp-btn" style="border:1px solid #cbd5e1;color:#334155;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub Repo</a>
           </div>
         </div>
       </div>
@@ -8557,7 +8557,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
     <div class="projects-bottom-bar fu">
       <div class="p-quote">“ Building solutions that solve <span style="color:var(--accent);font-weight:800;">real problems</span> and create <span style="color:var(--accent);font-weight:800;">meaningful impact</span>. ”</div>
       <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener" class="p-gh-link">
-        🐙 Explore more on GitHub →
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> Explore more on GitHub →
       </a>
     </div>
   </div>
@@ -8578,13 +8578,13 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         <p class="ach-narrative">
           From hackathons to code, every milestone represents learning, consistency, and impact.
         </p>
-        <a href="#works" class="ach-view-btn">🏆 View All Achievements →</a>
+        <a href="#works" class="ach-view-btn">View All Achievements →</a>
       </div>
 
       <!-- MIDDLE FEATURED CARD -->
       <div class="ach-feat-card">
         <div>
-          <div class="ach-feat-tag">🏆 FEATURED ACHIEVEMENT</div>
+          <div class="ach-feat-tag">FEATURED ACHIEVEMENT</div>
           <h3 class="ach-feat-title">Aerothon 2026</h3>
           <div class="ach-feat-sub">TOP 8 FINALIST <span>HAL × IIT Indore</span></div>
           <p class="ach-feat-desc">
@@ -8617,7 +8617,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         </div>
 
         <div class="ach-stat-row">
-          <span class="ach-stat-icon">📊</span>
+          <span class="ach-stat-icon">↗</span>
           <div>
             <div class="ach-stat-num">1771</div>
             <div class="ach-stat-lbl">Peak Contest Rating</div>
@@ -8626,7 +8626,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         </div>
 
         <div class="ach-stat-row">
-          <span class="ach-stat-icon">🐙</span>
+          <span class="ach-stat-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></span>
           <div>
             <div class="ach-stat-num">24+</div>
             <div class="ach-stat-lbl">GitHub Repositories</div>
@@ -8635,7 +8635,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         </div>
 
         <div class="ach-stat-row">
-          <span class="ach-stat-icon">🏆</span>
+          <span class="ach-stat-icon">★</span>
           <div>
             <div class="ach-stat-num">5+</div>
             <div class="ach-stat-lbl">Hackathon Finalist</div>
@@ -8652,7 +8652,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
       <div class="hackathons-grid">
         <!-- NODE 1: AEROTHON 2026 -->
         <div class="h-card-node highlight-node">
-          <div class="h-icon-box">🏆</div>
+          <div class="h-icon-box">★</div>
           <div class="h-name">Aerothon 2026</div>
           <div class="h-badge">TOP 8 FINALIST</div>
           <div class="h-org">HAL × IIT Indore</div>
@@ -8670,7 +8670,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 
         <!-- NODE 3: SMART HORIZON 2026 -->
         <div class="h-card-node">
-          <div class="h-icon-box">🏅</div>
+          <div class="h-icon-box">◈</div>
           <div class="h-name">Smart Horizon 2026</div>
           <div class="h-badge">FINALIST</div>
           <div class="h-org">National Level Hackathon</div>
@@ -8688,7 +8688,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 
         <!-- NODE 5: CIT SDG HACKATHON 2025 -->
         <div class="h-card-node">
-          <div class="h-icon-box">🌱</div>
+          <div class="h-icon-box">↑</div>
           <div class="h-name">CIT SDG Hackathon</div>
           <div class="h-badge">FINALIST</div>
           <div class="h-org">National Level Hackathon</div>
@@ -8697,7 +8697,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 
         <!-- NODE 6: ABACUS COMPETITION -->
         <div class="h-card-node">
-          <div class="h-icon-box">🌐</div>
+          <div class="h-icon-box">◎</div>
           <div class="h-name">Abacus Competition</div>
           <div class="h-badge">QUALIFIER</div>
           <div class="h-org">International Qualified</div>
@@ -8722,7 +8722,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 
         <div class="j-step-item">
           <div class="j-step-top">
-            <div class="j-step-icon">🛡️</div>
+            <div class="j-step-icon">SEC</div>
             <div class="j-step-year">End 2025</div>
           </div>
           <div class="j-step-title">Cybersecurity</div>
@@ -8740,7 +8740,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 
         <div class="j-step-item">
           <div class="j-step-top">
-            <div class="j-step-icon">🧠</div>
+            <div class="j-step-icon">AI</div>
             <div class="j-step-year">Mid 2026</div>
           </div>
           <div class="j-step-title">AI / Machine Learning</div>
@@ -8749,7 +8749,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
 
         <div class="j-step-item">
           <div class="j-step-top">
-            <div class="j-step-icon">🚀</div>
+            <div class="j-step-icon">→</div>
             <div class="j-step-year">Now</div>
           </div>
           <div class="j-step-title">Building Impact</div>
@@ -8804,7 +8804,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
       <div class="hk-card">
         <div class="hk-thumb-stage">
           <img src="images/hobbies/cricket_hero.jpg" alt="Cricket Batting & Ball" class="hk-hero-img">
-          <div class="hk-badge-circle">🏏</div>
+          <div class="hk-badge-circle">◈</div>
         </div>
 
         <div class="hk-body">
@@ -8858,7 +8858,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
       <div class="hk-card">
         <div class="hk-thumb-stage">
           <img src="images/hobbies/photography_hero.jpg" alt="Photography Camera Shot" class="hk-hero-img">
-          <div class="hk-badge-circle">📷</div>
+          <div class="hk-badge-circle">◎</div>
         </div>
 
         <div class="hk-body">
@@ -8900,7 +8900,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
       <div class="hk-card">
         <div class="hk-thumb-stage">
           <img src="images/hobbies/running_hero.jpg" alt="Running Shoes on Hill Steps" class="hk-hero-img">
-          <div class="hk-badge-circle">🏃</div>
+          <div class="hk-badge-circle">→</div>
         </div>
 
         <div class="hk-body">
@@ -8954,7 +8954,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
       <div class="hk-card">
         <div class="hk-thumb-stage">
           <img src="images/hobbies/travel_hero.jpg" alt="Google Maps India Travel Routes" class="hk-hero-img">
-          <div class="hk-badge-circle">✈️</div>
+          <div class="hk-badge-circle">↑</div>
         </div>
 
         <div class="hk-body">
@@ -9010,7 +9010,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
     <!-- HEADER -->
     <div class="memories-hdr-row fu" style="margin-bottom: 28px;">
       <div>
-        <div class="mem-badge-pill">🏆 HACKATHON & EVENT VAULT</div>
+        <div class="mem-badge-pill">HACKATHON & EVENT VAULT</div>
         <h2 id="memories-title" class="mem-h2">HACKATHON <span>MEMORIES.</span></h2>
       </div>
       <p class="mem-subdesc">
@@ -9077,17 +9077,17 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
         <div class="inquiry-pills-wrap">
           <div class="inquiry-pills-label" style="color:#f97316; font-weight:800;">SELECT INQUIRY TYPE</div>
           <div class="inquiry-pills-list">
-            <button type="button" class="inquiry-pill active">💼 Full-Time Role</button>
-            <button type="button" class="inquiry-pill">🚀 Freelance Project</button>
-            <button type="button" class="inquiry-pill">🏆 Hackathon / AI</button>
-            <button type="button" class="inquiry-pill">✉️ General Inquiry</button>
+            <button type="button" class="inquiry-pill active">Full-Time Role</button>
+            <button type="button" class="inquiry-pill">Freelance Project</button>
+            <button type="button" class="inquiry-pill">Hackathon / AI</button>
+            <button type="button" class="inquiry-pill">General Inquiry</button>
           </div>
         </div>
 
         <!-- DIRECT CHANNELS -->
         <div class="contact-links">
           <a href="mailto:nithishbharathwajn@gmail.com" class="c-link">
-            <div class="c-icon">✉️</div>
+            <div class="c-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
             <div>
               <div class="c-lbl" style="color:#cbd5e1;">DIRECT EMAIL</div>
               <div class="c-val" style="color:#ffffff;">nithishbharathwajn@gmail.com</div>
@@ -9095,7 +9095,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
           </a>
 
           <a href="https://www.linkedin.com/in/nithish-bharathwaj-n-847a00379" target="_blank" rel="noopener noreferrer" class="c-link">
-            <div class="c-icon">💼</div>
+            <div class="c-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
             <div>
               <div class="c-lbl" style="color:#cbd5e1;">LINKEDIN PROFILE</div>
               <div class="c-val" style="color:#ffffff;">Nithish Bharathwaj N</div>
@@ -9103,7 +9103,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
           </a>
 
           <a href="https://github.com/Nithish-Bharathwaj-N" target="_blank" rel="noopener noreferrer" class="c-link">
-            <div class="c-icon">💻</div>
+            <div class="c-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></div>
             <div>
               <div class="c-lbl" style="color:#cbd5e1;">GITHUB REPOSITORIES</div>
               <div class="c-val" style="color:#ffffff;">@Nithish-Bharathwaj-N</div>
@@ -9111,7 +9111,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
           </a>
 
           <a href="https://leetcode.com/u/nithish_cit/" target="_blank" rel="noopener noreferrer" class="c-link">
-            <div class="c-icon">🧩</div>
+            <div class="c-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" fill="currentColor"/></svg></div>
             <div>
               <div class="c-lbl" style="color:#cbd5e1;">LEETCODE PROFILE</div>
               <div class="c-val" style="color:#ffffff;">nithish_cit (500+ Solved)</div>
@@ -9133,7 +9133,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
           <div><span style="color:#f59e0b;font-weight:700;">location:</span> <span style="color:rgba(255,255,255,0.82);">Chennai, Tamil Nadu (UTC+5:30)</span></div>
           <div><span style="color:#f59e0b;font-weight:700;">focus:</span> <span style="color:rgba(255,255,255,0.82);">Cybersecurity × AI/ML × Full-Stack</span></div>
           <div><span style="color:#f59e0b;font-weight:700;">availability:</span> <span style="color:#4ade80;font-weight:700;">OPEN</span></div>
-          <div style="margin-top:8px;"><span style="color:#4ade80;font-weight:700;">✓</span> <span style="color:rgba(255,255,255,0.65);">Channel status: ONLINE · Ready to collaborate</span><span class="c-term-cursor-blink"></span></div>
+          <div style="margin-top:8px;"><span style="color:#4ade80;font-weight:700;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span style="color:rgba(255,255,255,0.65);">Channel status: ONLINE · Ready to collaborate</span><span class="c-term-cursor-blink"></span></div>
         </div>
       </div>
 
@@ -9155,7 +9155,7 @@ nav#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:
             <textarea class="c-ftextarea" required></textarea>
           </div>
 
-          <button type="submit" class="c-fbtn">SEND MESSAGE 🚀</button>
+          <button type="submit" class="c-fbtn">SEND MESSAGE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></button>
         </form>
       </div>
     </div>
